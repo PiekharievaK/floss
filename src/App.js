@@ -17,7 +17,7 @@ function App() {
       <Route path="/" element={<Outlet />}>
               <Route index  element={<Homepage />}/>
                 <Route
-                  path="/ColorsPage"
+                  path="ColorsPage"
                   element={
                     // <PublicRoute>
                     <ColorsPage />
