@@ -1,5 +1,5 @@
 import { Header } from './components/Header/Header';
-import { Route, Routes } from 'react-router-dom';
+import {Outlet, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Homepage } from './Pages/Homepage/HomePage';
 import { UserPage } from './Pages/UserPage/Userpage';
@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Header/>
       <Routes>
-      <Route path="/">
+      <Route path="/" element={<Outlet />}>
               <Route index  element={<Homepage />}/>
                 <Route
                   path="/ColorsPage"
