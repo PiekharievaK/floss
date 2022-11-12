@@ -13,7 +13,8 @@ function App() {
   return (
     <div className="App">
       <Header/>
-           <Routes>
+      <Routes>
+      <Route path="/">
               <Route index  element={<Homepage />}/>
                 <Route
                   path="/ColorsPage"
@@ -54,7 +55,7 @@ function App() {
                     <Homepage />
                   }
                   />
-                 
+                 </Route>
             </Routes>
     </div>
   );
