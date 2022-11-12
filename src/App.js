@@ -14,10 +14,10 @@ function App() {
     <div className="App">
       <Header/>
       <Routes>
-      <Route path="/" element={<Outlet />}>
-              <Route index  element={<Homepage />}/>
+      {/* <Route  element={<Outlet />}> */}
+              <Route path="/"  element={<Homepage />}/>
                 <Route
-                  path="ColorsPage"
+                  path="/ColorsPage"
                   element={
                     // <PublicRoute>
                     <ColorsPage />
@@ -55,7 +55,7 @@ function App() {
                     <Homepage />
                   }
                   />
-                 </Route>
+                 {/* </Route> */}
             </Routes>
     </div>
   );
