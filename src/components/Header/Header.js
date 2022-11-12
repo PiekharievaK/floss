@@ -1,4 +1,4 @@
-import s from "../Header/Header.module.scss"
+// import s from "../Header/Header.module.scss"
 
 export const Header =()=>{
     return<div>

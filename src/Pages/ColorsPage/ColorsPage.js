@@ -1,30 +1,31 @@
 import { colors } from "./colors";
 
 export const ColorsPage = () => {
-  const colorsTable = () => {
-    const table = document.getElementById("colors");
-    const arr = [...table.rows];
-    const data = arr.map((tr) => {
-      const row = tr.querySelectorAll("td");
-      console.log({ ...row[0] });
+    
+//   const colorsTable = () => {
+//     const table = document.getElementById("colors");
+//     const arr = [...table.rows];
+//     const data = arr.map((tr) => {
+//       const row = tr.querySelectorAll("td");
+//       console.log({ ...row[0] });
 
-      return {
-        hex: { ...row[0] }.__reactProps$oqdg78o7lv?.bgcolor
-          ? { ...row[0] }.__reactProps$oqdg78o7lv.bgcolor
-          : "00",
-        dmcNumber: { ...row[1] }.__reactProps$oqdg78o7lv?.children
-          ? { ...row[1] }.__reactProps$oqdg78o7lv.children
-          : "00",
-        colorName: { ...row[2] }.__reactProps$oqdg78o7lv?.children
-          ? { ...row[2] }.__reactProps$oqdg78o7lv.children
-          : "00",
-        colorRUname: { ...row[3] }.__reactProps$oqdg78o7lv?.children
-          ? { ...row[3] }.__reactProps$oqdg78o7lv.children
-          : "00",
-      };
-    });
-    return data;
-  };
+//       return {
+//         hex: { ...row[0] }.__reactProps$oqdg78o7lv?.bgcolor
+//           ? { ...row[0] }.__reactProps$oqdg78o7lv.bgcolor
+//           : "00",
+//         dmcNumber: { ...row[1] }.__reactProps$oqdg78o7lv?.children
+//           ? { ...row[1] }.__reactProps$oqdg78o7lv.children
+//           : "00",
+//         colorName: { ...row[2] }.__reactProps$oqdg78o7lv?.children
+//           ? { ...row[2] }.__reactProps$oqdg78o7lv.children
+//           : "00",
+//         colorRUname: { ...row[3] }.__reactProps$oqdg78o7lv?.children
+//           ? { ...row[3] }.__reactProps$oqdg78o7lv.children
+//           : "00",
+//       };
+//     });
+//     return data;
+//   };
 
   const createTable = (data) => {
     return (
