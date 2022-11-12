@@ -1,5 +1,5 @@
 import { Header } from './components/Header/Header';
-import {Outlet, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Homepage } from './Pages/Homepage/HomePage';
 import { UserPage } from './Pages/UserPage/Userpage';
