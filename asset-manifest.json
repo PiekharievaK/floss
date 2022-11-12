@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/floss/static/css/main.25f7d2c6.css",
+    "main.js": "/floss/static/js/main.2b1ed233.js",
+    "index.html": "/floss/index.html",
+    "main.25f7d2c6.css.map": "/floss/static/css/main.25f7d2c6.css.map",
+    "main.2b1ed233.js.map": "/floss/static/js/main.2b1ed233.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.25f7d2c6.css",
+    "static/js/main.2b1ed233.js"
+  ]
+}
