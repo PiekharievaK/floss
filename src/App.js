@@ -14,21 +14,20 @@ function App() {
     <div className="App">
       <Header/>
            <Routes>
-              <Route index  element={<Homepage />}>
-              </Route>
+              <Route index  element={<Homepage />}/>
                 <Route
                   path="/ColorsPage"
                   element={
                     // <PublicRoute>
-                      <ColorsPage />
+                    <ColorsPage />
                     /* </PublicRoute> */
                   }
-                />
+                  />
                  <Route
                   path="/Registerpage"
                   element={
                     // <PublicRoute>
-                      <RegisterPage />
+                    <RegisterPage />
                     /* </PublicRoute> */
                   }
                 />
@@ -36,10 +35,10 @@ function App() {
                   path={'/UserPage'}
                   element={
                     // <PrivateRoute>
-                      <UserPage />
+                    <UserPage />
                     // </PrivateRoute>
                   }
-                />
+                  />
                 <Route
                   path={'/JournalPage'}
                   element={
@@ -48,13 +47,14 @@ function App() {
                         />
                     // </PrivateRoute>
                   }
-                />
+                  />
                  <Route
                   path="*"
                   element={
                     <Homepage />
                   }
-                />
+                  />
+                 
             </Routes>
     </div>
   );
