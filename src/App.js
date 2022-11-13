@@ -1,5 +1,5 @@
 import { Header } from './components/Header/Header';
-import { Route, Routes } from 'react-router-dom';
+import {Outlet, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Homepage } from './Pages/Homepage/HomePage';
 import { UserPage } from './Pages/UserPage/Userpage';
@@ -15,9 +15,9 @@ function App() {
       <Header/>
       <Routes>
       {/* <Route  element={<Outlet />}> */}
-              <Route path="/"  element={<Homepage />}/>
+              <Route path="/floss"  element={<Homepage />}/>
                 <Route
-                  path="/ColorsPage"
+                  path="/floss/ColorsPage"
                   element={
                     // <PublicRoute>
                     <ColorsPage />
@@ -25,7 +25,7 @@ function App() {
                   }
                   />
                  <Route
-                  path="/Registerpage"
+                  path="/floss/Registerpage"
                   element={
                     // <PublicRoute>
                     <RegisterPage />
@@ -33,7 +33,7 @@ function App() {
                   }
                 />
                 <Route
-                  path={'/UserPage'}
+                  path={'/floss/UserPage'}
                   element={
                     // <PrivateRoute>
                     <UserPage />
@@ -41,7 +41,7 @@ function App() {
                   }
                   />
                 <Route
-                  path={'/JournalPage'}
+                  path={'/floss/JournalPage'}
                   element={
                     // <PrivateRoute>
                       <JournalPage
