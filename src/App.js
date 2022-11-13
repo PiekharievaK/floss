@@ -17,7 +17,7 @@ function App() {
       <Route  element={<Outlet />}>
               <Route path="/"  element={<Homepage />}/>
                 <Route
-                  path="/ColorsPage"
+                  path="/floss/ColorsPage"
                   element={
                     // <PublicRoute>
                     <ColorsPage />
@@ -25,7 +25,7 @@ function App() {
                   }
                   />
                  <Route
-                  path="/Registerpage"
+                  path="/floss/Registerpage"
                   element={
                     // <PublicRoute>
                     <RegisterPage />
@@ -33,7 +33,7 @@ function App() {
                   }
                 />
                 <Route
-                  path={'/UserPage'}
+                  path={'/floss/UserPage'}
                   element={
                     // <PrivateRoute>
                     <UserPage />
@@ -41,7 +41,7 @@ function App() {
                   }
                   />
                 <Route
-                  path={'/JournalPage'}
+                  path={'/floss/JournalPage'}
                   element={
                     // <PrivateRoute>
                       <JournalPage
