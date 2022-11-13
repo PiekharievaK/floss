@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Header/>
       <Routes>
-      {/* <Route  element={<Outlet />}> */}
+      <Route  element={<Outlet />}>
               <Route path="/"  element={<Homepage />}/>
                 <Route
                   path="/ColorsPage"
@@ -55,7 +55,7 @@ function App() {
                     <Homepage />
                   }
                   />
-                 {/* </Route> */}
+                 </Route>
             </Routes>
     </div>
   );
