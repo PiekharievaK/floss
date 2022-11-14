@@ -55,7 +55,7 @@ export const ColorsPage = () => {
           </tr>
           {data.map((el) => {
             return (
-              <tr>
+              <tr key={el.dmcNumber}>
                 <td bgcolor={el.hex}>{el.hex}</td>
                 <td>{el.dmcNumber}</td>
                 <td>{el.colorName}</td>

@@ -1265,24 +1265,14 @@ export const colors =[
         "colorName": "Beige Grey - lt ",
         "colorRUname": "Бежево-серый, св. "
     },
-    {
-        "hex": "00",
-        "dmcNumber": "00",
-        "colorName": "00",
-        "colorRUname": "00"
-    },
+   
     {
         "hex": "#124477",
         "dmcNumber": "823 ",
         "colorName": "Navy Blue - dk ",
         "colorRUname": "Темно-синий, т. "
     },
-    {
-        "hex": "00",
-        "dmcNumber": "00",
-        "colorName": "00",
-        "colorRUname": "00"
-    },
+ 
     {
         "hex": "#3b6292",
         "dmcNumber": "824 ",
@@ -1835,12 +1825,7 @@ export const colors =[
         "colorName": "Electric Blue - med ",
         "colorRUname": "Электрик синий, ср. "
     },
-    {
-        "hex": "00",
-        "dmcNumber": "00",
-        "colorName": "00",
-        "colorRUname": "00"
-    },
+  
     {
         "hex": "#635f2f",
         "dmcNumber": "3011 ",
