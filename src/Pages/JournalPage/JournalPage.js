@@ -9,6 +9,7 @@ export  const JournalPage =()=>{
     </div>
     <div>
     <form>
+        <input type={"color"} placeholder={"hex"}></input >
         <input type={"search"} placeholder={"number"}></input >
         <input type={"search"} placeholder={"label"}></input >
         <input type={"search"} placeholder={"color"}></input >
