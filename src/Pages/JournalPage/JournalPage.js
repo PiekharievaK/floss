@@ -26,11 +26,11 @@ export const JournalPage = () => {
     setNewThreadsArr((prevState) => [...prevState, newThread]);
   };
 
-  const deleteFloss =(e)=>{
-    // найти по номеру и удалить объект
-    // newThread.push(e.target.dmcNumber)
+  // const deleteFloss =(e)=>{
+  //   // найти по номеру и удалить объект
+  //   // newThread.push(e.target.dmcNumber)
 
-  }
+  // }
 
   const saveChanges =() =>{
     console.log(newThreadsArr);

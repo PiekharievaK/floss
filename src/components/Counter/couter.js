@@ -1,4 +1,4 @@
-import { isDisabled } from "@testing-library/user-event/dist/utils";
+// import { isDisabled } from "@testing-library/user-event/dist/utils";
 import { useState, useEffect } from "react";
 
 export const Counter = ({
@@ -8,7 +8,7 @@ export const Counter = ({
 
 }) => {
   const [counterValue, setCounterValue] = useState(card.count);
-  const [newArray, setNewArray] = useState(cardsArray);
+  // const [newArray, setNewArray] = useState(cardsArray);
 
   const step = 1;
 
@@ -16,7 +16,7 @@ export const Counter = ({
  
 useEffect(()=>{
   const newThreadsData = {...card, count: counterValue }
-  const newArray = cardsArray.map(item=>{if ( item.dmcNumber=== card.dmcNumber){return newThreadsData} else return item })
+  // const newArray = cardsArray.map(item=>{if ( item.dmcNumber=== card.dmcNumber){return newThreadsData} else return item })
 
   changeThreats(newThreadsData)
   
