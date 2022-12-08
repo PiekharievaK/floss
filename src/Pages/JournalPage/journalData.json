@@ -1,4 +1,4 @@
-export const journalData= [
+[
     {
         "hex": "#c4e7e8",
         "dmcNumber": "3811 ",
@@ -26,6 +26,6 @@ export const journalData= [
         "colorName": "Dusty Rose - ultra vy dk",
         "colorRUname": "Пыльная роза, ультра очень тёмный (оч.т.)",
         "count": 4
-    },
+    }
 
 ]

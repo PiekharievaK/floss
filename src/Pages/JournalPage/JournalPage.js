@@ -1,5 +1,5 @@
 import s from "../JournalPage/JournalPage.module.scss";
-import { journalData } from "./journalData";
+import journalData from "./journalData";
 import { useEffect, useState } from "react";
 import { Counter } from "../../components/Counter/couter";
 
