@@ -1,12 +1,18 @@
-import s from "../JournalPage/JournalPage.module.scss";
+// import s from "../JournalPage/JournalPage.module.scss";
 import journalData from "./journalData";
 import { useEffect, useState } from "react";
-import { Counter } from "../../components/Counter/couter";
+import { JournalList } from "../../components/JournalList/JournalList";
 
 export const JournalPage = () => {
   const [newThreadsArr, setNewThreadsArr] = useState([]);
   const [newThread, setNewThread] = useState({});
+  const [shownFloss, setShownFloss] = useState(journalData)
 
+  
+  useEffect(() => {
+    console.log(newThreadsArr);
+  }, [newThreadsArr]);
+  
   const onChange = (e) => {
     setNewThread({ ...newThread, [e.target.name]: e.target.value });
     console.log({ [e.target.name]: e.target.value });
@@ -14,7 +20,9 @@ export const JournalPage = () => {
 
   const AddThreads = (e) => {
     e.preventDefault();
-    if (newThreadsArr.find((item) => item.dmcNumber === newThread.dmcNumber)) {
+    console.log(journalData, journalData.find((item) => item.dmcNumber === newThread.dmcNumber));
+    if (journalData.find((item) => item.dmcNumber === newThread.dmcNumber) ) {
+      console.log(journalData, journalData.find((item) => item.dmcNumber === newThread.dmcNumber));
       window.alert(
         "You had this threads already, please find it and change count"
       );
@@ -23,44 +31,58 @@ export const JournalPage = () => {
     }
     console.log(newThread);
     journalData.push(newThread);
-    setNewThreadsArr((prevState) => [...prevState, newThread]);
+    setNewThreadsArr(prevState => [...prevState, newThread]);
   };
 
-  // const deleteFloss =(e)=>{
-  //   // найти по номеру и удалить объект
-  //   // newThread.push(e.target.dmcNumber)
+const onSearchFloss = (e) =>{
 
-  // }
+  if(e.target.value.length === 0){
+    setShownFloss(journalData)
+  return }
+  console.log(journalData, e.target.value );
+  const searchFloss = journalData.filter(item => item.dmcNumber.includes(e.target.value))
+  console.log(searchFloss);
+  setShownFloss(searchFloss)
+  return searchFloss
+}
+
+  const deleteFloss =(e)=>{
+    // надо обновить рендеринг после удаления
+    console.log(e.currentTarget);
+    console.log(e.target.parentNode);
+    // if(e.target === `button`){
+   const deleteIdx = journalData.findIndex(item => item.dmcNumber === e.target.parentNode.id)
+
+   journalData.splice( deleteIdx,1)
+    // }
+    return
+  }
 
   const saveChanges =() =>{
     console.log(newThreadsArr);
     window.alert(JSON.stringify(newThreadsArr))
   }
-  const changeThreats = (data) => {
+  const changeThreats = (journalData) => {
     const changeIndex = newThreadsArr.findIndex(
-      (item) => item.dmcNumber === data.dmcNumber
+      (item) => item.dmcNumber === journalData.dmcNumber
     );
 
     console.log(changeIndex);
     if (changeIndex >= 0) {
       const newArray = [...newThreadsArr];
-      newArray[changeIndex] = data;
+      newArray[changeIndex] = journalData;
       setNewThreadsArr(newArray);
-    } else setNewThreadsArr([...newThreadsArr, data]);
+    } else setNewThreadsArr([...newThreadsArr, journalData]);
   };
 
-  useEffect(() => {
-    console.log(newThreadsArr);
-  }, [newThreadsArr]);
 
-  const data = journalData;
 
   return (
     <div>
       <h1>JOURNAL</h1>
       <div>
         <form>
-          <input type={"search"} placeholder={"search by numder"}></input>
+          <input type={"search"} placeholder={"search by numder"} onChange={onSearchFloss}></input>
           <button style={{ width: "fitContent", height: "20px" }}>find</button>
         </form>
       </div>
@@ -106,12 +128,13 @@ export const JournalPage = () => {
           </button>
         </form>
       </div>
-      <div>
-        <h2>My list</h2>
+      {<JournalList data={shownFloss} changeThreats={changeThreats} deleteFloss={deleteFloss} saveChanges={saveChanges}/>}
+      {/* <div> */}
+        {/* <h2>My list</h2>
         <ul className={s.ul}>
           {data.map((item) => {
             return (
-              <li>
+              <li  key={item.dmcNumber} id={item.dmcNumber}>
                 <span style={{ backgroundColor: `${item.hex}`, border: "1px solid black" }}>
                   {item.hex?item.hex:"unknown"}{" "}
                 </span>
@@ -125,7 +148,7 @@ export const JournalPage = () => {
                     changeThreats={changeThreats}
                   />
                 }
-                <button style={{ width: "fitContent", height: "20px" }}>
+                <button style={{ width: "fitContent", height: "20px" }} onClick={deleteFloss} >
                   Del
                 </button>
                 <span className={s.span}></span>
@@ -133,8 +156,8 @@ export const JournalPage = () => {
             );
           })}
           <button onClick={saveChanges}>Save Changes</button>
-        </ul>
-      </div>
+        </ul> */}
+      {/* </div> */}
     </div>
   );
 };

@@ -15,6 +15,7 @@ export const Counter = ({
 
  
 useEffect(()=>{
+  
   const newThreadsData = {...card, count: counterValue }
   // const newArray = cardsArray.map(item=>{if ( item.dmcNumber=== card.dmcNumber){return newThreadsData} else return item })
 
