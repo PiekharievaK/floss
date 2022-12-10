@@ -6,12 +6,27 @@ import { UserPage } from "./Pages/UserPage/Userpage";
 import { JournalPage } from "./Pages/JournalPage/JournalPage";
 import { RegisterPage } from "./Pages/RegisterPage/RegisterPage";
 import { ColorsPage } from "./Pages/ColorsPage/ColorsPage";
+import { useEffect, useState } from "react";
 // import { PrivateRoute, PublicRoute } from './components/Routers';
+import operations from "./helpers/authOperations";
 
 function App() {
+const [user, setUser] = useState({user:{email:""}, token:"",  status: "unauthorize"})
+
+const { signUpUser, logInUser, logOut, fetchCurrentUser} = operations
+// axios.defaults.baseURL = 'http://localhost:3001';
+
+useEffect(()=>{
+  fetchCurrentUser(setUser)
+}, [])
+
+useEffect(()=>{
+  console.log(user);
+}, [user])
+
   return (
     <div className="App">
-      <Header />
+      <Header user={user} logOut={logOut} setUser={setUser}/>
       <Routes>
         <Route path="/" element={<Outlet />}>
           <Route index element={<Homepage />} />
@@ -27,7 +42,7 @@ function App() {
             path="Registerpage"
             element={
               // <PublicRoute>
-              <RegisterPage />
+              <RegisterPage signUpUser={signUpUser} logInUser={logInUser} setUser={setUser}/>
               /* </PublicRoute> */
             }
           />
