@@ -8,23 +8,14 @@ import s from './Registration.module.css'
 export const Registration =({signUpUser})=> {
   // json, json@mail.ru, json123
 
-  // const [login, setLogin] = useState('');
+  const [login, setLogin] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const token = {
-    set(token) {
-      axios.defaults.headers.common.Authorization = `Bearer ${token}`;
-    },
-    unset() {
-      axios.defaults.headers.common.Authorization = '';
-    },
-  };
-
-
+  
   const handleSubmit =  e => {
     e.preventDefault();
-    signUpUser({ email, password})
+    signUpUser({login, email, password})
     console.log("signUp");
     
     //  dispatch(operations.signUpUser({ name: login, email: email, password: password }));
@@ -32,8 +23,8 @@ export const Registration =({signUpUser})=> {
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
-      // case 'login':
-      //   return setLogin(value);
+      case 'login':
+        return setLogin(value);
       case 'email':
         return setEmail(value);
       case 'password':
@@ -47,14 +38,14 @@ export const Registration =({signUpUser})=> {
     <>
       <h2>Sign up</h2>
       <form onSubmit={handleSubmit} className={s.form}>
-        {/* <input
+        <input
           name="login"
           type="text"
           className={s.input}
           value={login}
           placeholder="login"
           onChange={handleChange}
-        /> */}
+        />
         <input
           name="email"
           type="email"

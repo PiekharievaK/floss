@@ -2,7 +2,7 @@ import s from "../Header/Header.module.scss"
 import { Link } from "react-router-dom"
 
 export const Header =({user, logOut, setUser})=>{
-    const userName= user.email
+    const userName= user.login
 const onClick = () =>{
     logOut(setUser)
 }

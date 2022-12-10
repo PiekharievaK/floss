@@ -74,7 +74,7 @@ const fetchCurrentUser =async(setUser)=>{
       setUser(data.data.user)
       return data;
     } catch (error) {
-      // return thunkAPI.rejectWithValue(toast.error('Error fetch current user.'));
+      return toast.error('Error fetch current user.');
     }
   }
 
