@@ -1,24 +1,21 @@
 import {Registration} from "../../components/Registration/Registration"
 import { LoginForm } from "../../components/Login/Login"
+import { useState } from "react"
 
 
-export  const RegisterPage =({signUpUser, logInUser, setUser})=>{
+export  const RegisterPage =({signUpUser, logInUser, setUser, setIsLoggedIn})=>{
+const [regisrtation, setregistration] = useState()
+
+const handleChange =(e)=>{
+    setregistration(e.target.id)
+}
+
     return <div><h1>RegisterPage</h1>
-{<Registration signUpUser={signUpUser}/>}
-{<LoginForm logInUser={logInUser} setUser={setUser}/>}
-
-    {/* <form> */}
-    {/* <input type={"text"} placeholder="email"></input>
-      <input type={"text"} placeholder="login"></input>  
-      <input type={"text"} placeholder="password"></input> 
-      <button style={{width: "fitContent", height: "20px"}}>submit</button> */}
-    {/* </form> */}
-
-    {/* <form>
-    <h2>Log In</h2>
-      <input type={"text"} placeholder="login"></input>  
-      <input type={"text"} placeholder="password"></input> 
-      <button style={{width: "fitContent", height: "20px"}}>submit</button>
-    </form> */}
+    <div>
+<button id={"login"} onClick={handleChange}>Login</button>
+<button id={"signup"} onClick={handleChange}>Signup</button>        
+    </div>
+{regisrtation=== "signup" &&<Registration signUpUser={signUpUser}/>}
+{ regisrtation=== "login" &&<LoginForm logInUser={logInUser} setUser={setUser} setIsLoggedIn={setIsLoggedIn}/>}
     </div>
     }

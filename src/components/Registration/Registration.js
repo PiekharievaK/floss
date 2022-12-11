@@ -1,7 +1,4 @@
 import { useState } from 'react';
-import axios from 'axios';
-import { toast } from 'react-toastify';
-// import operations from 'redux/auth/authOperation';
 import s from './Registration.module.css'
 
 
@@ -12,7 +9,7 @@ export const Registration =({signUpUser})=> {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  
+
   const handleSubmit =  e => {
     e.preventDefault();
     signUpUser({login, email, password})

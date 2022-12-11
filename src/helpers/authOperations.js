@@ -26,13 +26,13 @@ const signUpUser = async(userData)=>{
       );
     }}
 
-    const logInUser = async(userData, setUser)=>{
+    const logInUser = async(userData, setUser, setIsLoggedIn)=>{
       try {
           const { data } = await axios.post('/users/login', userData);
-          setUser(data.user)
-        
           token.set(data.token);
+          setUser(data.user)
           localStorage.setItem("token", data.token)
+          setIsLoggedIn(true)
           return data;
         } catch (error) {
           return (
@@ -44,19 +44,20 @@ const signUpUser = async(userData)=>{
       }
 
 
-const logOut = async(setUser)=>{
+const logOut = async(setUser, setIsLoggedIn)=>{
   try {
       await axios.get('/users/logout');
       token.unset();
-      localStorage.removeItem("token")
       setUser({status:"unauthorise"})
+      setIsLoggedIn(false)
+      localStorage.removeItem("token")
     } catch (error) {
       return (toast.error('Error logout'));
     }
   }
 
 
-const fetchCurrentUser =async(setUser)=>{
+const fetchCurrentUser =async(setUser, setIsLoggedIn)=>{
   
     // const state = thunkAPI.getState();
     // const userToken = state.auth.token;
@@ -72,6 +73,7 @@ const fetchCurrentUser =async(setUser)=>{
     try {
       const { data } = await axios.get('/users/current');
       setUser(data.data.user)
+      setIsLoggedIn(true)
       return data;
     } catch (error) {
       return toast.error('Error fetch current user.');

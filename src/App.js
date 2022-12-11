@@ -7,59 +7,62 @@ import { JournalPage } from "./Pages/JournalPage/JournalPage";
 import { RegisterPage } from "./Pages/RegisterPage/RegisterPage";
 import { ColorsPage } from "./Pages/ColorsPage/ColorsPage";
 import { useEffect, useState } from "react";
-// import { PrivateRoute, PublicRoute } from './components/Routers';
+import { PrivateRoute, PublicRoute } from './components/Routers';
 import operations from "./helpers/authOperations";
 
 function App() {
-const [user, setUser] = useState({user:{email:""}, token:"",  status: "unauthorize"})
-
+const [user, setUser] = useState({status:"unauthorise"})
+const [isLoggedIn, setIsLoggedIn] = useState(false)
 const { signUpUser, logInUser, logOut, fetchCurrentUser} = operations
 // axios.defaults.baseURL = 'http://localhost:3001';
 
 useEffect(()=>{
-  fetchCurrentUser(setUser)
+  fetchCurrentUser(setUser, setIsLoggedIn)
+  // console.log(user)
+  // console.log(isLoggedIn);
 }, [])
 
-useEffect(()=>{
-  console.log(user);
-}, [user])
+// useEffect(()=>{
+//   console.log(user);
+//   console.log(isLoggedIn);
+// }, [user])
 
   return (
     <div className="App">
-      <Header user={user} logOut={logOut} setUser={setUser}/>
+      <Header user={user} logOut={logOut} setUser={setUser} setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn}/>
       <Routes>
         <Route path="/" element={<Outlet />}>
           <Route index element={<Homepage />} />
           <Route
             path="ColorsPage"
             element={
-              // <PublicRoute>
+              // <PublicRoute isLoggedIn={isLoggedIn}>
               <ColorsPage />
-              /* </PublicRoute> */
+              // </PublicRoute> 
             }
           />
+            <Route
+              path={"UserPage"}
+              element={
+                <PrivateRoute isLoggedIn={isLoggedIn}>
+                <UserPage />
+                 </PrivateRoute> 
+              }
+            />
+            <Route
+              path={"JournalPage"}
+              element={
+                <PrivateRoute isLoggedIn={isLoggedIn}>
+                <JournalPage />
+                </PrivateRoute> 
+              }
+            />
           <Route
             path="Registerpage"
             element={
-              // <PublicRoute>
-              <RegisterPage signUpUser={signUpUser} logInUser={logInUser} setUser={setUser}/>
-              /* </PublicRoute> */
-            }
-          />
-          <Route
-            path={"UserPage"}
-            element={
-              // <PrivateRoute>
-              <UserPage />
-              // </PrivateRoute>
-            }
-          />
-          <Route
-            path={"JournalPage"}
-            element={
-              // <PrivateRoute>
-              <JournalPage />
-              // </PrivateRoute>
+              <PublicRoute isLoggedIn={isLoggedIn}>
+              <RegisterPage signUpUser={signUpUser} logInUser={logInUser} setUser={setUser} setIsLoggedIn={setIsLoggedIn}/>
+               </PublicRoute> 
             }
           />
           <Route path="*" element={<Homepage />} />

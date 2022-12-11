@@ -1,13 +1,13 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import authSelectors from '../../redux/auth/auth-selectors';
+// import { useSelector } from 'react-redux';
+// import authSelectors from '../../redux/auth/auth-selectors';
 import PropTypes from 'prop-types';
 
-function PrivateRoute({ children }) {
-  const isLoggedIn = useSelector(authSelectors.getIsAuthorised);
-
-  return isLoggedIn ? children : <Navigate to="/login" replace={true} />;
+function PrivateRoute({isLoggedIn, children }) {
+  // const isLoggedIn = user.status === "unauthorise";
+console.log(isLoggedIn);
+  return isLoggedIn === true ? children : <Navigate to="/RegisterPage" replace={true} />;
 }
 PrivateRoute.propTypes = {
   children: PropTypes.element,
