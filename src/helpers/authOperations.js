@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import notiflix from "notiflix"
 
 
 axios.defaults.baseURL = 'http://localhost:3001';
@@ -17,6 +18,22 @@ const signUpUser = async(userData)=>{
   try {
       const { data } = await axios.post('/users/signup', userData);
       token.set(data.token);
+notiflix.Confirm.show(
+    'Email Confirm',
+    'Do you agree with it?',
+    'Yes',
+    'It is Yes too',
+    async() => {
+        console.log(data.user.linkToVerify);
+        await axios.get(`${data.user.linkToVerify}`);
+    },
+    async() => {
+     await axios.get(data.user.linkToVerify)
+    },
+    {
+    },
+    );
+    
       return data;
     } catch (error) {
       return (
