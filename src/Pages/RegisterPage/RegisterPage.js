@@ -4,10 +4,10 @@ import { useState } from "react"
 
 
 export  const RegisterPage =({signUpUser, logInUser, setUser, setIsLoggedIn})=>{
-const [regisrtation, setregistration] = useState()
+const [regisrtation, setRegistration] = useState()
 
 const handleChange =(e)=>{
-    setregistration(e.target.id)
+    setRegistration(e.target.id)
 }
 
     return <div><h1>RegisterPage</h1>

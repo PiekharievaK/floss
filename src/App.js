@@ -14,9 +14,11 @@ function App() {
 const [user, setUser] = useState({status:"unauthorise"})
 const [isLoggedIn, setIsLoggedIn] = useState(false)
 const { signUpUser, logInUser, logOut, fetchCurrentUser} = operations
-// axios.defaults.baseURL = 'http://localhost:3001';
+// const [pending, setpending] = useState()
+
 
 useEffect(()=>{
+  
   fetchCurrentUser(setUser, setIsLoggedIn)
   // console.log(user)
   // console.log(isLoggedIn);
