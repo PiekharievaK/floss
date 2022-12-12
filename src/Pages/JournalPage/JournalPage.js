@@ -1,18 +1,26 @@
 // import s from "../JournalPage/JournalPage.module.scss";
-import journalData from "./journalData";
+// import journalData from "./journalData";
 import { useEffect, useState } from "react";
 import { JournalList } from "../../components/JournalList/JournalList";
+import operations from "../../helpers/journalOperations";
 
-export const JournalPage = () => {
+export const JournalPage = (user) => {
+  const [userCollection, setUserCollection] = useState([]);
   const [newThreadsArr, setNewThreadsArr] = useState([]);
   const [newThread, setNewThread] = useState({});
-  const [shownFloss, setShownFloss] = useState(journalData)
+  const [shownFloss, setShownFloss] = useState(userCollection);
 
-  
+  const { getAll, getFlossById, addNewFloss, deleteFloss } = operations;
+
   useEffect(() => {
-    console.log(newThreadsArr);
-  }, [newThreadsArr]);
-  
+    getAll(user, setUserCollection);
+  }, []);
+
+  useEffect(() => {
+    setShownFloss(userCollection);
+    console.log(userCollection);
+  }, [userCollection]);
+
   const onChange = (e) => {
     setNewThread({ ...newThread, [e.target.name]: e.target.value });
     console.log({ [e.target.name]: e.target.value });
@@ -20,9 +28,15 @@ export const JournalPage = () => {
 
   const AddThreads = (e) => {
     e.preventDefault();
-    console.log(journalData, journalData.find((item) => item.dmcNumber === newThread.dmcNumber));
-    if (journalData.find((item) => item.dmcNumber === newThread.dmcNumber) ) {
-      console.log(journalData, journalData.find((item) => item.dmcNumber === newThread.dmcNumber));
+    console.log(
+      userCollection,
+      userCollection.find((item) => item.dmcNumber === newThread.dmcNumber)
+    );
+    if (userCollection.find((item) => item.dmcNumber === newThread.dmcNumber)) {
+      console.log(
+        userCollection,
+        userCollection.find((item) => item.dmcNumber === newThread.dmcNumber)
+      );
       window.alert(
         "You had this threads already, please find it and change count"
       );
@@ -30,38 +44,40 @@ export const JournalPage = () => {
       return;
     }
     console.log(newThread);
-    journalData.push(newThread);
-    setNewThreadsArr(prevState => [...prevState, newThread]);
+    userCollection.push(newThread);
+    setNewThreadsArr((prevState) => [...prevState, newThread]);
   };
 
-const onSearchFloss = (e) =>{
+  const onSearchFloss = (e) => {
+    if (e.target.value.length === 0) {
+      setShownFloss(userCollection);
+      return;
+    }
+    console.log(shownFloss, e.target.value);
+    const searchFloss = userCollection.filter((item) =>
+      item.dmcNumber.includes(e.target.value)
+    );
+    console.log(searchFloss);
+    setShownFloss(searchFloss);
+    return searchFloss;
+  };
 
-  if(e.target.value.length === 0){
-    setShownFloss(journalData)
-  return }
-  console.log(journalData, e.target.value );
-  const searchFloss = journalData.filter(item => item.dmcNumber.includes(e.target.value))
-  console.log(searchFloss);
-  setShownFloss(searchFloss)
-  return searchFloss
-}
+  // const deleteFloss =(e)=>{
+  //   // надо обновить рендеринг после удаления
+  //   console.log(e.currentTarget);
+  //   console.log(e.target.parentNode);
+  //   // if(e.target === `button`){
+  //  const deleteIdx = userCollection.findIndex(item => item.dmcNumber === e.target.parentNode.id)
 
-  const deleteFloss =(e)=>{
-    // надо обновить рендеринг после удаления
-    console.log(e.currentTarget);
-    console.log(e.target.parentNode);
-    // if(e.target === `button`){
-   const deleteIdx = journalData.findIndex(item => item.dmcNumber === e.target.parentNode.id)
+  //  userCollection.splice( deleteIdx,1)
+  //   // }
+  //   return
+  // }
 
-   journalData.splice( deleteIdx,1)
-    // }
-    return
-  }
-
-  const saveChanges =() =>{
+  const saveChanges = () => {
     console.log(newThreadsArr);
-    window.alert(JSON.stringify(newThreadsArr))
-  }
+    window.alert(JSON.stringify(newThreadsArr));
+  };
   const changeThreats = (journalData) => {
     const changeIndex = newThreadsArr.findIndex(
       (item) => item.dmcNumber === journalData.dmcNumber
@@ -75,14 +91,16 @@ const onSearchFloss = (e) =>{
     } else setNewThreadsArr([...newThreadsArr, journalData]);
   };
 
-
-
   return (
     <div>
       <h1>JOURNAL</h1>
       <div>
         <form>
-          <input type={"search"} placeholder={"search by numder"} onChange={onSearchFloss}></input>
+          <input
+            type={"search"}
+            placeholder={"search by numder"}
+            onChange={onSearchFloss}
+          ></input>
           <button style={{ width: "fitContent", height: "20px" }}>find</button>
         </form>
       </div>
@@ -128,9 +146,16 @@ const onSearchFloss = (e) =>{
           </button>
         </form>
       </div>
-      {<JournalList data={shownFloss} changeThreats={changeThreats} deleteFloss={deleteFloss} saveChanges={saveChanges}/>}
+      {
+        <JournalList
+          data={shownFloss}
+          changeThreats={changeThreats}
+          deleteFloss={deleteFloss}
+          saveChanges={saveChanges}
+        />
+      }
       {/* <div> */}
-        {/* <h2>My list</h2>
+      {/* <h2>My list</h2>
         <ul className={s.ul}>
           {data.map((item) => {
             return (

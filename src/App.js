@@ -55,7 +55,7 @@ useEffect(()=>{
               path={"JournalPage"}
               element={
                 <PrivateRoute isLoggedIn={isLoggedIn}>
-                <JournalPage />
+                <JournalPage  user={user}/>
                 </PrivateRoute> 
               }
             />
