@@ -3,11 +3,11 @@ import { toast } from "react-toastify";
 import notiflix from "notiflix";
 
 const getAll = async (user, setUserCollection) => {
-  const userData = { user: { _id: user.user._id } };
+  const collectionId =  user.user.collectionId ;
   try {
-    console.log(user);
-    const { data } = await axios.post("/journal", userData);
-    setUserCollection(data.collection);
+    console.log(collectionId);
+    const { data } = await axios.get(`/journal/${collectionId}`);
+    setUserCollection(data.flossCollection);
     return data;
   } catch (error) {
     return toast.error(
@@ -16,6 +16,22 @@ const getAll = async (user, setUserCollection) => {
   }
 };
 
+const addNewFloss = async (user, userFloss) => {
+  // console.log(user);
+  const collectionId = user.user.collectionId;
+  try {
+    if (!userFloss.label) {
+      const DMCfloss = { floss: { ...userFloss, label: "DMC" }, collectionId };
+      const { data } = await axios.post("/journal", DMCfloss);
+      return data;
+    }
+    const otherFloss = { floss: userFloss, collectionId };
+    const { data } = await axios.post("/journal", otherFloss);
+    return data;
+  } catch (error) {
+    return toast.error("Error add floss.");
+  }
+};
 const deleteFloss = async (userData, setUser, setIsLoggedIn) => {
   try {
     const { data } = await axios.post("/users/login", userData);
@@ -37,17 +53,6 @@ const getFlossById = async (setUser, setIsLoggedIn) => {
     localStorage.removeItem("token");
   } catch (error) {
     return toast.error("Error logout");
-  }
-};
-
-const addNewFloss = async (setUser, setIsLoggedIn) => {
-  try {
-    const { data } = await axios.get("/users/current");
-    setUser(data.data.user);
-    setIsLoggedIn(true);
-    return data;
-  } catch (error) {
-    return toast.error("Error fetch current user.");
   }
 };
 

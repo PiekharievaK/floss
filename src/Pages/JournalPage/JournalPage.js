@@ -29,24 +29,26 @@ export const JournalPage = (user) => {
 
   const AddThreads = (e) => {
     e.preventDefault();
-    console.log(
-      userCollection,
-      userCollection.find((item) => item.umber === newThread.number)
-    );
-    if (userCollection.find((item) => item.umber === newThread.number)) {
-      console.log(
-        userCollection,
-        userCollection.find((item) => item.umber === newThread.number)
-      );
-      window.alert(
-        "You had this threads already, please find it and change count"
-      );
-      console.log(newThreadsArr);
-      return;
-    }
-    console.log(newThread);
-    userCollection.push(newThread);
-    setNewThreadsArr((prevState) => [...prevState, newThread]);
+    
+    addNewFloss(user, newThread)
+  //   console.log(
+  //     userCollection,
+  //     userCollection.find((item) => item.umber === newThread.number)
+  //   );
+  //   if (userCollection.find((item) => item.umber === newThread.number)) {
+  //     console.log(
+  //       userCollection,
+  //       userCollection.find((item) => item.umber === newThread.number)
+  //     );
+  //     window.alert(
+  //       "You had this threads already, please find it and change count"
+  //     );
+  //     console.log(newThreadsArr);
+  //     return;
+  //   }
+  //   console.log(newThread);
+  //   userCollection.push(newThread);
+  //   setNewThreadsArr((prevState) => [...prevState, newThread]);
   };
 
   const onSearchFloss = (e) => {
@@ -96,7 +98,7 @@ export const JournalPage = (user) => {
     <div>
       <h1>JOURNAL</h1>
 
-      <AddFlossForm AddThreads={AddThreads} onChange={onChange} />
+      <AddFlossForm  AddThreads={AddThreads} onChange={onChange} />
 
       <JournalList
         data={shownFloss}

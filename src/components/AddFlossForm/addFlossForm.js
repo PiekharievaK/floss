@@ -1,13 +1,12 @@
 import { useState } from "react";
 
-const AddFlossForm = ({ AddThreads, onChange }) => {
+const AddFlossForm = ({AddThreads, onChange }) => {
   const [addActive, setAddActive] = useState(false);
   const [label, setLabel] = useState("");
 
   const onRadioChange = (e) => {
     setLabel(e.target.value);
-    console.log(label);
-  };
+   };
 
   return (
     <div>
@@ -60,7 +59,7 @@ const AddFlossForm = ({ AddThreads, onChange }) => {
                 <input
                   type={"search"}
                   placeholder={"color"}
-                  name={"color"}
+                  name={"colorName"}
                   onChange={onChange}
                   required
                 ></input>

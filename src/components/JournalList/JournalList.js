@@ -11,7 +11,13 @@ export const JournalList = ({
 }) => {
   const [filter, setFilter] = useState("All");
   const [filteredFloss, setFilteredFloss] = useState(data);
-
+  
+  useEffect(() => {
+    setFilteredFloss(data);
+    filterFloss(filter);
+    // console.log(filteredFloss, data);
+  }, [data]);
+  
   const filterFloss = (value) => {
     if (value === "DMC") {
       setFilteredFloss(data.filter((item) => item.label === "DMC"));
@@ -33,14 +39,9 @@ export const JournalList = ({
     }
     setFilter(e.target.value);
     filterFloss(e.target.value);
-    console.log(e.target.value);
+    // console.log(e.target.value);
   };
 
-  useEffect(() => {
-    setFilteredFloss(data);
-    filterFloss(filter);
-    console.log(filteredFloss, data);
-  }, [data]);
 
   return (
     <div>
@@ -100,6 +101,7 @@ export const JournalList = ({
                 <span className={s.span}>{item.colorName}</span>
                 <span className={s.span}>{item.label}</span>
                 {
+                  // <span>{item.count}</span>
                   <Counter
                     card={item}
                     cardsArray={filteredFloss}
