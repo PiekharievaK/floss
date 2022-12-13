@@ -3,7 +3,8 @@ import { toast } from 'react-toastify';
 import notiflix from "notiflix"
 
 
-axios.defaults.baseURL = 'http://localhost:3001';
+// axios.defaults.baseURL = 'http://localhost:3001';
+axios.defaults.baseURL = 'https://floss-server.onrender.com';
 
 const token = {
   set(token) {
