@@ -3,8 +3,9 @@ import { useState, useEffect } from "react";
 
 export const Counter = ({
   card,
-  cardsArray,
-  changeThreats
+  setEditMode,
+  changeThreats,
+  updateOneFloss
 
 }) => {
   const [counterValue, setCounterValue] = useState(card.count);
@@ -84,6 +85,7 @@ useEffect(()=>{
             +
           </button>
         </div>
+        <button onClick={()=>{updateOneFloss(card._id, counterValue); setEditMode()}}>Save changes</button>
       </div>
 
     </>

@@ -11,7 +11,7 @@ export const JournalPage = (user) => {
   const [newThread, setNewThread] = useState({});
   const [shownFloss, setShownFloss] = useState(userCollection);
 
-  const { getAll, getFlossById, addNewFloss, deleteFloss } = operations;
+  const { getAll, updateFloss, addNewFloss, deleteFloss } = operations;
 
   useEffect(() => {
     getAll(user, setUserCollection);
@@ -22,15 +22,22 @@ export const JournalPage = (user) => {
     console.log(userCollection);
   }, [userCollection]);
 
+  
   const onChange = (e) => {
     setNewThread({ ...newThread, [e.target.name]: e.target.value });
     console.log({ [e.target.name]: e.target.value });
+    console.log(newThread);
   };
 
-  const AddThreads = (e) => {
+  const clearThreed = () =>{
+    setNewThread({})
+  }
+
+  const AddThreads = async(e) => {
     e.preventDefault();
     
-    addNewFloss(user, newThread)
+    await addNewFloss(user, newThread)
+    await getAll(user, setUserCollection)
   //   console.log(
   //     userCollection,
   //     userCollection.find((item) => item.umber === newThread.number)
@@ -65,17 +72,16 @@ export const JournalPage = (user) => {
     return searchFloss;
   };
 
-  // const deleteFloss =(e)=>{
-  //   // надо обновить рендеринг после удаления
-  //   console.log(e.currentTarget);
-  //   console.log(e.target.parentNode);
-  //   // if(e.target === `button`){
-  //  const deleteIdx = userCollection.findIndex(item => item.number === e.target.parentNode.id)
+  const deleteOneFloss =async (flossId)=>{
+    await deleteFloss(user.user.collectionId, flossId)
+    await getAll(user, setUserCollection)
+    return
+  }
 
-  //  userCollection.splice( deleteIdx,1)
-  //   // }
-  //   return
-  // }
+  const updateOneFloss = async(flossId, count)=>{
+   await updateFloss(user.user.collectionId, flossId, count)
+   await await getAll(user, setUserCollection)
+  }
 
   const saveChanges = () => {
     console.log(newThreadsArr);
@@ -98,14 +104,15 @@ export const JournalPage = (user) => {
     <div>
       <h1>JOURNAL</h1>
 
-      <AddFlossForm  AddThreads={AddThreads} onChange={onChange} />
+      <AddFlossForm  AddThreads={AddThreads} onChange={onChange} clearThreed={clearThreed} />
 
       <JournalList
         data={shownFloss}
         onSearchFloss={onSearchFloss}
         changeThreats={changeThreats}
-        deleteFloss={deleteFloss}
+        deleteOneFloss={deleteOneFloss}
         saveChanges={saveChanges}
+        updateOneFloss={updateOneFloss}
       />
     </div>
   );

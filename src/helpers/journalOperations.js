@@ -32,10 +32,11 @@ const addNewFloss = async (user, userFloss) => {
     return toast.error("Error add floss.");
   }
 };
-const deleteFloss = async (userData, setUser, setIsLoggedIn) => {
+const deleteFloss = async (collectionId, flossId ) => {
+    console.log(collectionId, flossId );
   try {
-    const { data } = await axios.post("/users/login", userData);
-    setUser(data.user);
+    const { data } = await axios.put(`/journal/${collectionId}`, {flossId, method: "delete"});
+ ;
 
     return data;
   } catch (error) {
@@ -45,20 +46,23 @@ const deleteFloss = async (userData, setUser, setIsLoggedIn) => {
   }
 };
 
-const getFlossById = async (setUser, setIsLoggedIn) => {
-  try {
-    await axios.get("/users/logout");
-    setUser({ status: "unauthorise" });
-    setIsLoggedIn(false);
-    localStorage.removeItem("token");
-  } catch (error) {
-    return toast.error("Error logout");
-  }
+const updateFloss = async (collectionId, flossId, count) => {
+    try {
+        const { data } = await axios.put(`/journal/${collectionId}`, {flossId, count, method: "update" });
+     ;
+    
+        return data;
+      } catch (error) {
+        return toast.error(
+          "Something wrong ehitn update."
+        );
+      }
+ 
 };
 
 const operations = {
   getAll,
-  getFlossById,
+  updateFloss,
   addNewFloss,
   deleteFloss,
 };

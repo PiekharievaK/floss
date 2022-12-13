@@ -1,10 +1,11 @@
 import { useState } from "react";
 
-const AddFlossForm = ({AddThreads, onChange }) => {
+const AddFlossForm = ({AddThreads, onChange, clearThreed }) => {
   const [addActive, setAddActive] = useState(false);
   const [label, setLabel] = useState("");
 
   const onRadioChange = (e) => {
+    clearThreed()
     setLabel(e.target.value);
    };
 

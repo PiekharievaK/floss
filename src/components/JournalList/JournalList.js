@@ -6,18 +6,21 @@ export const JournalList = ({
   data,
   onSearchFloss,
   changeThreats,
-  deleteFloss,
+  deleteOneFloss,
   saveChanges,
+  updateOneFloss
 }) => {
   const [filter, setFilter] = useState("All");
   const [filteredFloss, setFilteredFloss] = useState(data);
-  
+
+  const [editMode, setEditMode] = useState("");
+
   useEffect(() => {
     setFilteredFloss(data);
     filterFloss(filter);
     // console.log(filteredFloss, data);
   }, [data]);
-  
+
   const filterFloss = (value) => {
     if (value === "DMC") {
       setFilteredFloss(data.filter((item) => item.label === "DMC"));
@@ -40,6 +43,11 @@ export const JournalList = ({
     setFilter(e.target.value);
     filterFloss(e.target.value);
     // console.log(e.target.value);
+  };
+
+  const edit = (e) => {
+    setEditMode(e.target?.parentNode?.id ? e.target.parentNode.id : {});
+    console.log(e.target.parentNode.id);
   };
 
 
@@ -65,7 +73,7 @@ export const JournalList = ({
           checked={filter === "All"}
           onChange={onFilterChange}
         />
-        <label for="All">All</label>
+        <label htmlFor="All">All</label>
         <input
           type={"radio"}
           name="flossLabel"
@@ -73,7 +81,7 @@ export const JournalList = ({
           id="DMC"
           onChange={onFilterChange}
         />
-        <label for="DMC">DMC</label>
+        <label htmlFor="DMC">DMC</label>
         <input
           type={"radio"}
           name="flossLabel"
@@ -81,14 +89,14 @@ export const JournalList = ({
           id="Other"
           onChange={onFilterChange}
         />
-        <label for="Other">Other</label>
+        <label htmlFor="Other">Other</label>
       </form>
 
       {filteredFloss.length > 0 ? (
         <ul className={s.ul}>
           {filteredFloss.map((item) => {
             return (
-              <li key={item.number} id={item.number}>
+              <li key={item._id} id={item._id}>
                 <span
                   style={{
                     backgroundColor: `${item.hex}`,
@@ -100,26 +108,37 @@ export const JournalList = ({
                 <span className={s.span}>{item.number}</span>
                 <span className={s.span}>{item.colorName}</span>
                 <span className={s.span}>{item.label}</span>
-                {
-                  // <span>{item.count}</span>
-                  <Counter
-                    card={item}
-                    cardsArray={filteredFloss}
-                    changeThreats={changeThreats}
-                  />
-                }
-                <button
-                  style={{ width: "fitContent", height: "20px" }}
-                  onClick={deleteFloss}
-                >
-                  Del
-                </button>
+                {item._id !== editMode  && (
+                  <span>
+                    {"Кількість штук: "}
+                    {item.count}
+                  </span>
+                )}
+                {item._id !== editMode ? (
+                  <button
+                    style={{ width: "fitContent", height: "20px" }}
+                    onClick={edit}
+                  >
+                    Edit
+                  </button>
+                ) : (
+                  <span>
+                    <Counter
+                      card={item}
+                      cardsArray={filteredFloss}
+                      changeThreats={changeThreats}
+                      updateOneFloss={updateOneFloss}
+                      setEditMode={setEditMode}
+                    />
+                    <button onClick={()=>{deleteOneFloss(item._id)}}>Del</button>{" "}
+                    <button onClick={edit}>Close changes</button>
+                  </span>
+                )}
                 <span className={s.span}></span>
               </li>
             );
           })}
-          <button onClick={saveChanges}>Save Changes</button>
-        </ul>
+          </ul>
       ) : (
         <>
           <h3>no flosses yet</h3>
