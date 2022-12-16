@@ -1,30 +1,26 @@
-import { useState } from 'react';
-import s from './Registration.module.css'
+import { useState } from "react";
+import s from "./Registration.module.css";
 
-
-export const Registration =({signUpUser})=> {
+export const Registration = ({ signUpUser }) => {
   // json, json@mail.ru, json123
 
-  const [login, setLogin] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [login, setLogin] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-
-  const handleSubmit =  e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    signUpUser({login, email, password})
-    console.log("signUp");
-    
+    signUpUser({ login, email, password });
     //  dispatch(operations.signUpUser({ name: login, email: email, password: password }));
   };
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
-      case 'login':
+      case "login":
         return setLogin(value);
-      case 'email':
+      case "email":
         return setEmail(value);
-      case 'password':
+      case "password":
         return setPassword(value);
       default:
         return;
@@ -59,8 +55,10 @@ export const Registration =({signUpUser})=> {
           placeholder="password"
           onChange={handleChange}
         />
-        <button type="submit" className={s.button}>Submit</button>
+        <button type="submit" className={s.button}>
+          Submit
+        </button>
       </form>
     </>
   );
-}
+};

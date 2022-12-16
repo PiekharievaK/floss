@@ -1,63 +1,60 @@
 import axios from "axios";
-import { toast } from "react-toastify";
-import notiflix from "notiflix";
+import notiflix, { Notify } from "notiflix";
 
 const getAll = async (user, setUserCollection) => {
-  const collectionId =  user.user.collectionId ;
+  const collectionId = user.user.collectionId;
   try {
-    console.log(collectionId);
     const { data } = await axios.get(`/journal/${collectionId}`);
     setUserCollection(data.flossCollection);
     return data;
   } catch (error) {
-    return toast.error(
-      "Something wrong. Please  check that the form is filled out correctly and try again. Or go to sign in."
-    );
+    return Notify.failure(`${error.response.data.message}.`);
   }
 };
 
 const addNewFloss = async (user, userFloss) => {
-  // console.log(user);
   const collectionId = user.user.collectionId;
   try {
     if (!userFloss.label) {
       const DMCfloss = { floss: { ...userFloss, label: "DMC" }, collectionId };
       const { data } = await axios.post("/journal", DMCfloss);
+      Notify.success("Floss is added to your collection");
       return data;
     }
     const otherFloss = { floss: userFloss, collectionId };
     const { data } = await axios.post("/journal", otherFloss);
+    Notify.success("Floss is added to your collection");
     return data;
   } catch (error) {
-    return toast.error("Error add floss.");
+    return Notify.failure(`${error.response.data.message}.`);
   }
 };
-const deleteFloss = async (collectionId, flossId ) => {
-    console.log(collectionId, flossId );
+const deleteFloss = async (collectionId, flossId) => {
   try {
-    const { data } = await axios.put(`/journal/${collectionId}`, {flossId, method: "delete"});
- ;
+    const { data } = await axios.put(`/journal/${collectionId}`, {
+      flossId,
+      method: "delete",
+    });
+    Notify.success("This floss is remove from your collection");
 
     return data;
   } catch (error) {
-    return toast.error(
-      "Something wrong. Please  check that the form is filled out correctly and try again. Or  go to sign up."
-    );
+    return Notify.failure(`${error.response.data.message}.`);
   }
 };
 
 const updateFloss = async (collectionId, flossId, count) => {
-    try {
-        const { data } = await axios.put(`/journal/${collectionId}`, {flossId, count, method: "update" });
-     ;
-    
-        return data;
-      } catch (error) {
-        return toast.error(
-          "Something wrong ehitn update."
-        );
-      }
- 
+  try {
+    const { data } = await axios.put(`/journal/${collectionId}`, {
+      flossId,
+      count,
+      method: "update",
+    });
+    Notify.success("Count is update");
+    return data;
+  } catch (error) {
+    return Notify.failure(`${error.response.data.message}.`);
+  }
 };
 
 const operations = {

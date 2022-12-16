@@ -1,13 +1,26 @@
+import { Notify, Report } from "notiflix";
 import { useState } from "react";
 
-const AddFlossForm = ({AddThreads, onChange, clearThreed }) => {
+const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
   const [addActive, setAddActive] = useState(false);
-  const [label, setLabel] = useState("");
-
+  const [label, setLabel] = useState("DMC");
+  const firm = document.getElementById("firm");
   const onRadioChange = (e) => {
-    clearThreed()
+    clearThreed();
     setLabel(e.target.value);
-   };
+  };
+
+  const addValidation = (e) => {
+    e.preventDefault();
+    if (firm.value === "DMC") {
+      Report.info(
+        "You can`t add it like 'DMC'",
+        "DMC floss have reserved numbers in our Data Base, if your number is not in our collection, and you shure that it is 'DMC' please add it like `dmc`"
+      );
+      return;
+    }
+    AddThreads(e);
+  };
 
   return (
     <div>
@@ -23,8 +36,9 @@ const AddFlossForm = ({AddThreads, onChange, clearThreed }) => {
             value="DMC"
             id="DMC"
             onChange={onRadioChange}
+            checked={label === "DMC"}
           />
-          <label for="DMC">DMC</label>
+          <label htmlFor="DMC">DMC</label>
           <input
             type={"radio"}
             name="flossLabel"
@@ -32,10 +46,10 @@ const AddFlossForm = ({AddThreads, onChange, clearThreed }) => {
             id="Other"
             onChange={onRadioChange}
           />
-          <label for="Other">Other</label>
+          <label htmlFor="Other">Other</label>
           <div>
             {label === "Other" && (
-              <form onSubmit={AddThreads}>
+              <form onSubmit={addValidation}>
                 <input
                   type={"color"}
                   placeholder={"hex"}
@@ -55,6 +69,7 @@ const AddFlossForm = ({AddThreads, onChange, clearThreed }) => {
                   placeholder={"label"}
                   name={"label"}
                   onChange={onChange}
+                  id={"firm"}
                   required
                 ></input>
                 <input
@@ -69,6 +84,7 @@ const AddFlossForm = ({AddThreads, onChange, clearThreed }) => {
                   placeholder={"count"}
                   name={"count"}
                   onChange={onChange}
+                  min={1}
                   required
                 ></input>
                 <button style={{ width: "fitContent", height: "20px" }}>

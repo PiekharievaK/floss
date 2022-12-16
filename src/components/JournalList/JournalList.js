@@ -8,7 +8,7 @@ export const JournalList = ({
   changeThreats,
   deleteOneFloss,
   saveChanges,
-  updateOneFloss
+  updateOneFloss,
 }) => {
   const [filter, setFilter] = useState("All");
   const [filteredFloss, setFilteredFloss] = useState(data);
@@ -18,7 +18,6 @@ export const JournalList = ({
   useEffect(() => {
     setFilteredFloss(data);
     filterFloss(filter);
-    // console.log(filteredFloss, data);
   }, [data]);
 
   const filterFloss = (value) => {
@@ -42,14 +41,11 @@ export const JournalList = ({
     }
     setFilter(e.target.value);
     filterFloss(e.target.value);
-    // console.log(e.target.value);
   };
 
   const edit = (e) => {
     setEditMode(e.target?.parentNode?.id ? e.target.parentNode.id : {});
-    console.log(e.target.parentNode.id);
   };
-
 
   return (
     <div>
@@ -58,7 +54,7 @@ export const JournalList = ({
         <form>
           <input
             type={"search"}
-            placeholder={"search by numder"}
+            placeholder={"search by number or color name"}
             onChange={onSearchFloss}
           ></input>
           <button style={{ width: "fitContent", height: "20px" }}>find</button>
@@ -69,27 +65,27 @@ export const JournalList = ({
           type={"radio"}
           name="flossLabel"
           value="All"
-          id="All"
+          id="All-List"
           checked={filter === "All"}
           onChange={onFilterChange}
         />
-        <label htmlFor="All">All</label>
+        <label htmlFor="All-List">All</label>
         <input
           type={"radio"}
           name="flossLabel"
           value="DMC"
-          id="DMC"
+          id="DMC-List"
           onChange={onFilterChange}
         />
-        <label htmlFor="DMC">DMC</label>
+        <label htmlFor="DMC-List">DMC</label>
         <input
           type={"radio"}
           name="flossLabel"
           value="Other"
-          id="Other"
+          id="Other-List"
           onChange={onFilterChange}
         />
-        <label htmlFor="Other">Other</label>
+        <label htmlFor="Other-List">Other</label>
       </form>
 
       {filteredFloss.length > 0 ? (
@@ -108,7 +104,7 @@ export const JournalList = ({
                 <span className={s.span}>{item.number}</span>
                 <span className={s.span}>{item.colorName}</span>
                 <span className={s.span}>{item.label}</span>
-                {item._id !== editMode  && (
+                {item._id !== editMode && (
                   <span>
                     {"Кількість штук: "}
                     {item.count}
@@ -130,7 +126,13 @@ export const JournalList = ({
                       updateOneFloss={updateOneFloss}
                       setEditMode={setEditMode}
                     />
-                    <button onClick={()=>{deleteOneFloss(item._id)}}>Del</button>{" "}
+                    <button
+                      onClick={() => {
+                        deleteOneFloss(item._id);
+                      }}
+                    >
+                      Del
+                    </button>{" "}
                     <button onClick={edit}>Close changes</button>
                   </span>
                 )}
@@ -138,7 +140,7 @@ export const JournalList = ({
               </li>
             );
           })}
-          </ul>
+        </ul>
       ) : (
         <>
           <h3>no flosses yet</h3>

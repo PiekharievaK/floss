@@ -5,8 +5,6 @@ import { Navigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 function PrivateRoute({isLoggedIn, children }) {
-  // const isLoggedIn = user.status === "unauthorise";
-console.log(isLoggedIn);
   return isLoggedIn === true ? children : <Navigate to="/RegisterPage" replace={true} />;
 }
 PrivateRoute.propTypes = {

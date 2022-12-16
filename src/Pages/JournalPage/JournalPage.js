@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { JournalList } from "../../components/JournalList/JournalList";
 import operations from "../../helpers/journalOperations";
 import AddFlossForm from "../../components/AddFlossForm/addFlossForm";
+import { searchFilter } from "../../helpers/searchFilter";
 
 export const JournalPage = (user) => {
   const [userCollection, setUserCollection] = useState([]);
@@ -19,72 +20,39 @@ export const JournalPage = (user) => {
 
   useEffect(() => {
     setShownFloss(userCollection);
-    console.log(userCollection);
   }, [userCollection]);
 
-  
   const onChange = (e) => {
     setNewThread({ ...newThread, [e.target.name]: e.target.value });
-    console.log({ [e.target.name]: e.target.value });
-    console.log(newThread);
   };
 
-  const clearThreed = () =>{
-    setNewThread({})
-  }
+  const clearThreed = () => {
+    setNewThread({});
+  };
 
-  const AddThreads = async(e) => {
+  const AddThreads = async (e) => {
     e.preventDefault();
-    
-    await addNewFloss(user, newThread)
-    await getAll(user, setUserCollection)
-  //   console.log(
-  //     userCollection,
-  //     userCollection.find((item) => item.umber === newThread.number)
-  //   );
-  //   if (userCollection.find((item) => item.umber === newThread.number)) {
-  //     console.log(
-  //       userCollection,
-  //       userCollection.find((item) => item.umber === newThread.number)
-  //     );
-  //     window.alert(
-  //       "You had this threads already, please find it and change count"
-  //     );
-  //     console.log(newThreadsArr);
-  //     return;
-  //   }
-  //   console.log(newThread);
-  //   userCollection.push(newThread);
-  //   setNewThreadsArr((prevState) => [...prevState, newThread]);
+
+    await addNewFloss(user, newThread);
+    await getAll(user, setUserCollection);
   };
 
   const onSearchFloss = (e) => {
-    if (e.target.value.length === 0) {
-      setShownFloss(userCollection);
-      return;
-    }
-    console.log(shownFloss, e.target.value);
-    const searchFloss = userCollection.filter((item) =>
-      item.number.includes(e.target.value)
-    );
-    console.log(searchFloss);
-    setShownFloss(searchFloss);
-    return searchFloss;
+    searchFilter(e.target.value, userCollection, setShownFloss);
   };
 
-  const deleteOneFloss =async (flossId)=>{
-    await deleteFloss(user.user.collectionId, flossId)
-    await getAll(user, setUserCollection)
-    return
-  }
+  const deleteOneFloss = async (flossId) => {
+    await deleteFloss(user.user.collectionId, flossId);
+    await getAll(user, setUserCollection);
+    return;
+  };
 
-  const updateOneFloss = async(flossId, count)=>{
-   await updateFloss(user.user.collectionId, flossId, count)
-   await await getAll(user, setUserCollection)
-  }
+  const updateOneFloss = async (flossId, count) => {
+    await updateFloss(user.user.collectionId, flossId, count);
+    await await getAll(user, setUserCollection);
+  };
 
   const saveChanges = () => {
-    console.log(newThreadsArr);
     window.alert(JSON.stringify(newThreadsArr));
   };
   const changeThreats = (journalData) => {
@@ -92,7 +60,6 @@ export const JournalPage = (user) => {
       (item) => item.number === journalData.number
     );
 
-    console.log(changeIndex);
     if (changeIndex >= 0) {
       const newArray = [...newThreadsArr];
       newArray[changeIndex] = journalData;
@@ -104,7 +71,11 @@ export const JournalPage = (user) => {
     <div>
       <h1>JOURNAL</h1>
 
-      <AddFlossForm  AddThreads={AddThreads} onChange={onChange} clearThreed={clearThreed} />
+      <AddFlossForm
+        AddThreads={AddThreads}
+        onChange={onChange}
+        clearThreed={clearThreed}
+      />
 
       <JournalList
         data={shownFloss}

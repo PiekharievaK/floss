@@ -1,23 +1,22 @@
-import { useState } from 'react';
-import s from './Login.module.css'
+import { useState } from "react";
+import s from "./Login.module.css";
 
-export const LoginForm = ({logInUser, setUser, setIsLoggedIn})=> {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+export const LoginForm = ({ logInUser, setUser, setIsLoggedIn }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-// console.log("submit");
-// console.log(logInUser);
- logInUser({email, password}, setUser, setIsLoggedIn )
+
+    logInUser({ email, password }, setUser, setIsLoggedIn);
     // dispatch(operations.logInUser({ email: email, password: password }));
   };
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
-      case 'email':
+      case "email":
         return setEmail(value);
-      case 'password':
+      case "password":
         return setPassword(value);
       default:
         return;
@@ -26,8 +25,7 @@ export const LoginForm = ({logInUser, setUser, setIsLoggedIn})=> {
 
   return (
     <>
-     
-      <form onSubmit={handleSubmit} className={s.form} >
+      <form onSubmit={handleSubmit} className={s.form}>
         <input
           name="email"
           value={email}
@@ -44,7 +42,9 @@ export const LoginForm = ({logInUser, setUser, setIsLoggedIn})=> {
           placeholder="password"
           onChange={handleChange}
         />
-        <button type="submit" className={s.button}>Submit</button>
+        <button type="submit" className={s.button}>
+          Submit
+        </button>
       </form>
     </>
   );
