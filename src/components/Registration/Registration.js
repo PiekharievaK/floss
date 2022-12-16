@@ -1,5 +1,5 @@
 import { useState } from "react";
-import s from "./Registration.module.css";
+import s from "./Registration.module.scss";
 
 export const Registration = ({ signUpUser }) => {
   // json, json@mail.ru, json123

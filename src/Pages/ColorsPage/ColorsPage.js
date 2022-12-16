@@ -1,71 +1,40 @@
 import { colors } from "./colors";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { searchFilter } from "../../helpers/searchFilter";
+import { ColorsTable } from "../../components/ColorsTable/ColorsTable";
+import s from "./ColorsPage.module.scss"
 
 export const ColorsPage = () => {
   const [filteredFloss, setFilteredFloss] = useState(colors);
 
-  // useEffect(()=>{}, [filteredFloss])
+  // useEffect(()=>{
+  // пока список не из базы а из документа
+  //   fetchAllFloss
+  // }, [filteredFloss])
 
   const onChange = (e) => {
     searchFilter(e.target.value, colors, setFilteredFloss);
   };
 
-  const createTable = (data) => {
-    return (
-      <>
-        <table>
-          <tbody id="colors">
-            <tr>
-              <td>
-                <div>
-                  <strong>&nbsp;&nbsp; Цвет &nbsp;&nbsp;</strong>
-                </div>
-              </td>
-              <td>
-                <div>
-                  <strong>DMC</strong>
-                </div>
-              </td>
-              <td>
-                <div>
-                  <strong>Color</strong>
-                </div>
-              </td>
-              <td>
-                <div>
-                  <strong>Название цвета</strong>
-                </div>
-              </td>
-            </tr>
-            {data.map((el) => {
-              return (
-                <tr key={el.number}>
-                  <td bgcolor={el.hex}>{el.hex}</td>
-                  <td>{el.number}</td>
-                  <td>{el.colorName}</td>
-                  <td>{el.colorRUname}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </>
-    );
-  };
-
+ 
   return (
-    <>
-      <div>
-        <h1>ColorsPage</h1>
-        <input
+        <div className={s.box}>
+        <h1 className={s.title}>ColorsPage</h1>
+        <div className={s.searchBox}>
+          <p className={s.searchLabel}>Search by floss number or color name</p>
+         <input
           type={"search"}
-          placeholder={"search by number on color name"}
+          placeholder={"enter query"}
           onChange={onChange}
+          className={s.searchInput}
         ></input>
-        {createTable(filteredFloss)}
+        </div>
+        { filteredFloss.length > 0 &&
+        <ColorsTable data={filteredFloss}/>} 
+        { filteredFloss.length <=0 &&<h3 className={s.emptyTitle}>No floss by your request</h3>}
+
       </div>
-    </>
+    
   );
 };
 

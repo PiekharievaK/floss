@@ -1,6 +1,7 @@
 import { Registration } from "../../components/Registration/Registration";
 import { LoginForm } from "../../components/Login/Login";
 import { useState } from "react";
+import s from "./RegisterPage.module.scss"
 
 export const RegisterPage = ({
   signUpUser,
@@ -15,13 +16,13 @@ export const RegisterPage = ({
   };
 
   return (
-    <div>
+    <div style={{minHeight: "500px"}}>
       <h1>RegisterPage</h1>
       <div>
-        <button id={"login"} onClick={handleChange}>
+        <button id={"login"} onClick={handleChange} className={s.button}>
           Login
         </button>
-        <button id={"signup"} onClick={handleChange}>
+        <button id={"signup"} onClick={handleChange} className={s.button}>
           Signup
         </button>
       </div>

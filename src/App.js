@@ -6,10 +6,12 @@ import { JournalPage } from "./Pages/JournalPage/JournalPage";
 import { RegisterPage } from "./Pages/RegisterPage/RegisterPage";
 import { ColorsPage } from "./Pages/ColorsPage/ColorsPage";
 import { Header } from "./components/Header/Header";
+import { Footer } from "./components/Footer/Footer";
 import { PrivateRoute, PublicRoute } from "./components/Routers";
+import { Loading } from "notiflix";
+
 import operations from "./helpers/authOperations";
 import "./App.css";
-import { Loading } from "notiflix";
 
 function App() {
   const { signUpUser, logInUser, logOut, fetchCurrentUser } = operations;
@@ -85,6 +87,7 @@ function App() {
             <Route path="*" element={<Homepage />} />
           </Route>
         </Routes>
+        <Footer/>
       </div>
     )
   );

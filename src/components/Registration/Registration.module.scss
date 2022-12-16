@@ -8,11 +8,19 @@
     display: flex;
     flex-direction: column;
     width: fit-content;
-  /* align-items: center; */
+  /* align-items: center;
   justify-content: center;
  /* text-align: center; */
   }
 
+  @media screen and (min-width: 768px) {
+    .form {
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+      width: fit-content;
+  }
+  }
   
   .input {
     margin: 15px;

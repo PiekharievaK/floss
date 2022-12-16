@@ -1,5 +1,6 @@
 // import { isDisabled } from "@testing-library/user-event/dist/utils";
 import { useState, useEffect } from "react";
+import s from "./counter.module.scss"
 
 export const Counter = ({
   card,
@@ -24,46 +25,32 @@ useEffect(()=>{
   
 }, [counterValue])
 
-  // useEffect(() => {
-  //   localStorage.setItem('arrayTotal', JSON.stringify(total));
-  //   localStorage.setItem('counterValue', JSON.stringify(counterValue));
-  //   localStorage.setItem('cardsArray', JSON.stringify(newCardsArray));
-  // }, [total, newTotal, counterValue, newCardsArray]);
 
   const increment = () => {
     setCounterValue(prevState => (Number(prevState) + step));
-    // setTotal(prevState => prevState + Number(card.price));
-    // setNewTotal(Number(localStorage.getItem('Summary')) + Number(card.price));
 
-    // const cardD = { ...card, counter: counterValue + step };
-
-    // EditColName(cardD);
   };
 
   const decrement = () => {
 
     setCounterValue(prevState => prevState - step);
-    // setTotal(prevState => prevState - Number(card.price));
-    // setNewTotal(Number(localStorage.getItem('Summary')) - Number(card.price));
-    // const cardD = { ...card, counter: counterValue - step };
-    // EditColName(cardD);
+
   };
 
   return (
     <>
      
       <div 
-      style={{display: "inline-flex"}}
-      // className={s.counter_cell} 
+      className={s.counterBox} 
       id="counter">
         <div 
         // className={s.counter_title}
-        >Кількість штук : </div>
+        >count: </div>
         <div
-          //  className={s.counter_holder}
+           className={s.buttonBox}
          >
           <button
-            // className={s.counter_button_minus}
+            className={s.changeButton}
             type="button"
             data-action="decrement"
             disabled={counterValue===0? true: false}
@@ -77,7 +64,7 @@ useEffect(()=>{
            { ` ${counterValue} ` }
           </span>
           <button
-            // className={s.counter_button_plus}
+            className={s.changeButton}
             type="button"
             data-action="increment"
             onClick={increment}
@@ -85,7 +72,7 @@ useEffect(()=>{
             +
           </button>
         </div>
-        <button onClick={()=>{updateOneFloss(card._id, counterValue); setEditMode()}}>Save changes</button>
+        <button className={s.saveButton} onClick={()=>{updateOneFloss(card._id, counterValue); setEditMode()}}>Save changes</button>
       </div>
 
     </>

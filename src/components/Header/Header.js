@@ -9,20 +9,23 @@ const onClick = () =>{
 
     return<div>
          {isLoggedIn ?
-         <><ul>
-            <li className={s.li}><Link to="/">Homepage</Link> </li>
-            <li className={s.li}><Link to="/ColorsPage">ColorsPage</Link> </li>
-            <li className={s.li}><Link to="/UserPage">UserPage</Link> </li>
-            <li className={s.li}><Link to="/JournalPage">Journal</Link> </li>
+         <div className={s.box}>
+          <ul className={s.list}>
+            <li className={s.item}><Link to="/" className={s.link}>Homepage</Link> </li>
+            <li className={s.item}><Link to="/ColorsPage" className={s.link}>ColorsPage</Link> </li>
+            <li className={s.item}><Link to="/UserPage" className={s.link}>UserPage</Link> </li>
+            <li className={s.item}><Link to="/JournalPage" className={s.link}>Journal</Link> </li>
             </ul>
-            <div>user: <span>{userName? userName: user.status}</span> <button onClick={onClick}>logOut</button></div>
-            </>
+            <div className={s.userBox}><span className={s.user}>user:</span> <span className={s.userName}>{userName? userName: user.status}</span> <button className={s.button} onClick={onClick}>logOut</button></div>
+         </div >
             : 
-            <ul>
-            <li className={s.li}><Link to="/">Homepage</Link> </li>
-            <li className={s.li}><Link to="/ColorsPage">ColorsPage</Link> </li>
-            <li className={s.li}><Link to="/RegisterPage">Register</Link> </li>
-        </ul>}
+        <div className={s.box}>
+           <ul className={s.list}>
+            <li className={s.item}><Link to="/">Homepage</Link> </li>
+            <li className={s.item}><Link to="/ColorsPage">ColorsPage</Link> </li>
+            <li className={s.item}><Link to="/RegisterPage">Register</Link> </li>
+          </ul> 
+        </div >}
 
     </div>
 }

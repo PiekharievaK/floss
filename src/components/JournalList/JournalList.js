@@ -48,19 +48,18 @@ export const JournalList = ({
   };
 
   return (
-    <div>
+    <div className={s.box}>
       <h2>My list</h2>
-      <div>
-        <form>
-          <input
-            type={"search"}
-            placeholder={"search by number or color name"}
-            onChange={onSearchFloss}
-          ></input>
-          <button style={{ width: "fitContent", height: "20px" }}>find</button>
-        </form>
+      <div className={s.formBox}>
+        <input
+          type={"search"}
+          placeholder={"search by number or color name"}
+          onChange={onSearchFloss}
+          className={s.searchInput}
+        ></input>
+        {/* <button  className={s.findButton} style={{ width: "fitContent", height: "20px" }}>find</button> */}
       </div>
-      <form>
+      <div className={s.filterBox}>
         <input
           type={"radio"}
           name="flossLabel"
@@ -68,16 +67,22 @@ export const JournalList = ({
           id="All-List"
           checked={filter === "All"}
           onChange={onFilterChange}
+          className={s.radioBotton}
         />
-        <label htmlFor="All-List">All</label>
+        <label htmlFor="All-List" className={s.inputLabel}>
+          All
+        </label>
         <input
           type={"radio"}
           name="flossLabel"
           value="DMC"
           id="DMC-List"
           onChange={onFilterChange}
+          className={s.radioBotton}
         />
-        <label htmlFor="DMC-List">DMC</label>
+        <label htmlFor="DMC-List" className={s.inputLabel}>
+          DMC
+        </label>
         <input
           type={"radio"}
           name="flossLabel"
@@ -86,57 +91,67 @@ export const JournalList = ({
           onChange={onFilterChange}
         />
         <label htmlFor="Other-List">Other</label>
-      </form>
+      </div>
 
       {filteredFloss.length > 0 ? (
-        <ul className={s.ul}>
+        <ul className={s.list}>
           {filteredFloss.map((item) => {
             return (
-              <li key={item._id} id={item._id}>
-                <span
+              <li key={item._id} id={item._id} className={s.item}>
+                <div
+                  className={`${s.div} ${s.hexColor}`}
                   style={{
                     backgroundColor: `${item.hex}`,
                     border: "1px solid black",
                   }}
                 >
                   {item.hex ? item.hex : "unknown"}{" "}
-                </span>
-                <span className={s.span}>{item.number}</span>
-                <span className={s.span}>{item.colorName}</span>
-                <span className={s.span}>{item.label}</span>
+                </div>
+                <div className={`${s.div} ${s.number}`}>{item.number}</div>
+                <div className={`${s.div} ${s.colorName}`} data-tooltip={item.colorName}>
+                  {item.colorName}
+                </div>
+                <div className={`${s.div} ${s.label}`}>{item.label}</div>
                 {item._id !== editMode && (
-                  <span>
-                    {"Кількість штук: "}
+                  <div className={`${s.div} ${s.count}`}>
+                    {"count: "}
                     {item.count}
-                  </span>
+                  </div>
                 )}
                 {item._id !== editMode ? (
                   <button
+                    className={s.editButton}
                     style={{ width: "fitContent", height: "20px" }}
                     onClick={edit}
                   >
                     Edit
                   </button>
                 ) : (
-                  <span>
-                    <Counter
-                      card={item}
-                      cardsArray={filteredFloss}
-                      changeThreats={changeThreats}
-                      updateOneFloss={updateOneFloss}
-                      setEditMode={setEditMode}
-                    />
-                    <button
-                      onClick={() => {
-                        deleteOneFloss(item._id);
-                      }}
-                    >
-                      Del
-                    </button>{" "}
-                    <button onClick={edit}>Close changes</button>
-                  </span>
+                  <div className={s.counterBox}>
+                    <div className={s.counter}>
+                      <Counter
+                        card={item}
+                        cardsArray={filteredFloss}
+                        changeThreats={changeThreats}
+                        updateOneFloss={updateOneFloss}
+                        setEditMode={setEditMode}
+                      />
+<>
+                      <button
+                        className={s.deleteButton}
+                        onClick={() => {
+                          deleteOneFloss(item._id);
+                        }}
+                      >
+                        Delete
+                      </button>{" "}
+                      <button onClick={edit} className={s.closeButton}>
+                        Close changes
+                      </button>
+</>
+                    </div>
+                  </div>
                 )}
-                <span className={s.span}></span>
               </li>
             );
           })}

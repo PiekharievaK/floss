@@ -24,7 +24,7 @@ export const LoginForm = ({ logInUser, setUser, setIsLoggedIn }) => {
   };
 
   return (
-    <>
+    <><h2>Log in</h2>
       <form onSubmit={handleSubmit} className={s.form}>
         <input
           name="email"

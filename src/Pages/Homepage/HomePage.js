@@ -1,4 +1,4 @@
 export  const Homepage =()=>{
 return <>
-<div><h1>HOMEPAGE</h1></div></>
+<div style={{minHeight: "500px"}}><h1>HOMEPAGE</h1></div></>
 }

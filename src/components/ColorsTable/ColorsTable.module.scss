@@ -1,0 +1,11 @@
+.box{
+    min-height: 300px;
+    max-height: 500px;
+    margin: auto;
+    padding: 30px;
+    width: fit-content;
+    overflow-y: auto;
+&::-webkit-scrollbar {
+    width: 0;
+  }
+}
