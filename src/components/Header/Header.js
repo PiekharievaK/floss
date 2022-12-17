@@ -17,7 +17,7 @@ const onClick = () =>{
             <li className={s.item}><Link to="/UserPage" className={s.link}>UserPage</Link> </li>
             <li className={s.item}><Link to="/JournalPage" className={s.link}>Journal</Link> </li>
             </ul>
-            <div className={s.userBox}><span className={s.user}>user:</span> <span className={s.userName}>{userName? userName: user.status}</span> <Button className={s.button} onClick={onClick}>logOut</Button></div>
+            <div className={s.userBox}> <span className={s.userName}>{userName? userName: user.status}</span> <Button className={s.button} onClick={onClick}>logOut</Button></div>
          </div >
             : 
         <div className={s.box}>
