@@ -1,7 +1,7 @@
 import { Notify, Report } from "notiflix";
 import { useState } from "react";
-import Button from "../Button"
-import s from "./addFlossForm.module.scss"
+import Button from "../Button";
+import s from "./addFlossForm.module.scss";
 
 const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
   const [addActive, setAddActive] = useState(false);
@@ -26,39 +26,42 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
 
   return (
     <div>
-      <Button  className={s.openFormButton} onClick={() => setAddActive(!addActive)}>
-       <span> {!addActive ? "Add new floss to my collection" : "Cancel it"} </span>
-     </Button>
-      
+      <Button
+        className={s.openFormButton}
+        onClick={() => setAddActive(!addActive)}
+      >
+        <span>
+          {" "}
+          {!addActive ? "Add new floss to my collection" : "Cancel it"}{" "}
+        </span>
+      </Button>
 
       {addActive && (
         <>
-        <div className={s.radioBox}>
-          <div className={s.radioButton}>
-          <input
-            type={"radio"}
-            name="flossLabel"
-            value="DMC"
-            id="DMC"
-            onChange={onRadioChange}
-            checked={label === "DMC"}
-            className={`${s.radio} radio`}
-            
-          />
-          <label htmlFor="DMC">DMC</label>
-          </div>
-          <div className={s.radioButton}>
-          <input
-            type={"radio"}
-            name="flossLabel"
-            value="Other"
-            id="Other"
-            onChange={onRadioChange}
-            className={`${s.radio} radio`}
-            
-          />
-          <label htmlFor="Other">Other</label>
-          </div>
+          <div className={s.radioBox}>
+            <div className={s.radioButton}>
+              <input
+                type={"radio"}
+                name="flossLabel"
+                value="DMC"
+                id="DMC"
+                onChange={onRadioChange}
+                checked={label === "DMC"}
+                className={`${s.radio} radio`}
+              />
+              <label htmlFor="DMC">DMC</label>
+            </div>
+            <div className={s.radioButton}>
+              <input
+                type={"radio"}
+                name="flossLabel"
+                value="Other"
+                id="Other"
+                onChange={onRadioChange}
+                className={`${s.radio} radio`}
+              />
+              <label htmlFor="Other">Other</label>
+            </div>
           </div>
           <div>
             {label === "Other" && (
@@ -105,9 +108,7 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
                   required
                   className={s.input}
                 ></input>
-                <Button className={s.addButton}>
-                  Add to my list
-                </Button>
+                <Button className={s.addButton}>Add to my list</Button>
               </form>
             )}
             {label === "DMC" && (
@@ -128,9 +129,7 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
                   required
                   className={s.input}
                 ></input>
-                <Button className={s.addButton}>
-                  Add to my list
-                </Button>
+                <Button className={s.addButton}>Add to my list</Button>
               </form>
             )}
           </div>

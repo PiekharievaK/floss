@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 // import classNames from 'classnames';
-import style from './Button.module.scss';
+import style from "./Button.module.scss";
 
 export default function Button({ children, className, ...attrs }) {
   const classes = `${style.button} ${className}`;

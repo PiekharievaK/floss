@@ -5,7 +5,7 @@ import { JournalList } from "../../components/JournalList/JournalList";
 import operations from "../../helpers/journalOperations";
 import AddFlossForm from "../../components/AddFlossForm/addFlossForm";
 import { searchFilter } from "../../helpers/searchFilter";
-import Container from "../../components/Container"
+import Container from "../../components/Container";
 
 export const JournalPage = (user) => {
   const [userCollection, setUserCollection] = useState([]);

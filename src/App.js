@@ -9,7 +9,6 @@ import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
 import { PrivateRoute, PublicRoute } from "./components/Routers";
 
-
 import operations from "./helpers/authOperations";
 import "./App.css";
 
@@ -58,36 +57,36 @@ function App() {
             <Route
               path={"UserPage"}
               element={
-                 <PrivateRoute isLoggedIn={isLoggedIn}>
+                <PrivateRoute isLoggedIn={isLoggedIn}>
                   <UserPage />
-                 </PrivateRoute>
+                </PrivateRoute>
               }
             />
             <Route
               path={"JournalPage"}
               element={
-                 <PrivateRoute isLoggedIn={isLoggedIn}>
+                <PrivateRoute isLoggedIn={isLoggedIn}>
                   <JournalPage user={user} />
-                 </PrivateRoute>
+                </PrivateRoute>
               }
             />
             <Route
               path="Registerpage"
               element={
-                 <PublicRoute isLoggedIn={isLoggedIn}>
+                <PublicRoute isLoggedIn={isLoggedIn}>
                   <RegisterPage
                     signUpUser={signUpUser}
                     logInUser={logInUser}
                     setUser={setUser}
                     setIsLoggedIn={setIsLoggedIn}
                   />
-                 </PublicRoute>
+                </PublicRoute>
               }
             />
             <Route path="*" element={<Homepage />} />
           </Route>
         </Routes>
-        <Footer/>
+        <Footer />
       </div>
     )
   );
