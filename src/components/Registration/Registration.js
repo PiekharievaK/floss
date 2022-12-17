@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../Button";
 import s from "./Registration.module.scss";
 
 export const Registration = ({ signUpUser }) => {
@@ -55,9 +56,9 @@ export const Registration = ({ signUpUser }) => {
           placeholder="password"
           onChange={handleChange}
         />
-        <button type="submit" className={s.button}>
+        <Button type="submit" className={s.button}>
           Submit
-        </button>
+        </Button>
       </form>
     </>
   );

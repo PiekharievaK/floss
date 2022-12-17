@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Counter } from "../Counter/couter";
+import Button from "../Button";
+import Section from "../Section";
 import s from "../JournalList/JournalList.module.scss";
 
 export const JournalList = ({
@@ -60,6 +62,8 @@ export const JournalList = ({
         {/* <button  className={s.findButton} style={{ width: "fitContent", height: "20px" }}>find</button> */}
       </div>
       <div className={s.filterBox}>
+        <form className={s.filterForm}>
+          <div className={s.radioBox}>
         <input
           type={"radio"}
           name="flossLabel"
@@ -67,34 +71,56 @@ export const JournalList = ({
           id="All-List"
           checked={filter === "All"}
           onChange={onFilterChange}
-          className={s.radioBotton}
+          className={`${s.radioBotton} radio`}
         />
         <label htmlFor="All-List" className={s.inputLabel}>
           All
         </label>
+        </ div>
+        <div className={s.radioBox}>
         <input
           type={"radio"}
           name="flossLabel"
           value="DMC"
           id="DMC-List"
           onChange={onFilterChange}
-          className={s.radioBotton}
+          className={`${s.radioBotton} radio`}
         />
         <label htmlFor="DMC-List" className={s.inputLabel}>
           DMC
         </label>
+        </ div>
+        < div className={s.radioBox}>
         <input
           type={"radio"}
           name="flossLabel"
           value="Other"
           id="Other-List"
           onChange={onFilterChange}
+          className={`${s.radioBotton} radio`}
         />
         <label htmlFor="Other-List">Other</label>
+        </ div>
+         </form>
       </div>
 
-      {filteredFloss.length > 0 ? (
+      <Section>
+        {filteredFloss.length > 0 ? (
         <ul className={s.list}>
+          <li key={1}  className={s.item}>
+                <div
+                  className={`${s.div} ${s.hexColor}`}
+                  >
+                  Color
+                </div>
+                <div className={`${s.div} ${s.number}`}>Number</div>
+                <div className={`${s.div} ${s.colorName}`}>
+                  Color name
+                </div>
+                <div className={`${s.div} ${s.label}`}>Label</div>
+                <div className={`${s.div} ${s.count}`}>Count</div>
+                <div className={s.closeButton}></div>
+                </li>
           {filteredFloss.map((item) => {
             return (
               <li key={item._id} id={item._id} className={s.item}>
@@ -105,7 +131,7 @@ export const JournalList = ({
                     border: "1px solid black",
                   }}
                 >
-                  {item.hex ? item.hex : "unknown"}{" "}
+                  {/* {item.hex ? item.hex : "unknown"}{" "} */}
                 </div>
                 <div className={`${s.div} ${s.number}`}>{item.number}</div>
                 <div className={`${s.div} ${s.colorName}`} data-tooltip={item.colorName}>
@@ -114,18 +140,19 @@ export const JournalList = ({
                 <div className={`${s.div} ${s.label}`}>{item.label}</div>
                 {item._id !== editMode && (
                   <div className={`${s.div} ${s.count}`}>
-                    {"count: "}
+                    <span className={s.mobileHide}>{"count: "}</span>
                     {item.count}
                   </div>
+                  
                 )}
                 {item._id !== editMode ? (
-                  <button
+                  <Button
                     className={s.editButton}
                     style={{ width: "fitContent", height: "20px" }}
                     onClick={edit}
                   >
                     Edit
-                  </button>
+                  </Button>
                 ) : (
                   <div className={s.counterBox}>
                     <div className={s.counter}>
@@ -137,17 +164,17 @@ export const JournalList = ({
                         setEditMode={setEditMode}
                       />
 <>
-                      <button
+                      <Button
                         className={s.deleteButton}
                         onClick={() => {
                           deleteOneFloss(item._id);
                         }}
                       >
                         Delete
-                      </button>{" "}
-                      <button onClick={edit} className={s.closeButton}>
-                        Close changes
-                      </button>
+                      </Button>{" "}
+                      <Button onClick={edit} className={s.closeButton}>
+                        Close <span className={s.mobileHide}>changes</span>
+                      </Button>
 </>
                     </div>
                   </div>
@@ -160,7 +187,8 @@ export const JournalList = ({
         <>
           <h3>no flosses yet</h3>
         </>
-      )}
+      )} 
+      </Section>
     </div>
   );
 };

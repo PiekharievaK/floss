@@ -2,6 +2,8 @@ import { colors } from "./colors";
 import { useState } from "react";
 import { searchFilter } from "../../helpers/searchFilter";
 import { ColorsTable } from "../../components/ColorsTable/ColorsTable";
+import Container from "../../components/Container"
+import Section from "../../components/Section"
 import s from "./ColorsPage.module.scss"
 
 export const ColorsPage = () => {
@@ -17,9 +19,8 @@ export const ColorsPage = () => {
   };
 
  
-  return (
-        <div className={s.box}>
-        <h1 className={s.title}>ColorsPage</h1>
+  return (<Container>
+         <h1 className={s.title}>ColorsPage</h1>
         <div className={s.searchBox}>
           <p className={s.searchLabel}>Search by floss number or color name</p>
          <input
@@ -29,11 +30,14 @@ export const ColorsPage = () => {
           className={s.searchInput}
         ></input>
         </div>
-        { filteredFloss.length > 0 &&
-        <ColorsTable data={filteredFloss}/>} 
-        { filteredFloss.length <=0 &&<h3 className={s.emptyTitle}>No floss by your request</h3>}
+         { filteredFloss.length > 0 &&
+          <Section>
+        <ColorsTable data={filteredFloss}/>
+        </Section>} 
+        { filteredFloss.length <=0 && <Section><h3 className={s.emptyTitle}>No floss by your request</h3></Section>}
 
-      </div>
+      
+      </Container>
     
   );
 };

@@ -1,28 +1,32 @@
 [
-    {
+    {"_id": "1",
+    "label": "DMC",
         "hex": "#c4e7e8",
-        "dmcNumber": "3811",
+        "number": "3811",
         "colorName": "Turquoise - vy lt ",
         "colorRUname": "Бирюзовый, оч.св. ",
         "count": 1
     },
-    {
+    {"_id": "2",
+    "label": "DMC",
         "hex": "#e9e9d4",
-        "dmcNumber": "Ecru",
+        "number": "Ecru",
         "colorName": "Ecru",
         "colorRUname": "Кремовый",
         "count": 2
     },
-    {
+    {"_id": "3",
+    "label": "Other",
         "hex": "#c27d45",
-        "dmcNumber": "3776",
+        "number": "3776",
         "colorName": "Mahogany - lt ",
         "colorRUname": "Красного дерева, св. ",
         "count": 3
     },
-    {
+    {"_id":"4",
+    "label": "Other",
         "hex": "#9f3845",
-        "dmcNumber": "150",
+        "number": "150",
         "colorName": "Dusty Rose - ultra vy dk",
         "colorRUname": "Пыльная роза, ультра очень тёмный (оч.т.)",
         "count": 4

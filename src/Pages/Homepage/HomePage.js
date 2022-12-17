@@ -1,4 +1,6 @@
+import Container from "../../components/Container"
+
 export  const Homepage =()=>{
-return <>
-<div style={{minHeight: "500px"}}><h1>HOMEPAGE</h1></div></>
+return <Container>
+<div><h1>HOMEPAGE</h1></div></Container>
 }

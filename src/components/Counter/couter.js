@@ -1,5 +1,6 @@
 // import { isDisabled } from "@testing-library/user-event/dist/utils";
 import { useState, useEffect } from "react";
+import Button from "../Button";
 import s from "./counter.module.scss"
 
 export const Counter = ({
@@ -49,7 +50,7 @@ useEffect(()=>{
         <div
            className={s.buttonBox}
          >
-          <button
+          <Button
             className={s.changeButton}
             type="button"
             data-action="decrement"
@@ -57,22 +58,22 @@ useEffect(()=>{
             onClick={decrement}
           >
             -
-          </button>
+          </Button>
           <span 
           // className={s.counter_total} 
           id="value">
            { ` ${counterValue} ` }
           </span>
-          <button
+          <Button
             className={s.changeButton}
             type="button"
             data-action="increment"
             onClick={increment}
           >
             +
-          </button>
+          </Button>
         </div>
-        <button className={s.saveButton} onClick={()=>{updateOneFloss(card._id, counterValue); setEditMode()}}>Save changes</button>
+        <Button className={s.saveButton} onClick={()=>{updateOneFloss(card._id, counterValue); setEditMode()}}>Save <span className={s.mobileHide}>changes</span></Button>
       </div>
 
     </>

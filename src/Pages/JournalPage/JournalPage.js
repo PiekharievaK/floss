@@ -1,10 +1,11 @@
 // import s from "../JournalPage/JournalPage.module.scss";
-// import journalData from "./journalData";
+import journalData from "./journalData";
 import { useEffect, useState } from "react";
 import { JournalList } from "../../components/JournalList/JournalList";
 import operations from "../../helpers/journalOperations";
 import AddFlossForm from "../../components/AddFlossForm/addFlossForm";
 import { searchFilter } from "../../helpers/searchFilter";
+import Container from "../../components/Container"
 
 export const JournalPage = (user) => {
   const [userCollection, setUserCollection] = useState([]);
@@ -68,7 +69,7 @@ export const JournalPage = (user) => {
   };
 
   return (
-    <div>
+    <Container>
       <h1>JOURNAL</h1>
 
       <AddFlossForm
@@ -85,6 +86,6 @@ export const JournalPage = (user) => {
         saveChanges={saveChanges}
         updateOneFloss={updateOneFloss}
       />
-    </div>
+    </Container>
   );
 };

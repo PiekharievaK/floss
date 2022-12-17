@@ -1,5 +1,6 @@
 .counterBox {
   display: inline-flex;
+  align-items: center;
   margin-right: 5px;
   }
 
@@ -11,7 +12,16 @@
 .changeButton{
     margin-right: 5px;
     margin-left: 5px;
+    @media screen and (max-width: 767px){
+      width: 30px;
+      height: 30px;
+    }
 }
 .saveButton {
   width: max-content;
+  @media screen and (max-width: 767px){
+    height: 30px;
+  }
 }
+
+.mobileHide{display: none;}

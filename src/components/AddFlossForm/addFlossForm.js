@@ -1,5 +1,7 @@
 import { Notify, Report } from "notiflix";
 import { useState } from "react";
+import Button from "../Button"
+import s from "./addFlossForm.module.scss"
 
 const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
   const [addActive, setAddActive] = useState(false);
@@ -24,12 +26,15 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
 
   return (
     <div>
-      <button onClick={() => setAddActive(!addActive)}>
-        {!addActive ? "Add new floss to my collection" : "Cancel it"}
-      </button>
+      <Button  className={s.openFormButton} onClick={() => setAddActive(!addActive)}>
+       <span> {!addActive ? "Add new floss to my collection" : "Cancel it"} </span>
+     </Button>
+      
 
       {addActive && (
         <>
+        <div className={s.radioBox}>
+          <div className={s.radioButton}>
           <input
             type={"radio"}
             name="flossLabel"
@@ -37,25 +42,34 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
             id="DMC"
             onChange={onRadioChange}
             checked={label === "DMC"}
+            className={`${s.radio} radio`}
+            
           />
           <label htmlFor="DMC">DMC</label>
+          </div>
+          <div className={s.radioButton}>
           <input
             type={"radio"}
             name="flossLabel"
             value="Other"
             id="Other"
             onChange={onRadioChange}
+            className={`${s.radio} radio`}
+            
           />
           <label htmlFor="Other">Other</label>
+          </div>
+          </div>
           <div>
             {label === "Other" && (
-              <form onSubmit={addValidation}>
+              <form onSubmit={addValidation} className={s.form}>
                 <input
                   type={"color"}
                   placeholder={"hex"}
                   name={"hex"}
                   onChange={onChange}
                   required
+                  className={s.input}
                 ></input>
                 <input
                   type={"search"}
@@ -63,6 +77,7 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
                   name={"number"}
                   onChange={onChange}
                   required
+                  className={s.input}
                 ></input>
                 <input
                   type={"search"}
@@ -71,6 +86,7 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
                   onChange={onChange}
                   id={"firm"}
                   required
+                  className={s.input}
                 ></input>
                 <input
                   type={"search"}
@@ -78,6 +94,7 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
                   name={"colorName"}
                   onChange={onChange}
                   required
+                  className={s.input}
                 ></input>
                 <input
                   type={"number"}
@@ -86,20 +103,22 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
                   onChange={onChange}
                   min={1}
                   required
+                  className={s.input}
                 ></input>
-                <button style={{ width: "fitContent", height: "20px" }}>
+                <Button className={s.addButton}>
                   Add to my list
-                </button>
+                </Button>
               </form>
             )}
             {label === "DMC" && (
-              <form onSubmit={AddThreads}>
+              <form onSubmit={AddThreads} className={s.form}>
                 <input
                   type={"search"}
                   placeholder={"number"}
                   name={"number"}
                   onChange={onChange}
                   required
+                  className={s.input}
                 ></input>
                 <input
                   type={"number"}
@@ -107,10 +126,11 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
                   name={"count"}
                   onChange={onChange}
                   required
+                  className={s.input}
                 ></input>
-                <button style={{ width: "fitContent", height: "20px" }}>
+                <Button className={s.addButton}>
                   Add to my list
-                </button>
+                </Button>
               </form>
             )}
           </div>

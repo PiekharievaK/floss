@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../Button";
 import s from "./Login.module.css";
 
 export const LoginForm = ({ logInUser, setUser, setIsLoggedIn }) => {
@@ -42,9 +43,9 @@ export const LoginForm = ({ logInUser, setUser, setIsLoggedIn }) => {
           placeholder="password"
           onChange={handleChange}
         />
-        <button type="submit" className={s.button}>
+        <Button type="submit" className={s.button}>
           Submit
-        </button>
+        </Button>
       </form>
     </>
   );

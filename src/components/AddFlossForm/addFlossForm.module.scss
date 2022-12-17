@@ -1,0 +1,44 @@
+.openFormButton{
+    margin: auto;
+height: 40px;
+}
+
+.addButton{
+margin: auto;
+height: 40px;
+@media screen and (min-width: 768px){
+    margin: 0px;
+        }
+}
+
+.radioBox{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+}
+
+.radioButton{
+    margin-right: 10px;
+
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: fit-content;
+    max-width: 100%;
+    @media screen and (max-width: 767px){
+        flex-direction: column;
+            }
+}
+.input{
+    @media screen and (max-width: 767px){
+        margin-right: 0px;
+   margin-bottom: 15px ;
+   }
+   margin-right: 10px;
+}

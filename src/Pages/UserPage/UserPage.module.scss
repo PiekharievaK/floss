@@ -1,5 +1,4 @@
 .box {
-  min-height: 500px;
 }
 
 .list {
@@ -7,6 +6,7 @@
   flex-direction: column;
   width: fit-content;
   align-items: flex-start;
+  padding: 0px;
   list-style: none;
 }
 

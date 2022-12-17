@@ -11,7 +11,7 @@ export const ColorsTable = ({data}) =>{
         </td>
         <td>
           <div>
-            <strong>DMC</strong>
+            <strong>Number</strong>
           </div>
         </td>
         <td>
@@ -21,7 +21,7 @@ export const ColorsTable = ({data}) =>{
         </td>
         <td>
           <div>
-            <strong>Название цвета</strong>
+            <strong className={s.hide}>Название цвета</strong>
           </div>
         </td>
       </tr>
@@ -31,7 +31,7 @@ export const ColorsTable = ({data}) =>{
             <td bgcolor={el.hex}>{el.hex}</td>
             <td>{el.number}</td>
             <td>{el.colorName}</td>
-            <td>{el.colorRUname}</td>
+            <td className={s.hide}>{el.colorRUname}</td>
           </tr>
         );
       })}

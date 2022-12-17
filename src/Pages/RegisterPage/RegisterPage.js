@@ -1,6 +1,8 @@
 import { Registration } from "../../components/Registration/Registration";
 import { LoginForm } from "../../components/Login/Login";
 import { useState } from "react";
+import Container from "../../components/Container"
+import Button from "../../components/Button";
 import s from "./RegisterPage.module.scss"
 
 export const RegisterPage = ({
@@ -16,15 +18,15 @@ export const RegisterPage = ({
   };
 
   return (
-    <div style={{minHeight: "500px"}}>
+    <Container>
       <h1>RegisterPage</h1>
-      <div>
-        <button id={"login"} onClick={handleChange} className={s.button}>
+      <div className={s.buttonBox}>
+        <Button id={"login"} onClick={handleChange} className={s.button}>
           Login
-        </button>
-        <button id={"signup"} onClick={handleChange} className={s.button}>
+        </Button>
+        <Button id={"signup"} onClick={handleChange} className={s.button}>
           Signup
-        </button>
+        </Button>
       </div>
       {regisrtation === "signup" && <Registration signUpUser={signUpUser} />}
       {regisrtation === "login" && (
@@ -34,6 +36,6 @@ export const RegisterPage = ({
           setIsLoggedIn={setIsLoggedIn}
         />
       )}
-    </div>
+    </Container>
   );
 };

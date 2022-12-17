@@ -1,9 +1,13 @@
 .box {
-  min-height: 500px;
   margin: 0;
   overflow-y: auto;
 }
 
+.filterForm{
+    display: flex;
+    margin: auto;
+    width: fit-content;
+}
 .formBox {
 }
 
@@ -11,19 +15,22 @@
 }
 
 .filterBox {
+padding: 20px;
 }
 
 .radioBotton {
+    margin-right: 15px;
 }
 
 .list {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: flex-start;
-  // min-width: 500px;
   width: max-content;
-  // max-width: 50%;
   list-style: none;
+  margin: auto;
+  padding: 0px;
 }
 
 .item {
@@ -33,7 +40,9 @@
   border-bottom: 1px solid black;
   margin-bottom: 5px;
 }
-
+.radioBox{
+    margin-right: 10px;
+}
 .div {
   display: inline-block;
   width: 70px;
@@ -43,15 +52,29 @@
 
 .hexColor {
   height: 25px;
-  width: 65px;
+  width: 30px;
+  @media screen and (min-width: 768px) {
+    width: 65px;
+   }
 }
 .number {
-}
-.colorName {
-  width: 120px;
+  width: 50px;
   text-overflow: ellipsis;
   overflow: hidden;
-  // overflow-x: auto;
+  @media screen and (min-width: 768px) {
+    width: 80px;
+   }
+}
+.colorName {
+  @media screen and (max-width: 767px){
+    display: none;
+  }
+   width: 65px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  @media screen and (min-width: 768px) {
+    width: 120px;
+   }
 }
 .label {
 }
@@ -59,17 +82,38 @@
 .count {
   display: inline-block;
   width: 100px;
+  @media screen and (max-width: 767px){
+    width: 50px;
+  }
+
+}
+
+.mobileHide{
+  @media screen and (max-width: 767px){
+    display: none;
+  }
 }
 .counterBox {
-  position: relative;
   display: flex;
   width: 120px;
 }
 
+
 .counter {
   position: absolute;
   display: flex;
-  height: 25px;
+  flex-wrap: wrap;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  background: #3e4646;
+  color: white;
+  @media screen and (max-width: 767px){
+    left: 136px;
+  }
 }
 .editBotton,
 .deleteButton,
@@ -78,11 +122,12 @@
   align-items: center;
   justify-content: center;
   width: max-content;
+  height: 30px;
   margin-right: 5px;
   margin-left: 5px;
 }
 
-s.label{}
+.label{}
 .deleteButton {
   // width: fit-content;
 }
