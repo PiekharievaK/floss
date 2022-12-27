@@ -58,7 +58,7 @@ padding: 20px;
    }
 }
 .number {
-  width: 50px;
+  width: 70px;
   text-overflow: ellipsis;
   overflow: hidden;
   @media screen and (min-width: 768px) {
@@ -89,6 +89,7 @@ padding: 20px;
 }
 
 .mobileHide{
+  white-space: pre-wrap;
   @media screen and (max-width: 767px){
     display: none;
   }

@@ -2,6 +2,7 @@ import { Registration } from "../../components/Registration/Registration";
 import { LoginForm } from "../../components/Login/Login";
 import { useState } from "react";
 import Container from "../../components/Container"
+import Section from "../../components/Section";
 import Button from "../../components/Button";
 import s from "./RegisterPage.module.scss"
 
@@ -28,6 +29,7 @@ export const RegisterPage = ({
           Signup
         </Button>
       </div>
+      <Section>
       {regisrtation === "signup" && <Registration signUpUser={signUpUser} />}
       {regisrtation === "login" && (
         <LoginForm
@@ -36,6 +38,7 @@ export const RegisterPage = ({
           setIsLoggedIn={setIsLoggedIn}
         />
       )}
+      </Section>
     </Container>
   );
 };

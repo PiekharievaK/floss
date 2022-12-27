@@ -169,7 +169,7 @@ export const JournalList = ({
                             Delete
                           </Button>{" "}
                           <Button onClick={edit} className={s.closeButton}>
-                            Close <span className={s.mobileHide}>changes</span>
+                           Close<span className={s.mobileHide}> changes</span>
                           </Button>
                         </>
                       </div>

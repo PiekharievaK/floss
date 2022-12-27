@@ -1,5 +1,5 @@
 // import s from "../JournalPage/JournalPage.module.scss";
-import journalData from "./journalData";
+// import journalData from "./journalData";
 import { useEffect, useState } from "react";
 import { JournalList } from "../../components/JournalList/JournalList";
 import operations from "../../helpers/journalOperations";

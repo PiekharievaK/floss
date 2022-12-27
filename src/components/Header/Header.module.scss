@@ -31,7 +31,30 @@
 
 .link{
     text-decoration: none;
+    color: black;
+    &:hover{
+        border-bottom: 2px solid black;
+        text-shadow:  0 0 1em rgba(56, 56, 58, 0.603), 0 0 0.2em rgba(63, 63, 73, 0.479);
+    }
 
+}
+
+.active__link{
+    color: rgb(77, 15, 134);
+position: relative
+;
+    text-decoration: none;
+    &:after{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        bottom: -5px;
+        width: 100%;
+        left: 0px;
+        height: 3px;
+        background-color: rgb(77, 15, 134);
+    }
+   
 }
 
 .userBox{
