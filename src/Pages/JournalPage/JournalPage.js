@@ -43,10 +43,12 @@ export const JournalPage = (user) => {
 
   const AddThreads = async (e) => {
     e.preventDefault();
-
-    await addNewFloss(user, newThread);
-    await getAll(user, setUserCollection);
-  };
+try{
+  await addNewFloss(user, newThread);
+  await getAll(user, setUserCollection);
+  }
+  catch (e){console.log('object');}
+};
 
   const onSearchFloss = (e) => {
     searchFilter(e.target.value, userCollection, setShownFloss);
@@ -132,7 +134,7 @@ export const JournalPage = (user) => {
             </>
           }
         />
-        <Route path="Schemas" element={<h2>Not aviable yet</h2>} />
+        <Route path="Schemas" element={<h2>Not available now</h2>} />
       </Routes>
       {/* <AddFlossForm
         AddThreads={AddThreads}

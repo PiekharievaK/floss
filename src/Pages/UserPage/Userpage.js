@@ -17,8 +17,8 @@ export  const UserPage =()=>{
         </ul>}>
         </Route>
 
-        <Route path="WishList" element={<div className={s.box}> <button className={s.botton}><Link to="/UserPage" className={s.link + " " + s.back}>{"< Back"} </Link></button><h2 className={s.title}>Is anviable now</h2></div>}/>
-        <Route path="Profile" element={<div className={s.box}> <button className={s.botton}><Link to="/UserPage" className={s.link + " " + s.back}>{"< Back"} </Link></button><h2 className={s.title}>Is anviable now</h2></div>}/>
+        <Route path="WishList" element={<div className={s.box}> <button className={s.botton}><Link to="/UserPage" className={s.link + " " + s.back}>{"< Back"} </Link></button><h2 className={s.title}>Not available yet</h2></div>}/>
+        <Route path="Profile" element={<div className={s.box}> <button className={s.botton}><Link to="/UserPage" className={s.link + " " + s.back}>{"< Back"} </Link></button><h2 className={s.title}>Not available yet</h2></div>}/>
     </Routes>
     
 

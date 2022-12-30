@@ -21,7 +21,10 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
       );
       return;
     }
-    AddThreads(e);
+   AddThreads(e);
+   console.log(e);
+  e.target.reset()
+ 
   };
 
   return (
@@ -113,7 +116,7 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
               </form>
             )}
             {label === "DMC" && (
-              <form onSubmit={AddThreads} className={s.form}>
+              <form onSubmit={(e)=>{AddThreads(e); e.target.reset()}} className={s.form}>
                 <input
                   type={"search"}
                   placeholder={"number"}
