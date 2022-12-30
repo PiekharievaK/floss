@@ -58,6 +58,7 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
                 value="Other"
                 id="Other"
                 onChange={onRadioChange}
+                checked={label === "Other"}
                 className={`${s.radio} radio`}
               />
               <label htmlFor="Other">Other</label>
