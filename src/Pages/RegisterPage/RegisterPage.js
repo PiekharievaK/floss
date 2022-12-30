@@ -1,10 +1,13 @@
 import { Registration } from "../../components/Registration/Registration";
 import { LoginForm } from "../../components/Login/Login";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Container from "../../components/Container"
 import Section from "../../components/Section";
 import Button from "../../components/Button";
+import { NavLink, Outlet, useNavigate} from "react-router-dom";
+// import { RedirectFunction } from "react-router-dom";
 import s from "./RegisterPage.module.scss"
+
 
 export const RegisterPage = ({
   signUpUser,
@@ -12,32 +15,43 @@ export const RegisterPage = ({
   setUser,
   setIsLoggedIn,
 }) => {
-  const [regisrtation, setRegistration] = useState();
+  const navigate = useNavigate()
 
-  const handleChange = (e) => {
-    setRegistration(e.target.id);
-  };
+useEffect(()=>{
+  // if(window.location.pathname !== "/RegisterPage/LogIn" || window.location.pathname !== "/RegisterPage/SignUp"){
+  if(window.location.pathname === "/RegisterPage" ){
+    navigate('/RegisterPage/LogIn')
+  }
+}, [])
+
+
+
+  const getLinkClassName = ({ isActive }) =>
+isActive ? s.active__link : s.link;
 
   return (
     <Container>
       <h1>RegisterPage</h1>
-      <div className={s.buttonBox}>
-        <Button id={"login"} onClick={handleChange} className={s.button}>
-          Login
-        </Button>
-        <Button id={"signup"} onClick={handleChange} className={s.button}>
-          Signup
-        </Button>
+      <div className={s.linkBox}>
+        {/* <Button id={"login"} className={s.button}> */}
+        <NavLink to="logIn" className={getLinkClassName}>Log In</NavLink>
+          {/* </Button> */}
+        {/* <Button id={"signup"} className={s.button}> */}
+        <NavLink to="SignUp" className={getLinkClassName}>Sign Up</NavLink>
+          {/* </Button> */}
       </div>
       <Section>
-      {regisrtation === "signup" && <Registration signUpUser={signUpUser} />}
-      {regisrtation === "login" && (
+
+     <Outlet/>
+
+      {/* {regisrtation === "signup" ? <Registration signUpUser={signUpUser} />:
+     
         <LoginForm
           logInUser={logInUser}
           setUser={setUser}
           setIsLoggedIn={setIsLoggedIn}
         />
-      )}
+      } */}
       </Section>
     </Container>
   );

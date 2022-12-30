@@ -1,4 +1,21 @@
-.box {
+.title{
+margin: auto;
+}
+.box{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.botton{
+  position: absolute;
+  left: 0px;
+}
+
+.back{
+  color: black;
+  font-weight: 600;
+
 }
 
 .list {

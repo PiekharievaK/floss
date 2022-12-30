@@ -5,6 +5,7 @@
 
 .filterForm{
     display: flex;
+    align-items: center;
     margin: auto;
     width: fit-content;
 }
@@ -16,6 +17,7 @@
 
 .filterBox {
 padding: 20px;
+padding-bottom: 0px;
 }
 
 .radioBotton {
@@ -41,6 +43,7 @@ padding: 20px;
   margin-bottom: 5px;
 }
 .radioBox{
+  height: 28px;
     margin-right: 10px;
 }
 .div {

@@ -7,6 +7,8 @@ import { RegisterPage } from "./Pages/RegisterPage/RegisterPage";
 import { ColorsPage } from "./Pages/ColorsPage/ColorsPage";
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
+import { LoginForm } from "./components/Login/Login";
+import { Registration } from "./components/Registration/Registration";
 import { PrivateRoute, PublicRoute } from "./components/Routers";
 
 import operations from "./helpers/authOperations";
@@ -45,7 +47,7 @@ function App() {
         />
         <Routes>
           <Route path="/" element={<Outlet />}>
-            <Route index element={<Homepage />} />
+            <Route index element={<Homepage isLoggedIn={isLoggedIn} />} />
             <Route
               path="ColorsPage"
               element={
@@ -55,7 +57,7 @@ function App() {
               }
             />
             <Route
-              path={"UserPage"}
+              path={"UserPage/*"}
               element={
                 <PrivateRoute isLoggedIn={isLoggedIn}>
                   <UserPage />
@@ -63,27 +65,42 @@ function App() {
               }
             />
             <Route
-              path={"JournalPage"}
+              path={"JournalPage/*"}
               element={
                 <PrivateRoute isLoggedIn={isLoggedIn}>
                   <JournalPage user={user} />
                 </PrivateRoute>
-              }
-            />
+              }>
+            {/* <Route path="Floss" element={<Registration signUpUser={signUpUser}/>}/>
+            <Route path="Schemas" element={<Registration signUpUser={signUpUser}/>}/> */}
+
+              </Route>
+
             <Route
-              path="Registerpage"
+              path="Registerpage/"
               element={
                 <PublicRoute isLoggedIn={isLoggedIn}>
+
                   <RegisterPage
                     signUpUser={signUpUser}
                     logInUser={logInUser}
                     setUser={setUser}
                     setIsLoggedIn={setIsLoggedIn}
                   />
+                 
                 </PublicRoute>
-              }
-            />
-            <Route path="*" element={<Homepage />} />
+              }>
+              <Route path="SignUp" element={<Registration signUpUser={signUpUser}/>}/>
+              <Route path="LogIn" element={<LoginForm
+                  logInUser={logInUser}
+                  setUser={setUser}
+                  setIsLoggedIn={setIsLoggedIn}
+                 />}/>
+            <Route/>
+
+            <Route path="*" element={<Homepage />} >
+            </Route>
+            </Route>
           </Route>
         </Routes>
         <Footer />

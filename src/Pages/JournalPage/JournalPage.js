@@ -1,11 +1,14 @@
 // import s from "../JournalPage/JournalPage.module.scss";
 // import journalData from "./journalData";
+import { useNavigate, Route, Routes, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { JournalList } from "../../components/JournalList/JournalList";
 import operations from "../../helpers/journalOperations";
 import AddFlossForm from "../../components/AddFlossForm/addFlossForm";
 import { searchFilter } from "../../helpers/searchFilter";
 import Container from "../../components/Container";
+import Section from "../../components/Section";
+import s from "./JournalPage.module.scss"
 
 export const JournalPage = (user) => {
   const [userCollection, setUserCollection] = useState([]);
@@ -14,9 +17,15 @@ export const JournalPage = (user) => {
   const [shownFloss, setShownFloss] = useState(userCollection);
 
   const { getAll, updateFloss, addNewFloss, deleteFloss } = operations;
+  const navigate = useNavigate()
+
 
   useEffect(() => {
     getAll(user, setUserCollection);
+  if(window.location.pathname === "/JournalPage" ){
+    navigate('/JournalPage/Floss')
+  }
+
   }, []);
 
   useEffect(() => {
@@ -68,11 +77,46 @@ export const JournalPage = (user) => {
     } else setNewThreadsArr([...newThreadsArr, journalData]);
   };
 
+  const getLinkClassName = ({ isActive }) =>
+  isActive ? s.active__link : s.link;
+
+
+
   return (
     <Container>
-      <h1>JOURNAL</h1>
+      <Section>
+      {/* <h1>JOURNAL</h1> */}
 
-      <AddFlossForm
+      <div className={s.linkBox}>
+      <NavLink to="Floss" className={getLinkClassName}>Flosses</NavLink>
+
+        <NavLink to="Schemas" className={getLinkClassName}>Schemas</NavLink>
+        </div>
+      <Routes>
+        <Route
+          path="Floss"
+          element={
+            <>
+              <AddFlossForm
+                AddThreads={AddThreads}
+                onChange={onChange}
+                clearThreed={clearThreed}
+              />
+
+              <JournalList
+                data={shownFloss}
+                onSearchFloss={onSearchFloss}
+                changeThreats={changeThreats}
+                deleteOneFloss={deleteOneFloss}
+                saveChanges={saveChanges}
+                updateOneFloss={updateOneFloss}
+              />
+            </>
+          }
+        />
+        <Route path="Schemas" element={<h2>Not aviable yet</h2>} />
+      </Routes>
+      {/* <AddFlossForm
         AddThreads={AddThreads}
         onChange={onChange}
         clearThreed={clearThreed}
@@ -85,7 +129,8 @@ export const JournalPage = (user) => {
         deleteOneFloss={deleteOneFloss}
         saveChanges={saveChanges}
         updateOneFloss={updateOneFloss}
-      />
+      /> */}
+      </Section>
     </Container>
   );
 };
