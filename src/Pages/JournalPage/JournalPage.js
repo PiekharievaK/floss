@@ -2,6 +2,7 @@
 // import journalData from "./journalData";
 import { useNavigate, Route, Routes, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
+import {Confirm} from "notiflix";
 import { JournalList } from "../../components/JournalList/JournalList";
 import operations from "../../helpers/journalOperations";
 import AddFlossForm from "../../components/AddFlossForm/addFlossForm";
@@ -52,9 +53,26 @@ export const JournalPage = (user) => {
   };
 
   const deleteOneFloss = async (flossId) => {
-    await deleteFloss(user.user.collectionId, flossId);
+
+    Confirm.show(
+      'Delete',
+      'Are you shure that you want to delete this floss?',
+      'Yes',
+      'No',
+      async() => {
+        await deleteFloss(user.user.collectionId, flossId);
     await getAll(user, setUserCollection);
     return;
+      },
+      () => {
+      return
+      },
+      {
+        titleColor: "#80bdff",
+        okButtonBackground: "#80bdff"
+      },
+      );
+  
   };
 
   const updateOneFloss = async (flossId, count) => {
