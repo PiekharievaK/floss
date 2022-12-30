@@ -52,11 +52,11 @@ export const JournalPage = (user) => {
     searchFilter(e.target.value, userCollection, setShownFloss);
   };
 
-  const deleteOneFloss = async (flossId) => {
+  const deleteOneFloss = async (flossId, flossLabel, flossNumber) => {
 
     Confirm.show(
       'Delete',
-      'Are you shure that you want to delete this floss?',
+      `Are you shure that you want to delete this floss: "${flossLabel} №${flossNumber}"?`,
       'Yes',
       'No',
       async() => {

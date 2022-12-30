@@ -163,7 +163,7 @@ export const JournalList = ({
                           <Button
                             className={s.deleteButton}
                             onClick={() => {
-                              deleteOneFloss(item._id);
+                              deleteOneFloss(item._id, item.label, item.number);
                             }}
                           >
                             Delete
