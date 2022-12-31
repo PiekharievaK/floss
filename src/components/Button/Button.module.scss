@@ -16,7 +16,7 @@
   border-radius: 20px;
   transition: background-color 100ms linear;
   cursor: pointer;
-  &:hover{
+  &:hover,:focus{
      background-color: rgba(35, 72, 82, 0.808);
   }
 }

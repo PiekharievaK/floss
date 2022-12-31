@@ -58,8 +58,10 @@ isActive ? s.active__link : s.link;
 
     return<div className={s.box}>
         <Container>
-        <div className={s.content}>
-        <NavLink to="/" className={s.logo} onClick={toggleModal}> <img src={logo} alt="Site logo" width={"60px"}></img> </NavLink>
+        <div className={isLoggedIn?s.content: s.unauthoresedContent}>
+            <div className={s.secction}>
+        <NavLink to="/"  onClick={toggleModal}> <img src={logo} alt="Site logo" className={s.logo}></img> </NavLink>
+        </div>
          {isLoggedIn ?<>
          <nav className={s.nav} id="navigation">
           <ul className={s.list}>
@@ -72,7 +74,7 @@ isActive ? s.active__link : s.link;
          <div className={s.userBox}> <span className={s.userName}>{userName? userName: user.status}</span> <Button className={s.button} onClick={onClick}>logOut</Button></div>
          </>
             : 
-            <nav className={s.nav} id="navigation">
+            <nav className={s.unauthoriseNav} id="navigation">
            <ul className={s.list}>
             <li className={s.item}><NavLink to="/"  className={getLinkClassName} onClick={toggleModal}>Homepage</NavLink> </li>
             <li className={s.item}><NavLink to="/ColorsPage"  className={getLinkClassName} onClick={toggleModal}>ColorsPage</NavLink> </li>

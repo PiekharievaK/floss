@@ -14,8 +14,10 @@ const token = {
 };
 
 const signUpUser = async (userData) => {
-  try {
+  Loading.standard(`...Loading`);
+  try { 
     const { data } = await axios.post("/users/signup", userData);
+    Loading.remove();
 
     token.set(data.token);
     notiflix.Confirm.show(
@@ -25,9 +27,12 @@ const signUpUser = async (userData) => {
       "It is Yes too",
       async () => {
         try {
+          Loading.standard(`...Loading`);
           await axios.get(`${data.user.linkToVerify}`);
+          Loading.remove()
           Notify.success("You have successfully registered on our website");
         } catch (error) {
+          Loading.remove();
           Notify.failure(
             `Your email is not verify.  use this link to fix it ${data.user.linkToVerify}`
           );
@@ -38,6 +43,7 @@ const signUpUser = async (userData) => {
           await axios.get(`${data.user.linkToVerify}`);
           Notify.success("You have successfully registered on our website");
         } catch (error) {
+          Loading.remove();
           Notify.failure(
             `Your email is not verify.  use this link to fix it ${data.user.linkToVerify}`
           );
@@ -48,20 +54,24 @@ const signUpUser = async (userData) => {
 
     return data;
   } catch (error) {
+    Loading.remove();
     return Notify.failure(`${error.response.data.message}.`);
   }
 };
 
 const logInUser = async (userData, setUser, setIsLoggedIn) => {
+  Loading.standard(`...Loading`);
   try {
     const { data } = await axios.post("/users/login", userData);
     token.set(data.token);
     setUser(data.user);
     localStorage.setItem("token", data.token);
     setIsLoggedIn(true);
+    Loading.remove()
     Notify.success("You have successfully logged in");
     return data;
   } catch (error) {
+    Loading.remove()
     return Notify.failure(`${error.response.data.message}.`);
   }
 };

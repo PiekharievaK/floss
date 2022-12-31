@@ -20,7 +20,7 @@ export const ColorsPage = () => {
 
  
   return (<Container>
-         <h1 className={s.title}>ColorsPage</h1>
+         <h1 className={s.title}>DMC Collection</h1>
         <div className={s.searchBox}>
           <p className={s.searchLabel}>Search by floss number or color name</p>
          <input

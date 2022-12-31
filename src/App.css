@@ -40,11 +40,11 @@
   }
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-link{
+link {
   text-decoration: none;
 }
 
@@ -61,7 +61,8 @@ link{
   overflow: hidden;
 }
 
-@media screen and (max-width: 767px){
-.modal__active{
-  overflow: hidden;}
+@media screen and (max-width: 767px) {
+  .modal__active {
+    overflow: hidden;
+  }
 }
