@@ -62,11 +62,10 @@ export const Footer = () => {
             <div className={s.footerSection}>
               <address>
                 <ul className={s.contactsList}>
-                  <li className={s.item}>
+                  <li className={s.contactsItem}>
                     {" "}
                     <a
                       href="mailto:pechareva@gmail.com"
-                      target="blank"
                       className={s.contactsLink}
                     >
                       <span className="visually-hidden">Email</span>{" "}
@@ -76,11 +75,10 @@ export const Footer = () => {
                       <span>pechareva@gmail.com</span>
                     </a>
                   </li>
-                  <li className={s.item}>
+                  <li className={s.contactsItem}>
                     {" "}
                     <a
                       href="tel:+380956650827"
-                      target="blank"
                       className={s.contactsLink}
                     >
                       <span className="visually-hidden">Phone</span>{" "}
@@ -90,7 +88,7 @@ export const Footer = () => {
                       <span>+380956650827</span>
                     </a>{" "}
                   </li>
-                  <li className={s.item} onClick={onClick}>
+                  <li className={s.contactsItem} onClick={onClick}>
                     <button className={s.contactsLink}>
                       <span className="visually-hidden">Location</span>{" "}
                       <svg className={s.contactsSvg}>
