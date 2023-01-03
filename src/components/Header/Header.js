@@ -9,9 +9,9 @@ export const Header =({user, logOut, setUser, setIsLoggedIn, isLoggedIn})=>{
     const userName= user.login
     
 
-const onLogOut = (e) =>{
+const onLogOut = async(e) =>{
     const nav = document.getElementById("navigation")
-    logOut(setUser, setIsLoggedIn)
+    await logOut(setUser, setIsLoggedIn)
     nav.classList.contains(s.active) && toggleModal(e)
 }
 
