@@ -1,9 +1,11 @@
+import { useSelector } from "react-redux";
 import Container from "../Container";
 import logo from "../../images/icon2v2.png";
 import sprite from "../../images/sprite.svg";
 import s from "./Footer.module.scss";
 
 export const Footer = () => {
+const isDark = useSelector((state) => state.theme.isDark);
   let animation;
   const onClick = (e) => {
     const heart = document.getElementById("heart");
@@ -35,7 +37,7 @@ export const Footer = () => {
             <div className={s.footerSection}>
               <h3 className={s.title}>Contact us</h3>
               <ul className={s.socList}>
-                <li className={s.socLink}>
+                <li className={isDark? s.socLinkDark :s.socLink}>
                   {" "}
                   <a href="https://github.com/PiekharievaK" target="blank">
                     {" "}
@@ -45,7 +47,7 @@ export const Footer = () => {
                     </svg>{" "}
                   </a>
                 </li>
-                <li className={s.socLink}>
+                <li className={isDark? s.socLinkDark :s.socLink}>
                   {" "}
                   <a
                     href="https://www.linkedin.com/in/kateryna-piekharieva/"
@@ -66,7 +68,7 @@ export const Footer = () => {
                     {" "}
                     <a
                       href="mailto:pechareva@gmail.com"
-                      className={s.contactsLink}
+                      className={isDark? s.contactsLinkDark :s.contactsLink}
                     >
                       <span className="visually-hidden">Email</span>{" "}
                       <svg className={s.contactsSvg}>
@@ -79,7 +81,7 @@ export const Footer = () => {
                     {" "}
                     <a
                       href="tel:+380956650827"
-                      className={s.contactsLink}
+                      className={isDark? s.contactsLinkDark :s.contactsLink}
                     >
                       <span className="visually-hidden">Phone</span>{" "}
                       <svg className={s.contactsSvg}>
@@ -89,7 +91,7 @@ export const Footer = () => {
                     </a>{" "}
                   </li>
                   <li className={s.contactsItem} onClick={onClick}>
-                    <button className={s.contactsLink}>
+                    <button className={isDark? s.contactsLinkDark :s.contactsLink}>
                       <span className="visually-hidden">Location</span>{" "}
                       <svg className={s.contactsSvg}>
                         <use href={`${sprite}#icon-map2`}></use>
@@ -105,7 +107,7 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <div className={s.underline}></div>
+        <div className={isDark?s.underlineDark:s.underline}></div>
         <div className={s.copyright}>Ukraine 2022 </div>
       </Container>
     </footer>

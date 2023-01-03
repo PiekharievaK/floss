@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .linkBox{
     display: flex;
     align-items: center;
@@ -12,13 +14,17 @@
     cursor: pointer;
 }
 .link{
-    color: black;
+    color: $main-text-color;
     text-decoration: none;
 }
 
-.active__link{
+.linkDark{
+    color: $accent-text-collor;
+}
+
+.active__link,
+.active__linkDark{
     position: relative;
-    color: rgb(78, 10, 73);
     text-decoration: none;
     &:after{
         content: "";
@@ -27,6 +33,20 @@
         left: -3px;
         width: calc(100% + 6px);
         height: 3px;
-        background-color: rgb(78, 10, 73);
+     }
+}
+
+
+.active__link{
+    color: $link-hover;
+    &:after{
+        background-color: $link-hover;
+    }
+
+}
+.active__linkDark{
+    color: $buttons-color;
+    &:after{
+        background-color: $buttons-color;
     }
 }

@@ -1,5 +1,5 @@
 import { Outlet, Route, Routes } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Homepage } from "./Pages/Homepage/HomePage";
 import { UserPage } from "./Pages/UserPage/Userpage";
 import { JournalPage } from "./Pages/JournalPage/JournalPage";
@@ -10,6 +10,7 @@ import { Footer } from "./components/Footer/Footer";
 import { LoginForm } from "./components/Login/Login";
 import { Registration } from "./components/Registration/Registration";
 import { PrivateRoute, PublicRoute } from "./components/Routers";
+import { ThemeContext } from './components/ThemeProvider/ThemeProvider';
 
 import operations from "./helpers/authOperations";
 import "./App.css";
@@ -20,6 +21,8 @@ function App() {
   const [user, setUser] = useState({ status: "unauthorise" });
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [pending, setPending] = useState(true);
+
+  const [{theme}] = useContext(ThemeContext);
 
   useEffect(() => {
     setPending(true);
@@ -37,7 +40,10 @@ function App() {
 
   return (
     !pending && (
-      <div className="App">
+      <div className="App" style={{
+        backgroundColor: theme.backgroundColor,
+        color: theme.color,
+      }}>
         <Header
           user={user}
           logOut={logOut}

@@ -5,6 +5,7 @@ import Container from "../../components/Container"
 import Section from "../../components/Section";
 import Button from "../../components/Button";
 import { NavLink, Outlet, useNavigate} from "react-router-dom";
+import { useSelector } from "react-redux";
 // import { RedirectFunction } from "react-router-dom";
 import s from "./RegisterPage.module.scss"
 
@@ -15,10 +16,11 @@ export const RegisterPage = ({
   setUser,
   setIsLoggedIn,
 }) => {
+  const isDark = useSelector((state) => state.theme.isDark);
   const navigate = useNavigate()
-
-useEffect(()=>{
-  // if(window.location.pathname !== "/RegisterPage/LogIn" || window.location.pathname !== "/RegisterPage/SignUp"){
+  
+  useEffect(()=>{
+    // if(window.location.pathname !== "/RegisterPage/LogIn" || window.location.pathname !== "/RegisterPage/SignUp"){
   if(window.location.pathname === "/RegisterPage" ){
     navigate('/RegisterPage/LogIn')
   }
@@ -27,7 +29,7 @@ useEffect(()=>{
 
 
   const getLinkClassName = ({ isActive }) =>
-isActive ? s.active__link : s.link;
+isActive ? (isDark?s.active__linkDark :s.active__link ) : (isDark?s.linkDark :s.link );
 
   return (
     <Container>

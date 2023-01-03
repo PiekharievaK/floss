@@ -1,3 +1,6 @@
+@import "../../styles/variables.scss";
+
+
 .box {
   margin: 0;
   padding-top: 10px;
@@ -12,12 +15,13 @@
   align-items: center;
   width: 200px;
   @media screen and (max-width: 767px) {
-    &:not(:last-child){
-    margin-bottom: 10px;}
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
-  
 }
 .title {
+  color: $main-text-color;
   margin-top: 0px;
   @media screen and (max-width: 767px) {
     margin-bottom: 5px;
@@ -36,15 +40,25 @@
   width: 100%;
   margin-bottom: 10px;
 }
-.underline {
+.underline,
+.underlineDark {
   left: 0px;
   position: absolute;
   display: block;
   width: 100vw;
-  border-bottom: 1px solid grey;
+
 }
+
+.underline{
+  border-bottom: 1px solid $underline-color;
+}
+.underlineDark{
+  border-bottom: 1px solid $underline-color-dark
+}
+
 .copyright {
   padding-top: 5px;
+  color: $main-text-color;
 }
 .content {
   display: flex;
@@ -63,12 +77,13 @@
   padding: 0px;
   margin: 0px;
   @media screen and (max-width: 767px) {
-      align-items: center;
-        // flex-direction: column-reverse;
-    }
+    align-items: center;
+    // flex-direction: column-reverse;
+  }
 }
 
-.socLink {
+.socLink,
+.socLinkDark {
   margin: 5px;
 
   & svg:hover,
@@ -76,33 +91,46 @@
     fill: inherit;
   }
 }
+
 .socLink,
 .contactsLink {
   padding: 0px;
   align-items: center;
-//   margin-bottom: 10px;
+  //   margin-bottom: 10px;
   border: none;
   background-color: transparent;
   color: black;
   &:hover,
   :focus {
-    fill: rgb(75, 18, 75);
+    fill: $link-hover;
   }
 }
 
-.contactsLink {
+.contactsLink,
+.contactsLinkDark {
   display: flex;
+  border: none;
   position: relative;
+  background-color: transparent;
   text-decoration: none;
   cursor: pointer;
+}
 
+.socLinkDark,
+.contactsLinkDark {
+  color: $main-text-color;
+  &:hover,
+  :focus {
+    fill: $link-hover-dark;
+  }
 }
 .contactsItem {
   display: flex;
   align-items: center;
-  
-  &:not(:last-child){
-    margin-bottom: 10px;}
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .svg {
@@ -119,8 +147,8 @@
 }
 
 .locationSvg {
-    position: absolute;
-    right: -25px;
+  position: absolute;
+  right: -25px;
 
   fill: rgb(177, 28, 28);
   width: 20px;

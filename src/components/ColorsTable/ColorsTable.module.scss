@@ -1,14 +1,22 @@
-.box{
+@import "../../styles/variables.scss";
+
+.box,
+.boxDark{
     min-height: 300px;
     max-height: 500px;
     margin: auto;
     padding: 30px;
     width: fit-content;
     overflow-y: auto;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 4px 10px $shadow-color;
+    background-color: $table-collor;
 &::-webkit-scrollbar {
     width: 0;
   }
+}
+.boxDark{
+  background-color: $table-collor-dark;
+  // box-shadow: 0px 4px 10px $shadow-dark-color;
 }
 
 .hide{

@@ -10,16 +10,18 @@ import { searchFilter } from "../../helpers/searchFilter";
 import Container from "../../components/Container";
 import Section from "../../components/Section";
 import s from "./JournalPage.module.scss"
+import { useSelector } from "react-redux"
 
 export const JournalPage = (user) => {
   const [userCollection, setUserCollection] = useState([]);
   const [newThreadsArr, setNewThreadsArr] = useState([]);
   const [newThread, setNewThread] = useState({});
   const [shownFloss, setShownFloss] = useState(userCollection);
-
+  
   const { getAll, updateFloss, addNewFloss, deleteFloss } = operations;
   const navigate = useNavigate()
-
+  
+  const isDark = useSelector((state) => state.theme.isDark);
 
   useEffect(() => {
     getAll(user, setUserCollection);
@@ -98,7 +100,7 @@ try{
   };
 
   const getLinkClassName = ({ isActive }) =>
-  isActive ? s.active__link : s.link;
+  isActive ? (isDark?s.active__linkDark :s.active__link) : (isDark?s.linkDark :s.link);
 
 
 

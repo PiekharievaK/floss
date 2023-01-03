@@ -1,8 +1,12 @@
+import { useSelector } from "react-redux";
 import s from "./ColorsTable.module.scss";
 
 export const ColorsTable = ({ data }) => {
+  const isDark = useSelector((state) => state.theme.isDark);
+
+  
   return (
-    <div className={s.box}>
+    <div className={isDark? s.boxDark:s.box  }>
       <table>
         <tbody id="colors">
           <tr>

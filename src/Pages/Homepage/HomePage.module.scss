@@ -1,5 +1,42 @@
-.list{
+@import "../../styles/variables.scss";
+
+.authorisedText,
+.authorisedTextDark{
     margin: 0px;
     padding: 0px;
     text-align: start;
+    
 }
+.authorisedText{
+    & a:hover{
+        color:   $title-color
+    }
+}
+.authorisedTextDark{
+    & a {color: $accent-color;
+        &:hover{
+            color:   $title-color
+        }}
+
+}
+.text{
+    & a {color: $buttons-hover;
+    &:hover{
+        color:   $title-color
+    }}
+}
+.textDark{
+   & a { color: $accent-color;
+    &:hover{
+        color:   $title-color
+    }}
+}
+
+.authorisedText,
+.authorisedTextDark,
+.textDark,
+.text{
+& a{
+    font-weight: 600;
+    text-decoration: none;
+}}

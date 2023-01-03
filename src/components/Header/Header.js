@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom"
 import Button from "../Button"
 import Container from "../Container"
 import logo from "../../images/icon1.png"
+import ThemeButton from "../ThemeProvider/ThemeButton"
 import s from "../Header/Header.module.scss"
 
 export const Header =({user, logOut, setUser, setIsLoggedIn, isLoggedIn})=>{
@@ -69,19 +70,23 @@ isActive ? s.active__link : s.link;
             <li className={s.item}><NavLink to="/ColorsPage" className={getLinkClassName} onClick={toggleModal}>ColorsPage</NavLink> </li>
             <li className={s.item}><NavLink to="/UserPage" className={getLinkClassName} onClick={toggleModal}>UserPage</NavLink> </li>
             <li className={s.item}><NavLink to="/JournalPage" className={getLinkClassName} onClick={toggleModal}>Journal</NavLink> </li>
-            </ul>
+            </ul><div className={s.buttonBox}>
+            <ThemeButton/> 
+            </div>
          </nav >
          <div className={s.userBox}> <span className={s.userName}>{userName? userName: user.status}</span> <Button className={s.button} onClick={onClick}>logOut</Button></div>
          </>
             : 
-            <nav className={s.unauthoriseNav} id="navigation">
+           <> <nav className={s.unauthoriseNav} id="navigation">
            <ul className={s.list}>
             <li className={s.item}><NavLink to="/"  className={getLinkClassName} onClick={toggleModal}>Homepage</NavLink> </li>
             <li className={s.item}><NavLink to="/ColorsPage"  className={getLinkClassName} onClick={toggleModal}>ColorsPage</NavLink> </li>
             <li className={s.item}><NavLink to="/RegisterPage"  className={getLinkClassName} onClick={toggleModal}>Register</NavLink> </li>
           </ul> 
         </nav >
+        <ThemeButton/></>
     }
+     {/* <ThemeButton/> */}
     <Button onClick={toggleModal} className={s.burgerButton}>•••</Button>
             </div>
             </Container>
