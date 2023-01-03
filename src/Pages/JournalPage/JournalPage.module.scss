@@ -46,9 +46,9 @@
 }
 
 .active__link{
-   color: $link-hover;
+   color: $buttons-hover;
    &::after {
-      background-color: $link-hover;
+      background-color: $buttons-hover;
    }
 }
 .active__linkDark{
