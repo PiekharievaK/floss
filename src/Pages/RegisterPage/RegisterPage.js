@@ -1,9 +1,9 @@
-import { Registration } from "../../components/Registration/Registration";
-import { LoginForm } from "../../components/Login/Login";
-import { useEffect, useState } from "react";
+// import { Registration } from "../../components/Registration/Registration";
+// import { LoginForm } from "../../components/Login/Login";
+import { useEffect} from "react";
 import Container from "../../components/Container"
 import Section from "../../components/Section";
-import Button from "../../components/Button";
+// import Button from "../../components/Button";
 import { NavLink, Outlet, useNavigate} from "react-router-dom";
 import { useSelector } from "react-redux";
 // import { RedirectFunction } from "react-router-dom";

@@ -1,8 +1,8 @@
 import {React,useState,useEffect} from "react"
 import { useSelector, useDispatch } from "react-redux";
 import { toggleTheme } from '../../redux/theme/themeSlice';
-import BsSun from "../../images/icon.png"
-import BsMoon from "../../images/radio2.png"
+// import BsSun from "../../images/icon.png"
+// import BsMoon from "../../images/radio2.png"
 
 // import { BsSun, BsMoon } from 'react-icons/bs';
 

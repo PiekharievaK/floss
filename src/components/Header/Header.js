@@ -9,8 +9,10 @@ export const Header =({user, logOut, setUser, setIsLoggedIn, isLoggedIn})=>{
     const userName= user.login
     
 
-const onClick = () =>{
+const onLogOut = (e) =>{
+    const nav = document.getElementById("navigation")
     logOut(setUser, setIsLoggedIn)
+    nav.classList.contains(s.active) && toggleModal(e)
 }
 
 
@@ -74,7 +76,7 @@ isActive ? s.active__link : s.link;
             <ThemeButton/> 
             </div>
          </nav >
-         <div className={s.userBox}> <span className={s.userName}>{userName? userName: user.status}</span> <Button className={s.button} onClick={onClick}>logOut</Button></div>
+         <div className={s.userBox}> <span className={s.userName}>{userName? userName: user.status}</span> <Button className={s.button} onClick={onLogOut}>logOut</Button></div>
          </>
             : 
            <> <nav className={s.unauthoriseNav} id="navigation">

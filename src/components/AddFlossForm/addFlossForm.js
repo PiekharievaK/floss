@@ -1,4 +1,4 @@
-import { Notify, Report } from "notiflix";
+import { Report } from "notiflix";
 import { useState } from "react";
 import Button from "../Button";
 import s from "./addFlossForm.module.scss";

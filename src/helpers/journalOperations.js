@@ -1,5 +1,5 @@
 import axios from "axios";
-import notiflix, { Notify } from "notiflix";
+import { Notify } from "notiflix";
 
 const getAll = async (user, setUserCollection) => {
   const collectionId = user.user.collectionId;
