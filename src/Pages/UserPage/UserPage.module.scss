@@ -40,6 +40,13 @@ margin: auto;
   text-decoration: none;
 
 }
+
+.link{
+  color: $buttons-hover;
+  &:hover{
+    color: $main-text-color;
+  }
+}
 .linkDark{
   color: $buttons-color;
   &:hover{
