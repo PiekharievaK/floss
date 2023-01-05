@@ -31,23 +31,24 @@ const AddFloss = async(e) =>{
     await AddSchemaFloss(e, label, number, count)
     setNumber("")
     setCount("")
+    e.target.reset()
 
 }
 
     console.log("Schema mount");
-    return (<div>
+    return (<div>{schemasData.length>0?
     <div className={s.cardBox}>
     {schemasData.map((schema) => {
         return (<div className={s.card}> <h4>name: {schema.name}</h4> 
         <div className={s.addForm}> 
         <form onSubmit={AddFloss} id={schema.name}>
-            <select name="label" id="label" onChange={handleChange}>
+            <select name="label" id="label" onChange={handleChange} >
                 <option name="label" value="DMC" >DMC</option>
                  <option name="Amhor" value="Amhor">Amhor</option>
                  <option name="Other" value="Other">Other</option>
             </select>
-            <input type="string" placeholder="number" name="number" onChange={handleChange}></input>
-            <input type="number" placeholder="count" name="count" onChange={handleChange}></input> 
+            <input type="string" placeholder="number" name="number"  onChange={handleChange} required className={s.input}></input>
+            <input type="number" placeholder="count" name="count" onChange={handleChange} required className={s.input}></input> 
             <button type="submit">add new floss</button></form> </div>
         <div className={s.flossesBox}>
          {schema.flossesList.map(item=>{
@@ -56,7 +57,7 @@ const AddFloss = async(e) =>{
             })}</ul></div>)
         })} </div>
         </div>)
-    })}</div>
-    </div>
+    })}</div> : <h3> No schemas yet</h3>
+  }</div>
     )
 }
