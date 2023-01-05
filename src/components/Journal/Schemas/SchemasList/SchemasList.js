@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import s from "./SchemasList.module.scss"
 
 export const SchemasList= ({schemasData, AddSchemaFloss}) =>{
@@ -6,17 +6,19 @@ export const SchemasList= ({schemasData, AddSchemaFloss}) =>{
     // const [label, setLabel] = useState("DMC");
     const [number, setNumber] = useState("");
     const [count, setCount] = useState("");
+    const [selectedFile, setSelectedFile]= useState("")
+    // const [uploaded, setUploaded] = useState({})
 
-    const handleChange = ({ target: { name, value } }) => {
-        console.log( name, value);
-        switch (name) {
-          // case "label":
-          //   console.log(value);
-          //   return value===""?setLabel(value): setLabel("DMC") ;
+const filePicker = useRef(null)
+
+    const handleChange = ({target}) => {
+        switch (target.name) {
+          case "selectedFile":
+            return setSelectedFile(target.files[0]);
           case "number":
-            return setNumber(value);
+            return setNumber(target.value);
           case "count":
-            return setCount(value);
+            return setCount(target.value);
           default:
             return;
         }
@@ -35,6 +37,20 @@ const AddFloss = async(e) =>{
 
 }
 
+const pickFile=()=>{
+  // ссылка на видео
+  // https://www.youtube.com/watch?v=xPRA4jixCX8&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%9D%D0%B5%D0%BF%D0%BE%D0%BC%D0%BD%D1%8F%D1%89%D0%B8%D0%B9
+  filePicker.current.click()
+}
+const AddSchemaImage = () =>{
+  console.log(selectedFile);
+  const formData = new FormData()
+  formData.append("image", selectedFile)
+console.log(formData);
+  // fetch ("http//localhost:3002", {method: "POST", body: formData})
+  // axios.post("/schemas/image", formData)
+}
+
     console.log("Schema mount");
     return (<div>{schemasData.length>0?
     <div className={s.cardBox}>
@@ -49,7 +65,11 @@ const AddFloss = async(e) =>{
             </select>
             <input type="string" placeholder="number" name="number"  onChange={handleChange} required className={s.input}></input>
             <input type="number" placeholder="count" name="count" onChange={handleChange} required className={s.input}></input> 
-            <button type="submit">add new floss</button></form> </div>
+            <button type="submit">add new floss</button>
+            </form> 
+            <button onClick={pickFile}>Pick schema image</button>
+            <button onClick={AddSchemaImage}>Add image</button>
+            <input type="file" name="selectedFile" accept=".png, .jpg" onChange={handleChange} className="visually-hidden" ref={filePicker}></input></div>
         <div className={s.flossesBox}>
          {schema.flossesList.map(item=>{
             return (<div ><span>{item.label}</span><ul className={s.flossesList}>{item.flosses.map(floss=>{
