@@ -1,0 +1,23 @@
+@import "/src/styles/variables.scss";
+.cardBox{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.card{
+margin: 20px;    
+padding: 20px;
+background-color: $table-collor;
+    border: 1px solid black;
+}
+
+.flossesBox{
+    display: flex;
+}
+
+.flossesList{
+    margin: 10px;
+    padding: 0px;
+    list-style: none;
+}

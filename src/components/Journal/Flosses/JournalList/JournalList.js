@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Counter } from "../Counter/couter";
-import Button from "../Button";
-import Section from "../Section";
+import { Counter } from "../../../Counter/couter";
+import Button from "../../../Button";
+import Section from "../../../Section";
 import s from "../JournalList/JournalList.module.scss";
 
 export const JournalList = ({
