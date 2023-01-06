@@ -74,7 +74,7 @@ AddImage(e, e.target.id, url )
     <div className={s.cardBox}>
     {schemasData.map((schema, idx) => {
         return (<div className={s.card}> <h4>name: {schema.name}</h4> 
-        {schema.image && schema.image.urlPreview.trim() !== "" && <img src={schema.image.urlPreview} alt="img" onClick={(e)=>{console.log(e.target.style.width); e.target.style.width = e.target.style.width === "50px" ?"300px": "50px"}} style={{width: "50px"}}></img>}
+        {schema.image && schema.image.urlPreview.trim() !== "" && <img src={schema.image.urlPreview} alt="img" onClick={(e)=>{console.log(e.target.style.width); e.target.style.width = e.target.style.width === "50px" ?"300px": "50px"}} style={{width: "50px", cursor: "pointer"}}></img>}
         <div className={s.addForm}> 
         <form onSubmit={AddFloss} id={schema.name}>
             <select name="label" id="label" onChange={handleChange} >
@@ -87,7 +87,7 @@ AddImage(e, e.target.id, url )
             <button type="submit">add new floss</button>
             </form> 
             <button onClick={pickFile} id="file" className="file">Pick schema image</button>
-            <button  id={idx}onClick={AddSchemaImage}>Add image</button>
+            <button  id={idx}onClick={AddSchemaImage}>{schema.image?.urlPreview.trim()?"Change image":"Add image"}</button>
             <input type="file" name="selectedFile" accept=".png, .jpg" onChange={handleChange} className="visually-hidden" ref={filePicker}></input></div>
         <div className={s.flossesBox}>
          {schema.flossesList.map(item=>{
