@@ -2,6 +2,11 @@
   {
     "_id": "1",
     "name": "Schema1",
+    "image": {
+      "urlPreview": "-",
+      "urlFull": "",
+      "deleteUrl": ""
+    },
     "flossesList": [
       {
         "label": "DMC",
@@ -25,12 +30,16 @@
           { "number": "2", "count": 12 }
         ]
       }
-      
     ]
   },
   {
     "_id": "2",
     "name": "Schema2",
+    "image": {
+      "urlPreview": "",
+      "urlFull": "",
+      "deleteUrl": ""
+    },
     "flossesList": [
       {
         "label": "Amhor",
@@ -54,7 +63,6 @@
           { "number": "2", "count": 12 }
         ]
       }
-  
     ]
   }
 ]

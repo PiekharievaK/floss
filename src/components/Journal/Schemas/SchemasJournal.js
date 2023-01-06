@@ -30,11 +30,21 @@ const AddSchemaFloss = (e, label, number, count) =>{
     
 }
 
+const AddImage = (e, schemaIdx, image) =>{
+    // console.log(schemas[schemaIdx].image.urlPreview);
+    schemas[schemaIdx].image?
+    schemas[schemaIdx].image.urlPreview = image:schemas[schemaIdx].image={   urlPreview: image,
+    urlFull: "",
+    deleteUrl: ""} 
+    console.log(schemas[schemaIdx].image.urlPreview);
+    setSchemas(schemas)
+}
+
 
 
     return <>
     <AddSchemaForm schemasData={schemas} AddSchema={AddSchema}/>
-    <SchemasList schemasData={schemas} AddSchemaFloss={AddSchemaFloss}/>
+    <SchemasList schemasData={schemas} AddSchemaFloss={AddSchemaFloss} AddImage={AddImage}/>
     </>
 
 }

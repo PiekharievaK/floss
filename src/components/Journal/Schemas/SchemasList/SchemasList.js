@@ -1,13 +1,13 @@
 import { useState, useRef } from "react";
 import s from "./SchemasList.module.scss"
 
-export const SchemasList= ({schemasData, AddSchemaFloss}) =>{
+export const SchemasList= ({schemasData, AddSchemaFloss, AddImage}) =>{
 
     // const [label, setLabel] = useState("DMC");
     const [number, setNumber] = useState("");
     const [count, setCount] = useState("");
     const [selectedFile, setSelectedFile]= useState("")
-    // const [uploaded, setUploaded] = useState({})
+    const [uploaded, setUploaded] = useState({})
 
 const filePicker = useRef(null)
 
@@ -38,15 +38,33 @@ const AddFloss = async(e) =>{
 }
 
 const pickFile=()=>{
-  // ссылка на видео
+  // ссылка на видео отправки файла
   // https://www.youtube.com/watch?v=xPRA4jixCX8&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%9D%D0%B5%D0%BF%D0%BE%D0%BC%D0%BD%D1%8F%D1%89%D0%B8%D0%B9
+
+// ссылка на видео получения файла 
+// https://www.youtube.com/watch?v=9tA-wuuLkPw&ab_channel=%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%9D%D0%B5%D0%BF%D0%BE%D0%BC%D0%BD%D1%8F%D1%89%D0%B8%D0%B9
+
+
   filePicker.current.click()
 }
-const AddSchemaImage = () =>{
+const AddSchemaImage = (e) =>{
   console.log(selectedFile);
   const formData = new FormData()
   formData.append("image", selectedFile)
 console.log(formData);
+const binaryData = []
+// чтоб отправить надо через формдату
+// binaryData.push(formData)
+// чтоб сразу посмотреть не через фом дату а напрямую 
+binaryData.push(selectedFile)
+
+const url = URL.createObjectURL(new Blob(binaryData, {type: "	application/octet-stream"}))
+console.log(url);
+setUploaded(url)
+AddImage(e, e.target.id, url )
+
+// https://api.imgbb.com/ сайт для загрузки картинки и получения ссылки на неё
+
   // fetch ("http//localhost:3002", {method: "POST", body: formData})
   // axios.post("/schemas/image", formData)
 }
@@ -54,8 +72,9 @@ console.log(formData);
     console.log("Schema mount");
     return (<div>{schemasData.length>0?
     <div className={s.cardBox}>
-    {schemasData.map((schema) => {
+    {schemasData.map((schema, idx) => {
         return (<div className={s.card}> <h4>name: {schema.name}</h4> 
+        {schema.image && schema.image.urlPreview.trim() !== "" && <img src={schema.image.urlPreview} alt="img" onClick={(e)=>{console.log(e.target.style.width); e.target.style.width = e.target.style.width === "50px" ?"300px": "50px"}} style={{width: "50px"}}></img>}
         <div className={s.addForm}> 
         <form onSubmit={AddFloss} id={schema.name}>
             <select name="label" id="label" onChange={handleChange} >
@@ -67,8 +86,8 @@ console.log(formData);
             <input type="number" placeholder="count" name="count" onChange={handleChange} required className={s.input}></input> 
             <button type="submit">add new floss</button>
             </form> 
-            <button onClick={pickFile}>Pick schema image</button>
-            <button onClick={AddSchemaImage}>Add image</button>
+            <button onClick={pickFile} id="file" className="file">Pick schema image</button>
+            <button  id={idx}onClick={AddSchemaImage}>Add image</button>
             <input type="file" name="selectedFile" accept=".png, .jpg" onChange={handleChange} className="visually-hidden" ref={filePicker}></input></div>
         <div className={s.flossesBox}>
          {schema.flossesList.map(item=>{
