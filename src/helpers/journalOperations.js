@@ -1,11 +1,11 @@
 import axios from "axios";
 import { Notify } from "notiflix";
 
-const getAll = async (user, setUserCollection) => {
-  const collectionId = user.user.collectionId;
+const getAllFlosses = async (user, setUserCollection) => {
+  const collectionId = user.collectionId;
   try {
-    const { data } = await axios.get(`/journal/${collectionId}`);
-    setUserCollection(data.flossCollection);
+    const { data } = await axios.get(`/flosses/${collectionId}`);
+    setUserCollection(data);
     return data;
   } catch (error) {
     return Notify.failure(`${error.response.data.message}.`);
@@ -13,16 +13,16 @@ const getAll = async (user, setUserCollection) => {
 };
 
 const addNewFloss = async (user, userFloss) => {
-  const collectionId = user.user.collectionId;
+  const collectionId = user.collectionId;
   try {
     if (!userFloss.label) {
       const DMCfloss = { floss: { ...userFloss, label: "DMC" }, collectionId };
-      const { data } = await axios.post("/journal", DMCfloss);
+      const { data } = await axios.post("/flosses", DMCfloss);
       Notify.success("Floss is added to your collection");
       return data;
     }
     const otherFloss = { floss: userFloss, collectionId };
-    const { data } = await axios.post("/journal", otherFloss);
+    const { data } = await axios.post("/flosses", otherFloss);
     Notify.success("Floss is added to your collection");
     return data;
   } catch (error) {
@@ -31,12 +31,12 @@ const addNewFloss = async (user, userFloss) => {
 };
 const deleteFloss = async (collectionId, flossId) => {
   try {
-    const { data } = await axios.put(`/journal/${collectionId}`, {
+    const { data } = await axios.put(`/flosses/${collectionId}`, {
       flossId,
       method: "delete",
     });
     Notify.success("This floss is remove from your collection");
-
+    
     return data;
   } catch (error) {
     return Notify.failure(`${error.response.data.message}.`);
@@ -45,7 +45,7 @@ const deleteFloss = async (collectionId, flossId) => {
 
 const updateFloss = async (collectionId, flossId, count) => {
   try {
-    const { data } = await axios.put(`/journal/${collectionId}`, {
+    const { data } = await axios.put(`/flosses/${collectionId}`, {
       flossId,
       count,
       method: "update",
@@ -57,10 +57,33 @@ const updateFloss = async (collectionId, flossId, count) => {
   }
 };
 
+
+const getAllSchemas = async (user, setSchemas) => {
+  const collectionId = user.collectionId;
+  try {
+    const { data } = await axios.get(`/schemas/${collectionId}`);
+    setSchemas(data);
+    return data;
+  } catch (error) {
+    return Notify.failure(`${error.response.data.message}.`);
+  }
+};
+
+const addNewSchema = async(user, schema) =>{
+  const collectionId = user.collectionId;
+  try {
+    const { data } = await axios.post(`/schemas`, {collectionId, schema})
+  return data;
+} catch (error) {
+  return Notify.failure(`${error.response.data.message}.`);
+}
+}
 const operations = {
-  getAll,
+  getAllFlosses,
   updateFloss,
   addNewFloss,
   deleteFloss,
+  getAllSchemas,
+  addNewSchema,
 };
 export default operations;

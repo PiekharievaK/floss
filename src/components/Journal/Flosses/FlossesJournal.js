@@ -15,13 +15,13 @@ export const FlossesJournal = ({user}) =>{
     const [newThread, setNewThread] = useState({});
     const [shownFloss, setShownFloss] = useState(userCollection);
     
-    const { getAll, updateFloss, addNewFloss, deleteFloss } = operations;
+    const { getAllFlosses, updateFloss, addNewFloss, deleteFloss } = operations;
     const navigate = useNavigate()
     
     const isDark = useSelector((state) => state.theme.isDark);
   
     useEffect(() => {
-      getAll(user, setUserCollection);
+      getAllFlosses(user, setUserCollection);
     if(window.location.pathname === "/JournalPage" ){
       navigate('/JournalPage/Floss')
     }
@@ -44,7 +44,7 @@ export const FlossesJournal = ({user}) =>{
       e.preventDefault();
   try{
     await addNewFloss(user, newThread);
-    await getAll(user, setUserCollection);
+    await getAllFlosses(user, setUserCollection);
     }
     catch (e){console.log('object');}
   };
@@ -61,8 +61,8 @@ export const FlossesJournal = ({user}) =>{
         'Yes',
         'No',
         async() => {
-          await deleteFloss(user.user.collectionId, flossId);
-      await getAll(user, setUserCollection);
+          await deleteFloss(user.collectionId, flossId);
+      await getAllFlosses(user, setUserCollection);
       return;
         },
         () => {
@@ -77,8 +77,8 @@ export const FlossesJournal = ({user}) =>{
     };
   
     const updateOneFloss = async (flossId, count) => {
-      await updateFloss(user.user.collectionId, flossId, count);
-      await await getAll(user, setUserCollection);
+      await updateFloss(user.collectionId, flossId, count);
+      await getAllFlosses(user, setUserCollection);
     };
   
     const saveChanges = () => {

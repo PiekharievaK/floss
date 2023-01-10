@@ -6,7 +6,7 @@ import Section from "../../components/Section";
 import s from "./JournalPage.module.scss";
 import { useSelector } from "react-redux";
 
-export const JournalPage = (user) => {
+export const JournalPage = ({user}) => {
   const navigate = useNavigate();
 
   const isDark = useSelector((state) => state.theme.isDark);
@@ -42,7 +42,7 @@ export const JournalPage = (user) => {
         </div>
         <Routes>
           <Route path="Floss" element={<FlossesJournal user={user} />} />
-          <Route path="Schemas" element={<SchemasJournal />} />
+          <Route path="Schemas" element={<SchemasJournal user={user} />} />
         </Routes>
       </Section>
     </Container>

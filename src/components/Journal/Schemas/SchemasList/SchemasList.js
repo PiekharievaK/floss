@@ -1,4 +1,6 @@
-import { useState, useRef } from "react";
+import axios from "axios";
+import { useState, useRef, useEffect } from "react";
+import { ImageCropper } from "../../../ImageCropper/ImageCropper";
 import s from "./SchemasList.module.scss"
 
 export const SchemasList= ({schemasData, AddSchemaFloss, AddImage}) =>{
@@ -8,6 +10,33 @@ export const SchemasList= ({schemasData, AddSchemaFloss, AddImage}) =>{
     const [count, setCount] = useState("");
     const [selectedFile, setSelectedFile]= useState("")
     const [uploaded, setUploaded] = useState({})
+    const [croppedImage, setCroppedImage] = useState(null)
+
+    const imgBB__Key = '8b00f487a83dc973ed09ca7e8799f625'
+    const imgbbUrl = `https://api.imgbb.com/1/upload/schemas?key=${imgBB__Key}`
+
+useEffect(()=>{
+  const formData = new FormData()
+  formData.append("image", selectedFile)
+console.log(formData);
+const binaryData = []
+
+binaryData.push(selectedFile)
+
+const url = URL.createObjectURL(new Blob(binaryData, {type: "	application/octet-stream"}))
+// console.log(url);
+setUploaded(url)
+
+}, [selectedFile])
+
+
+useEffect(()=>{
+  console.log(croppedImage);
+  console.log(schemasData);
+  
+}, [croppedImage])
+
+
 
 const filePicker = useRef(null)
 
@@ -48,20 +77,26 @@ const pickFile=()=>{
   filePicker.current.click()
 }
 const AddSchemaImage = (e) =>{
-  console.log(selectedFile);
+//   console.log(selectedFile);
   const formData = new FormData()
-  formData.append("image", selectedFile)
-console.log(formData);
-const binaryData = []
-// чтоб отправить надо через формдату
-// binaryData.push(formData)
-// чтоб сразу посмотреть не через фом дату а напрямую 
-binaryData.push(selectedFile)
+  // formData.append("image", selectedFile)
+  formData.append("image", croppedImage.split(",").pop())
+  formData.append("name", `schema-${e.target.name}-image`)
+  
+// console.log(formData);
+// const binaryData = []
+// // чтоб отправить надо через формдату
+// // binaryData.push(formData)
+// // чтоб сразу посмотреть не через фом дату а напрямую 
+// binaryData.push(croppedImage)
 
-const url = URL.createObjectURL(new Blob(binaryData, {type: "	application/octet-stream"}))
-console.log(url);
-setUploaded(url)
-AddImage(e, e.target.id, url )
+// const url = URL.createObjectURL(new Blob(binaryData, {type: "	application/octet-stream"}))
+// console.log(url);
+
+
+// setUploaded(url)
+AddImage(e, e.target.id, croppedImage)
+fetch(imgbbUrl, {method: "POST", body:formData})
 
 // https://api.imgbb.com/ сайт для загрузки картинки и получения ссылки на неё
 
@@ -74,7 +109,10 @@ AddImage(e, e.target.id, url )
     <div className={s.cardBox}>
     {schemasData.map((schema, idx) => {
         return (<div className={s.card}> <h4>name: {schema.name}</h4> 
-        {schema.image && schema.image.urlPreview.trim() !== "" && <img src={schema.image.urlPreview} alt="img" onClick={(e)=>{console.log(e.target.style.width); e.target.style.width = e.target.style.width === "50px" ?"300px": "50px"}} style={{width: "50px", cursor: "pointer"}}></img>}
+        {schema.image && schema.image.urlPreview.trim() !== ""  &&  
+        <img src={schema.image.urlPreview} alt="img" onClick={(e)=>{console.log(e.target.style.width); e.target.style.width = e.target.style.width === "50px" ?"300px": "50px"}} style={{width: "50px", cursor: "pointer"}}></img>}
+        {selectedFile  &&
+       <ImageCropper image={uploaded} setCroppedImage={setCroppedImage} setSelectedFile={setSelectedFile}/>}
         <div className={s.addForm}> 
         <form onSubmit={AddFloss} id={schema.name}>
             <select name="label" id="label" onChange={handleChange} >
@@ -87,10 +125,10 @@ AddImage(e, e.target.id, url )
             <button type="submit">add new floss</button>
             </form> 
             <button onClick={pickFile} id="file" className="file">Pick schema image</button>
-            <button  id={idx}onClick={AddSchemaImage}>{schema.image?.urlPreview.trim()?"Change image":"Add image"}</button>
+            <button  id={idx} name={schema.name}onClick={AddSchemaImage}>{schema.image?.urlPreview.trim()?"Change image":"Add image"}</button>
             <input type="file" name="selectedFile" accept=".png, .jpg" onChange={handleChange} className="visually-hidden" ref={filePicker}></input></div>
         <div className={s.flossesBox}>
-         {schema.flossesList.map(item=>{
+         {schema.flossesList?.map(item=>{
             return (<div ><span>{item.label}</span><ul className={s.flossesList}>{item.flosses.map(floss=>{
                 return (<li className={s.item} key={floss.number + floss.count}> number:<span>{floss.number}</span> count:<span>{floss.count}</span></li>)
             })}</ul></div>)

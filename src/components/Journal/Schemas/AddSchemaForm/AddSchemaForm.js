@@ -1,14 +1,15 @@
 import { useState } from "react"
+import axios from "axios"
 import s from "./AddSchemaForm.module.scss"
 
 
-export  const AddSchemaForm =({schemasData, AddSchema})=>{
+export  const AddSchemaForm =({user, schemasData, addSchema})=>{
 const [name,  setName] = useState("")
-
 const onSubmit= async(e) =>{
     e.preventDefault()
-    const newData = [...schemasData, {_id: 3, name, flossesList: []}]
-    await AddSchema(newData)
+
+    addSchema({name})
+
     setName("")
     console.log(schemasData);
 }
