@@ -6,7 +6,7 @@ import operations from "../../../helpers/journalOperations";
 
 export const SchemasJournal = ({ user }) => {
   const [schemas, setSchemas] = useState([]);
-  const { getAllSchemas, addNewSchema } = operations;
+  const { getAllSchemas, addNewSchema, addSchemaImage } = operations;
 
   useEffect(() => {
     getAllSchemas(user, setSchemas);
@@ -49,17 +49,19 @@ export const SchemasJournal = ({ user }) => {
     console.log(schemas);
   };
 
-  const AddImage = (e, schemaIdx, image) => {
+  const AddImage = (e, schemaId, image) => {
     // console.log(schemas[schemaIdx].image.urlPreview);
-    schemas[schemaIdx].image
-      ? (schemas[schemaIdx].image.urlPreview = image)
-      : (schemas[schemaIdx].image = {
-          urlPreview: image,
-          urlFull: "",
-          deleteUrl: "",
-        });
-    console.log(schemas[schemaIdx].image.urlPreview);
-    setSchemas(schemas);
+    // schemas[schemaIdx].image
+    //   ? (schemas[schemaIdx].image.urlPreview = image)
+    //   : (schemas[schemaIdx].image = {
+    //       urlPreview: image,
+    //       urlFull: "",
+    //       deleteUrl: "",
+    //     });
+    // console.log(schemas[schemaIdx].image.urlPreview);
+    addSchemaImage(user, schemaId, image)
+    // setSchemas(schemas);
+    
   };
 
   return (

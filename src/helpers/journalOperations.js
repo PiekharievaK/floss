@@ -36,7 +36,7 @@ const deleteFloss = async (collectionId, flossId) => {
       method: "delete",
     });
     Notify.success("This floss is remove from your collection");
-    
+
     return data;
   } catch (error) {
     return Notify.failure(`${error.response.data.message}.`);
@@ -57,7 +57,6 @@ const updateFloss = async (collectionId, flossId, count) => {
   }
 };
 
-
 const getAllSchemas = async (user, setSchemas) => {
   const collectionId = user.collectionId;
   try {
@@ -69,15 +68,28 @@ const getAllSchemas = async (user, setSchemas) => {
   }
 };
 
-const addNewSchema = async(user, schema) =>{
+const addNewSchema = async (user, schema) => {
   const collectionId = user.collectionId;
   try {
-    const { data } = await axios.post(`/schemas`, {collectionId, schema})
-  return data;
-} catch (error) {
-  return Notify.failure(`${error.response.data.message}.`);
-}
-}
+    const { data } = await axios.post(`/schemas`, { collectionId, schema });
+    return data;
+  } catch (error) {
+    return Notify.failure(`${error.response.data.message}.`);
+  }
+};
+const addSchemaImage = async (user, schemaId, image) => {
+  const collectionId = user.collectionId;
+  try {
+    console.log(image);
+    const { data } = await axios.post(`/schemas/image`, image, {
+      headers: { collectionId, schemaId },
+    });
+    return data;
+  } catch (error) {
+    return Notify.failure(`${error.response.data.message}.`);
+  }
+};
+
 const operations = {
   getAllFlosses,
   updateFloss,
@@ -85,5 +97,6 @@ const operations = {
   deleteFloss,
   getAllSchemas,
   addNewSchema,
+  addSchemaImage,
 };
 export default operations;

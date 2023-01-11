@@ -12,8 +12,6 @@ export const SchemasList= ({schemasData, AddSchemaFloss, AddImage}) =>{
     const [uploaded, setUploaded] = useState({})
     const [croppedImage, setCroppedImage] = useState(null)
 
-    const imgBB__Key = '8b00f487a83dc973ed09ca7e8799f625'
-    const imgbbUrl = `https://api.imgbb.com/1/upload/schemas?key=${imgBB__Key}`
 
 useEffect(()=>{
   const formData = new FormData()
@@ -77,31 +75,23 @@ const pickFile=()=>{
   filePicker.current.click()
 }
 const AddSchemaImage = (e) =>{
-//   console.log(selectedFile);
+  console.log(e);
   const formData = new FormData()
-  // formData.append("image", selectedFile)
   formData.append("image", croppedImage.split(",").pop())
   formData.append("name", `schema-${e.target.name}-image`)
   
 // console.log(formData);
 // const binaryData = []
 // // чтоб отправить надо через формдату
-// // binaryData.push(formData)
+// binaryData.push(formData)
 // // чтоб сразу посмотреть не через фом дату а напрямую 
 // binaryData.push(croppedImage)
 
 // const url = URL.createObjectURL(new Blob(binaryData, {type: "	application/octet-stream"}))
 // console.log(url);
 
+AddImage(e, e.target.id, formData)
 
-// setUploaded(url)
-AddImage(e, e.target.id, croppedImage)
-fetch(imgbbUrl, {method: "POST", body:formData})
-
-// https://api.imgbb.com/ сайт для загрузки картинки и получения ссылки на неё
-
-  // fetch ("http//localhost:3002", {method: "POST", body: formData})
-  // axios.post("/schemas/image", formData)
 }
 
     console.log("Schema mount");
@@ -125,7 +115,7 @@ fetch(imgbbUrl, {method: "POST", body:formData})
             <button type="submit">add new floss</button>
             </form> 
             <button onClick={pickFile} id="file" className="file">Pick schema image</button>
-            <button  id={idx} name={schema.name}onClick={AddSchemaImage}>{schema.image?.urlPreview.trim()?"Change image":"Add image"}</button>
+            <button  id={schema._id} name={schema.name}onClick={AddSchemaImage}>{schema.image?.urlPreview.trim()?"Change image":"Add image"}</button>
             <input type="file" name="selectedFile" accept=".png, .jpg" onChange={handleChange} className="visually-hidden" ref={filePicker}></input></div>
         <div className={s.flossesBox}>
          {schema.flossesList?.map(item=>{

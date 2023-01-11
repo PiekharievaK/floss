@@ -16,7 +16,7 @@ const onSubmit= async(e) =>{
 
     return <>
     <form onSubmit={onSubmit}>
-<input type="text" placeholder="schema name" value={name} onChange={(e)=>{setName(e.target.value)}}></input>
+<input type="text" placeholder="schema name" value={name} onChange={(e)=>{setName(e.target.value)}} required></input>
 <button type="submit"> Add schema</button>      
     </form>
     </>
