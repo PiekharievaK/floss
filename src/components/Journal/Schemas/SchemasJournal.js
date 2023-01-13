@@ -6,19 +6,23 @@ import operations from "../../../helpers/journalOperations";
 
 export const SchemasJournal = ({ user }) => {
   const [schemas, setSchemas] = useState([]);
-  const { getAllSchemas, addNewSchema, addSchemaImage, addSchemaFloss } = operations;
+  const { getAllSchemas, addNewSchema, addSchemaImage, addSchemaFloss, deleteSchemaFloss, deleteSchema } = operations;
+  const collectionId = user.collectionId
 
   useEffect(() => {
-    getAllSchemas(user, setSchemas);
+    getAllSchemas(collectionId, setSchemas);
   }, []);
 
   const addSchema = async(schema) => {
-    await addNewSchema(user, schema);
-    getAllSchemas(user, setSchemas)
+    await addNewSchema(collectionId, schema);
+   await getAllSchemas(collectionId, setSchemas)
   };
+const deleteOneSchema = async (schemaId) =>{
+    deleteSchema(collectionId, schemaId)
 
+}
   const AddFloss = async(e, floss) => {
-await addSchemaFloss(user, e.target.id, floss )
+await addSchemaFloss(collectionId, e.target.id, floss )
 
     // const schemaIdx = schemas.findIndex(
     //   (schema) => schema.name === e.target.id
@@ -61,10 +65,14 @@ await addSchemaFloss(user, e.target.id, floss )
     //       deleteUrl: "",
     //     });
     // console.log(schemas[schemaIdx].image.urlPreview);
-    addSchemaImage(user, schemaId, image)
+    addSchemaImage(collectionId, schemaId, image)
     // setSchemas(schemas);
     
   };
+
+  const deleteFloss = async(schemaId, label, flossId)=>{
+    deleteSchemaFloss(collectionId, schemaId, label, flossId)
+  }
 
   return (
     <>
@@ -73,6 +81,8 @@ await addSchemaFloss(user, e.target.id, floss )
         schemasData={schemas}
         AddSchemaFloss={AddFloss}
         AddImage={AddImage}
+        deleteSchemaFloss={deleteFloss}
+        deleteOneSchema={deleteOneSchema}
       />
     </>
   );

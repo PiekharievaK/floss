@@ -57,8 +57,7 @@ const updateFloss = async (collectionId, flossId, count) => {
   }
 };
 
-const getAllSchemas = async (user, setSchemas) => {
-  const collectionId = user.collectionId;
+const getAllSchemas = async (collectionId, setSchemas) => {
   try {
     const { data } = await axios.get(`/schemas/${collectionId}`);
     setSchemas(data);
@@ -68,8 +67,7 @@ const getAllSchemas = async (user, setSchemas) => {
   }
 };
 
-const addNewSchema = async (user, schema) => {
-  const collectionId = user.collectionId;
+const addNewSchema = async (collectionId, schema) => {
   try {
     const { data } = await axios.post(`/schemas`, { collectionId, schema });
     return data;
@@ -77,8 +75,8 @@ const addNewSchema = async (user, schema) => {
     return Notify.failure(`${error.response.data.message}.`);
   }
 };
-const addSchemaImage = async (user, schemaId, image) => {
-  const collectionId = user.collectionId;
+const addSchemaImage = async (collectionId, schemaId, image) => {
+
   try {
     console.log(image);
     const { data } = await axios.post(`/schemas/image`, image, {
@@ -89,9 +87,8 @@ const addSchemaImage = async (user, schemaId, image) => {
     return Notify.failure(`${error.response.data.message}.`);
   }
 };
-const addSchemaFloss = async(user, schemaId, floss) =>{
-  const collectionId = user.collectionId;
-  try {
+const addSchemaFloss = async(collectionId, schemaId, floss) =>{
+   try {
     console.log(floss);
     const { data } = await axios.post(`/schemas/floss`, floss, {
       headers: { collectionId, schemaId },
@@ -102,6 +99,30 @@ const addSchemaFloss = async(user, schemaId, floss) =>{
   }
 }
 
+const deleteSchemaFloss = async(collectionId, schemaId, label, flossId) =>{
+  try {
+   console.log(collectionId);
+    const { data } = await axios.put(`/schemas/deleteFloss`, {label, flossId}, {
+      headers: { collectionId, schemaId },
+    });
+    return data;
+  } catch (error) {
+    return Notify.failure(`${error.response.data.message}.`);
+  }
+}
+const deleteSchema = async(collectionId, schemaId) =>{
+  try {
+    console.log(collectionId);
+     const { data } = await axios.delete(`/schemas`, {
+       headers: { collectionId, schemaId },
+     });
+     return data;
+   } catch (error) {
+     return Notify.failure(`${error.response.data.message}.`);
+   }
+}
+
+
 const operations = {
   getAllFlosses,
   updateFloss,
@@ -110,6 +131,8 @@ const operations = {
   getAllSchemas,
   addNewSchema,
   addSchemaImage,
-  addSchemaFloss
+  addSchemaFloss,
+  deleteSchemaFloss,
+  deleteSchema
 };
 export default operations;
