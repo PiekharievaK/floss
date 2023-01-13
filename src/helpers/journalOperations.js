@@ -89,6 +89,18 @@ const addSchemaImage = async (user, schemaId, image) => {
     return Notify.failure(`${error.response.data.message}.`);
   }
 };
+const addSchemaFloss = async(user, schemaId, floss) =>{
+  const collectionId = user.collectionId;
+  try {
+    console.log(floss);
+    const { data } = await axios.post(`/schemas/floss`, floss, {
+      headers: { collectionId, schemaId },
+    });
+    return data;
+  } catch (error) {
+    return Notify.failure(`${error.response.data.message}.`);
+  }
+}
 
 const operations = {
   getAllFlosses,
@@ -98,5 +110,6 @@ const operations = {
   getAllSchemas,
   addNewSchema,
   addSchemaImage,
+  addSchemaFloss
 };
 export default operations;

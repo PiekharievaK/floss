@@ -6,7 +6,7 @@ import operations from "../../../helpers/journalOperations";
 
 export const SchemasJournal = ({ user }) => {
   const [schemas, setSchemas] = useState([]);
-  const { getAllSchemas, addNewSchema, addSchemaImage } = operations;
+  const { getAllSchemas, addNewSchema, addSchemaImage, addSchemaFloss } = operations;
 
   useEffect(() => {
     getAllSchemas(user, setSchemas);
@@ -17,36 +17,38 @@ export const SchemasJournal = ({ user }) => {
     getAllSchemas(user, setSchemas)
   };
 
-  const AddSchemaFloss = (e, label, number, count) => {
-    const schemaIdx = schemas.findIndex(
-      (schema) => schema.name === e.target.id
-    );
-    const currentLableIdx = schemas[schemaIdx].flossesList.findIndex(
-      (flosses) => flosses.label === label
-    );
+  const AddFloss = async(e, floss) => {
+await addSchemaFloss(user, e.target.id, floss )
 
-    const currentSchema = schemas[schemaIdx];
-    const currentLableFlosses = currentSchema.flossesList[currentLableIdx];
+    // const schemaIdx = schemas.findIndex(
+    //   (schema) => schema.name === e.target.id
+    // );
+    // const currentLableIdx = schemas[schemaIdx].flossesList.findIndex(
+    //   (flosses) => flosses.label === label
+    // );
 
-    if (!currentLableFlosses) {
-      schemas[schemaIdx].flossesList =
-        currentSchema.flossesList.length > 0
-          ? [
-              ...currentSchema.flossesList,
-              { label, flosses: [{ number, count }] },
-            ]
-          : [{ label, flosses: [{ number, count }] }];
-      console.log(currentSchema);
-      setSchemas(schemas);
-      console.log(schemas);
-      return;
-    }
-    currentLableFlosses.flosses = [
-      ...currentLableFlosses.flosses,
-      { number, count },
-    ];
-    setSchemas(schemas);
-    console.log(schemas);
+    // const currentSchema = schemas[schemaIdx];
+    // const currentLableFlosses = currentSchema.flossesList[currentLableIdx];
+
+    // if (!currentLableFlosses) {
+    //   schemas[schemaIdx].flossesList =
+    //     currentSchema.flossesList.length > 0
+    //       ? [
+    //           ...currentSchema.flossesList,
+    //           { label, flosses: [{ number, count }] },
+    //         ]
+    //       : [{ label, flosses: [{ number, count }] }];
+    //   console.log(currentSchema);
+    //   setSchemas(schemas);
+    //   console.log(schemas);
+    //   return;
+    // }
+    // currentLableFlosses.flosses = [
+    //   ...currentLableFlosses.flosses,
+    //   { number, count },
+    // ];
+    // setSchemas(schemas);
+    // console.log(schemas);
   };
 
   const AddImage = (e, schemaId, image) => {
@@ -69,7 +71,7 @@ export const SchemasJournal = ({ user }) => {
       <AddSchemaForm schemasData={schemas} user={user} addSchema={addSchema} />
       <SchemasList
         schemasData={schemas}
-        AddSchemaFloss={AddSchemaFloss}
+        AddSchemaFloss={AddFloss}
         AddImage={AddImage}
       />
     </>

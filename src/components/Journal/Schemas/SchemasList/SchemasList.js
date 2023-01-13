@@ -57,7 +57,7 @@ const AddFloss = async(e) =>{
   console.log(e.target[0].options.selectedIndex, e.target[0].options[e.target[0].options.selectedIndex].innerHTML
     );
     const label = e.target[0].options[e.target[0].options.selectedIndex].innerHTML
-    await AddSchemaFloss(e, label, number, count)
+    await AddSchemaFloss(e, {label, number, count})
     setNumber("")
     setCount("")
     e.target.reset()
@@ -74,7 +74,7 @@ const pickFile=()=>{
 
   filePicker.current.click()
 }
-const AddSchemaImage = (e) =>{
+const AddSchemaImage = async(e) =>{
   console.log(e);
   const formData = new FormData()
   formData.append("image", croppedImage.split(",").pop())
@@ -89,22 +89,30 @@ const AddSchemaImage = (e) =>{
 
 // const url = URL.createObjectURL(new Blob(binaryData, {type: "	application/octet-stream"}))
 // console.log(url);
+try{
+  await AddImage(e, e.target.id, formData)
+  setCroppedImage("")
+  setSelectedFile("")
 
-AddImage(e, e.target.id, formData)
+}
+catch{
+  console.log("problem with add file");
+}
 
 }
 
     console.log("Schema mount");
     return (<div>{schemasData.length>0?
-    <div className={s.cardBox}>
-    {schemasData.map((schema, idx) => {
-        return (<div className={s.card}> <h4>name: {schema.name}</h4> 
+    <div >
+    {schemasData&& <ul className={s.cardList}>{schemasData.map((schema, idx) => {
+        return (<li className={s.card} key={schema.id}> <h4>name: {schema.name}</h4> 
+        {croppedImage&& !schema.image?.urlPreview&& <><p>Image preview:</p><img src={croppedImage} alt="img" onClick={(e)=>{console.log(e.target.style.width); e.target.style.width = e.target.style.width === "50px" ?"300px": "50px"}} style={{width: "50px", cursor: "pointer"}}></img></>}
         {schema.image && schema.image.urlPreview.trim() !== ""  &&  
         <img src={schema.image.urlPreview} alt="img" onClick={(e)=>{console.log(e.target.style.width); e.target.style.width = e.target.style.width === "50px" ?"300px": "50px"}} style={{width: "50px", cursor: "pointer"}}></img>}
         {selectedFile  &&
        <ImageCropper image={uploaded} setCroppedImage={setCroppedImage} setSelectedFile={setSelectedFile}/>}
         <div className={s.addForm}> 
-        <form onSubmit={AddFloss} id={schema.name}>
+        <form onSubmit={AddFloss} id={schema._id}>
             <select name="label" id="label" onChange={handleChange} >
                 <option name="label" value="DMC" >DMC</option>
                  <option name="Amhor" value="Amhor">Amhor</option>
@@ -119,12 +127,12 @@ AddImage(e, e.target.id, formData)
             <input type="file" name="selectedFile" accept=".png, .jpg" onChange={handleChange} className="visually-hidden" ref={filePicker}></input></div>
         <div className={s.flossesBox}>
          {schema.flossesList?.map(item=>{
-            return (<div ><span>{item.label}</span><ul className={s.flossesList}>{item.flosses.map(floss=>{
+            return (<div key={item._id} ><span>{item.label}</span><ul className={s.flossesList}>{item.flosses.map(floss=>{
                 return (<li className={s.item} key={floss.number + floss.count}> number:<span>{floss.number}</span> count:<span>{floss.count}</span></li>)
             })}</ul></div>)
         })} </div>
-        </div>)
-    })}</div> : <h3> No schemas yet</h3>
+        </li>)
+    })}</ul>}</div> : <h3> No schemas yet</h3>
   }</div>
     )
 }
