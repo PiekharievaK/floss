@@ -6,7 +6,7 @@ width: auto;
 height: 400px;
 }
 .cropperWrapper {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   top: 0px;

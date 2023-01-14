@@ -31,12 +31,15 @@ export const SchemasList = ({
       new Blob(binaryData, { type: "	application/octet-stream" })
     );
     setUploaded(url);
+    document.body.style.overflow="hidden"
+    console.log(selectedFile);
   }, [selectedFile]);
 
   useEffect(() => {
     if (!croppedImage) {
       return;
     }
+    document.body.style.overflow="visible"
   }, [croppedImage]);
 
   const filePicker = useRef(null);
@@ -82,6 +85,7 @@ export const SchemasList = ({
     setSelectedFile(null);
     setUploaded(null);
     setCroppedImage(null);
+    setCurrentSchemaId(null);
   };
 
   const pickFile = (e) => {
@@ -121,8 +125,8 @@ export const SchemasList = ({
     // console.log(url);
     try {
       await AddImage(e, e.target.id, formData);
-      setCroppedImage("");
-      setSelectedFile("");
+      setCroppedImage(null);
+      setSelectedFile(null);
       setCurrentSchemaId(null);
     } catch {
       console.log("problem with add file");
@@ -164,7 +168,8 @@ export const SchemasList = ({
                     )}
                     {schema.image &&
                       schema.image.urlPreview.trim() !== "" &&
-                      !croppedImage && (
+                      !selectedFile &&
+                      currentSchemaId !== schema._id && (
                         <img
                           src={schema.image.urlPreview}
                           alt="img"
@@ -212,20 +217,22 @@ export const SchemasList = ({
                       <button onClick={pickFile} id="file" className="file">
                         Pick schema image
                       </button>
-                      {croppedImage&& currentSchemaId === schema._id &&
-                      <><button
-                        id={schema._id}
-                        name={schema.name}
-                        onClick={AddSchemaImage}
-                      >
-                        {schema.image?.urlPreview.trim()
-                          ? "Save new image"
-                          : "Add image"}
-                      </button>                      
-                        <button onClick={closeImageChange}>
-                          Close changes
-                        </button></>
-                      }
+                      {croppedImage && currentSchemaId === schema._id && (
+                        <>
+                          <button
+                            id={schema._id}
+                            name={schema.name}
+                            onClick={AddSchemaImage}
+                          >
+                            {schema.image?.urlPreview.trim()
+                              ? "Save new image"
+                              : "Add image"}
+                          </button>
+                          <button onClick={closeImageChange}>
+                            Close changes
+                          </button>
+                        </>
+                      )}
                       <input
                         type="file"
                         name="selectedFile"
