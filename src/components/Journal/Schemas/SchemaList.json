@@ -1,0 +1,68 @@
+[
+  {
+    "_id": "1",
+    "name": "Schema1",
+    "image": {
+      "urlPreview": "",
+      "urlFull": "",
+      "deleteUrl": ""
+    },
+    "flossesList": [
+      {
+        "label": "DMC",
+        "flosses": [
+          { "number": "1", "count": 1 },
+          { "number": "2", "count": 3 },
+          { "number": "3", "count": 4 },
+          { "number": "4", "count": 1 },
+          { "number": "5", "count": 14 },
+          { "number": "6", "count": 32 }
+        ]
+      },
+      {
+        "label": "Other",
+        "flosses": [
+          { "number": "5", "count": 8 },
+          { "number": "3", "count": 37 },
+          { "number": "1", "count": 54 },
+          { "number": "9", "count": 3 },
+          { "number": "3", "count": 44 },
+          { "number": "2", "count": 12 }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "2",
+    "name": "Schema2",
+    "image": {
+      "urlPreview": "",
+      "urlFull": "",
+      "deleteUrl": ""
+    },
+    "flossesList": [
+      {
+        "label": "Amhor",
+        "flosses": [
+          { "number": "1", "count": 1 },
+          { "number": "2", "count": 3 },
+          { "number": "3", "count": 4 },
+          { "number": "4", "count": 1 },
+          { "number": "5", "count": 14 },
+          { "number": "6", "count": 32 }
+        ]
+      },
+      {
+        "label": "Doom",
+        "flosses": [
+          { "number": "5", "count": 8 },
+          { "number": "3", "count": 37 },
+          { "number": "1", "count": 54 },
+          { "number": "9", "count": 3 },
+          { "number": "3", "count": 44 },
+          { "number": "2", "count": 12 }
+        ]
+      }
+    ]
+  }
+]

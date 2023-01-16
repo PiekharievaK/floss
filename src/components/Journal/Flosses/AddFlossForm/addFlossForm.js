@@ -1,6 +1,6 @@
 import { Report } from "notiflix";
 import { useState } from "react";
-import Button from "../Button";
+import Button from "../../../Button";
 import s from "./addFlossForm.module.scss";
 
 const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
