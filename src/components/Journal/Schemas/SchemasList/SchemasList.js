@@ -1,5 +1,5 @@
-import axios from "axios";
 import { useState, useRef, useEffect } from "react";
+import { useSelector } from "react-redux";
 import { ImageCropper } from "../../../ImageCropper/ImageCropper";
 import sprite from "../../../../images/sprite.svg";
 import s from "./SchemasList.module.scss";
@@ -18,6 +18,8 @@ export const SchemasList = ({
   const [currentSchemaId, setCurrentSchemaId] = useState(null);
   const [uploaded, setUploaded] = useState(null);
   const [croppedImage, setCroppedImage] = useState(null);
+
+  const isDark = useSelector((state) => state.theme.isDark);
 
   useEffect(() => {
     if (!selectedFile) {
@@ -135,9 +137,9 @@ export const SchemasList = ({
 
   // console.log(currentSchemaId);
   return (
-    <div>
+    <div >
       {schemasData.length > 0 ? (
-        <div>
+        <div className={isDark? s.boxDark:s.box  }>
           {schemasData && (
             <ul className={s.cardList}>
               {schemasData.map((schema, idx) => {
