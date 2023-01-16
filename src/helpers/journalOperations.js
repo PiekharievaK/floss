@@ -76,7 +76,6 @@ const addNewSchema = async (collectionId, schema) => {
   }
 };
 const addSchemaImage = async (collectionId, schemaId, image) => {
-
   try {
     console.log(image);
     const { data } = await axios.post(`/schemas/image`, image, {
@@ -87,8 +86,8 @@ const addSchemaImage = async (collectionId, schemaId, image) => {
     return Notify.failure(`${error.response.data.message}.`);
   }
 };
-const addSchemaFloss = async(collectionId, schemaId, floss) =>{
-   try {
+const addSchemaFloss = async (collectionId, schemaId, floss) => {
+  try {
     console.log(floss);
     const { data } = await axios.post(`/schemas/floss`, floss, {
       headers: { collectionId, schemaId },
@@ -97,31 +96,34 @@ const addSchemaFloss = async(collectionId, schemaId, floss) =>{
   } catch (error) {
     return Notify.failure(`${error.response.data.message}.`);
   }
-}
+};
 
-const deleteSchemaFloss = async(collectionId, schemaId, label, flossId) =>{
+const deleteSchemaFloss = async (collectionId, schemaId, label, flossId) => {
   try {
-   console.log(collectionId);
-    const { data } = await axios.put(`/schemas/deleteFloss`, {label, flossId}, {
+    console.log(collectionId);
+    const { data } = await axios.put(
+      `/schemas/deleteFloss`,
+      { label, flossId },
+      {
+        headers: { collectionId, schemaId },
+      }
+    );
+    return data;
+  } catch (error) {
+    return Notify.failure(`${error.response.data.message}.`);
+  }
+};
+const deleteSchema = async (collectionId, schemaId) => {
+  try {
+    console.log(collectionId);
+    const { data } = await axios.delete(`/schemas`, {
       headers: { collectionId, schemaId },
     });
     return data;
   } catch (error) {
     return Notify.failure(`${error.response.data.message}.`);
   }
-}
-const deleteSchema = async(collectionId, schemaId) =>{
-  try {
-    console.log(collectionId);
-     const { data } = await axios.delete(`/schemas`, {
-       headers: { collectionId, schemaId },
-     });
-     return data;
-   } catch (error) {
-     return Notify.failure(`${error.response.data.message}.`);
-   }
-}
-
+};
 
 const operations = {
   getAllFlosses,
@@ -133,6 +135,6 @@ const operations = {
   addSchemaImage,
   addSchemaFloss,
   deleteSchemaFloss,
-  deleteSchema
+  deleteSchema,
 };
 export default operations;

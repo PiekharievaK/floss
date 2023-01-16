@@ -76,16 +76,6 @@ export const ImageCropper = ({ image, setCroppedImage, setSelectedFile }) => {
         <div className={s.rotationBox}>
           <button
             type="button"
-            name="increment"
-            aria-label="Rotate right"
-            onClick={onRotate}
-          >
-            <svg className={s.svg}>
-              <use href={`${sprite}#icon-rotate`}></use>
-            </svg>
-          </button>
-          <button
-            type="button"
             name="decrement"
             aria-label="Rotate left"
             onClick={onRotate}
@@ -94,11 +84,21 @@ export const ImageCropper = ({ image, setCroppedImage, setSelectedFile }) => {
               <use href={`${sprite}#icon-rotate`}></use>
             </svg>
           </button>
+          <button
+            type="button"
+            name="increment"
+            aria-label="Rotate right"
+            onClick={onRotate}
+          >
+            <svg className={s.svg}>
+              <use href={`${sprite}#icon-rotate`}></use>
+            </svg>
+          </button>
+        </div>
 
           <button onClick={saveCrop} className={s.button}>
             Crop Complete
           </button>
-        </div>
       </div>
     </div>
   );

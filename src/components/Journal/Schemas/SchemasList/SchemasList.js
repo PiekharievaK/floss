@@ -31,7 +31,7 @@ export const SchemasList = ({
       new Blob(binaryData, { type: "	application/octet-stream" })
     );
     setUploaded(url);
-    document.body.style.overflow="hidden"
+    document.body.style.overflow = "hidden";
     console.log(selectedFile);
   }, [selectedFile]);
 
@@ -39,7 +39,7 @@ export const SchemasList = ({
     if (!croppedImage) {
       return;
     }
-    document.body.style.overflow="visible"
+    document.body.style.overflow = "visible";
   }, [croppedImage]);
 
   const filePicker = useRef(null);
@@ -59,10 +59,10 @@ export const SchemasList = ({
 
   const AddFloss = async (e) => {
     e.preventDefault();
-    console.log(
-      e.target[0].options.selectedIndex,
-      e.target[0].options[e.target[0].options.selectedIndex].innerHTML
-    );
+    // console.log(
+    //   e.target[0].options.selectedIndex,
+    //   e.target[0].options[e.target[0].options.selectedIndex].innerHTML
+    // );
 
     const label =
       e.target[0].options[e.target[0].options.selectedIndex].innerHTML;
@@ -150,7 +150,7 @@ export const SchemasList = ({
                     >
                       Delete Schema
                     </button>
-                    {croppedImage && currentSchemaId === schema._id && (
+                    {currentSchemaId === schema._id && croppedImage && (
                       <>
                         <p>Image preview:</p>
                         <img
@@ -166,10 +166,10 @@ export const SchemasList = ({
                         ></img>
                       </>
                     )}
-                    {schema.image &&
+                    {(currentSchemaId !== schema._id || (currentSchemaId === schema._id&&!croppedImage)) &&
+                      schema.image &&
                       schema.image.urlPreview.trim() !== "" &&
-                      !selectedFile &&
-                      currentSchemaId !== schema._id && (
+                       (
                         <img
                           src={schema.image.urlPreview}
                           alt="img"
