@@ -1,8 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { ImageCropper } from "../../../ImageCropper/ImageCropper";
+import { Confirm } from "notiflix";
 import sprite from "../../../../images/sprite.svg";
 import s from "./SchemasList.module.scss";
+import flosses from "../../../../Pages/ColorsPage/flosses.json";
 
 export const SchemasList = ({
   schemasData,
@@ -14,13 +16,18 @@ export const SchemasList = ({
   // const [label, setLabel] = useState("DMC");
   const [number, setNumber] = useState("");
   const [count, setCount] = useState("");
+  const [otherLabel, setOtherLabel] = useState("");
+  const [labels, setLabels] = useState(
+    Object.keys(flosses[0].labels).filter(
+      (label) => label !== "Bestex" && label !== "BELKA" && label !== "Kirova"
+    )
+  );
   const [selectedFile, setSelectedFile] = useState(null);
   const [currentSchemaId, setCurrentSchemaId] = useState(null);
   const [uploaded, setUploaded] = useState(null);
   const [croppedImage, setCroppedImage] = useState(null);
 
   const isDark = useSelector((state) => state.theme.isDark);
-
   useEffect(() => {
     if (!selectedFile) {
       return;
@@ -34,7 +41,7 @@ export const SchemasList = ({
     );
     setUploaded(url);
     document.body.style.overflow = "hidden";
-    console.log(selectedFile);
+    // console.log(selectedFile);
   }, [selectedFile]);
 
   useEffect(() => {
@@ -43,6 +50,34 @@ export const SchemasList = ({
     }
     document.body.style.overflow = "visible";
   }, [croppedImage]);
+
+  useEffect(() => {
+    if (otherLabel !== "Other") {
+      return;
+    }
+    Confirm.prompt(
+      "You label will be added to list",
+      "Please enter you label here",
+      "",
+      "Save",
+      "Cancel",
+      (e) => {
+        setLabels([...labels, e]);
+        setOtherLabel("");
+        return;
+      },
+      () => {
+        setOtherLabel("");
+        return;
+      },
+      {
+        titleColor: "#80bdff",
+        okButtonBackground: "#80bdff",
+      }
+    );
+
+    // console.log(labels);
+  }, [otherLabel]);
 
   const filePicker = useRef(null);
 
@@ -54,6 +89,8 @@ export const SchemasList = ({
         return setNumber(target.value);
       case "count":
         return setCount(target.value);
+      case "label":
+        return setOtherLabel(target.value);
       default:
         return;
     }
@@ -79,7 +116,7 @@ export const SchemasList = ({
   const deleteFloss = async (e) => {
     const { flossid } = e.currentTarget.parentNode.dataset;
     const { label, schemaid } = e.currentTarget.parentNode.parentNode.dataset;
-    console.log(flossid, label, schemaid);
+    // console.log(flossid, label, schemaid);
     deleteSchemaFloss(schemaid, label, flossid);
   };
 
@@ -137,9 +174,9 @@ export const SchemasList = ({
 
   // console.log(currentSchemaId);
   return (
-    <div >
+    <div>
       {schemasData.length > 0 ? (
-        <div className={isDark? s.boxDark:s.box  }>
+        <div className={isDark ? s.boxDark : s.box}>
           {schemasData && (
             <ul className={s.cardList}>
               {schemasData.map((schema, idx) => {
@@ -168,15 +205,15 @@ export const SchemasList = ({
                         ></img>
                       </>
                     )}
-                    {(currentSchemaId !== schema._id || (currentSchemaId === schema._id&&!croppedImage)) &&
+                    {(currentSchemaId !== schema._id ||
+                      (currentSchemaId === schema._id && !croppedImage)) &&
                       schema.image &&
-                      schema.image.urlPreview.trim() !== "" &&
-                       (
+                      schema.image.urlPreview.trim() !== "" && (
                         <img
                           src={schema.image.urlPreview}
                           alt="img"
                           onClick={(e) => {
-                            console.log(e.target.style.width);
+                            // console.log(e.target.style.width);
                             e.target.style.width =
                               e.target.style.width === "50px"
                                 ? "300px"
@@ -188,12 +225,23 @@ export const SchemasList = ({
                     <div className={s.addForm}>
                       <form onSubmit={AddFloss} id={schema._id}>
                         <select name="label" id="label" onChange={handleChange}>
-                          <option name="label" value="DMC">
+                          {labels.map((item) => (
+                            <option name={item} value={item} key={item}>
+                              {item}
+                            </option>
+                          ))}
+                          {/* <option name="label" value="DMC">
                             DMC
                           </option>
                           <option name="Amhor" value="Amhor">
-                            Amhor
+                          Anchor
                           </option>
+                          <option name="label" value="DMC">
+                          Madeira
+                          </option>
+                          <option name="label" value="DMC">
+                          Gamma
+                          </option> */}
                           <option name="Other" value="Other">
                             Other
                           </option>
@@ -264,7 +312,6 @@ export const SchemasList = ({
                                     key={floss._id}
                                     data-flossid={floss._id}
                                   >
-                                    {" "}
                                     number:<span>{floss.number}</span> count:
                                     <span>{floss.count}</span>{" "}
                                     <button onClick={deleteFloss}>

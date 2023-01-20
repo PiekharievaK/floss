@@ -15,14 +15,15 @@ const getAllFlosses = async (user, setUserCollection) => {
 const addNewFloss = async (user, userFloss) => {
   const collectionId = user.collectionId;
   try {
-    if (!userFloss.label) {
-      const DMCfloss = { floss: { ...userFloss, label: "DMC" }, collectionId };
-      const { data } = await axios.post("/flosses", DMCfloss);
+    if (userFloss.label === "Other") {
+      const otherFloss = { floss: userFloss, collectionId };
+      const { data } = await axios.post("/flosses", otherFloss);
       Notify.success("Floss is added to your collection");
       return data;
+    
     }
-    const otherFloss = { floss: userFloss, collectionId };
-    const { data } = await axios.post("/flosses", otherFloss);
+    const labelfloss = { floss: userFloss, collectionId };
+    const { data } = await axios.post("/flosses", labelfloss);
     Notify.success("Floss is added to your collection");
     return data;
   } catch (error) {

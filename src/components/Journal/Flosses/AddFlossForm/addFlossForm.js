@@ -1,12 +1,16 @@
 import { Report } from "notiflix";
 import { useState } from "react";
 import Button from "../../../Button";
+import flosses from "../../../../Pages/ColorsPage/flosses.json";
 import s from "./addFlossForm.module.scss";
 
 const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
   const [addActive, setAddActive] = useState(false);
   const [label, setLabel] = useState("DMC");
   const firm = document.getElementById("firm");
+  const labels = Object.keys(flosses[0].labels).filter(
+    (label) => label !== "Bestex" && label !== "BELKA" && label !== "Kirova"
+  );
   const onRadioChange = (e) => {
     clearThreed();
     setLabel(e.target.value);
@@ -14,17 +18,21 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
 
   const addValidation = (e) => {
     e.preventDefault();
-    if (firm.value === "DMC") {
+    if (
+      firm.value === "DMC" ||
+      firm.value === "Madeira" ||
+      firm.value === "Anchor" ||
+      firm.value === "Gamma"
+    ) {
       Report.info(
-        "You can`t add it like 'DMC'",
-        "DMC floss have reserved numbers in our Data Base, if your number is not in our collection, and you shure that it is 'DMC' please add it like `dmc`"
+        `You can't add it like ${firm.value}`,
+        `${firm.value} floss have reserved numbers in our Data Base, if your number is not in our collection, and you shure that it is ${firm.value} please add it in lower case`
       );
       return;
     }
-   AddThreads(e);
-   console.log(e);
-  e.target.reset()
- 
+    AddThreads(e);
+    console.log(e);
+    e.target.reset();
   };
 
   return (
@@ -42,18 +50,20 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
       {addActive && (
         <>
           <div className={s.radioBox}>
-            <div className={s.radioButton}>
-              <input
-                type={"radio"}
-                name="flossLabel"
-                value="DMC"
-                id="DMC"
-                onChange={onRadioChange}
-                checked={label === "DMC"}
-                className={`${s.radio} radio`}
-              />
-              <label htmlFor="DMC">DMC</label>
-            </div>
+            {labels.map((item) => (
+              <div className={s.radioButton} key={item}>
+                <input
+                  type={"radio"}
+                  name="flossLabel"
+                  value={item}
+                  id={item}
+                  onChange={onRadioChange}
+                  checked={label === item}
+                  className={`${s.radio} radio`}
+                />
+                <label htmlFor={item}>{item}</label>
+              </div>
+            ))}
             <div className={s.radioButton}>
               <input
                 type={"radio"}
@@ -115,8 +125,14 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
                 <Button className={s.addButton}>Add to my list</Button>
               </form>
             )}
-            {label === "DMC" && (
-              <form onSubmit={(e)=>{AddThreads(e); e.target.reset()}} className={s.form}>
+            {label !== "Other" && (
+              <form
+                onSubmit={(e) => {
+                  AddThreads(e, label);
+                  e.target.reset();
+                }}
+                className={s.form}
+              >
                 <input
                   type={"search"}
                   placeholder={"number"}

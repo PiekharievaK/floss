@@ -2,6 +2,10 @@
 
 .box,
 .boxDark{
+  @media screen and (max-width: 767px){
+    max-width: 200px;
+    overflow-x: auto;
+  }
     min-height: 300px;
     max-height: 500px;
     margin: auto;
@@ -28,4 +32,11 @@
 }
 .hash{
   border: 1px solid black;
+}
+
+.tableTitle{
+  
+    font-weight: 600;
+    font-size: 15px
+  
 }

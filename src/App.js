@@ -9,8 +9,9 @@ import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
 import { LoginForm } from "./components/Login/Login";
 import { Registration } from "./components/Registration/Registration";
+import { NotFound } from "./Pages/404Page/404";
 import { PrivateRoute, PublicRoute } from "./components/Routers";
-import { ThemeContext } from './components/ThemeProvider/ThemeProvider';
+import { ThemeContext } from "./components/ThemeProvider/ThemeProvider";
 
 import operations from "./helpers/authOperations";
 import "./App.css";
@@ -22,7 +23,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [pending, setPending] = useState(true);
 
-  const [{theme}] = useContext(ThemeContext);
+  const [{ theme }] = useContext(ThemeContext);
 
   useEffect(() => {
     setPending(true);
@@ -40,10 +41,13 @@ function App() {
 
   return (
     !pending && (
-      <div className="App" style={{
-        backgroundColor: theme.backgroundColor,
-        color: theme.color,
-      }}>
+      <div
+        className="App"
+        style={{
+          backgroundColor: theme.backgroundColor,
+          color: theme.color,
+        }}
+      >
         <Header
           user={user}
           logOut={logOut}
@@ -76,38 +80,44 @@ function App() {
                 <PrivateRoute isLoggedIn={isLoggedIn}>
                   <JournalPage user={user} />
                 </PrivateRoute>
-              }>
-            {/* <Route path="Floss" element={<Registration signUpUser={signUpUser}/>}/>
+              }
+            >
+              {/* <Route path="Floss" element={<Registration signUpUser={signUpUser}/>}/>
             <Route path="Schemas" element={<Registration signUpUser={signUpUser}/>}/> */}
-
-              </Route>
+            </Route>
 
             <Route
               path="Registerpage/"
               element={
                 <PublicRoute isLoggedIn={isLoggedIn}>
-
                   <RegisterPage
                     signUpUser={signUpUser}
                     logInUser={logInUser}
                     setUser={setUser}
                     setIsLoggedIn={setIsLoggedIn}
                   />
-                 
                 </PublicRoute>
-              }>
-              <Route path="SignUp" element={<Registration signUpUser={signUpUser}/>}/>
-              <Route path="LogIn" element={<LoginForm
-                  logInUser={logInUser}
-                  setUser={setUser}
-                  setIsLoggedIn={setIsLoggedIn}
-                 />}/>
-            <Route/>
-
-            <Route path="*" element={<Homepage />} >
-            </Route>
+              }
+            >
+              <Route
+                path="SignUp"
+                element={<Registration signUpUser={signUpUser} />}
+              />
+              <Route
+                path="LogIn"
+                element={
+                  <LoginForm
+                    logInUser={logInUser}
+                    setUser={setUser}
+                    setIsLoggedIn={setIsLoggedIn}
+                  />
+                }
+              />
+              <Route />
             </Route>
           </Route>
+            <Route path="*" element={<NotFound />} />
+            {/* <Route path="*" element={<Homepage />} /> */}
         </Routes>
         <Footer />
       </div>
