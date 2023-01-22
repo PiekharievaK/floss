@@ -1,0 +1,6797 @@
+[
+    {
+        "hex": "#FFFFFF",
+        "dmcNumber": "blanc",
+        "colorName": "White",
+        "colorRUname": "Белый",
+        "labels": {
+            "DMC": "blanc",
+            "BELKA": "2",
+            "Kirova": "101",
+            "Bestex": "415",
+            "Anchor": "2",
+            "Madeira": "2402",
+            "Gamma": "415"
+        }
+    },
+    {
+        "hex": "#e9e9d4",
+        "dmcNumber": "Ecru",
+        "colorName": "Ecru",
+        "colorRUname": "Кремовый",
+        "labels": {
+            "DMC": "Ecru",
+            "BELKA": "3",
+            "Kirova": "102",
+            "Bestex": "-",
+            "Gamma": "1",
+            "Anchor": "831",
+            "Madeira": "Ecru"
+        }
+    },
+    {
+        "hex": "#FFFFFF",
+        "dmcNumber": "B5200",
+        "colorName": "Ultra white",
+        "colorRUname": "Белоснежный",
+        "labels": {
+            "DMC": "B5200",
+            "BELKA": "-",
+            "Kirova": "-",
+            "Bestex": "0415",
+            "Gamma": "0415",
+            "Anchor": "1",
+            "Madeira": "2402"
+        }
+    },
+    {
+        "hex": "#9f3845",
+        "dmcNumber": "150",
+        "colorName": "Dusty Rose - ultra vy dk",
+        "colorRUname": "Пыльная роза, ультра очень тёмный (оч.т.)",
+        "labels": {
+            "DMC": "150",
+            "BELKA": "3602",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3235",
+            "Anchor": "59",
+            "Madeira": "509"
+        }
+    },
+    {
+        "hex": "#f2bcc5",
+        "dmcNumber": "151",
+        "colorName": "Dusty Rose - vy lt",
+        "colorRUname": "Пыльная роза, очень светлый (оч.св.)",
+        "labels": {
+            "DMC": "151",
+            "BELKA": "171",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3236",
+            "Anchor": "73",
+            "Madeira": "607"
+        }
+    },
+    {
+        "hex": "#cfa296",
+        "dmcNumber": "152",
+        "colorName": "Shell Pink - med lt",
+        "colorRUname": "Розовых ракушек, средне светлый (ср.св.)",
+        "labels": {
+            "DMC": "152",
+            "BELKA": "1867",
+            "Kirova": "-",
+            "Bestex": "A078",
+            "Gamma": "3013",
+            "Anchor": "-",
+            "Madeira": "-"
+        }
+    },
+    {
+        "hex": "#debcd9",
+        "dmcNumber": "153",
+        "colorName": "Violet - vy lt",
+        "colorRUname": "Фиолетовый, очень светлый (оч.св)",
+        "labels": {
+            "DMC": "153",
+            "BELKA": "3357",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3251",
+            "Anchor": "95",
+            "Madeira": "-"
+        }
+    },
+    {
+        "hex": "#4d2e3d",
+        "dmcNumber": "154",
+        "colorName": "Grape - vy dk",
+        "colorRUname": "Красного винограда, оч.т.",
+        "labels": {
+            "DMC": "154",
+            "BELKA": "927",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "909",
+            "Anchor": "873",
+            "Madeira": "2607"
+        }
+    },
+    {
+        "hex": "#908bc3",
+        "dmcNumber": "155",
+        "colorName": "Blue Violet - med dk",
+        "colorRUname": "Сине-фиолетовый, ср.т.",
+        "labels": {
+            "DMC": "155",
+            "BELKA": "1259",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3238",
+            "Anchor": "1030",
+            "Madeira": "902"
+        }
+    },
+    {
+        "hex": "#8b9ac5",
+        "dmcNumber": "156",
+        "colorName": "Blue Violet - med lt",
+        "colorRUname": "Сине-фиолетовый, ср.св.",
+        "labels": {
+            "DMC": "156",
+            "BELKA": "2014",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3048",
+            "Anchor": "118",
+            "Madeira": "-"
+        }
+    },
+    {
+        "hex": "#abc2de",
+        "dmcNumber": "157",
+        "colorName": "Cornflower Blue - vy lt",
+        "colorRUname": "Васильковый, кобальтовый, оч.св.",
+        "labels": {
+            "DMC": "157",
+            "BELKA": "3687",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3239",
+            "Anchor": "120",
+            "Madeira": "907"
+        }
+    },
+    {
+        "hex": "#465082",
+        "dmcNumber": "158",
+        "colorName": "Cornflower Blue-med vy dk",
+        "colorRUname": "Васильковый,кобальтовый,ср.оч.т.",
+        "labels": {
+            "DMC": "158",
+            "BELKA": "2001",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3240",
+            "Anchor": "177",
+            "Madeira": "2702"
+        }
+    },
+    {
+        "hex": "#a7b4cd",
+        "dmcNumber": "159",
+        "colorName": "Gray Blue-lt",
+        "colorRUname": "Серо-синий,св.",
+        "labels": {
+            "DMC": "159",
+            "BELKA": "1096",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3049",
+            "Anchor": "-",
+            "Madeira": "901"
+        }
+    },
+    {
+        "hex": "#8290ae",
+        "dmcNumber": "160",
+        "colorName": "Gray Blue-med",
+        "colorRUname": "Серо-синий,ср.",
+        "labels": {
+            "DMC": "160",
+            "BELKA": "1098",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3050",
+            "Anchor": "806",
+            "Madeira": "-"
+        }
+    },
+    {
+        "hex": "#667594",
+        "dmcNumber": "161",
+        "colorName": "Gray Blue",
+        "colorRUname": "Серо-синий",
+        "labels": {
+            "DMC": "161",
+            "BELKA": "1539",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3242",
+            "Anchor": "-",
+            "Madeira": "758"
+        }
+    },
+    {
+        "hex": "#bddbe6",
+        "dmcNumber": "162",
+        "colorName": "Blue-ultra vy lt",
+        "colorRUname": "Голубой, ультра оч.св.",
+        "labels": {
+            "DMC": "162",
+            "BELKA": "1690",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3243",
+            "Anchor": "160",
+            "Madeira": "908"
+        }
+    },
+    {
+        "hex": "#569571",
+        "dmcNumber": "163",
+        "colorName": "Celadon Green-med",
+        "colorRUname": "Серовато-зеленый,ср.",
+        "labels": {
+            "DMC": "163",
+            "BELKA": "2782",
+            "Kirova": "-",
+            "Bestex": "956",
+            "Gamma": "956",
+            "Anchor": "877",
+            "Madeira": "1703"
+        }
+    },
+    {
+        "hex": "#9fcc8d",
+        "dmcNumber": "164",
+        "colorName": "Forest Green-lt",
+        "colorRUname": "Зеленый лесной,св.",
+        "labels": {
+            "DMC": "164",
+            "BELKA": "2700",
+            "Kirova": "-",
+            "Bestex": "3126",
+            "Gamma": "3252",
+            "Anchor": "240",
+            "Madeira": "1209"
+        }
+    },
+    {
+        "hex": "#dad878",
+        "dmcNumber": "165",
+        "colorName": "Moss Green-vylt",
+        "colorRUname": "Мох,оч.св.",
+        "labels": {
+            "DMC": "165",
+            "BELKA": "1140",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3244",
+            "Anchor": "278",
+            "Madeira": "1414"
+        }
+    },
+    {
+        "hex": "#bfbb20",
+        "dmcNumber": "166",
+        "colorName": "Moss Green-med lt",
+        "colorRUname": "Мох,ср.св.",
+        "labels": {
+            "DMC": "166",
+            "BELKA": "2005",
+            "Kirova": "-",
+            "Bestex": "818",
+            "Gamma": "818",
+            "Anchor": "280",
+            "Madeira": "1308"
+        }
+    },
+    {
+        "hex": "#9f8447",
+        "dmcNumber": "167",
+        "colorName": "Yellow Beige-vy dk",
+        "colorRUname": "Желтовато-бежевый,оч.т.",
+        "labels": {
+            "DMC": "167",
+            "BELKA": "120",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3253",
+            "Anchor": "398",
+            "Madeira": "2104"
+        }
+    },
+    {
+        "hex": "#b4c3c1",
+        "dmcNumber": "168",
+        "colorName": "Pewter-vy lt",
+        "colorRUname": "Оловянный,оч.св.",
+        "labels": {
+            "DMC": "168",
+            "BELKA": "26",
+            "Kirova": "-",
+            "Bestex": "A047",
+            "Gamma": "3045",
+            "Anchor": "-",
+            "Madeira": "-"
+        }
+    },
+    {
+        "hex": "#8b9a94",
+        "dmcNumber": "169",
+        "colorName": "Pewter-lt",
+        "colorRUname": "Оловянный,св.",
+        "labels": {
+            "DMC": "169",
+            "BELKA": "1940",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3046",
+            "Anchor": "849",
+            "Madeira": "-"
+        }
+    },
+    {
+        "hex": "#9870ac",
+        "dmcNumber": "208",
+        "colorName": "Lavender-vy dk",
+        "colorRUname": "Лаванда,оч.т.",
+        "labels": {
+            "DMC": "208",
+            "BELKA": "2483",
+            "Kirova": "2206",
+            "Bestex": "111",
+            "Gamma": "111",
+            "Anchor": "111",
+            "Madeira": "804"
+        }
+    },
+    {
+        "hex": "#b693b6",
+        "dmcNumber": "209",
+        "colorName": "Lavender-dk",
+        "colorRUname": "Лаванда,т.",
+        "labels": {
+            "DMC": "209",
+            "BELKA": "2907",
+            "Kirova": "2204",
+            "Bestex": "-",
+            "Gamma": "3107",
+            "Anchor": "109",
+            "Madeira": "803"
+        }
+    },
+    {
+        "hex": "#c9afdd",
+        "dmcNumber": "210",
+        "colorName": "Lavender-med",
+        "colorRUname": "Лаванда,ср.",
+        "labels": {
+            "DMC": "210",
+            "BELKA": "774",
+            "Kirova": "2304",
+            "Bestex": "110",
+            "Gamma": "76",
+            "Anchor": "108",
+            "Madeira": "802"
+        }
+    },
+    {
+        "hex": "#d4c3e4",
+        "dmcNumber": "211",
+        "colorName": "Lavender-lt",
+        "colorRUname": "Лаванда,св.",
+        "labels": {
+            "DMC": "211",
+            "BELKA": "635",
+            "Kirova": "2202",
+            "Bestex": "-",
+            "Gamma": "1095",
+            "Anchor": "342",
+            "Madeira": "801"
+        }
+    },
+    {
+        "hex": "#884238",
+        "dmcNumber": "221",
+        "colorName": "Shel lPink-vy dk",
+        "colorRUname": "Розовых ракушек, оч.т.",
+        "labels": {
+            "DMC": "221",
+            "BELKA": "2595",
+            "Kirova": "-",
+            "Bestex": "865",
+            "Gamma": "3097",
+            "Anchor": "897",
+            "Madeira": "811"
+        }
+    },
+    {
+        "hex": "#bb817b",
+        "dmcNumber": "223",
+        "colorName": "Shell Pink-lt",
+        "colorRUname": "Розовых ракушек, св.",
+        "labels": {
+            "DMC": "223",
+            "BELKA": "2906",
+            "Kirova": "5604",
+            "Bestex": "-",
+            "Gamma": "3014",
+            "Anchor": "895",
+            "Madeira": "812"
+        }
+    },
+    {
+        "hex": "#dfb3a6",
+        "dmcNumber": "224",
+        "colorName": "ShellPink-vy lt",
+        "colorRUname": "Розовых ракушек, оч. св.",
+        "labels": {
+            "DMC": "224",
+            "BELKA": "1354",
+            "Kirova": "5602",
+            "Bestex": "876",
+            "Gamma": "3095",
+            "Anchor": "894",
+            "Madeira": "813"
+        }
+    },
+    {
+        "hex": "#ecd9cf",
+        "dmcNumber": "225",
+        "colorName": "ShellPink-ultra vy lt",
+        "colorRUname": "Розовых ракушек, ультра св.",
+        "labels": {
+            "DMC": "225",
+            "BELKA": "1988",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "765",
+            "Anchor": "1026",
+            "Madeira": "814"
+        }
+    },
+    {
+        "hex": "#784e24",
+        "dmcNumber": "300",
+        "colorName": "Mahogany-vy dk",
+        "colorRUname": "Красного дерева,оч.т.",
+        "labels": {
+            "DMC": "300",
+            "BELKA": "3473",
+            "Kirova": "5812",
+            "Bestex": "930,A096",
+            "Gamma": "2",
+            "Anchor": "352",
+            "Madeira": "2304"
+        }
+    },
+    {
+        "hex": "#aa6730",
+        "dmcNumber": "301",
+        "colorName": "Mahogany-med",
+        "colorRUname": "Красного дерева,ср.",
+        "labels": {
+            "DMC": "301",
+            "BELKA": "1836",
+            "Kirova": "5808",
+            "Bestex": "-",
+            "Gamma": "3022",
+            "Anchor": "1049",
+            "Madeira": "2306"
+        }
+    },
+    {
+        "hex": "#9e3332",
+        "dmcNumber": "304",
+        "colorName": "Christmas Red-med",
+        "colorRUname": "Рождественский красный, ср.",
+        "labels": {
+            "DMC": "304",
+            "BELKA": "1981",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "4055",
+            "Anchor": "1006",
+            "Madeira": "508"
+        }
+    },
+    {
+        "hex": "#f6e311",
+        "dmcNumber": "307",
+        "colorName": "Lemon",
+        "colorRUname": "Лимонный",
+        "labels": {
+            "DMC": "307",
+            "BELKA": "2794",
+            "Kirova": "206",
+            "Bestex": "-",
+            "Gamma": "3192",
+            "Anchor": "289",
+            "Madeira": "104"
+        }
+    },
+    {
+        "hex": "#b84351",
+        "dmcNumber": "309",
+        "colorName": "Rose-dk",
+        "colorRUname": "Розы,т.",
+        "labels": {
+            "DMC": "309",
+            "BELKA": "172",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3090",
+            "Anchor": "42",
+            "Madeira": "507"
+        }
+    },
+    {
+        "hex": "#000000",
+        "dmcNumber": "310",
+        "colorName": "Black",
+        "colorRUname": "Черный",
+        "labels": {
+            "DMC": "310",
+            "BELKA": "274",
+            "Kirova": "7214",
+            "Bestex": "420",
+            "Gamma": "420",
+            "Anchor": "403",
+            "Madeira": "Black"
+        }
+    },
+    {
+        "hex": "#30506f",
+        "dmcNumber": "311",
+        "colorName": "Navy Blue-med",
+        "colorRUname": "Темно-синий,ср.",
+        "labels": {
+            "DMC": "311",
+            "BELKA": "3184",
+            "Kirova": "2612",
+            "Bestex": "-",
+            "Gamma": "3119",
+            "Anchor": "148",
+            "Madeira": "1006"
+        }
+    },
+    {
+        "hex": "#386189",
+        "dmcNumber": "312",
+        "colorName": "Navy Blue-lt",
+        "colorRUname": "Темно-синий,св.",
+        "labels": {
+            "DMC": "312",
+            "BELKA": "1729",
+            "Kirova": "2610",
+            "Bestex": "-",
+            "Gamma": "3118",
+            "Anchor": "979",
+            "Madeira": "1005"
+        }
+    },
+    {
+        "hex": "#8e5d5c",
+        "dmcNumber": "315",
+        "colorName": "Antique Mauve-med dk",
+        "colorRUname": "Античный розовато-лиловый,ср.т.",
+        "labels": {
+            "DMC": "315",
+            "BELKA": "2011",
+            "Kirova": "5708",
+            "Bestex": "-",
+            "Gamma": "3099",
+            "Anchor": "1019",
+            "Madeira": "810"
+        }
+    },
+    {
+        "hex": "#bf889c",
+        "dmcNumber": "316",
+        "colorName": "Antique Mauve-med",
+        "colorRUname": "Античный розовато-лиловый,ср.",
+        "labels": {
+            "DMC": "316",
+            "BELKA": "2847",
+            "Kirova": "1804",
+            "Bestex": "-",
+            "Gamma": "3098",
+            "Anchor": "1017",
+            "Madeira": "809"
+        }
+    },
+    {
+        "hex": "#697275",
+        "dmcNumber": "317",
+        "colorName": "Pewter Grey",
+        "colorRUname": "Оловянносерый",
+        "labels": {
+            "DMC": "317",
+            "BELKA": "3056",
+            "Kirova": "7008",
+            "Bestex": "-",
+            "Gamma": "3232",
+            "Anchor": "400",
+            "Madeira": "1714"
+        }
+    },
+    {
+        "hex": "#a0a7b0",
+        "dmcNumber": "318",
+        "colorName": "Steel Grey-lt",
+        "colorRUname": "Стальной, св.",
+        "labels": {
+            "DMC": "318",
+            "BELKA": "2058",
+            "Kirova": "7004",
+            "Bestex": "-",
+            "Gamma": "4",
+            "Anchor": "399",
+            "Madeira": "1802"
+        }
+    },
+    {
+        "hex": "#35633d",
+        "dmcNumber": "319",
+        "colorName": "Pistachio Green-vy dk",
+        "colorRUname": "Фисташково-зеленый,оч.т.",
+        "labels": {
+            "DMC": "319",
+            "BELKA": "2164",
+            "Kirova": "3704",
+            "Bestex": "719",
+            "Gamma": "719",
+            "Anchor": "218",
+            "Madeira": "1313"
+        }
+    },
+    {
+        "hex": "#71a072",
+        "dmcNumber": "320",
+        "colorName": "Pistachio Green-med",
+        "colorRUname": "Фисташково-зеленый,ср.",
+        "labels": {
+            "DMC": "320",
+            "BELKA": "265",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3151",
+            "Anchor": "215",
+            "Madeira": "1311"
+        }
+    },
+    {
+        "hex": "#ce1f32",
+        "dmcNumber": "321",
+        "colorName": "Christmas Red",
+        "colorRUname": "Рождественскийкрасный",
+        "labels": {
+            "DMC": "321",
+            "BELKA": "2946",
+            "Kirova": "906",
+            "Bestex": "120",
+            "Gamma": "120",
+            "Anchor": "9046",
+            "Madeira": "507"
+        }
+    },
+    {
+        "hex": "#647e9d",
+        "dmcNumber": "322",
+        "colorName": "NavyBlue-vy lt",
+        "colorRUname": "Темно-синий,оч.св.",
+        "labels": {
+            "DMC": "322",
+            "BELKA": "108",
+            "Kirova": "2608",
+            "Bestex": "-",
+            "Gamma": "3052",
+            "Anchor": "978",
+            "Madeira": "1004"
+        }
+    },
+    {
+        "hex": "#a92332",
+        "dmcNumber": "326",
+        "colorName": "Rose-vy dk",
+        "colorRUname": "Розы,оч.т.",
+        "labels": {
+            "DMC": "326",
+            "BELKA": "565",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "64",
+            "Anchor": "59",
+            "Madeira": "508"
+        }
+    },
+    {
+        "hex": "#723657",
+        "dmcNumber": "327",
+        "colorName": "Violet-vy dk",
+        "colorRUname": "Фиолетовый,оч.т.",
+        "labels": {
+            "DMC": "327",
+            "BELKA": "2626",
+            "Kirova": "2004",
+            "Bestex": "-",
+            "Gamma": "3108",
+            "Anchor": "100",
+            "Madeira": "805"
+        }
+    },
+    {
+        "hex": "#6c5086",
+        "dmcNumber": "333",
+        "colorName": "BlueViolet-vy dk",
+        "colorRUname": "Сине-фиолетовый,оч.т.",
+        "labels": {
+            "DMC": "333",
+            "BELKA": "3547",
+            "Kirova": "2308",
+            "Bestex": "-",
+            "Gamma": "79",
+            "Anchor": "119",
+            "Madeira": "903"
+        }
+    },
+    {
+        "hex": "#4c698c",
+        "dmcNumber": "334",
+        "colorName": "BabyBlue-med",
+        "colorRUname": "Нежноголубой,ср.",
+        "labels": {
+            "DMC": "334",
+            "BELKA": "3348",
+            "Kirova": "2608",
+            "Bestex": "757",
+            "Gamma": "757",
+            "Anchor": "977",
+            "Madeira": "1004"
+        }
+    },
+    {
+        "hex": "#e56d7f",
+        "dmcNumber": "335",
+        "colorName": "Rose",
+        "colorRUname": "Розы",
+        "labels": {
+            "DMC": "335",
+            "BELKA": "575",
+            "Kirova": "1504",
+            "Bestex": "-",
+            "Gamma": "3089",
+            "Anchor": "38",
+            "Madeira": "506"
+        }
+    },
+    {
+        "hex": "#0c1225",
+        "dmcNumber": "336",
+        "colorName": "Navy Blue",
+        "colorRUname": "Темно-синий",
+        "labels": {
+            "DMC": "336",
+            "BELKA": "3542",
+            "Kirova": "2614",
+            "Bestex": "A045",
+            "Gamma": "26",
+            "Anchor": "150",
+            "Madeira": "1007"
+        }
+    },
+    {
+        "hex": "#9389c1",
+        "dmcNumber": "340",
+        "colorName": "Blue Violet-med",
+        "colorRUname": "Сине-фиолетовый,ср.",
+        "labels": {
+            "DMC": "340",
+            "BELKA": "1774",
+            "Kirova": "2404",
+            "Bestex": "A057",
+            "Gamma": "78",
+            "Anchor": "118",
+            "Madeira": "902"
+        }
+    },
+    {
+        "hex": "#a2accd",
+        "dmcNumber": "341",
+        "colorName": "Blue Violet-lt",
+        "colorRUname": "Сине-фиолетовый,св.",
+        "labels": {
+            "DMC": "341",
+            "BELKA": "2017",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3047",
+            "Anchor": "117",
+            "Madeira": "901"
+        }
+    },
+    {
+        "hex": "#bf3e31",
+        "dmcNumber": "347",
+        "colorName": "Salmon - vy dk",
+        "colorRUname": "Лососевый,оч.т.",
+        "labels": {
+            "DMC": "347",
+            "BELKA": "2046",
+            "Kirova": "-",
+            "Bestex": "418",
+            "Gamma": "62",
+            "Anchor": "1025",
+            "Madeira": "407"
+        }
+    },
+    {
+        "hex": "#c24731",
+        "dmcNumber": "349",
+        "colorName": "Coral-dk",
+        "colorRUname": "Коралловокрасный,т.",
+        "labels": {
+            "DMC": "349",
+            "BELKA": "267",
+            "Kirova": "810",
+            "Bestex": "708",
+            "Gamma": "708",
+            "Anchor": "13",
+            "Madeira": "212"
+        }
+    },
+    {
+        "hex": "#e46647",
+        "dmcNumber": "350",
+        "colorName": "Coral-med",
+        "colorRUname": "Кораллово красный,ср.",
+        "labels": {
+            "DMC": "350",
+            "BELKA": "2898",
+            "Kirova": "808",
+            "Bestex": "707,A080",
+            "Gamma": "707",
+            "Anchor": "11",
+            "Madeira": "213"
+        }
+    },
+    {
+        "hex": "#f78465",
+        "dmcNumber": "351",
+        "colorName": "Coral",
+        "colorRUname": "Кораллово красный",
+        "labels": {
+            "DMC": "351",
+            "BELKA": "3487",
+            "Kirova": "806",
+            "Bestex": "314,313",
+            "Gamma": "705",
+            "Anchor": "10",
+            "Madeira": "214"
+        }
+    },
+    {
+        "hex": "#f69d80",
+        "dmcNumber": "352",
+        "colorName": "Coral-lt",
+        "colorRUname": "Коралловокрасный,св.",
+        "labels": {
+            "DMC": "352",
+            "BELKA": "1670",
+            "Kirova": "1604",
+            "Bestex": "-",
+            "Gamma": "3073",
+            "Anchor": "9",
+            "Madeira": "303"
+        }
+    },
+    {
+        "hex": "#fdbca1",
+        "dmcNumber": "353",
+        "colorName": "Peach",
+        "colorRUname": "Персиковый",
+        "labels": {
+            "DMC": "353",
+            "BELKA": "268",
+            "Kirova": "1602",
+            "Bestex": "703",
+            "Gamma": "703",
+            "Anchor": "6",
+            "Madeira": "304"
+        }
+    },
+    {
+        "hex": "#9a3b2d",
+        "dmcNumber": "355",
+        "colorName": "TerraCotta-dk",
+        "colorRUname": "Терракотовый,т.",
+        "labels": {
+            "DMC": "355",
+            "BELKA": "2394",
+            "Kirova": "5610",
+            "Bestex": "-",
+            "Gamma": "3211",
+            "Anchor": "1014",
+            "Madeira": "401"
+        }
+    },
+    {
+        "hex": "#a06757",
+        "dmcNumber": "356",
+        "colorName": "TerraCotta-med",
+        "colorRUname": "Терракотовый,ср.",
+        "labels": {
+            "DMC": "356",
+            "BELKA": "1347",
+            "Kirova": "5606",
+            "Bestex": "-",
+            "Gamma": "768",
+            "Anchor": "5975",
+            "Madeira": "402"
+        }
+    },
+    {
+        "hex": "#4c7047",
+        "dmcNumber": "367",
+        "colorName": "PistachioGreen-dk",
+        "colorRUname": "Фисташково-зеленый,т.",
+        "labels": {
+            "DMC": "367",
+            "BELKA": "1629",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "89",
+            "Anchor": "217",
+            "Madeira": "1312"
+        }
+    },
+    {
+        "hex": "#91ab84",
+        "dmcNumber": "368",
+        "colorName": "PistachioGreen-lt",
+        "colorRUname": "Фисташково-зеленый,св.",
+        "labels": {
+            "DMC": "368",
+            "BELKA": "1725",
+            "Kirova": "-",
+            "Bestex": "716",
+            "Gamma": "716",
+            "Anchor": "214",
+            "Madeira": "1310"
+        }
+    },
+    {
+        "hex": "#ccdcbe",
+        "dmcNumber": "369",
+        "colorName": "PistachioGreen-vy lt",
+        "colorRUname": "Фисташково-зеленый,оч.св.",
+        "labels": {
+            "DMC": "369",
+            "BELKA": "1302",
+            "Kirova": "4602",
+            "Bestex": "715",
+            "Gamma": "715",
+            "Anchor": "1043",
+            "Madeira": "1309"
+        }
+    },
+    {
+        "hex": "#bbaa55",
+        "dmcNumber": "370",
+        "colorName": "Mustard-med",
+        "colorRUname": "Горчичный,ср.",
+        "labels": {
+            "DMC": "370",
+            "BELKA": "3469",
+            "Kirova": "5202",
+            "Bestex": "-",
+            "Gamma": "3068",
+            "Anchor": "855",
+            "Madeira": "2110"
+        }
+    },
+    {
+        "hex": "#a08f4d",
+        "dmcNumber": "371",
+        "colorName": "Mustard",
+        "colorRUname": "Горчичный",
+        "labels": {
+            "DMC": "371",
+            "BELKA": "2040",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3175",
+            "Anchor": "854",
+            "Madeira": "2110"
+        }
+    },
+    {
+        "hex": "#9c8c4a",
+        "dmcNumber": "372",
+        "colorName": "Mustard - lt",
+        "colorRUname": "Горчичный,св.",
+        "labels": {
+            "DMC": "372",
+            "BELKA": "123",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "92",
+            "Anchor": "853",
+            "Madeira": "2110"
+        }
+    },
+    {
+        "hex": "#934d29",
+        "dmcNumber": "400",
+        "colorName": "Mahogany - dk",
+        "colorRUname": "Красного дерева, т.",
+        "labels": {
+            "DMC": "400",
+            "BELKA": "470",
+            "Kirova": "5810",
+            "Bestex": "-",
+            "Gamma": "3023",
+            "Anchor": "351",
+            "Madeira": "2305"
+        }
+    },
+    {
+        "hex": "#e8a76d",
+        "dmcNumber": "402",
+        "colorName": "Mahogany - vy lt",
+        "colorRUname": "Красного дерева, оч.св.",
+        "labels": {
+            "DMC": "402",
+            "BELKA": "1936",
+            "Kirova": "5404",
+            "Bestex": "-",
+            "Gamma": "3207",
+            "Anchor": "1047",
+            "Madeira": "2301"
+        }
+    },
+    {
+        "hex": "#c49a87",
+        "dmcNumber": "407",
+        "colorName": "Desert Sand - dk",
+        "colorRUname": "Пустынного песка, т.",
+        "labels": {
+            "DMC": "407",
+            "BELKA": "932",
+            "Kirova": "6302",
+            "Bestex": "-",
+            "Gamma": "3031",
+            "Anchor": "914",
+            "Madeira": "2312"
+        }
+    },
+    {
+        "hex": "#535657",
+        "dmcNumber": "413",
+        "colorName": "Pewter Grey - dk",
+        "colorRUname": "Оловянно серый, т.",
+        "labels": {
+            "DMC": "413",
+            "BELKA": "2097",
+            "Kirova": "7206",
+            "Bestex": "-",
+            "Gamma": "3233",
+            "Anchor": "236",
+            "Madeira": "1714"
+        }
+    },
+    {
+        "hex": "#95909d",
+        "dmcNumber": "414",
+        "colorName": "Steel Grey - dk",
+        "colorRUname": "Стальной, т.",
+        "labels": {
+            "DMC": "414",
+            "BELKA": "1596",
+            "Kirova": "7006",
+            "Bestex": "A049",
+            "Gamma": "61",
+            "Anchor": "815",
+            "Madeira": "1802"
+        }
+    },
+    {
+        "hex": "#d3d4db",
+        "dmcNumber": "415",
+        "colorName": "Pearl Grey",
+        "colorRUname": "Жемчужно серый",
+        "labels": {
+            "DMC": "415",
+            "BELKA": "287",
+            "Kirova": "7002",
+            "Bestex": "966",
+            "Gamma": "6",
+            "Anchor": "398",
+            "Madeira": "1803"
+        }
+    },
+    {
+        "hex": "#866226",
+        "dmcNumber": "420",
+        "colorName": "Hazelnut Brown - dk",
+        "colorRUname": "Фундука, т.",
+        "labels": {
+            "DMC": "420",
+            "BELKA": "173",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3184",
+            "Anchor": "374",
+            "Madeira": "2105"
+        }
+    },
+    {
+        "hex": "#d0ba79",
+        "dmcNumber": "422",
+        "colorName": "Hazelnut Brown - lt",
+        "colorRUname": "Фундука, св.",
+        "labels": {
+            "DMC": "422",
+            "BELKA": "-",
+            "Kirova": "-",
+            "Bestex": "A073",
+            "Gamma": "-",
+            "Anchor": "943",
+            "Madeira": "2102"
+        }
+    },
+    {
+        "hex": "#775437",
+        "dmcNumber": "433",
+        "colorName": "Brown - med",
+        "colorRUname": "Коричневый, ср.",
+        "labels": {
+            "DMC": "433",
+            "BELKA": "1639",
+            "Kirova": "-",
+            "Bestex": "217,219",
+            "Gamma": "217",
+            "Anchor": "371",
+            "Madeira": "2311"
+        }
+    },
+    {
+        "hex": "#b78237",
+        "dmcNumber": "434",
+        "colorName": "Brown - lt",
+        "colorRUname": "Коричневый, св.",
+        "labels": {
+            "DMC": "434",
+            "BELKA": "2731",
+            "Kirova": "3908",
+            "Bestex": "A070",
+            "Gamma": "22",
+            "Anchor": "310",
+            "Madeira": "2009"
+        }
+    },
+    {
+        "hex": "#c4863a",
+        "dmcNumber": "435",
+        "colorName": "Brown - vy lt",
+        "colorRUname": "Коричневый, оч.св.",
+        "labels": {
+            "DMC": "435",
+            "BELKA": "2991",
+            "Kirova": "5508",
+            "Bestex": "-",
+            "Gamma": "7",
+            "Anchor": "1046",
+            "Madeira": "2010"
+        }
+    },
+    {
+        "hex": "#c09557",
+        "dmcNumber": "436",
+        "colorName": "Tan",
+        "colorRUname": "Желто-коричневый",
+        "labels": {
+            "DMC": "436",
+            "BELKA": "532",
+            "Kirova": "5504",
+            "Bestex": "-",
+            "Gamma": "3218",
+            "Anchor": "1045",
+            "Madeira": "2011"
+        }
+    },
+    {
+        "hex": "#d9b879",
+        "dmcNumber": "437",
+        "colorName": "Tan - lt",
+        "colorRUname": "Желто-коричневый, св.",
+        "labels": {
+            "DMC": "437",
+            "BELKA": "110",
+            "Kirova": "5802",
+            "Bestex": "-",
+            "Gamma": "54",
+            "Anchor": "362",
+            "Madeira": "2012"
+        }
+    },
+    {
+        "hex": "#f5d500",
+        "dmcNumber": "444",
+        "colorName": "Lemon - dk",
+        "colorRUname": "Лимонный, т.",
+        "labels": {
+            "DMC": "444",
+            "BELKA": "1835",
+            "Kirova": "-",
+            "Bestex": "516",
+            "Gamma": "516",
+            "Anchor": "291",
+            "Madeira": "106"
+        }
+    },
+    {
+        "hex": "#f0ed85",
+        "dmcNumber": "445",
+        "colorName": "Lemon - lt",
+        "colorRUname": "Лимонный, св.",
+        "labels": {
+            "DMC": "445",
+            "BELKA": "94",
+            "Kirova": "202",
+            "Bestex": "514",
+            "Gamma": "514",
+            "Anchor": "802",
+            "Madeira": "103"
+        }
+    },
+    {
+        "hex": "#978b81",
+        "dmcNumber": "451",
+        "colorName": "Shell Grey - dk",
+        "colorRUname": "Серых ракушек, т.",
+        "labels": {
+            "DMC": "451",
+            "BELKA": "1469",
+            "Kirova": "6406",
+            "Bestex": "-",
+            "Gamma": "674",
+            "Anchor": "233",
+            "Madeira": "1808"
+        }
+    },
+    {
+        "hex": "#bbaea6",
+        "dmcNumber": "452",
+        "colorName": "Shell Grey - med",
+        "colorRUname": "Серых ракушек, ср.",
+        "labels": {
+            "DMC": "452",
+            "BELKA": "1538",
+            "Kirova": "6402",
+            "Bestex": "-",
+            "Gamma": "53",
+            "Anchor": "676",
+            "Madeira": "1807"
+        }
+    },
+    {
+        "hex": "#e3dcdb",
+        "dmcNumber": "453",
+        "colorName": "Shell Grey - lt",
+        "colorRUname": "Серых ракушек, св.",
+        "labels": {
+            "DMC": "453",
+            "BELKA": "39",
+            "Kirova": "-",
+            "Bestex": "670",
+            "Gamma": "670",
+            "Anchor": "231",
+            "Madeira": "1803"
+        }
+    },
+    {
+        "hex": "#798738",
+        "dmcNumber": "469",
+        "colorName": "Avocado Green",
+        "colorRUname": "Авокадо",
+        "labels": {
+            "DMC": "469",
+            "BELKA": "1233",
+            "Kirova": "4608",
+            "Bestex": "-",
+            "Gamma": "90",
+            "Anchor": "267",
+            "Madeira": "1504"
+        }
+    },
+    {
+        "hex": "#98a859",
+        "dmcNumber": "470",
+        "colorName": "Avocado Green - lt",
+        "colorRUname": "Авокадо, св.",
+        "labels": {
+            "DMC": "470",
+            "BELKA": "2172",
+            "Kirova": "4504",
+            "Bestex": "-",
+            "Gamma": "3161",
+            "Anchor": "267",
+            "Madeira": "1502"
+        }
+    },
+    {
+        "hex": "#929937",
+        "dmcNumber": "471",
+        "colorName": "Avocado Green - vy lt",
+        "colorRUname": "Авокадо, оч.св.",
+        "labels": {
+            "DMC": "471",
+            "BELKA": "3265",
+            "Kirova": "4806",
+            "Bestex": "819",
+            "Gamma": "8",
+            "Anchor": "266",
+            "Madeira": "1501"
+        }
+    },
+    {
+        "hex": "#dee077",
+        "dmcNumber": "472",
+        "colorName": "Avocado Green - ultra lt",
+        "colorRUname": "Авокадо, ультра св.",
+        "labels": {
+            "DMC": "472",
+            "BELKA": "186",
+            "Kirova": "4702",
+            "Bestex": "-",
+            "Gamma": "816",
+            "Anchor": "254",
+            "Madeira": "1414"
+        }
+    },
+    {
+        "hex": "#98232c",
+        "dmcNumber": "498",
+        "colorName": "Christmas Red - dk",
+        "colorRUname": "Рождественский красный, т.",
+        "labels": {
+            "DMC": "498",
+            "BELKA": "3065",
+            "Kirova": "-",
+            "Bestex": "709",
+            "Gamma": "709",
+            "Anchor": "1005",
+            "Madeira": "511"
+        }
+    },
+    {
+        "hex": "#14361e",
+        "dmcNumber": "500",
+        "colorName": "Blue Green - vy dk",
+        "colorRUname": "Сине-зеленый, оч.т.",
+        "labels": {
+            "DMC": "500",
+            "BELKA": "1477",
+            "Kirova": "3806",
+            "Bestex": "960",
+            "Gamma": "960",
+            "Anchor": "879",
+            "Madeira": "1705"
+        }
+    },
+    {
+        "hex": "#496f5c",
+        "dmcNumber": "501",
+        "colorName": "Blue Green - dk",
+        "colorRUname": "Сине-зеленый, т.",
+        "labels": {
+            "DMC": "501",
+            "BELKA": "397",
+            "Kirova": "3802",
+            "Bestex": "957",
+            "Gamma": "957",
+            "Anchor": "878",
+            "Madeira": "1704"
+        }
+    },
+    {
+        "hex": "#799a83",
+        "dmcNumber": "502",
+        "colorName": "Blue Green",
+        "colorRUname": "Сине-зеленый",
+        "labels": {
+            "DMC": "502",
+            "BELKA": "1343",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3145",
+            "Anchor": "877",
+            "Madeira": "1703"
+        }
+    },
+    {
+        "hex": "#8ebea9",
+        "dmcNumber": "503",
+        "colorName": "Blue Green - med",
+        "colorRUname": "Сине-зеленый, ср.",
+        "labels": {
+            "DMC": "503",
+            "BELKA": "2118",
+            "Kirova": "-",
+            "Bestex": "954",
+            "Gamma": "954",
+            "Anchor": "876",
+            "Madeira": "1702"
+        }
+    },
+    {
+        "hex": "#d1e2d7",
+        "dmcNumber": "504",
+        "colorName": "Blue Green - vy lt",
+        "colorRUname": "Сине-зеленый, оч.св.",
+        "labels": {
+            "DMC": "504",
+            "BELKA": "-",
+            "Kirova": "-",
+            "Bestex": "953",
+            "Gamma": "0953",
+            "Anchor": "1042",
+            "Madeira": "1101"
+        }
+    },
+    {
+        "hex": "#418253",
+        "dmcNumber": "505",
+        "colorName": "Jade",
+        "colorRUname": "Нефрит",
+        "labels": {
+            "DMC": "505",
+            "BELKA": "3082",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3246",
+            "Anchor": "210",
+            "Madeira": "1205"
+        }
+    },
+    {
+        "hex": "#166d92",
+        "dmcNumber": "517",
+        "colorName": "Wedgwood - dk",
+        "colorRUname": "Пыльно-синий, т.",
+        "labels": {
+            "DMC": "517",
+            "BELKA": "2041",
+            "Kirova": "2508",
+            "Bestex": "513",
+            "Gamma": "513",
+            "Anchor": "162",
+            "Madeira": "1107"
+        }
+    },
+    {
+        "hex": "#6b9cb9",
+        "dmcNumber": "518",
+        "colorName": "Wedgwood - lt",
+        "colorRUname": "Пыльно-синий, св.",
+        "labels": {
+            "DMC": "518",
+            "BELKA": "2501",
+            "Kirova": "3304",
+            "Bestex": "-",
+            "Gamma": "3055",
+            "Anchor": "1039",
+            "Madeira": "1106"
+        }
+    },
+    {
+        "hex": "#a8c6d8",
+        "dmcNumber": "519",
+        "colorName": "Sky Blue",
+        "colorRUname": "Небесно голубой",
+        "labels": {
+            "DMC": "519",
+            "BELKA": "1206",
+            "Kirova": "2502",
+            "Bestex": "A026",
+            "Gamma": "3054",
+            "Anchor": "1038",
+            "Madeira": "1002"
+        }
+    },
+    {
+        "hex": "#4f6035",
+        "dmcNumber": "520",
+        "colorName": "Fern Green - dk",
+        "colorRUname": "Папоротниковый, т.",
+        "labels": {
+            "DMC": "520",
+            "BELKA": "860",
+            "Kirova": "4306",
+            "Bestex": "-",
+            "Gamma": "3167",
+            "Anchor": "862",
+            "Madeira": "2603"
+        }
+    },
+    {
+        "hex": "#93a181",
+        "dmcNumber": "522",
+        "colorName": "Fern Green",
+        "colorRUname": "Папоротниковый",
+        "labels": {
+            "DMC": "522",
+            "BELKA": "2110",
+            "Kirova": "4304",
+            "Bestex": "A018",
+            "Gamma": "3065",
+            "Anchor": "860",
+            "Madeira": "1512"
+        }
+    },
+    {
+        "hex": "#a5a888",
+        "dmcNumber": "523",
+        "colorName": "Fern Green - lt",
+        "colorRUname": "Папоротниковый, св.",
+        "labels": {
+            "DMC": "523",
+            "BELKA": "2263",
+            "Kirova": "4304",
+            "Bestex": "-",
+            "Gamma": "3166",
+            "Anchor": "859",
+            "Madeira": "1512"
+        }
+    },
+    {
+        "hex": "#bec0a8",
+        "dmcNumber": "524",
+        "colorName": "Fern Green - vy lt",
+        "colorRUname": "Папоротниковый, оч.св.",
+        "labels": {
+            "DMC": "524",
+            "BELKA": "1139",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3165",
+            "Anchor": "858",
+            "Madeira": "1511"
+        }
+    },
+    {
+        "hex": "#504f50",
+        "dmcNumber": "535",
+        "colorName": "Ash Grey - vy lt",
+        "colorRUname": "Пепельный, оч.св.",
+        "labels": {
+            "DMC": "535",
+            "BELKA": "2598",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3230",
+            "Anchor": "401",
+            "Madeira": "1714, 1809"
+        }
+    },
+    {
+        "hex": "#f0e3d4",
+        "dmcNumber": "543",
+        "colorName": "Beige Brown - ultra vy lt",
+        "colorRUname": "Бежево-коричневый, ультра св.",
+        "labels": {
+            "DMC": "543",
+            "BELKA": "2970",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3033",
+            "Anchor": "933",
+            "Madeira": "1909"
+        }
+    },
+    {
+        "hex": "#541244",
+        "dmcNumber": "550",
+        "colorName": "Violet - vy dk",
+        "colorRUname": "Фиолетовый, оч.т.",
+        "labels": {
+            "DMC": "550",
+            "BELKA": "199",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "75",
+            "Anchor": "102",
+            "Madeira": "714"
+        }
+    },
+    {
+        "hex": "#7b3f6c",
+        "dmcNumber": "552",
+        "colorName": "Violet - med",
+        "colorRUname": "Фиолетовый, ср.",
+        "labels": {
+            "DMC": "552",
+            "BELKA": "372",
+            "Kirova": "2208",
+            "Bestex": "-",
+            "Gamma": "77",
+            "Anchor": "99",
+            "Madeira": "713"
+        }
+    },
+    {
+        "hex": "#a772a4",
+        "dmcNumber": "553",
+        "colorName": "Violet",
+        "colorRUname": "Фиолетовый",
+        "labels": {
+            "DMC": "553",
+            "BELKA": "3177",
+            "Kirova": "2206",
+            "Bestex": "-",
+            "Gamma": "74",
+            "Anchor": "98",
+            "Madeira": "712"
+        }
+    },
+    {
+        "hex": "#ae99b1",
+        "dmcNumber": "554",
+        "colorName": "Violet - lt",
+        "colorRUname": "Фиолетовый, св.",
+        "labels": {
+            "DMC": "554",
+            "BELKA": "3279",
+            "Kirova": "2106",
+            "Bestex": "-",
+            "Gamma": "727",
+            "Anchor": "97",
+            "Madeira": "711"
+        }
+    },
+    {
+        "hex": "#377557",
+        "dmcNumber": "561",
+        "colorName": "Jade - vy dk",
+        "colorRUname": "Нефрит, оч.т.",
+        "labels": {
+            "DMC": "561",
+            "BELKA": "1508",
+            "Kirova": "3604",
+            "Bestex": "958",
+            "Gamma": "3142",
+            "Anchor": "878, 212",
+            "Madeira": "1205"
+        }
+    },
+    {
+        "hex": "#599b6d",
+        "dmcNumber": "562",
+        "colorName": "Jade - med",
+        "colorRUname": "Нефрит, ср.",
+        "labels": {
+            "DMC": "562",
+            "BELKA": "166",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3141",
+            "Anchor": "216",
+            "Madeira": "1206"
+        }
+    },
+    {
+        "hex": "#87c39e",
+        "dmcNumber": "563",
+        "colorName": "Jade - lt",
+        "colorRUname": "  Нефрит, св.",
+        "labels": {
+            "DMC": "563",
+            "BELKA": "1227",
+            "Kirova": "3902",
+            "Bestex": "-",
+            "Gamma": "3140",
+            "Anchor": "208",
+            "Madeira": "1207"
+        }
+    },
+    {
+        "hex": "#9cd0ab",
+        "dmcNumber": "564",
+        "colorName": "Jade - vy lt",
+        "colorRUname": "Нефрит, оч.св.",
+        "labels": {
+            "DMC": "564",
+            "BELKA": "2911",
+            "Kirova": "4102",
+            "Bestex": "-",
+            "Gamma": "4105",
+            "Anchor": "206",
+            "Madeira": "1209"
+        }
+    },
+    {
+        "hex": "#68772d",
+        "dmcNumber": "580",
+        "colorName": "Moss Green - dk",
+        "colorRUname": "Мох, т.",
+        "labels": {
+            "DMC": "580",
+            "BELKA": "819",
+            "Kirova": "-",
+            "Bestex": "820",
+            "Gamma": "3170",
+            "Anchor": "817",
+            "Madeira": "1503"
+        }
+    },
+    {
+        "hex": "#9fa146",
+        "dmcNumber": "581",
+        "colorName": "Moss Green",
+        "colorRUname": "Мох",
+        "labels": {
+            "DMC": "581",
+            "BELKA": "200",
+            "Kirova": "4502",
+            "Bestex": "-",
+            "Gamma": "3169",
+            "Anchor": "280",
+            "Madeira": "1502"
+        }
+    },
+    {
+        "hex": "#70aeb4",
+        "dmcNumber": "597",
+        "colorName": "Turquoise",
+        "colorRUname": "Бирюзовый",
+        "labels": {
+            "DMC": "597",
+            "BELKA": "245",
+            "Kirova": "3404",
+            "Bestex": "-",
+            "Gamma": "3056",
+            "Anchor": "1064",
+            "Madeira": "1110"
+        }
+    },
+    {
+        "hex": "#97ccca",
+        "dmcNumber": "598",
+        "colorName": "Turquoise - lt",
+        "colorRUname": "Бирюзовый, св.",
+        "labels": {
+            "DMC": "598",
+            "BELKA": "2458",
+            "Kirova": "3402",
+            "Bestex": "854",
+            "Gamma": "3130",
+            "Anchor": "1062",
+            "Madeira": "1111"
+        }
+    },
+    {
+        "hex": "#bf1c48",
+        "dmcNumber": "600",
+        "colorName": "Cranberry - vy dk",
+        "colorRUname": "Клюквенный, оч.т.",
+        "labels": {
+            "DMC": "600",
+            "BELKA": "417",
+            "Kirova": "1112",
+            "Bestex": "405",
+            "Gamma": "3105",
+            "Anchor": "59",
+            "Madeira": "507"
+        }
+    },
+    {
+        "hex": "#d34067",
+        "dmcNumber": "601",
+        "colorName": "Cranberry - dk",
+        "colorRUname": "Клюквенный, т.",
+        "labels": {
+            "DMC": "601",
+            "BELKA": "581",
+            "Kirova": "1110",
+            "Bestex": "2055",
+            "Gamma": "3104",
+            "Anchor": "57",
+            "Madeira": "610"
+        }
+    },
+    {
+        "hex": "#ca0b51",
+        "dmcNumber": "602",
+        "colorName": "Cranberry - med",
+        "colorRUname": "Клюквенный, ср.",
+        "labels": {
+            "DMC": "602",
+            "BELKA": "131",
+            "Kirova": "1108",
+            "Bestex": "205,404",
+            "Gamma": "71",
+            "Anchor": "63",
+            "Madeira": "611"
+        }
+    },
+    {
+        "hex": "#ef7ba1",
+        "dmcNumber": "603",
+        "colorName": "Cranberry",
+        "colorRUname": "Клюквенный",
+        "labels": {
+            "DMC": "603",
+            "BELKA": "2737",
+            "Kirova": "1106",
+            "Bestex": "204",
+            "Gamma": "204",
+            "Anchor": "62",
+            "Madeira": "701"
+        }
+    },
+    {
+        "hex": "#ec9ab9",
+        "dmcNumber": "604",
+        "colorName": "Cranberry - lt",
+        "colorRUname": "Клюквенный, св.",
+        "labels": {
+            "DMC": "604",
+            "BELKA": "3130",
+            "Kirova": "1104",
+            "Bestex": "202,203",
+            "Gamma": "70",
+            "Anchor": "55",
+            "Madeira": "614"
+        }
+    },
+    {
+        "hex": "#faccdb",
+        "dmcNumber": "605",
+        "colorName": "Cranberry - vy lt",
+        "colorRUname": "Клюквенный, оч.св.",
+        "labels": {
+            "DMC": "605",
+            "BELKA": "1290",
+            "Kirova": "-",
+            "Bestex": "114",
+            "Gamma": "114",
+            "Anchor": "1094",
+            "Madeira": "613"
+        }
+    },
+    {
+        "hex": "#ea592c",
+        "dmcNumber": "606",
+        "colorName": "Bright Orange Red",
+        "colorRUname": "Яркий красно-оранжевый",
+        "labels": {
+            "DMC": "606",
+            "BELKA": "2204",
+            "Kirova": "810",
+            "Bestex": "-",
+            "Gamma": "11",
+            "Anchor": "335",
+            "Madeira": "209"
+        }
+    },
+    {
+        "hex": "#f06e46",
+        "dmcNumber": "608",
+        "colorName": "Bright Orange",
+        "colorRUname": "Ярко оранжевый",
+        "labels": {
+            "DMC": "608",
+            "BELKA": "2982",
+            "Kirova": "712",
+            "Bestex": "315,A082",
+            "Gamma": "315",
+            "Anchor": "332",
+            "Madeira": "206"
+        }
+    },
+    {
+        "hex": "#806638",
+        "dmcNumber": "610",
+        "colorName": "Drab Brown - vy dk",
+        "colorRUname": "Тускло-коричневый, оч.т.",
+        "labels": {
+            "DMC": "610",
+            "BELKA": "764",
+            "Kirova": "6610",
+            "Bestex": "-",
+            "Gamma": "3181",
+            "Anchor": "898",
+            "Madeira": "2107"
+        }
+    },
+    {
+        "hex": "#9e9072",
+        "dmcNumber": "611",
+        "colorName": "Drab Brown - dk",
+        "colorRUname": "Тускло-коричневый, т.",
+        "labels": {
+            "DMC": "611",
+            "BELKA": "870",
+            "Kirova": "6610",
+            "Bestex": "917,A068",
+            "Gamma": "917",
+            "Anchor": "898",
+            "Madeira": "1903"
+        }
+    },
+    {
+        "hex": "#917d4a",
+        "dmcNumber": "612",
+        "colorName": "Drab Brown - med",
+        "colorRUname": "Тускло-коричневый, ср.",
+        "labels": {
+            "DMC": "612",
+            "BELKA": "2401",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3180",
+            "Anchor": "832",
+            "Madeira": "2108"
+        }
+    },
+    {
+        "hex": "#bcae83",
+        "dmcNumber": "613",
+        "colorName": "Drab Brown - lt",
+        "colorRUname": "Тускло-коричневый, св.",
+        "labels": {
+            "DMC": "613",
+            "BELKA": "3024",
+            "Kirova": "6602",
+            "Bestex": "-",
+            "Gamma": "3179",
+            "Anchor": "831",
+            "Madeira": "1902"
+        }
+    },
+    {
+        "hex": "#8c593e",
+        "dmcNumber": "632",
+        "colorName": "Desert Sand - ultra vy dk",
+        "colorRUname": "Пустынного песка, ультра т.",
+        "labels": {
+            "DMC": "632",
+            "BELKA": "2376",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3216",
+            "Anchor": "936",
+            "Madeira": "2311"
+        }
+    },
+    {
+        "hex": "#938962",
+        "dmcNumber": "640",
+        "colorName": "Beige Grey - vy dk",
+        "colorRUname": "Бежево-серый, оч.т.",
+        "labels": {
+            "DMC": "640",
+            "BELKA": "1986",
+            "Kirova": "6008",
+            "Bestex": "-",
+            "Gamma": "3037",
+            "Anchor": "903",
+            "Madeira": "1813"
+        }
+    },
+    {
+        "hex": "#bab599",
+        "dmcNumber": "642",
+        "colorName": "Beige Grey - dk",
+        "colorRUname": "Бежево-серый, т.",
+        "labels": {
+            "DMC": "642",
+            "BELKA": "393",
+            "Kirova": "6604",
+            "Bestex": "916",
+            "Gamma": "59",
+            "Anchor": "392",
+            "Madeira": "1906"
+        }
+    },
+    {
+        "hex": "#d6d3c1",
+        "dmcNumber": "644",
+        "colorName": "Beige Grey - med",
+        "colorRUname": "Бежево-серый, ср.",
+        "labels": {
+            "DMC": "644",
+            "BELKA": "1664",
+            "Kirova": "6602",
+            "Bestex": "-",
+            "Gamma": "3247",
+            "Anchor": "830",
+            "Madeira": "1814"
+        }
+    },
+    {
+        "hex": "#747e65",
+        "dmcNumber": "645",
+        "colorName": "Beaver Grey - vy dk",
+        "colorRUname": "Боброво-серый, оч.т.",
+        "labels": {
+            "DMC": "645",
+            "BELKA": "773",
+            "Kirova": "6806",
+            "Bestex": "-",
+            "Gamma": "154",
+            "Anchor": "273",
+            "Madeira": "1811"
+        }
+    },
+    {
+        "hex": "#97978e",
+        "dmcNumber": "646",
+        "colorName": "Beaver Grey - dk",
+        "colorRUname": "Боброво-серый, т.",
+        "labels": {
+            "DMC": "646",
+            "BELKA": "317",
+            "Kirova": "6708",
+            "Bestex": "-",
+            "Gamma": "60",
+            "Anchor": "8581",
+            "Madeira": "1812"
+        }
+    },
+    {
+        "hex": "#abafa3",
+        "dmcNumber": "647",
+        "colorName": "Beaver Grey - med",
+        "colorRUname": "Боброво-серый, ср.",
+        "labels": {
+            "DMC": "647",
+            "BELKA": "445",
+            "Kirova": "6604",
+            "Bestex": "152",
+            "Gamma": "152",
+            "Anchor": "1040",
+            "Madeira": "1813"
+        }
+    },
+    {
+        "hex": "#babfad",
+        "dmcNumber": "648",
+        "colorName": "Beaver Grey - lt",
+        "colorRUname": "Боброво-серый, св.",
+        "labels": {
+            "DMC": "648",
+            "BELKA": "50",
+            "Kirova": "-",
+            "Bestex": "150",
+            "Gamma": "3044",
+            "Anchor": "900",
+            "Madeira": "1814"
+        }
+    },
+    {
+        "hex": "#d12627",
+        "dmcNumber": "666",
+        "colorName": "Christmas Red - bright",
+        "colorRUname": "Рождественский красный, яркий",
+        "labels": {
+            "DMC": "666",
+            "BELKA": "1852",
+            "Kirova": "904",
+            "Bestex": "119,A084",
+            "Gamma": "12",
+            "Anchor": "46",
+            "Madeira": "210"
+        }
+    },
+    {
+        "hex": "#eed7a1",
+        "dmcNumber": "676",
+        "colorName": "Old Gold - lt",
+        "colorRUname": "Старого золота, св.",
+        "labels": {
+            "DMC": "676",
+            "BELKA": "489",
+            "Kirova": "402",
+            "Bestex": "2125",
+            "Gamma": "2125",
+            "Anchor": "891",
+            "Madeira": "2207"
+        }
+    },
+    {
+        "hex": "#ede0ba",
+        "dmcNumber": "677",
+        "colorName": "Old Gold - vy lt",
+        "colorRUname": "Старого золота, оч.св.",
+        "labels": {
+            "DMC": "677",
+            "BELKA": "2229",
+            "Kirova": "502",
+            "Bestex": "-",
+            "Gamma": "96",
+            "Anchor": "886",
+            "Madeira": "2207"
+        }
+    },
+    {
+        "hex": "#af8334",
+        "dmcNumber": "680",
+        "colorName": "Old Gold - dk",
+        "colorRUname": "Старого золота, т.",
+        "labels": {
+            "DMC": "680",
+            "BELKA": "2472",
+            "Kirova": "5004",
+            "Bestex": "-",
+            "Gamma": "3188",
+            "Anchor": "901",
+            "Madeira": "2210"
+        }
+    },
+    {
+        "hex": "#015731",
+        "dmcNumber": "699",
+        "colorName": "Christmas Green",
+        "colorRUname": "Рождественский зеленый",
+        "labels": {
+            "DMC": "699",
+            "BELKA": "1086",
+            "Kirova": "4110",
+            "Bestex": "-",
+            "Gamma": "3158",
+            "Anchor": "923",
+            "Madeira": "2704"
+        }
+    },
+    {
+        "hex": "#2e9148",
+        "dmcNumber": "700",
+        "colorName": "Christmas Green - bright",
+        "colorRUname": "Рождественский зеленый, яркий",
+        "labels": {
+            "DMC": "700",
+            "BELKA": "1181",
+            "Kirova": "4108",
+            "Bestex": "-",
+            "Gamma": "14",
+            "Anchor": "228",
+            "Madeira": "1304"
+        }
+    },
+    {
+        "hex": "#007a3f",
+        "dmcNumber": "701",
+        "colorName": "Christmas Green - lt",
+        "colorRUname": "Рождественский зеленый, св.",
+        "labels": {
+            "DMC": "701",
+            "BELKA": "520",
+            "Kirova": "3910",
+            "Bestex": "321",
+            "Gamma": "321",
+            "Anchor": "227",
+            "Madeira": "1305"
+        }
+    },
+    {
+        "hex": "#59a052",
+        "dmcNumber": "702",
+        "colorName": "Kelly Green",
+        "colorRUname": "Мутновато-зеленый",
+        "labels": {
+            "DMC": "702",
+            "BELKA": "1443",
+            "Kirova": "3908",
+            "Bestex": "210,32",
+            "Gamma": "210",
+            "Anchor": "239",
+            "Madeira": "1306"
+        }
+    },
+    {
+        "hex": "#81b85e",
+        "dmcNumber": "703",
+        "colorName": "Chartreuse",
+        "colorRUname": "Бледно-зеленый",
+        "labels": {
+            "DMC": "703",
+            "BELKA": "379",
+            "Kirova": "-",
+            "Bestex": "209",
+            "Gamma": "3157",
+            "Anchor": "238",
+            "Madeira": "1307"
+        }
+    },
+    {
+        "hex": "#bad765",
+        "dmcNumber": "704",
+        "colorName": "Chartreuse - bright",
+        "colorRUname": "Бледно-зеленый, яркий",
+        "labels": {
+            "DMC": "704",
+            "BELKA": "1023",
+            "Kirova": "-",
+            "Bestex": "207",
+            "Gamma": "207",
+            "Anchor": "256",
+            "Madeira": "1308"
+        }
+    },
+    {
+        "hex": "#e1e1d9",
+        "dmcNumber": "712",
+        "colorName": "Cream",
+        "colorRUname": "Кремовый",
+        "labels": {
+            "DMC": "712",
+            "BELKA": "908",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3036",
+            "Anchor": "926",
+            "Madeira": "1908"
+        }
+    },
+    {
+        "hex": "#9f2d6f",
+        "dmcNumber": "718",
+        "colorName": "Plum",
+        "colorRUname": "Сливовый",
+        "labels": {
+            "DMC": "718",
+            "BELKA": "2238",
+            "Kirova": "1710",
+            "Bestex": "-",
+            "Gamma": "73",
+            "Anchor": "88",
+            "Madeira": "707"
+        }
+    },
+    {
+        "hex": "#ec6810",
+        "dmcNumber": "720",
+        "colorName": "Orange Spice - dk",
+        "colorRUname": "Красновато-рыжеватый, т.",
+        "labels": {
+            "DMC": "720",
+            "BELKA": "23",
+            "Kirova": "1608",
+            "Bestex": "109",
+            "Gamma": "109",
+            "Anchor": "326",
+            "Madeira": "309"
+        }
+    },
+    {
+        "hex": "#e4752b",
+        "dmcNumber": "721",
+        "colorName": "Orange Spice - med",
+        "colorRUname": "Красновато-рыжеватый, ср.",
+        "labels": {
+            "DMC": "721",
+            "BELKA": "554",
+            "Kirova": "1606",
+            "Bestex": "108",
+            "Gamma": "108",
+            "Anchor": "925",
+            "Madeira": "308"
+        }
+    },
+    {
+        "hex": "#faa463",
+        "dmcNumber": "722",
+        "colorName": "Orange Spice - lt",
+        "colorRUname": "Красновато-рыжеватый, св.",
+        "labels": {
+            "DMC": "722",
+            "BELKA": "463",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3204",
+            "Anchor": "323",
+            "Madeira": "307"
+        }
+    },
+    {
+        "hex": "#fad558",
+        "dmcNumber": "725",
+        "colorName": "Topaz",
+        "colorRUname": "Топаз",
+        "labels": {
+            "DMC": "725",
+            "BELKA": "759",
+            "Kirova": "506",
+            "Bestex": "-",
+            "Gamma": "3194",
+            "Anchor": "305",
+            "Madeira": "109"
+        }
+    },
+    {
+        "hex": "#ffe35f",
+        "dmcNumber": "726",
+        "colorName": "Topaz - lt",
+        "colorRUname": "Топаз, св.",
+        "labels": {
+            "DMC": "726",
+            "BELKA": "124",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3193",
+            "Anchor": "295",
+            "Madeira": "108"
+        }
+    },
+    {
+        "hex": "#feee89",
+        "dmcNumber": "727",
+        "colorName": "Topaz - vy lt",
+        "colorRUname": "Топаз, оч.св.",
+        "labels": {
+            "DMC": "727",
+            "BELKA": "428",
+            "Kirova": "204",
+            "Bestex": "A006",
+            "Gamma": "16",
+            "Anchor": "293",
+            "Madeira": "102"
+        }
+    },
+    {
+        "hex": "#ecbf3b",
+        "dmcNumber": "728",
+        "colorName": "Topaz",
+        "colorRUname": "Топаз",
+        "labels": {
+            "DMC": "728",
+            "BELKA": "1752",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3248",
+            "Anchor": "305",
+            "Madeira": "2509"
+        }
+    },
+    {
+        "hex": "#cc993d",
+        "dmcNumber": "729",
+        "colorName": "Old Gold - med",
+        "colorRUname": "Старого золота, ср.",
+        "labels": {
+            "DMC": "729",
+            "BELKA": "2586",
+            "Kirova": "5504",
+            "Bestex": "A072",
+            "Gamma": "3019",
+            "Anchor": "890",
+            "Madeira": "2204"
+        }
+    },
+    {
+        "hex": "#746d2b",
+        "dmcNumber": "730",
+        "colorName": "Olive Green - vy dk",
+        "colorRUname": "Оливково-зеленый, оч.т.",
+        "labels": {
+            "DMC": "730",
+            "BELKA": "611",
+            "Kirova": "4506",
+            "Bestex": "-",
+            "Gamma": "3173",
+            "Anchor": "845",
+            "Madeira": "1614"
+        }
+    },
+    {
+        "hex": "#837d2f",
+        "dmcNumber": "731",
+        "colorName": "Olive Green - dk",
+        "colorRUname": "Оливково-зеленый, т.",
+        "labels": {
+            "DMC": "731",
+            "BELKA": "-",
+            "Kirova": "-",
+            "Bestex": "819",
+            "Gamma": "3172",
+            "Anchor": "924",
+            "Madeira": "1612"
+        }
+    },
+    {
+        "hex": "#91852a",
+        "dmcNumber": "732",
+        "colorName": "Olive Green",
+        "colorRUname": "Оливково-зеленый",
+        "labels": {
+            "DMC": "732",
+            "BELKA": "812",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3171",
+            "Anchor": "281",
+            "Madeira": "1612"
+        }
+    },
+    {
+        "hex": "#a6a036",
+        "dmcNumber": "733",
+        "colorName": "Olive Green - med",
+        "colorRUname": "Оливково-зеленый, ср.",
+        "labels": {
+            "DMC": "733",
+            "BELKA": "786",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "10",
+            "Anchor": "280",
+            "Madeira": "1611"
+        }
+    },
+    {
+        "hex": "#d1c66d",
+        "dmcNumber": "734",
+        "colorName": "Olive Green - lt",
+        "colorRUname": "Оливково-зеленый, св.",
+        "labels": {
+            "DMC": "734",
+            "BELKA": "2568",
+            "Kirova": "5002",
+            "Bestex": "653",
+            "Gamma": "17",
+            "Anchor": "279",
+            "Madeira": "1610"
+        }
+    },
+    {
+        "hex": "#d9c38f",
+        "dmcNumber": "738",
+        "colorName": "Tan - vy lt",
+        "colorRUname": "Желто-коричневый, оч.св.",
+        "labels": {
+            "DMC": "738",
+            "BELKA": "2810",
+            "Kirova": "5902",
+            "Bestex": "803",
+            "Gamma": "803",
+            "Anchor": "942",
+            "Madeira": "2102"
+        }
+    },
+    {
+        "hex": "#e5dab2",
+        "dmcNumber": "739",
+        "colorName": "Tan - ultra vy lt",
+        "colorRUname": "Желто-коричневый, ультра св.",
+        "labels": {
+            "DMC": "739",
+            "BELKA": "823",
+            "Kirova": "103",
+            "Bestex": "802",
+            "Gamma": "18",
+            "Anchor": "276",
+            "Madeira": "2001"
+        }
+    },
+    {
+        "hex": "#ff7600",
+        "dmcNumber": "740",
+        "colorName": "Tangerine",
+        "colorRUname": "Мандариновый",
+        "labels": {
+            "DMC": "740",
+            "BELKA": "1388",
+            "Kirova": "608",
+            "Bestex": "-",
+            "Gamma": "3196",
+            "Anchor": "316",
+            "Madeira": "202"
+        }
+    },
+    {
+        "hex": "#f69726",
+        "dmcNumber": "741",
+        "colorName": "Tangerine - med",
+        "colorRUname": "Мандариновый, ср.",
+        "labels": {
+            "DMC": "741",
+            "BELKA": "1943",
+            "Kirova": "606",
+            "Bestex": "105",
+            "Gamma": "3195",
+            "Anchor": "314",
+            "Madeira": "201"
+        }
+    },
+    {
+        "hex": "#ffc33a",
+        "dmcNumber": "742",
+        "colorName": "Tangerine - lt",
+        "colorRUname": "Мандариновый, св.",
+        "labels": {
+            "DMC": "742",
+            "BELKA": "2617",
+            "Kirova": "510",
+            "Bestex": "-",
+            "Gamma": "19",
+            "Anchor": "303",
+            "Madeira": "114"
+        }
+    },
+    {
+        "hex": "#ffda5a",
+        "dmcNumber": "743",
+        "colorName": "Yellow - med",
+        "colorRUname": "Желтый, ср.",
+        "labels": {
+            "DMC": "743",
+            "BELKA": "2317",
+            "Kirova": "506",
+            "Bestex": "104",
+            "Gamma": "104",
+            "Anchor": "302",
+            "Madeira": "113"
+        }
+    },
+    {
+        "hex": "#ffe276",
+        "dmcNumber": "744",
+        "colorName": "Yellow - pale",
+        "colorRUname": "Желтый, бледный",
+        "labels": {
+            "DMC": "744",
+            "BELKA": "97",
+            "Kirova": "504",
+            "Bestex": "103, A008",
+            "Gamma": "20",
+            "Anchor": "301",
+            "Madeira": "109"
+        }
+    },
+    {
+        "hex": "#ffeda9",
+        "dmcNumber": "745",
+        "colorName": "Yellow - lt pale",
+        "colorRUname": "Желтый, бледно св.",
+        "labels": {
+            "DMC": "745",
+            "BELKA": "1247",
+            "Kirova": "502",
+            "Bestex": "A007",
+            "Gamma": "21",
+            "Anchor": "300",
+            "Madeira": "112"
+        }
+    },
+    {
+        "hex": "#f5f0df",
+        "dmcNumber": "746",
+        "colorName": "Off White",
+        "colorRUname": "Белесый",
+        "labels": {
+            "DMC": "746",
+            "BELKA": "2848",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3187",
+            "Anchor": "275",
+            "Madeira": "101"
+        }
+    },
+    {
+        "hex": "#d3e9e7",
+        "dmcNumber": "747",
+        "colorName": "Sky Blue - vy lt",
+        "colorRUname": "Небесно голубой, оч.св.",
+        "labels": {
+            "DMC": "747",
+            "BELKA": "1851",
+            "Kirova": "-",
+            "Bestex": "852",
+            "Gamma": "852",
+            "Anchor": "158",
+            "Madeira": "1104"
+        }
+    },
+    {
+        "hex": "#efc1aa",
+        "dmcNumber": "754",
+        "colorName": "Peach - lt",
+        "colorRUname": "Персиковый, св.",
+        "labels": {
+            "DMC": "754",
+            "BELKA": "369",
+            "Kirova": "1602",
+            "Bestex": "-",
+            "Gamma": "3025",
+            "Anchor": "1012",
+            "Madeira": "305"
+        }
+    },
+    {
+        "hex": "#eac0b4",
+        "dmcNumber": "758",
+        "colorName": "Terra Cotta - vy lt",
+        "colorRUname": "Терракотовый, оч.св.",
+        "labels": {
+            "DMC": "758",
+            "BELKA": "3173",
+            "Kirova": "1602",
+            "Bestex": "-",
+            "Gamma": "51",
+            "Anchor": "9575",
+            "Madeira": "403"
+        }
+    },
+    {
+        "hex": "#e29690",
+        "dmcNumber": "760",
+        "colorName": "Salmon",
+        "colorRUname": "Лососевый",
+        "labels": {
+            "DMC": "760",
+            "BELKA": "196",
+            "Kirova": "5604",
+            "Bestex": "-",
+            "Gamma": "3012",
+            "Anchor": "1022",
+            "Madeira": "405"
+        }
+    },
+    {
+        "hex": "#f4c4c1",
+        "dmcNumber": "761",
+        "colorName": "Salmon - lt",
+        "colorRUname": "Лососевый, св.",
+        "labels": {
+            "DMC": "761",
+            "BELKA": "583",
+            "Kirova": "5602",
+            "Bestex": "-",
+            "Gamma": "3011",
+            "Anchor": "1021",
+            "Madeira": "404"
+        }
+    },
+    {
+        "hex": "#e9e9eb",
+        "dmcNumber": "762",
+        "colorName": "Pearl Grey - vy lt",
+        "colorRUname": "Жемчужно серый, оч.св.",
+        "labels": {
+            "DMC": "762",
+            "BELKA": "1081",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3231",
+            "Anchor": "234",
+            "Madeira": "1804"
+        }
+    },
+    {
+        "hex": "#f3f6d4",
+        "dmcNumber": "772",
+        "colorName": "Yellow Green - vy lt",
+        "colorRUname": "Желто-зеленый, оч.св.",
+        "labels": {
+            "DMC": "772",
+            "BELKA": "1868",
+            "Kirova": "4002",
+            "Bestex": "500",
+            "Gamma": "500",
+            "Anchor": "259",
+            "Madeira": "1604"
+        }
+    },
+    {
+        "hex": "#ceddea",
+        "dmcNumber": "775",
+        "colorName": "Baby Blue - vy lt",
+        "colorRUname": "Нежно голубой, оч.св.",
+        "labels": {
+            "DMC": "775",
+            "BELKA": "3144",
+            "Kirova": "2602",
+            "Bestex": "753",
+            "Gamma": "753",
+            "Anchor": "128",
+            "Madeira": "1001"
+        }
+    },
+    {
+        "hex": "#eeaeb0",
+        "dmcNumber": "776",
+        "colorName": "Pink - med",
+        "colorRUname": "Розовый, ср.",
+        "labels": {
+            "DMC": "776",
+            "BELKA": "-",
+            "Kirova": "-",
+            "Bestex": "409",
+            "Gamma": "3087",
+            "Anchor": "24",
+            "Madeira": "503"
+        }
+    },
+    {
+        "hex": "#8a373b",
+        "dmcNumber": "777",
+        "colorName": "Raspberry - vy dk",
+        "colorRUname": "Малина оч.т",
+        "labels": {
+            "DMC": "777",
+            "BELKA": "1055",
+            "Kirova": "-",
+            "Bestex": "406",
+            "Gamma": "406",
+            "Anchor": "65",
+            "Madeira": "508"
+        }
+    },
+    {
+        "hex": "#ddb3b1",
+        "dmcNumber": "778",
+        "colorName": "Antique Mauve - vy lt",
+        "colorRUname": "Античный розовато-лиловый, оч.св.",
+        "labels": {
+            "DMC": "778",
+            "BELKA": "333",
+            "Kirova": "5702",
+            "Bestex": "3214",
+            "Gamma": "876",
+            "Anchor": "968",
+            "Madeira": "808"
+        }
+    },
+    {
+        "hex": "#6d5748",
+        "dmcNumber": "779",
+        "colorName": "Cocoa - dk",
+        "colorRUname": "Какао т.",
+        "labels": {
+            "DMC": "779",
+            "BELKA": "218",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3249",
+            "Anchor": "380",
+            "Madeira": "-"
+        }
+    },
+    {
+        "hex": "#936626",
+        "dmcNumber": "780",
+        "colorName": "Topaz - ultra vy dk",
+        "colorRUname": "Топаз, ультра т.",
+        "labels": {
+            "DMC": "780",
+            "BELKA": "1610",
+            "Kirova": "5908",
+            "Bestex": "216",
+            "Gamma": "3186",
+            "Anchor": "370",
+            "Madeira": "2214"
+        }
+    },
+    {
+        "hex": "#ba8225",
+        "dmcNumber": "781",
+        "colorName": "Topaz - vy dk",
+        "colorRUname": "Топаз, оч.т.",
+        "labels": {
+            "DMC": "781",
+            "BELKA": "-",
+            "Kirova": "5508",
+            "Bestex": "215,2135",
+            "Gamma": "215",
+            "Anchor": "309",
+            "Madeira": "2104"
+        }
+    },
+    {
+        "hex": "#b38132",
+        "dmcNumber": "782",
+        "colorName": "Topaz - dk",
+        "colorRUname": "Топаз, т.",
+        "labels": {
+            "DMC": "782",
+            "BELKA": "134",
+            "Kirova": "5506",
+            "Bestex": "-",
+            "Gamma": "3185",
+            "Anchor": "308",
+            "Madeira": "2210"
+        }
+    },
+    {
+        "hex": "#d19d2f",
+        "dmcNumber": "783",
+        "colorName": "Topaz - med",
+        "colorRUname": "Топаз, ср.т.",
+        "labels": {
+            "DMC": "783",
+            "BELKA": "668",
+            "Kirova": "406",
+            "Bestex": "214",
+            "Gamma": "97",
+            "Anchor": "307",
+            "Madeira": "2514"
+        }
+    },
+    {
+        "hex": "#161151",
+        "dmcNumber": "791",
+        "colorName": "Cornflower Blue - vy dk",
+        "colorRUname": "Васильковый, кобальтовый, оч.т.",
+        "labels": {
+            "DMC": "791",
+            "BELKA": "2484",
+            "Kirova": "2410",
+            "Bestex": "308,A043",
+            "Gamma": "308",
+            "Anchor": "306",
+            "Madeira": "904"
+        }
+    },
+    {
+        "hex": "#7971a0",
+        "dmcNumber": "792",
+        "colorName": "Cornflower Blue - dk",
+        "colorRUname": "Васильковый, кобальтовый, т.",
+        "labels": {
+            "DMC": "792",
+            "BELKA": "1056",
+            "Kirova": "2408",
+            "Bestex": "-",
+            "Gamma": "80",
+            "Anchor": "178",
+            "Madeira": "905"
+        }
+    },
+    {
+        "hex": "#686d8d",
+        "dmcNumber": "793",
+        "colorName": "Cornflower Blue - med",
+        "colorRUname": "Васильковый, кобальтовый, ср.",
+        "labels": {
+            "DMC": "793",
+            "BELKA": "371",
+            "Kirova": "2404",
+            "Bestex": "-",
+            "Gamma": "3111",
+            "Anchor": "941",
+            "Madeira": "906"
+        }
+    },
+    {
+        "hex": "#8ea7c0",
+        "dmcNumber": "794",
+        "colorName": "Cornflower Blue - lt",
+        "colorRUname": "Васильковый, кобальтовый, св.т.",
+        "labels": {
+            "DMC": "794",
+            "BELKA": "2305",
+            "Kirova": "2806",
+            "Bestex": "756,A060",
+            "Gamma": "23",
+            "Anchor": "176",
+            "Madeira": "907"
+        }
+    },
+    {
+        "hex": "#181f66",
+        "dmcNumber": "796",
+        "colorName": "Royal Blue - dk",
+        "colorRUname": "Чисто синий, т.",
+        "labels": {
+            "DMC": "796",
+            "BELKA": "1062",
+            "Kirova": "2410",
+            "Bestex": "307,A064",
+            "Gamma": "83",
+            "Anchor": "133",
+            "Madeira": "913"
+        }
+    },
+    {
+        "hex": "#2c4180",
+        "dmcNumber": "797",
+        "colorName": "Royal Blue",
+        "colorRUname": "Чисто синий",
+        "labels": {
+            "DMC": "797",
+            "BELKA": "994",
+            "Kirova": "-",
+            "Bestex": "A039,A063",
+            "Gamma": "306",
+            "Anchor": "147",
+            "Madeira": "912"
+        }
+    },
+    {
+        "hex": "#445997",
+        "dmcNumber": "798",
+        "colorName": "Delft - dk",
+        "colorRUname": "Фарфоровый, т.",
+        "labels": {
+            "DMC": "798",
+            "BELKA": "2528",
+            "Kirova": "2610",
+            "Bestex": "A040",
+            "Gamma": "82",
+            "Anchor": "131",
+            "Madeira": "911"
+        }
+    },
+    {
+        "hex": "#6e8db5",
+        "dmcNumber": "799",
+        "colorName": "Delft - med",
+        "colorRUname": "Фарфоровый, ср.",
+        "labels": {
+            "DMC": "799",
+            "BELKA": "945",
+            "Kirova": "2504",
+            "Bestex": "303,A033",
+            "Gamma": "5",
+            "Anchor": "145",
+            "Madeira": "910"
+        }
+    },
+    {
+        "hex": "#c1d3df",
+        "dmcNumber": "800",
+        "colorName": "Delft - pale",
+        "colorRUname": "Фарфоровый, бледный",
+        "labels": {
+            "DMC": "800",
+            "BELKA": "1948",
+            "Kirova": "2604",
+            "Bestex": "A025",
+            "Gamma": "27",
+            "Anchor": "159, 144",
+            "Madeira": "908"
+        }
+    },
+    {
+        "hex": "#63461f",
+        "dmcNumber": "801",
+        "colorName": "Coffee Brown - dk",
+        "colorRUname": "Кофейный, т.",
+        "labels": {
+            "DMC": "801",
+            "BELKA": "698",
+            "Kirova": "6012",
+            "Bestex": "810,A097",
+            "Gamma": "55",
+            "Anchor": "359",
+            "Madeira": "2007"
+        }
+    },
+    {
+        "hex": "#437490",
+        "dmcNumber": "806",
+        "colorName": "Peacock Blue - dk",
+        "colorRUname": "Переливчатый синий, т.",
+        "labels": {
+            "DMC": "806",
+            "BELKA": "-",
+            "Kirova": "3306",
+            "Bestex": "-",
+            "Gamma": "3128",
+            "Anchor": "978",
+            "Madeira": "1107"
+        }
+    },
+    {
+        "hex": "#70a8b3",
+        "dmcNumber": "807",
+        "colorName": "Peacock Blue",
+        "colorRUname": "Переливчатый синий",
+        "labels": {
+            "DMC": "807",
+            "BELKA": "2623",
+            "Kirova": "3304",
+            "Bestex": "-",
+            "Gamma": "3127",
+            "Anchor": "168",
+            "Madeira": "1105"
+        }
+    },
+    {
+        "hex": "#6c91c0",
+        "dmcNumber": "809",
+        "colorName": "Delft",
+        "colorRUname": "Фарфоровый",
+        "labels": {
+            "DMC": "809",
+            "BELKA": "2669",
+            "Kirova": "2606",
+            "Bestex": "304",
+            "Gamma": "304",
+            "Anchor": "130",
+            "Madeira": "909"
+        }
+    },
+    {
+        "hex": "#91b4ce",
+        "dmcNumber": "813",
+        "colorName": "Blue - lt",
+        "colorRUname": "Синий, св.",
+        "labels": {
+            "DMC": "813",
+            "BELKA": "1251",
+            "Kirova": "2606",
+            "Bestex": "A031",
+            "Gamma": "3116",
+            "Anchor": "161",
+            "Madeira": "1711"
+        }
+    },
+    {
+        "hex": "#711f2e",
+        "dmcNumber": "814",
+        "colorName": "Garnet - dk",
+        "colorRUname": "Гранатовый, т.",
+        "labels": {
+            "DMC": "814",
+            "BELKA": "2449",
+            "Kirova": "1208",
+            "Bestex": "407",
+            "Gamma": "407",
+            "Anchor": "45",
+            "Madeira": "514"
+        }
+    },
+    {
+        "hex": "#9d3030",
+        "dmcNumber": "815",
+        "colorName": "Garnet - med",
+        "colorRUname": "Гранатовый, ср.",
+        "labels": {
+            "DMC": "815",
+            "BELKA": "338",
+            "Kirova": "1202",
+            "Bestex": "867",
+            "Gamma": "867",
+            "Anchor": "44",
+            "Madeira": "2502"
+        }
+    },
+    {
+        "hex": "#811024",
+        "dmcNumber": "816",
+        "colorName": "Garnet",
+        "colorRUname": "Гранатовый",
+        "labels": {
+            "DMC": "816",
+            "BELKA": "1296",
+            "Kirova": "1204",
+            "Bestex": "869",
+            "Gamma": "869",
+            "Anchor": "1005",
+            "Madeira": "513"
+        }
+    },
+    {
+        "hex": "#bd2e2e",
+        "dmcNumber": "817",
+        "colorName": "Coral Red - vy dk",
+        "colorRUname": "Кораллово красный, оч.т.",
+        "labels": {
+            "DMC": "817",
+            "BELKA": "2281",
+            "Kirova": "906",
+            "Bestex": "-",
+            "Gamma": "24",
+            "Anchor": "13",
+            "Madeira": "211"
+        }
+    },
+    {
+        "hex": "#f9d6dd",
+        "dmcNumber": "818",
+        "colorName": "Baby Pink",
+        "colorRUname": "Нежно розовый",
+        "labels": {
+            "DMC": "818",
+            "BELKA": "2563",
+            "Kirova": "1102",
+            "Bestex": "902",
+            "Gamma": "902",
+            "Anchor": "48",
+            "Madeira": "502"
+        }
+    },
+    {
+        "hex": "#fbe2df",
+        "dmcNumber": "819",
+        "colorName": "Baby Pink - lt",
+        "colorRUname": "Нежно розовый, св.",
+        "labels": {
+            "DMC": "819",
+            "BELKA": "3042",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "25",
+            "Anchor": "271",
+            "Madeira": "501"
+        }
+    },
+    {
+        "hex": "#190f60",
+        "dmcNumber": "820",
+        "colorName": "Royal Blue - vy dk",
+        "colorRUname": "Чисто синий, оч.т.",
+        "labels": {
+            "DMC": "820",
+            "BELKA": "496",
+            "Kirova": "2412",
+            "Bestex": "-",
+            "Gamma": "3114",
+            "Anchor": "134",
+            "Madeira": "904"
+        }
+    },
+    {
+        "hex": "#e2dfd3",
+        "dmcNumber": "822",
+        "colorName": "Beige Grey - lt",
+        "colorRUname": "Бежево-серый, св.",
+        "labels": {
+            "DMC": "822",
+            "BELKA": "1485",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3225",
+            "Anchor": "390",
+            "Madeira": "1908"
+        }
+    },
+    {
+        "hex": "#124477",
+        "dmcNumber": "823",
+        "colorName": "Navy Blue - dk",
+        "colorRUname": "Темно-синий, т.",
+        "labels": {
+            "DMC": "823",
+            "BELKA": "-",
+            "Kirova": "-",
+            "Bestex": "A042",
+            "Gamma": "-",
+            "Anchor": "127",
+            "Madeira": "1008"
+        }
+    },
+    {
+        "hex": "#3b6292",
+        "dmcNumber": "824",
+        "colorName": "Blue - vy dk",
+        "colorRUname": "Синий, оч.т.",
+        "labels": {
+            "DMC": "824",
+            "BELKA": "2687",
+            "Kirova": "2610",
+            "Bestex": "A037",
+            "Gamma": "3",
+            "Anchor": "164",
+            "Madeira": "1010"
+        }
+    },
+    {
+        "hex": "#366390",
+        "dmcNumber": "825",
+        "colorName": "Blue - dk",
+        "colorRUname": "Синий, т.",
+        "labels": {
+            "DMC": "825",
+            "BELKA": "1305",
+            "Kirova": "2508",
+            "Bestex": "305,A034",
+            "Gamma": "84",
+            "Anchor": "162",
+            "Madeira": "1011"
+        }
+    },
+    {
+        "hex": "#5a82a2",
+        "dmcNumber": "826",
+        "colorName": "Blue - med",
+        "colorRUname": "Синий, ср.",
+        "labels": {
+            "DMC": "826",
+            "BELKA": "649",
+            "Kirova": "2506",
+            "Bestex": "512",
+            "Gamma": "512",
+            "Anchor": "161",
+            "Madeira": "1012"
+        }
+    },
+    {
+        "hex": "#b4d3e3",
+        "dmcNumber": "827",
+        "colorName": "Blue - vy lt",
+        "colorRUname": "Синий, оч.св.",
+        "labels": {
+            "DMC": "827",
+            "BELKA": "2427",
+            "Kirova": "2604",
+            "Bestex": "-",
+            "Gamma": "3115",
+            "Anchor": "160",
+            "Madeira": "1014"
+        }
+    },
+    {
+        "hex": "#cae2eb",
+        "dmcNumber": "828",
+        "colorName": "Blue - ultra vy lt",
+        "colorRUname": "Синий, ультра св.",
+        "labels": {
+            "DMC": "828",
+            "BELKA": "540",
+            "Kirova": "2802",
+            "Bestex": "A046",
+            "Gamma": "3053",
+            "Anchor": "9159",
+            "Madeira": "1101"
+        }
+    },
+    {
+        "hex": "#6f5422",
+        "dmcNumber": "829",
+        "colorName": "Golden Olive - vy dk",
+        "colorRUname": "Оливково-золотой, оч.т.",
+        "labels": {
+            "DMC": "829",
+            "BELKA": "1777",
+            "Kirova": "5306",
+            "Bestex": "-",
+            "Gamma": "3178",
+            "Anchor": "906",
+            "Madeira": "2114"
+        }
+    },
+    {
+        "hex": "#806c26",
+        "dmcNumber": "830",
+        "colorName": "Golden Olive - dk",
+        "colorRUname": "Оливково-золотой, т.",
+        "labels": {
+            "DMC": "830",
+            "BELKA": "682",
+            "Kirova": "5304",
+            "Bestex": "655",
+            "Gamma": "3177",
+            "Anchor": "277",
+            "Madeira": "2112"
+        }
+    },
+    {
+        "hex": "#957b2f",
+        "dmcNumber": "831",
+        "colorName": "Golden Olive - med",
+        "colorRUname": "Оливково-золотой, ср.",
+        "labels": {
+            "DMC": "831",
+            "BELKA": "2547",
+            "Kirova": "5202",
+            "Bestex": "-",
+            "Gamma": "94",
+            "Anchor": "277",
+            "Madeira": "2201"
+        }
+    },
+    {
+        "hex": "#b19a3f",
+        "dmcNumber": "832",
+        "colorName": "Golden Olive",
+        "colorRUname": "Оливково-золотой",
+        "labels": {
+            "DMC": "832",
+            "BELKA": "2686",
+            "Kirova": "5302",
+            "Bestex": "654",
+            "Gamma": "654",
+            "Anchor": "907",
+            "Madeira": "2202"
+        }
+    },
+    {
+        "hex": "#bfa43a",
+        "dmcNumber": "833",
+        "colorName": "Golden Olive - lt",
+        "colorRUname": "Оливково-золотой, св.",
+        "labels": {
+            "DMC": "833",
+            "BELKA": "1073",
+            "Kirova": "5002",
+            "Bestex": "-",
+            "Gamma": "3176",
+            "Anchor": "907",
+            "Madeira": "2202"
+        }
+    },
+    {
+        "hex": "#cab751",
+        "dmcNumber": "834",
+        "colorName": "Golden Olive - vy lt",
+        "colorRUname": "Оливково-золотой, оч.св.",
+        "labels": {
+            "DMC": "834",
+            "BELKA": "2683",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3069",
+            "Anchor": "874",
+            "Madeira": "2206"
+        }
+    },
+    {
+        "hex": "#573c2a",
+        "dmcNumber": "838",
+        "colorName": "Beige Brown - vy dk",
+        "colorRUname": "Бежево-коричневый, оч.т.",
+        "labels": {
+            "DMC": "838",
+            "BELKA": "1706",
+            "Kirova": "5710",
+            "Bestex": "811,A098",
+            "Gamma": "811",
+            "Anchor": "1088",
+            "Madeira": "1914"
+        }
+    },
+    {
+        "hex": "#684e37",
+        "dmcNumber": "839",
+        "colorName": "Beige Brown - dk",
+        "colorRUname": "Бежево-коричневый, т.",
+        "labels": {
+            "DMC": "839",
+            "BELKA": "354",
+            "Kirova": "6510",
+            "Bestex": "-",
+            "Gamma": "3222",
+            "Anchor": "1086",
+            "Madeira": "1913"
+        }
+    },
+    {
+        "hex": "#977e65",
+        "dmcNumber": "840",
+        "colorName": "Beige Brown - med",
+        "colorRUname": "Бежево-коричневый, ср.",
+        "labels": {
+            "DMC": "840",
+            "BELKA": "111",
+            "Kirova": "6106",
+            "Bestex": "-",
+            "Gamma": "3221",
+            "Anchor": "1084",
+            "Madeira": "1912"
+        }
+    },
+    {
+        "hex": "#b39f8c",
+        "dmcNumber": "841",
+        "colorName": "Beige Brown - lt",
+        "colorRUname": "Бежево-коричневый, св.",
+        "labels": {
+            "DMC": "841",
+            "BELKA": "464",
+            "Kirova": "6504",
+            "Bestex": "-",
+            "Gamma": "57",
+            "Anchor": "1082",
+            "Madeira": "1911"
+        }
+    },
+    {
+        "hex": "#cdb9a4",
+        "dmcNumber": "842",
+        "colorName": "Beige Brown - vy lt",
+        "colorRUname": "Бежево-коричневый, оч.св.",
+        "labels": {
+            "DMC": "842",
+            "BELKA": "1254",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3220",
+            "Anchor": "1080",
+            "Madeira": "1907"
+        }
+    },
+    {
+        "hex": "#6c6e58",
+        "dmcNumber": "844",
+        "colorName": "Beaver Grey - ultra dk",
+        "colorRUname": "Боброво-серый, ультра т.",
+        "labels": {
+            "DMC": "844",
+            "BELKA": "1659",
+            "Kirova": "6808",
+            "Bestex": "-",
+            "Gamma": "154",
+            "Anchor": "1041",
+            "Madeira": "1810"
+        }
+    },
+    {
+        "hex": "#775820",
+        "dmcNumber": "869",
+        "colorName": "Hazelnut Brown - vy dk",
+        "colorRUname": "Фундука, оч.т.",
+        "labels": {
+            "DMC": "869",
+            "BELKA": "2410",
+            "Kirova": "5306",
+            "Bestex": "-",
+            "Gamma": "3183",
+            "Anchor": "944",
+            "Madeira": "2113"
+        }
+    },
+    {
+        "hex": "#043810",
+        "dmcNumber": "890",
+        "colorName": "Pistachio Green - ultra dk",
+        "colorRUname": "Фисташково зеленый, ультра т.",
+        "labels": {
+            "DMC": "890",
+            "BELKA": "2989",
+            "Kirova": "4202",
+            "Bestex": "-",
+            "Gamma": "3152",
+            "Anchor": "218",
+            "Madeira": "1314"
+        }
+    },
+    {
+        "hex": "#ef4949",
+        "dmcNumber": "891",
+        "colorName": "Carnation - dk",
+        "colorRUname": "Гвоздичный, т.",
+        "labels": {
+            "DMC": "891",
+            "BELKA": "2651",
+            "Kirova": "902",
+            "Bestex": "118",
+            "Gamma": "118",
+            "Anchor": "35",
+            "Madeira": "412"
+        }
+    },
+    {
+        "hex": "#f85b64",
+        "dmcNumber": "892",
+        "colorName": "Carnation - med",
+        "colorRUname": "Гвоздичный, ср.",
+        "labels": {
+            "DMC": "892",
+            "BELKA": "2122",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3078",
+            "Anchor": "33",
+            "Madeira": "411"
+        }
+    },
+    {
+        "hex": "#fc6a84",
+        "dmcNumber": "893",
+        "colorName": "Carnation - lt",
+        "colorRUname": "Гвоздичный, св.",
+        "labels": {
+            "DMC": "893",
+            "BELKA": "3594",
+            "Kirova": "1012",
+            "Bestex": "116",
+            "Gamma": "116",
+            "Anchor": "41",
+            "Madeira": "411"
+        }
+    },
+    {
+        "hex": "#f999a5",
+        "dmcNumber": "894",
+        "colorName": "Carnation - vy lt",
+        "colorRUname": "Гвоздичный, оч.св.",
+        "labels": {
+            "DMC": "894",
+            "BELKA": "2060",
+            "Kirova": "1010",
+            "Bestex": "115",
+            "Gamma": "3077",
+            "Anchor": "27",
+            "Madeira": "408"
+        }
+    },
+    {
+        "hex": "#29542f",
+        "dmcNumber": "895",
+        "colorName": "Hunter Green - vy dk",
+        "colorRUname": "Защитный, грязновато зеленый, оч.т.",
+        "labels": {
+            "DMC": "895",
+            "BELKA": "871",
+            "Kirova": "-",
+            "Bestex": "720",
+            "Gamma": "720",
+            "Anchor": "1044",
+            "Madeira": "1314"
+        }
+    },
+    {
+        "hex": "#502f1b",
+        "dmcNumber": "898",
+        "colorName": "Coffee Brown - vy dk",
+        "colorRUname": "Кофейный, оч.т.",
+        "labels": {
+            "DMC": "898",
+            "BELKA": "162",
+            "Kirova": "6512",
+            "Bestex": "220",
+            "Gamma": "220",
+            "Anchor": "360",
+            "Madeira": "2007"
+        }
+    },
+    {
+        "hex": "#ee8593",
+        "dmcNumber": "899",
+        "colorName": "Rose - med",
+        "colorRUname": "Розы, ср.",
+        "labels": {
+            "DMC": "899",
+            "BELKA": "219",
+            "Kirova": "1008",
+            "Bestex": "-",
+            "Gamma": "3088",
+            "Anchor": "52",
+            "Madeira": "609"
+        }
+    },
+    {
+        "hex": "#d45d28",
+        "dmcNumber": "900",
+        "colorName": "Burnt Orange - dk",
+        "colorRUname": "Оранжево-жженный, т.",
+        "labels": {
+            "DMC": "900",
+            "BELKA": "148",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3201",
+            "Anchor": "333",
+            "Madeira": "208"
+        }
+    },
+    {
+        "hex": "#6b3b33",
+        "dmcNumber": "902",
+        "colorName": "Garnet - vy dk",
+        "colorRUname": "Гранатовый, оч.т.",
+        "labels": {
+            "DMC": "902",
+            "BELKA": "861",
+            "Kirova": "1304",
+            "Bestex": "410",
+            "Gamma": "870",
+            "Anchor": "897",
+            "Madeira": "601"
+        }
+    },
+    {
+        "hex": "#4f6c33",
+        "dmcNumber": "904",
+        "colorName": "Parrot Green - vy dk",
+        "colorRUname": "Зеленый попугаевый, оч.т.",
+        "labels": {
+            "DMC": "904",
+            "BELKA": "1307",
+            "Kirova": "3912",
+            "Bestex": "3223",
+            "Gamma": "29",
+            "Anchor": "258",
+            "Madeira": "1413"
+        }
+    },
+    {
+        "hex": "#759a3e",
+        "dmcNumber": "905",
+        "colorName": "Parrot Green - dk",
+        "colorRUname": "Зеленый попугаевый, т.",
+        "labels": {
+            "DMC": "905",
+            "BELKA": "187",
+            "Kirova": "4010",
+            "Bestex": "-",
+            "Gamma": "30",
+            "Anchor": "257",
+            "Madeira": "1412"
+        }
+    },
+    {
+        "hex": "#82ae44",
+        "dmcNumber": "906",
+        "colorName": "Parrot Green - med",
+        "colorRUname": "Зеленый попугаевый, ср.",
+        "labels": {
+            "DMC": "906",
+            "BELKA": "2054",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3160",
+            "Anchor": "256",
+            "Madeira": "1411"
+        }
+    },
+    {
+        "hex": "#a9c33e",
+        "dmcNumber": "907",
+        "colorName": "Parrot Green - lt",
+        "colorRUname": "Зеленый попугаевый, св.",
+        "labels": {
+            "DMC": "907",
+            "BELKA": "2564",
+            "Kirova": "4706",
+            "Bestex": "-",
+            "Gamma": "3159",
+            "Anchor": "255",
+            "Madeira": "1410"
+        }
+    },
+    {
+        "hex": "#00793b",
+        "dmcNumber": "909",
+        "colorName": "Emerald Green - vy dk",
+        "colorRUname": "Изумрудный, оч.т.",
+        "labels": {
+            "DMC": "909",
+            "BELKA": "2620",
+            "Kirova": "4110",
+            "Bestex": "-",
+            "Gamma": "13",
+            "Anchor": "230",
+            "Madeira": "1302"
+        }
+    },
+    {
+        "hex": "#008c4c",
+        "dmcNumber": "910",
+        "colorName": "Emerald Green - dk",
+        "colorRUname": "Изумрудный, т.",
+        "labels": {
+            "DMC": "910",
+            "BELKA": "1489",
+            "Kirova": "4108",
+            "Bestex": "-",
+            "Gamma": "88",
+            "Anchor": "229",
+            "Madeira": "1301"
+        }
+    },
+    {
+        "hex": "#40a756",
+        "dmcNumber": "911",
+        "colorName": "Emerald Green - med",
+        "colorRUname": "Изумрудный, ср.",
+        "labels": {
+            "DMC": "911",
+            "BELKA": "1457",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "15",
+            "Anchor": "205",
+            "Madeira": "1214"
+        }
+    },
+    {
+        "hex": "#58a96b",
+        "dmcNumber": "912",
+        "colorName": "Emerald Green - lt",
+        "colorRUname": "Изумрудный, св.",
+        "labels": {
+            "DMC": "912",
+            "BELKA": "580",
+            "Kirova": "3906",
+            "Bestex": "504",
+            "Gamma": "504",
+            "Anchor": "209",
+            "Madeira": "1213"
+        }
+    },
+    {
+        "hex": "#88c78d",
+        "dmcNumber": "913",
+        "colorName": "Nile Green - med",
+        "colorRUname": "Мутно-зеленый, ср.",
+        "labels": {
+            "DMC": "913",
+            "BELKA": "473",
+            "Kirova": "3904",
+            "Bestex": "-",
+            "Gamma": "3148",
+            "Anchor": "204",
+            "Madeira": "1212"
+        }
+    },
+    {
+        "hex": "#800137",
+        "dmcNumber": "915",
+        "colorName": "Plum - dk",
+        "colorRUname": "Сливовый, т.",
+        "labels": {
+            "DMC": "915",
+            "BELKA": "167",
+            "Kirova": "1412",
+            "Bestex": "-",
+            "Gamma": "3106",
+            "Anchor": "1029",
+            "Madeira": "705"
+        }
+    },
+    {
+        "hex": "#832a58",
+        "dmcNumber": "917",
+        "colorName": "Plum - med",
+        "colorRUname": "Сливовый, ср.",
+        "labels": {
+            "DMC": "917",
+            "BELKA": "2951",
+            "Kirova": "1712",
+            "Bestex": "-",
+            "Gamma": "31",
+            "Anchor": "89",
+            "Madeira": "706"
+        }
+    },
+    {
+        "hex": "#8c3b1a",
+        "dmcNumber": "918",
+        "colorName": "Red Copper - dk",
+        "colorRUname": "Красной меди, т.",
+        "labels": {
+            "DMC": "918",
+            "BELKA": "1644",
+            "Kirova": "5610",
+            "Bestex": "771",
+            "Gamma": "771",
+            "Anchor": "341",
+            "Madeira": "314"
+        }
+    },
+    {
+        "hex": "#9b3b1b",
+        "dmcNumber": "919",
+        "colorName": "Red Copper",
+        "colorRUname": "Красной меди",
+        "labels": {
+            "DMC": "919",
+            "BELKA": "512",
+            "Kirova": "1614",
+            "Bestex": "-",
+            "Gamma": "3206",
+            "Anchor": "340",
+            "Madeira": "313"
+        }
+    },
+    {
+        "hex": "#a74f2a",
+        "dmcNumber": "920",
+        "colorName": "Copper - med",
+        "colorRUname": "Медный, ср.",
+        "labels": {
+            "DMC": "920",
+            "BELKA": "1466",
+            "Kirova": "1614",
+            "Bestex": "-",
+            "Gamma": "32",
+            "Anchor": "1004",
+            "Madeira": "312"
+        }
+    },
+    {
+        "hex": "#c36b29",
+        "dmcNumber": "921",
+        "colorName": "Copper",
+        "colorRUname": "Медный",
+        "labels": {
+            "DMC": "921",
+            "BELKA": "1686",
+            "Kirova": "1608",
+            "Bestex": "-",
+            "Gamma": "3205",
+            "Anchor": "1003",
+            "Madeira": "2306"
+        }
+    },
+    {
+        "hex": "#d6834d",
+        "dmcNumber": "922",
+        "colorName": "Copper - lt",
+        "colorRUname": "Медный, св.",
+        "labels": {
+            "DMC": "922",
+            "BELKA": "3012",
+            "Kirova": "5408",
+            "Bestex": "-",
+            "Gamma": "46",
+            "Anchor": "1003",
+            "Madeira": "310"
+        }
+    },
+    {
+        "hex": "#42605c",
+        "dmcNumber": "924",
+        "colorName": "Grey Green - vy dk",
+        "colorRUname": "Серо-зеленый, оч.т.",
+        "labels": {
+            "DMC": "924",
+            "BELKA": "2143",
+            "Kirova": "4204",
+            "Bestex": "666",
+            "Gamma": "666",
+            "Anchor": "851",
+            "Madeira": "1706"
+        }
+    },
+    {
+        "hex": "#789899",
+        "dmcNumber": "926",
+        "colorName": "Grey Green - med",
+        "colorRUname": "Серо-зеленый, ср.",
+        "labels": {
+            "DMC": "926",
+            "BELKA": "2399",
+            "Kirova": "-",
+            "Bestex": "664,A054",
+            "Gamma": "664",
+            "Anchor": "850",
+            "Madeira": "1707"
+        }
+    },
+    {
+        "hex": "#c5d2cf",
+        "dmcNumber": "927",
+        "colorName": "Grey Green - lt",
+        "colorRUname": "Серо-зеленый, св.",
+        "labels": {
+            "DMC": "927",
+            "BELKA": "898",
+            "Kirova": "6802",
+            "Bestex": "662,663",
+            "Gamma": "662",
+            "Anchor": "848",
+            "Madeira": "1708"
+        }
+    },
+    {
+        "hex": "#e5eae9",
+        "dmcNumber": "928",
+        "colorName": "Grey Green - vy lt",
+        "colorRUname": "Серо-зеленый, оч.св.",
+        "labels": {
+            "DMC": "928",
+            "BELKA": "2542",
+            "Kirova": "7102",
+            "Bestex": "661",
+            "Gamma": "661",
+            "Anchor": "274",
+            "Madeira": "1709"
+        }
+    },
+    {
+        "hex": "#435e67",
+        "dmcNumber": "930",
+        "colorName": "Antique Blue - dk",
+        "colorRUname": "Античный синий, т.",
+        "labels": {
+            "DMC": "930",
+            "BELKA": "1658",
+            "Kirova": "2810",
+            "Bestex": "971",
+            "Gamma": "971",
+            "Anchor": "1035",
+            "Madeira": "1712"
+        }
+    },
+    {
+        "hex": "#678997",
+        "dmcNumber": "931",
+        "colorName": "Antique Blue - med",
+        "colorRUname": "Античный синий, ср.",
+        "labels": {
+            "DMC": "931",
+            "BELKA": "1357",
+            "Kirova": "2808",
+            "Bestex": "970",
+            "Gamma": "970",
+            "Anchor": "1034, 921",
+            "Madeira": "1711"
+        }
+    },
+    {
+        "hex": "#8faeb9",
+        "dmcNumber": "932",
+        "colorName": "Antique Blue - lt",
+        "colorRUname": "Античный синий, св.",
+        "labels": {
+            "DMC": "932",
+            "BELKA": "1899",
+            "Kirova": "2804",
+            "Bestex": "755",
+            "Gamma": "755",
+            "Anchor": "1033",
+            "Madeira": "1710"
+        }
+    },
+    {
+        "hex": "#4d4c34",
+        "dmcNumber": "934",
+        "colorName": "Black Avocado Green - dk",
+        "colorRUname": "Черно-зеленого авокадо, т.",
+        "labels": {
+            "DMC": "934",
+            "BELKA": "2816",
+            "Kirova": "4308",
+            "Bestex": "155",
+            "Gamma": "3164",
+            "Anchor": "862",
+            "Madeira": "1506"
+        }
+    },
+    {
+        "hex": "#4b5035",
+        "dmcNumber": "935",
+        "colorName": "Black Avocado Green - med",
+        "colorRUname": "Черно-зеленого авокадо, ср.",
+        "labels": {
+            "DMC": "935",
+            "BELKA": "309",
+            "Kirova": "4510",
+            "Bestex": "-",
+            "Gamma": "3163",
+            "Anchor": "861",
+            "Madeira": "1508"
+        }
+    },
+    {
+        "hex": "#5d5c2b",
+        "dmcNumber": "936",
+        "colorName": "Avocado Green - vy dk",
+        "colorRUname": "Авокадо, оч.т.",
+        "labels": {
+            "DMC": "936",
+            "BELKA": "1704",
+            "Kirova": "4508",
+            "Bestex": "-",
+            "Gamma": "3162",
+            "Anchor": "269",
+            "Madeira": "1505"
+        }
+    },
+    {
+        "hex": "#4f5925",
+        "dmcNumber": "937",
+        "colorName": "Avocado Green - med",
+        "colorRUname": "Авокадо, ср.",
+        "labels": {
+            "DMC": "937",
+            "BELKA": "805",
+            "Kirova": "4610",
+            "Bestex": "821",
+            "Gamma": "821",
+            "Anchor": "268",
+            "Madeira": "1507"
+        }
+    },
+    {
+        "hex": "#3b2811",
+        "dmcNumber": "938",
+        "colorName": "Coffee Brown - ultra dk",
+        "colorRUname": "Кофейный, ультра т.",
+        "labels": {
+            "DMC": "938",
+            "BELKA": "2558",
+            "Kirova": "5710",
+            "Bestex": "812",
+            "Gamma": "812",
+            "Anchor": "381",
+            "Madeira": "2005"
+        }
+    },
+    {
+        "hex": "#02101c",
+        "dmcNumber": "939",
+        "colorName": "Navy Blue - vy dk",
+        "colorRUname": "Темно-синий, оч.т.",
+        "labels": {
+            "DMC": "939",
+            "BELKA": "117",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3120",
+            "Anchor": "152",
+            "Madeira": "1009"
+        }
+    },
+    {
+        "hex": "#009a7b",
+        "dmcNumber": "943",
+        "colorName": "Aquamarine - med",
+        "colorRUname": "Аквамарин, ср.",
+        "labels": {
+            "DMC": "943",
+            "BELKA": "133",
+            "Kirova": "3510",
+            "Bestex": "-",
+            "Gamma": "3135",
+            "Anchor": "188",
+            "Madeira": "1203"
+        }
+    },
+    {
+        "hex": "#e3be8e",
+        "dmcNumber": "945",
+        "colorName": "Tawny",
+        "colorRUname": "Рыжевато-коричневый",
+        "labels": {
+            "DMC": "945",
+            "BELKA": "933",
+            "Kirova": "5902",
+            "Bestex": "924",
+            "Gamma": "924",
+            "Anchor": "881",
+            "Madeira": "1910"
+        }
+    },
+    {
+        "hex": "#e15729",
+        "dmcNumber": "946",
+        "colorName": "Burnt Orange - med",
+        "colorRUname": "Оранжево-жженный, ср.",
+        "labels": {
+            "DMC": "946",
+            "BELKA": "594",
+            "Kirova": "712",
+            "Bestex": "A083",
+            "Gamma": "44",
+            "Anchor": "332",
+            "Madeira": "207"
+        }
+    },
+    {
+        "hex": "#f26922",
+        "dmcNumber": "947",
+        "colorName": "Burnt Orange",
+        "colorRUname": "Оранжево-жженный",
+        "labels": {
+            "DMC": "947",
+            "BELKA": "1179",
+            "Kirova": "710",
+            "Bestex": "-",
+            "Gamma": "3200",
+            "Anchor": "330",
+            "Madeira": "205"
+        }
+    },
+    {
+        "hex": "#feebe2",
+        "dmcNumber": "948",
+        "colorName": "Peach - vy lt",
+        "colorRUname": "Персиковый, оч.св.",
+        "labels": {
+            "DMC": "948",
+            "BELKA": "2708",
+            "Kirova": "-",
+            "Bestex": "309,A086",
+            "Gamma": "309",
+            "Anchor": "1011",
+            "Madeira": "306"
+        }
+    },
+    {
+        "hex": "#e7ceb9",
+        "dmcNumber": "950",
+        "colorName": "Desert Sand - lt",
+        "colorRUname": "Пустынного песка, св.",
+        "labels": {
+            "DMC": "950",
+            "BELKA": "1598",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3030",
+            "Anchor": "4146",
+            "Madeira": "2309"
+        }
+    },
+    {
+        "hex": "#f2e0ce",
+        "dmcNumber": "951",
+        "colorName": "Tawny - lt",
+        "colorRUname": "Рыжевато-коричневый, св.",
+        "labels": {
+            "DMC": "951",
+            "BELKA": "2145",
+            "Kirova": "-",
+            "Bestex": "A075",
+            "Gamma": "3021",
+            "Anchor": "1010",
+            "Madeira": "2308"
+        }
+    },
+    {
+        "hex": "#abd58b",
+        "dmcNumber": "954",
+        "colorName": "Nile Green",
+        "colorRUname": "Мутно-зеленый",
+        "labels": {
+            "DMC": "954",
+            "BELKA": "983",
+            "Kirova": "3904",
+            "Bestex": "502",
+            "Gamma": "502",
+            "Anchor": "203",
+            "Madeira": "1211"
+        }
+    },
+    {
+        "hex": "#b4e8b3",
+        "dmcNumber": "955",
+        "colorName": "Nile Green - lt",
+        "colorRUname": "Мутно-зеленый, св.",
+        "labels": {
+            "DMC": "955",
+            "BELKA": "22",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3147",
+            "Anchor": "206",
+            "Madeira": "1210"
+        }
+    },
+    {
+        "hex": "#ff7a90",
+        "dmcNumber": "956",
+        "colorName": "Geranium",
+        "colorRUname": "Герань",
+        "labels": {
+            "DMC": "956",
+            "BELKA": "651",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3080",
+            "Anchor": "40",
+            "Madeira": "413"
+        }
+    },
+    {
+        "hex": "#f9afb7",
+        "dmcNumber": "957",
+        "colorName": "Geranium - pale",
+        "colorRUname": "Герань, бледный",
+        "labels": {
+            "DMC": "957",
+            "BELKA": "777",
+            "Kirova": "1008",
+            "Bestex": "-",
+            "Gamma": "3079",
+            "Anchor": "50",
+            "Madeira": "612"
+        }
+    },
+    {
+        "hex": "#51c0bb",
+        "dmcNumber": "958",
+        "colorName": "Seagreen - dk",
+        "colorRUname": "Морской воды, т.",
+        "labels": {
+            "DMC": "958",
+            "BELKA": "939",
+            "Kirova": "3508",
+            "Bestex": "606",
+            "Gamma": "606",
+            "Anchor": "187",
+            "Madeira": "1114"
+        }
+    },
+    {
+        "hex": "#8fd3d4",
+        "dmcNumber": "959",
+        "colorName": "Seagreen - med",
+        "colorRUname": "Морской воды, ср.",
+        "labels": {
+            "DMC": "959",
+            "BELKA": "519",
+            "Kirova": "3504",
+            "Bestex": "605",
+            "Gamma": "605",
+            "Anchor": "186",
+            "Madeira": "1113"
+        }
+    },
+    {
+        "hex": "#df6877",
+        "dmcNumber": "961",
+        "colorName": "Dusty Rose - dk",
+        "colorRUname": "Пыльной розы, т.",
+        "labels": {
+            "DMC": "961",
+            "BELKA": "25",
+            "Kirova": "1504",
+            "Bestex": "-",
+            "Gamma": "3083",
+            "Anchor": "76",
+            "Madeira": "506"
+        }
+    },
+    {
+        "hex": "#f08d9f",
+        "dmcNumber": "962",
+        "colorName": "Dusty Rose - med",
+        "colorRUname": "Пыльной розы, ср.",
+        "labels": {
+            "DMC": "962",
+            "BELKA": "2537",
+            "Kirova": "1502",
+            "Bestex": "-",
+            "Gamma": "3082",
+            "Anchor": "75",
+            "Madeira": "609"
+        }
+    },
+    {
+        "hex": "#fad0d5",
+        "dmcNumber": "963",
+        "colorName": "Dusty Rose - ultra vy lt",
+        "colorRUname": "Пыльной розы, очень св.",
+        "labels": {
+            "DMC": "963",
+            "BELKA": "373",
+            "Kirova": "1002",
+            "Bestex": "201",
+            "Gamma": "201",
+            "Anchor": "73",
+            "Madeira": "502"
+        }
+    },
+    {
+        "hex": "#9cd3cc",
+        "dmcNumber": "964",
+        "colorName": "Seagreen - lt",
+        "colorRUname": "Морской воды, св.",
+        "labels": {
+            "DMC": "964",
+            "BELKA": "872",
+            "Kirova": "3504",
+            "Bestex": "-",
+            "Gamma": "3132",
+            "Anchor": "185",
+            "Madeira": "1112"
+        }
+    },
+    {
+        "hex": "#bbd7ae",
+        "dmcNumber": "966",
+        "colorName": "Baby Green - med",
+        "colorRUname": "Нежно зеленый, ср.",
+        "labels": {
+            "DMC": "966",
+            "BELKA": "2223",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3150",
+            "Anchor": "206",
+            "Madeira": "1209"
+        }
+    },
+    {
+        "hex": "#fbdbcd",
+        "dmcNumber": "967",
+        "colorName": "Apricot - vy lt",
+        "colorRUname": "Абрикосовый оч.св.",
+        "labels": {
+            "DMC": "967",
+            "BELKA": "2603",
+            "Kirova": "-",
+            "Bestex": "310,A010",
+            "Gamma": "310",
+            "Anchor": "1012",
+            "Madeira": "-"
+        }
+    },
+    {
+        "hex": "#ff781e",
+        "dmcNumber": "970",
+        "colorName": "Pumpkin - bright",
+        "colorRUname": "Тыквенный, яркий",
+        "labels": {
+            "DMC": "970",
+            "BELKA": "81",
+            "Kirova": "708",
+            "Bestex": "-",
+            "Gamma": "3199",
+            "Anchor": "316",
+            "Madeira": "204"
+        }
+    },
+    {
+        "hex": "#fc7e0c",
+        "dmcNumber": "971",
+        "colorName": "Pumpkin",
+        "colorRUname": "Тыквенный",
+        "labels": {
+            "DMC": "971",
+            "BELKA": "-",
+            "Kirova": "608",
+            "Bestex": "-",
+            "Gamma": "3198",
+            "Anchor": "316",
+            "Madeira": "202"
+        }
+    },
+    {
+        "hex": "#ffb401",
+        "dmcNumber": "972",
+        "colorName": "Canary - deep",
+        "colorRUname": "Канареечный, глубокий",
+        "labels": {
+            "DMC": "972",
+            "BELKA": "647",
+            "Kirova": "508",
+            "Bestex": "-",
+            "Gamma": "3197",
+            "Anchor": "298",
+            "Madeira": "107"
+        }
+    },
+    {
+        "hex": "#ffe21a",
+        "dmcNumber": "973",
+        "colorName": "Canary - bright",
+        "colorRUname": "Канареечный, яркий",
+        "labels": {
+            "DMC": "973",
+            "BELKA": "648",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "42",
+            "Anchor": "297",
+            "Madeira": "105"
+        }
+    },
+    {
+        "hex": "#945c2d",
+        "dmcNumber": "975",
+        "colorName": "Golden Brown - dk",
+        "colorRUname": "Золотисто-коричневый, т.",
+        "labels": {
+            "DMC": "975",
+            "BELKA": "699",
+            "Kirova": "5810",
+            "Bestex": "928",
+            "Gamma": "928",
+            "Anchor": "355",
+            "Madeira": "2303"
+        }
+    },
+    {
+        "hex": "#e6973f",
+        "dmcNumber": "976",
+        "colorName": "Golden Brown - med",
+        "colorRUname": "Золотисто-коричневый, ср.",
+        "labels": {
+            "DMC": "976",
+            "BELKA": "51",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "49",
+            "Anchor": "1001",
+            "Madeira": "2302"
+        }
+    },
+    {
+        "hex": "#e59034",
+        "dmcNumber": "977",
+        "colorName": "Golden Brown - lt",
+        "colorRUname": "Золотисто-коричневый, св.",
+        "labels": {
+            "DMC": "977",
+            "BELKA": "1306",
+            "Kirova": "5402",
+            "Bestex": "-",
+            "Gamma": "3210",
+            "Anchor": "1002",
+            "Madeira": "2211"
+        }
+    },
+    {
+        "hex": "#1f561f",
+        "dmcNumber": "986",
+        "colorName": "Forest Green - vy dk",
+        "colorRUname": "Зеленый лесной, оч.т.",
+        "labels": {
+            "DMC": "986",
+            "BELKA": "387",
+            "Kirova": "3912",
+            "Bestex": "-",
+            "Gamma": "3154",
+            "Anchor": "246",
+            "Madeira": "1312"
+        }
+    },
+    {
+        "hex": "#568357",
+        "dmcNumber": "987",
+        "colorName": "Forest Green - dk",
+        "colorRUname": "Зеленый лесной, т.",
+        "labels": {
+            "DMC": "987",
+            "BELKA": "2085",
+            "Kirova": "4010",
+            "Bestex": "718",
+            "Gamma": "718",
+            "Anchor": "245",
+            "Madeira": "1403"
+        }
+    },
+    {
+        "hex": "#76996c",
+        "dmcNumber": "988",
+        "colorName": "Forest Green - med",
+        "colorRUname": "Зеленый лесной, ср.",
+        "labels": {
+            "DMC": "988",
+            "BELKA": "1487",
+            "Kirova": "4006",
+            "Bestex": "717",
+            "Gamma": "3153",
+            "Anchor": "243",
+            "Madeira": "1402"
+        }
+    },
+    {
+        "hex": "#87a462",
+        "dmcNumber": "989",
+        "colorName": "Forest Green",
+        "colorRUname": "Зеленый лесной",
+        "labels": {
+            "DMC": "989",
+            "BELKA": "2926",
+            "Kirova": "4006",
+            "Bestex": "-",
+            "Gamma": "33",
+            "Anchor": "242",
+            "Madeira": "1401"
+        }
+    },
+    {
+        "hex": "#176a59",
+        "dmcNumber": "991",
+        "colorName": "Aquamarine - dk",
+        "colorRUname": "Аквамарин, т.",
+        "labels": {
+            "DMC": "991",
+            "BELKA": "985",
+            "Kirova": "3608",
+            "Bestex": "506",
+            "Gamma": "3139",
+            "Anchor": "1076",
+            "Madeira": "1204"
+        }
+    },
+    {
+        "hex": "#6cbfa8",
+        "dmcNumber": "992",
+        "colorName": "Aquamarine - lt",
+        "colorRUname": "Аквамарин, св.",
+        "labels": {
+            "DMC": "992",
+            "BELKA": "2252",
+            "Kirova": "4104",
+            "Bestex": "-",
+            "Gamma": "3060",
+            "Anchor": "1072",
+            "Madeira": "1201"
+        }
+    },
+    {
+        "hex": "#8ec2b3",
+        "dmcNumber": "993",
+        "colorName": "Aquamarine - vy lt",
+        "colorRUname": "Аквамарин, оч.св.",
+        "labels": {
+            "DMC": "993",
+            "BELKA": "211",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3137",
+            "Anchor": "1070",
+            "Madeira": "1201"
+        }
+    },
+    {
+        "hex": "#0064b0",
+        "dmcNumber": "995",
+        "colorName": "Electric Blue - dk",
+        "colorRUname": "Электрик синий, т.",
+        "labels": {
+            "DMC": "995",
+            "BELKA": "2539",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "86",
+            "Anchor": "410",
+            "Madeira": "1102"
+        }
+    },
+    {
+        "hex": "#57baf5",
+        "dmcNumber": "996",
+        "colorName": "Electric Blue - med",
+        "colorRUname": "Электрик синий, ср.",
+        "labels": {
+            "DMC": "996",
+            "BELKA": "1929",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3121",
+            "Anchor": "1090",
+            "Madeira": "1103"
+        }
+    },
+    {
+        "hex": "#635f2f",
+        "dmcNumber": "3011",
+        "colorName": "Khaki Green - dk",
+        "colorRUname": "Хаки, т.",
+        "labels": {
+            "DMC": "3011",
+            "BELKA": "1141",
+            "Kirova": "5104",
+            "Bestex": "-",
+            "Gamma": "3174",
+            "Anchor": "846",
+            "Madeira": "1507"
+        }
+    },
+    {
+        "hex": "#9b9648",
+        "dmcNumber": "3012",
+        "colorName": "Khaki Green - med",
+        "colorRUname": "Хаки, ср.",
+        "labels": {
+            "DMC": "3012",
+            "BELKA": "2294",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3067",
+            "Anchor": "844",
+            "Madeira": "1605"
+        }
+    },
+    {
+        "hex": "#999c6c",
+        "dmcNumber": "3013",
+        "colorName": "Khaki Green - lt",
+        "colorRUname": "Хаки, св.",
+        "labels": {
+            "DMC": "3013",
+            "BELKA": "2618",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3066",
+            "Anchor": "842",
+            "Madeira": "1511"
+        }
+    },
+    {
+        "hex": "#3b2e08",
+        "dmcNumber": "3021",
+        "colorName": "Brown Grey - vy dk",
+        "colorRUname": "Коричнево-серый, оч.т.",
+        "labels": {
+            "DMC": "3021",
+            "BELKA": "1028",
+            "Kirova": "5204",
+            "Bestex": "-",
+            "Gamma": "3228",
+            "Anchor": "905",
+            "Madeira": "1904"
+        }
+    },
+    {
+        "hex": "#938e6e",
+        "dmcNumber": "3022",
+        "colorName": "Brown Grey - med",
+        "colorRUname": "Коричнево-серый, ср.",
+        "labels": {
+            "DMC": "3022",
+            "BELKA": "790",
+            "Kirova": "6704",
+            "Bestex": "-",
+            "Gamma": "3040",
+            "Anchor": "8581",
+            "Madeira": "1812"
+        }
+    },
+    {
+        "hex": "#b2ae95",
+        "dmcNumber": "3023",
+        "colorName": "Brown Grey - lt",
+        "colorRUname": "Коричнево-серый, св.",
+        "labels": {
+            "DMC": "3023",
+            "BELKA": "2570",
+            "Kirova": "6606",
+            "Bestex": "-",
+            "Gamma": "3039",
+            "Anchor": "1040",
+            "Madeira": "1902"
+        }
+    },
+    {
+        "hex": "#dcdcd7",
+        "dmcNumber": "3024",
+        "colorName": "Brown Grey - vy lt",
+        "colorRUname": "Коричнево-серый, оч.св.",
+        "labels": {
+            "DMC": "3024",
+            "BELKA": "2015",
+            "Kirova": "6002",
+            "Bestex": "-",
+            "Gamma": "3038",
+            "Anchor": "397",
+            "Madeira": "1805"
+        }
+    },
+    {
+        "hex": "#442e10",
+        "dmcNumber": "3031",
+        "colorName": "Mocha Brown - vy dk",
+        "colorRUname": "Мокка, оч.т.",
+        "labels": {
+            "DMC": "3031",
+            "BELKA": "342",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3224",
+            "Anchor": "905",
+            "Madeira": "2003"
+        }
+    },
+    {
+        "hex": "#ada183",
+        "dmcNumber": "3032",
+        "colorName": "Mocha Brown - med",
+        "colorRUname": "Мокка, ср.",
+        "labels": {
+            "DMC": "3032",
+            "BELKA": "241",
+            "Kirova": "6004",
+            "Bestex": "-",
+            "Gamma": "3226",
+            "Anchor": "903",
+            "Madeira": "2002"
+        }
+    },
+    {
+        "hex": "#d7d0c2",
+        "dmcNumber": "3033",
+        "colorName": "Mocha Brown - vy lt",
+        "colorRUname": "Мокка, оч.св.",
+        "labels": {
+            "DMC": "3033",
+            "BELKA": "31",
+            "Kirova": "103",
+            "Bestex": "9",
+            "Gamma": "9",
+            "Anchor": "391",
+            "Madeira": "2001"
+        }
+    },
+    {
+        "hex": "#966e6e",
+        "dmcNumber": "3041",
+        "colorName": "Antique Violet - med",
+        "colorRUname": "Антично фиолетовый, ср.",
+        "labels": {
+            "DMC": "3041",
+            "BELKA": "824",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3017",
+            "Anchor": "871",
+            "Madeira": "806"
+        }
+    },
+    {
+        "hex": "#ccc1d0",
+        "dmcNumber": "3042",
+        "colorName": "Antique Violet - lt",
+        "colorRUname": "Антично фиолетовый, св.",
+        "labels": {
+            "DMC": "3042",
+            "BELKA": "2853",
+            "Kirova": "-",
+            "Bestex": "417",
+            "Gamma": "417",
+            "Anchor": "870",
+            "Madeira": "2612"
+        }
+    },
+    {
+        "hex": "#b19563",
+        "dmcNumber": "3045",
+        "colorName": "Yellow Beige - dk",
+        "colorRUname": "Желтовато-бежевый, т.",
+        "labels": {
+            "DMC": "3045",
+            "BELKA": "1164",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3018",
+            "Anchor": "888",
+            "Madeira": "2103"
+        }
+    },
+    {
+        "hex": "#ccbc7d",
+        "dmcNumber": "3046",
+        "colorName": "Yellow Beige - med",
+        "colorRUname": "Желтовато-бежевый, ср.",
+        "labels": {
+            "DMC": "3046",
+            "BELKA": "3016",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "93",
+            "Anchor": "887",
+            "Madeira": "2206"
+        }
+    },
+    {
+        "hex": "#ececd2",
+        "dmcNumber": "3047",
+        "colorName": "Yellow Beige - lt",
+        "colorRUname": "Желтовато-бежевый, св.",
+        "labels": {
+            "DMC": "3047",
+            "BELKA": "467",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "95",
+            "Anchor": "852",
+            "Madeira": "2205"
+        }
+    },
+    {
+        "hex": "#6d6f42",
+        "dmcNumber": "3051",
+        "colorName": "Green Grey - dk",
+        "colorRUname": "Серо-зеленый, т.",
+        "labels": {
+            "DMC": "3051",
+            "BELKA": "277",
+            "Kirova": "4610",
+            "Bestex": "-",
+            "Gamma": "35",
+            "Anchor": "681",
+            "Madeira": "1508"
+        }
+    },
+    {
+        "hex": "#899770",
+        "dmcNumber": "3052",
+        "colorName": "Green Grey - med",
+        "colorRUname": "Серо-зеленый, ср.",
+        "labels": {
+            "DMC": "3052",
+            "BELKA": "482",
+            "Kirova": "4404",
+            "Bestex": "A016,A017",
+            "Gamma": "3064",
+            "Anchor": "262",
+            "Madeira": "1513"
+        }
+    },
+    {
+        "hex": "#bac28b",
+        "dmcNumber": "3053",
+        "colorName": "Green Grey",
+        "colorRUname": "Серо-зеленый",
+        "labels": {
+            "DMC": "3053",
+            "BELKA": "2357",
+            "Kirova": "4304",
+            "Bestex": "A015",
+            "Gamma": "91",
+            "Anchor": "261",
+            "Madeira": "1510"
+        }
+    },
+    {
+        "hex": "#cda072",
+        "dmcNumber": "3064",
+        "colorName": "Desert Sand",
+        "colorRUname": "Пустынного песка",
+        "labels": {
+            "DMC": "3064",
+            "BELKA": "834",
+            "Kirova": "5804",
+            "Bestex": "925",
+            "Gamma": "925",
+            "Anchor": "883",
+            "Madeira": "2312"
+        }
+    },
+    {
+        "hex": "#e3e6dc",
+        "dmcNumber": "3072",
+        "colorName": "Beaver Grey - vy lt",
+        "colorRUname": "Боброво-серый, оч.св.",
+        "labels": {
+            "DMC": "3072",
+            "BELKA": "185",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3043",
+            "Anchor": "847",
+            "Madeira": "1805"
+        }
+    },
+    {
+        "hex": "#fff3ad",
+        "dmcNumber": "3078",
+        "colorName": "Golden Yellow - vy lt",
+        "colorRUname": "Желтый золотой, оч.св.",
+        "labels": {
+            "DMC": "3078",
+            "BELKA": "1869",
+            "Kirova": "202",
+            "Bestex": "101,A005",
+            "Gamma": "101",
+            "Anchor": "292",
+            "Madeira": "102"
+        }
+    },
+    {
+        "hex": "#c6d3e1",
+        "dmcNumber": "3325",
+        "colorName": "Baby Blue - lt",
+        "colorRUname": "Нежно голубой, св.",
+        "labels": {
+            "DMC": "3325",
+            "BELKA": "1882",
+            "Kirova": "2804",
+            "Bestex": "-",
+            "Gamma": "3051",
+            "Anchor": "129",
+            "Madeira": "909"
+        }
+    },
+    {
+        "hex": "#f7b4b7",
+        "dmcNumber": "3326",
+        "colorName": "Rose - lt",
+        "colorRUname": "Розы, св.",
+        "labels": {
+            "DMC": "3326",
+            "BELKA": "2722",
+            "Kirova": "1006",
+            "Bestex": "-",
+            "Gamma": "66",
+            "Anchor": "36",
+            "Madeira": "504"
+        }
+    },
+    {
+        "hex": "#c36154",
+        "dmcNumber": "3328",
+        "colorName": "Salmon - dk",
+        "colorRUname": "Лососевый, т.",
+        "labels": {
+            "DMC": "3328",
+            "BELKA": "2485",
+            "Kirova": "5608",
+            "Bestex": "-",
+            "Gamma": "3072",
+            "Anchor": "1024",
+            "Madeira": "406"
+        }
+    },
+    {
+        "hex": "#f38351",
+        "dmcNumber": "3340",
+        "colorName": "Apricot - med",
+        "colorRUname": "Абрикосовый, ср.",
+        "labels": {
+            "DMC": "3340",
+            "BELKA": "3038",
+            "Kirova": "706",
+            "Bestex": "-",
+            "Gamma": "3202",
+            "Anchor": "329",
+            "Madeira": "301"
+        }
+    },
+    {
+        "hex": "#fbbe9d",
+        "dmcNumber": "3341",
+        "colorName": "Apricot",
+        "colorRUname": "Абрикосовый",
+        "labels": {
+            "DMC": "3341",
+            "BELKA": "2049",
+            "Kirova": "802",
+            "Bestex": "312",
+            "Gamma": "312",
+            "Anchor": "328",
+            "Madeira": "302"
+        }
+    },
+    {
+        "hex": "#486131",
+        "dmcNumber": "3345",
+        "colorName": "Hunter Green - dk",
+        "colorRUname": "Защитный, грязновато зеленый, т.",
+        "labels": {
+            "DMC": "3345",
+            "BELKA": "2705",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3156",
+            "Anchor": "268",
+            "Madeira": "1406"
+        }
+    },
+    {
+        "hex": "#6a823d",
+        "dmcNumber": "3346",
+        "colorName": "Hunter Green",
+        "colorRUname": "Защитный, грязновато зеленый",
+        "labels": {
+            "DMC": "3346",
+            "BELKA": "2120",
+            "Kirova": "4608",
+            "Bestex": "-",
+            "Gamma": "3155",
+            "Anchor": "267",
+            "Madeira": "1407"
+        }
+    },
+    {
+        "hex": "#78983b",
+        "dmcNumber": "3347",
+        "colorName": "Yellow Green - med",
+        "colorRUname": "Желто-зеленый, ср.",
+        "labels": {
+            "DMC": "3347",
+            "BELKA": "363",
+            "Kirova": "4604",
+            "Bestex": "614",
+            "Gamma": "614",
+            "Anchor": "266",
+            "Madeira": "1408"
+        }
+    },
+    {
+        "hex": "#e3ee9f",
+        "dmcNumber": "3348",
+        "colorName": "Yellow Green - lt",
+        "colorRUname": "Желто-зеленый, св.",
+        "labels": {
+            "DMC": "3348",
+            "BELKA": "997",
+            "Kirova": "4004",
+            "Bestex": "-",
+            "Gamma": "6115",
+            "Anchor": "264",
+            "Madeira": "1604"
+        }
+    },
+    {
+        "hex": "#b95569",
+        "dmcNumber": "3350",
+        "colorName": "Dusty Rose - ultra dk",
+        "colorRUname": "Пыльной розы, ультра т.",
+        "labels": {
+            "DMC": "3350",
+            "BELKA": "-",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "-",
+            "Anchor": "59",
+            "Madeira": "603"
+        }
+    },
+    {
+        "hex": "#e3a5aa",
+        "dmcNumber": "3354",
+        "colorName": "Dusty Rose - lt",
+        "colorRUname": "Пыльной розы, св.",
+        "labels": {
+            "DMC": "3354",
+            "BELKA": "2721",
+            "Kirova": "1104",
+            "Bestex": "904",
+            "Gamma": "3091",
+            "Anchor": "74",
+            "Madeira": "607"
+        }
+    },
+    {
+        "hex": "#2e3d1a",
+        "dmcNumber": "3362",
+        "colorName": "Pine Green - dk",
+        "colorRUname": "Сосновый, т.",
+        "labels": {
+            "DMC": "3362",
+            "BELKA": "2632",
+            "Kirova": "3702",
+            "Bestex": "823",
+            "Gamma": "823",
+            "Anchor": "263",
+            "Madeira": "1601"
+        }
+    },
+    {
+        "hex": "#72885f",
+        "dmcNumber": "3363",
+        "colorName": "Pine Green - med",
+        "colorRUname": "Сосновый, ср.",
+        "labels": {
+            "DMC": "3363",
+            "BELKA": "552",
+            "Kirova": "4606",
+            "Bestex": "-",
+            "Gamma": "36",
+            "Anchor": "262",
+            "Madeira": "1602"
+        }
+    },
+    {
+        "hex": "#85905c",
+        "dmcNumber": "3364",
+        "colorName": "Pine Green",
+        "colorRUname": "Сосновый",
+        "labels": {
+            "DMC": "3364",
+            "BELKA": "2644",
+            "Kirova": "3604",
+            "Bestex": "-",
+            "Gamma": "3168",
+            "Anchor": "260",
+            "Madeira": "1509"
+        }
+    },
+    {
+        "hex": "#2d1705",
+        "dmcNumber": "3371",
+        "colorName": "Black Brown",
+        "colorRUname": "Черно-коричневый",
+        "labels": {
+            "DMC": "3371",
+            "BELKA": "582",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3219",
+            "Anchor": "382",
+            "Madeira": "2004"
+        }
+    },
+    {
+        "hex": "#b34e8c",
+        "dmcNumber": "3607",
+        "colorName": "Plum - lt",
+        "colorRUname": "Сливовый, св.",
+        "labels": {
+            "DMC": "3607",
+            "BELKA": "1499",
+            "Kirova": "1410",
+            "Bestex": "610",
+            "Gamma": "72",
+            "Anchor": "87",
+            "Madeira": "708"
+        }
+    },
+    {
+        "hex": "#c07ba3",
+        "dmcNumber": "3608",
+        "colorName": "Plum - vy lt",
+        "colorRUname": "Сливовый, оч.св.",
+        "labels": {
+            "DMC": "3608",
+            "BELKA": "2872",
+            "Kirova": "1706",
+            "Bestex": "609",
+            "Gamma": "609",
+            "Anchor": "86",
+            "Madeira": "709"
+        }
+    },
+    {
+        "hex": "#e9afd3",
+        "dmcNumber": "3609",
+        "colorName": "Plum - ultra lt",
+        "colorRUname": "Сливовый, ультра св.",
+        "labels": {
+            "DMC": "3609",
+            "BELKA": "24",
+            "Kirova": "1702",
+            "Bestex": "-",
+            "Gamma": "37",
+            "Anchor": "85",
+            "Madeira": "710"
+        }
+    },
+    {
+        "hex": "#7d3248",
+        "dmcNumber": "3685",
+        "colorName": "Mauve - vy dk",
+        "colorRUname": "Розовато-лиловый, оч.т.",
+        "labels": {
+            "DMC": "3685",
+            "BELKA": "1415",
+            "Kirova": "1208",
+            "Bestex": "908",
+            "Gamma": "38, 908",
+            "Anchor": "70",
+            "Madeira": "2609"
+        }
+    },
+    {
+        "hex": "#c2596d",
+        "dmcNumber": "3687",
+        "colorName": "Mauve",
+        "colorRUname": "Розовато-лиловый",
+        "labels": {
+            "DMC": "3687",
+            "BELKA": "3237",
+            "Kirova": "1508",
+            "Bestex": "906",
+            "Gamma": "906",
+            "Anchor": "68",
+            "Madeira": "605"
+        }
+    },
+    {
+        "hex": "#e6849a",
+        "dmcNumber": "3688",
+        "colorName": "Mauve - med",
+        "colorRUname": "Розовато-лиловый, ср.",
+        "labels": {
+            "DMC": "3688",
+            "BELKA": "3609",
+            "Kirova": "-",
+            "Bestex": "905",
+            "Gamma": "905",
+            "Anchor": "66",
+            "Madeira": "605"
+        }
+    },
+    {
+        "hex": "#e8b9c5",
+        "dmcNumber": "3689",
+        "colorName": "Mauve - lt",
+        "colorRUname": "Розовато-лиловый, св.",
+        "labels": {
+            "DMC": "3689",
+            "BELKA": "2904",
+            "Kirova": "1702",
+            "Bestex": "-",
+            "Gamma": "3093",
+            "Anchor": "49",
+            "Madeira": "607"
+        }
+    },
+    {
+        "hex": "#f65d5b",
+        "dmcNumber": "3705",
+        "colorName": "Melon - dk",
+        "colorRUname": "Дыни, т.",
+        "labels": {
+            "DMC": "3705",
+            "BELKA": "2717",
+            "Kirova": "808",
+            "Bestex": "-",
+            "Gamma": "3076",
+            "Anchor": "35",
+            "Madeira": "410"
+        }
+    },
+    {
+        "hex": "#ff988e",
+        "dmcNumber": "3706",
+        "colorName": "Melon - med",
+        "colorRUname": "Дыни, ср.",
+        "labels": {
+            "DMC": "3706",
+            "BELKA": "754",
+            "Kirova": "1012",
+            "Bestex": "-",
+            "Gamma": "3075",
+            "Anchor": "33",
+            "Madeira": "409"
+        }
+    },
+    {
+        "hex": "#fcbbc1",
+        "dmcNumber": "3708",
+        "colorName": "Melon - lt",
+        "colorRUname": "Дыни, св.",
+        "labels": {
+            "DMC": "3708",
+            "BELKA": "127",
+            "Kirova": "1006",
+            "Bestex": "-",
+            "Gamma": "3074",
+            "Anchor": "31",
+            "Madeira": "408"
+        }
+    },
+    {
+        "hex": "#db7d73",
+        "dmcNumber": "3712",
+        "colorName": "Salmon - med",
+        "colorRUname": "Лососевый, ср.",
+        "labels": {
+            "DMC": "3712",
+            "BELKA": "2451",
+            "Kirova": "5606",
+            "Bestex": "-",
+            "Gamma": "3071",
+            "Anchor": "1023",
+            "Madeira": "405"
+        }
+    },
+    {
+        "hex": "#fcdcda",
+        "dmcNumber": "3713",
+        "colorName": "Salmon - vy lt",
+        "colorRUname": "Лососевый, оч.св.",
+        "labels": {
+            "DMC": "3713",
+            "BELKA": "961",
+            "Kirova": "1002",
+            "Bestex": "765",
+            "Gamma": "3010",
+            "Anchor": "1020",
+            "Madeira": "502"
+        }
+    },
+    {
+        "hex": "#fcb1ba",
+        "dmcNumber": "3716",
+        "colorName": "Dusty Rose - vy lt",
+        "colorRUname": "Пыльной розы, оч.св.",
+        "labels": {
+            "DMC": "3716",
+            "BELKA": "980",
+            "Kirova": "1004",
+            "Bestex": "903",
+            "Gamma": "3081",
+            "Anchor": "25",
+            "Madeira": "607"
+        }
+    },
+    {
+        "hex": "#aa5048",
+        "dmcNumber": "3721",
+        "colorName": "Shell Pink - dk",
+        "colorRUname": "Розовых ракушек, т.",
+        "labels": {
+            "DMC": "3721",
+            "BELKA": "3527",
+            "Kirova": "5610",
+            "Bestex": "-",
+            "Gamma": "3096",
+            "Anchor": "896",
+            "Madeira": "810"
+        }
+    },
+    {
+        "hex": "#a45d55",
+        "dmcNumber": "3722",
+        "colorName": "Shell Pink - med",
+        "colorRUname": "Розовых ракушек, ср.",
+        "labels": {
+            "DMC": "3722",
+            "BELKA": "2540",
+            "Kirova": "5606",
+            "Bestex": "-",
+            "Gamma": "3015",
+            "Anchor": "1027",
+            "Madeira": "812"
+        }
+    },
+    {
+        "hex": "#874c49",
+        "dmcNumber": "3726",
+        "colorName": "Antique Mauve - dk",
+        "colorRUname": "Античный розовато-лиловый, т.",
+        "labels": {
+            "DMC": "3726",
+            "BELKA": "2772",
+            "Kirova": "5706",
+            "Bestex": "879",
+            "Gamma": "879",
+            "Anchor": "1018",
+            "Madeira": "810"
+        }
+    },
+    {
+        "hex": "#e6bcc3",
+        "dmcNumber": "3727",
+        "colorName": "Antique Mauve - lt",
+        "colorRUname": "Античный розовато-лиловый, св.",
+        "labels": {
+            "DMC": "3727",
+            "BELKA": "2575",
+            "Kirova": "1802",
+            "Bestex": "-",
+            "Gamma": "3016",
+            "Anchor": "1016",
+            "Madeira": "2610"
+        }
+    },
+    {
+        "hex": "#c65a6b",
+        "dmcNumber": "3731",
+        "colorName": "Dusty Rose - vy dk",
+        "colorRUname": "Пыльной розы, оч.т.",
+        "labels": {
+            "DMC": "3731",
+            "BELKA": "1556",
+            "Kirova": "1506",
+            "Bestex": "-",
+            "Gamma": "3092",
+            "Anchor": "76",
+            "Madeira": "506"
+        }
+    },
+    {
+        "hex": "#eda6ac",
+        "dmcNumber": "3733",
+        "colorName": "Dusty Rose",
+        "colorRUname": "Пыльной розы",
+        "labels": {
+            "DMC": "3733",
+            "BELKA": "2429",
+            "Kirova": "1502",
+            "Bestex": "-",
+            "Gamma": "65",
+            "Anchor": "1023",
+            "Madeira": "813"
+        }
+    },
+    {
+        "hex": "#72535a",
+        "dmcNumber": "3740",
+        "colorName": "Antique Violet - dk",
+        "colorRUname": "Антично фиолетовый, т.",
+        "labels": {
+            "DMC": "3740",
+            "BELKA": "459",
+            "Kirova": "1910",
+            "Bestex": "-",
+            "Gamma": "3101",
+            "Anchor": "873",
+            "Madeira": "806"
+        }
+    },
+    {
+        "hex": "#c7bac7",
+        "dmcNumber": "3743",
+        "colorName": "Antique Violet - vy lt",
+        "colorRUname": "Антично фиолетовый, оч.св.",
+        "labels": {
+            "DMC": "3743",
+            "BELKA": "776",
+            "Kirova": "-",
+            "Bestex": "416",
+            "Gamma": "725",
+            "Anchor": "869",
+            "Madeira": "2611"
+        }
+    },
+    {
+        "hex": "#8572a4",
+        "dmcNumber": "3746",
+        "colorName": "Blue Violet - dk",
+        "colorRUname": "Сине-фиолетовый, т.",
+        "labels": {
+            "DMC": "3746",
+            "BELKA": "524",
+            "Kirova": "2306",
+            "Bestex": "-",
+            "Gamma": "3110",
+            "Anchor": "1030",
+            "Madeira": "903"
+        }
+    },
+    {
+        "hex": "#bcc0d8",
+        "dmcNumber": "3747",
+        "colorName": "Blue Violet - vy lt",
+        "colorRUname": "Сине-фиолетовый, оч.св.",
+        "labels": {
+            "DMC": "3747",
+            "BELKA": "2123",
+            "Kirova": "2402",
+            "Bestex": "-",
+            "Gamma": "3109",
+            "Anchor": "120",
+            "Madeira": "901"
+        }
+    },
+    {
+        "hex": "#444d58",
+        "dmcNumber": "3750",
+        "colorName": "Antique Blue - vy dk",
+        "colorRUname": "Античный синий, оч.т.",
+        "labels": {
+            "DMC": "3750",
+            "BELKA": "132",
+            "Kirova": "2814",
+            "Bestex": "972",
+            "Gamma": "972",
+            "Anchor": "1036",
+            "Madeira": "1712"
+        }
+    },
+    {
+        "hex": "#bbc8d6",
+        "dmcNumber": "3752",
+        "colorName": "Antique Blue - vy lt",
+        "colorRUname": "Античный синий, оч.св.",
+        "labels": {
+            "DMC": "3752",
+            "BELKA": "2895",
+            "Kirova": "2802",
+            "Bestex": "754",
+            "Gamma": "754",
+            "Anchor": "1032",
+            "Madeira": "1001"
+        }
+    },
+    {
+        "hex": "#ccd5da",
+        "dmcNumber": "3753",
+        "colorName": "Antique Blue - ultra vy lt",
+        "colorRUname": "Античный синий, ультра св.",
+        "labels": {
+            "DMC": "3753",
+            "BELKA": "2561",
+            "Kirova": "2602",
+            "Bestex": "967",
+            "Gamma": "967",
+            "Anchor": "1031",
+            "Madeira": "1001"
+        }
+    },
+    {
+        "hex": "#9fbbd5",
+        "dmcNumber": "3755",
+        "colorName": "Baby Blue",
+        "colorRUname": "Нежно голубой",
+        "labels": {
+            "DMC": "3755",
+            "BELKA": "1257",
+            "Kirova": "2606",
+            "Bestex": "-",
+            "Gamma": "3117",
+            "Anchor": "140",
+            "Madeira": "909"
+        }
+    },
+    {
+        "hex": "#e8edf3",
+        "dmcNumber": "3756",
+        "colorName": "Baby Blue - ultra vy lt",
+        "colorRUname": "Нежно голубой, ультра св.",
+        "labels": {
+            "DMC": "3756",
+            "BELKA": "3207",
+            "Kirova": "-",
+            "Bestex": "752",
+            "Gamma": "752",
+            "Anchor": "1037",
+            "Madeira": "2504"
+        }
+    },
+    {
+        "hex": "#4f819d",
+        "dmcNumber": "3760",
+        "colorName": "Wedgwood - med",
+        "colorRUname": "Пыльно-синий, ср. (гжель)",
+        "labels": {
+            "DMC": "3760",
+            "BELKA": "940",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3125",
+            "Anchor": "169",
+            "Madeira": "1107"
+        }
+    },
+    {
+        "hex": "#b8dae9",
+        "dmcNumber": "3761",
+        "colorName": "Sky Blue - lt",
+        "colorRUname": "Небесно голубой, св.",
+        "labels": {
+            "DMC": "3761",
+            "BELKA": "1832",
+            "Kirova": "2702",
+            "Bestex": "-",
+            "Gamma": "3124",
+            "Anchor": "928",
+            "Madeira": "1014"
+        }
+    },
+    {
+        "hex": "#296e87",
+        "dmcNumber": "3765",
+        "colorName": "Peacock Blue - vy dk",
+        "colorRUname": "Переливчатый синий, оч.т.",
+        "labels": {
+            "DMC": "3765",
+            "BELKA": "3862",
+            "Kirova": "3306",
+            "Bestex": "-",
+            "Gamma": "3129",
+            "Anchor": "170",
+            "Madeira": "2506"
+        }
+    },
+    {
+        "hex": "#7cbec6",
+        "dmcNumber": "3766",
+        "colorName": "Peacock Blue - lt",
+        "colorRUname": "Переливчатый синий, св.",
+        "labels": {
+            "DMC": "3766",
+            "BELKA": "1520",
+            "Kirova": "3102",
+            "Bestex": "855",
+            "Gamma": "855",
+            "Anchor": "167",
+            "Madeira": "1109"
+        }
+    },
+    {
+        "hex": "#6b8084",
+        "dmcNumber": "3768",
+        "colorName": "Grey Green - dk",
+        "colorRUname": "Серо-зеленый",
+        "labels": {
+            "DMC": "3768",
+            "BELKA": "2360",
+            "Kirova": "7110",
+            "Bestex": "665",
+            "Gamma": "39",
+            "Anchor": "779",
+            "Madeira": "2508"
+        }
+    },
+    {
+        "hex": "#f8eedc",
+        "dmcNumber": "3770",
+        "colorName": "Tawny - vy lt",
+        "colorRUname": "Рыжевато-коричневый, оч.св.",
+        "labels": {
+            "DMC": "3770",
+            "BELKA": "3714",
+            "Kirova": "102",
+            "Bestex": "A085",
+            "Gamma": "40",
+            "Anchor": "1009",
+            "Madeira": "2314"
+        }
+    },
+    {
+        "hex": "#e8b58f",
+        "dmcNumber": "3771",
+        "colorName": "Terra Cotta - ultra vy lt",
+        "colorRUname": "Терракотовый, ультра оч.св.",
+        "labels": {
+            "DMC": "3771",
+            "BELKA": "2536",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3026",
+            "Anchor": "336",
+            "Madeira": "2605"
+        }
+    },
+    {
+        "hex": "#b8846c",
+        "dmcNumber": "3772",
+        "colorName": "Desert Sand - vy dk",
+        "colorRUname": "Пустынного песка, оч.т.",
+        "labels": {
+            "DMC": "3772",
+            "BELKA": "2251",
+            "Kirova": "6304",
+            "Bestex": "-",
+            "Gamma": "3215",
+            "Anchor": "1007",
+            "Madeira": "2601"
+        }
+    },
+    {
+        "hex": "#d8b39d",
+        "dmcNumber": "3773",
+        "colorName": "Desert Sand - med",
+        "colorRUname": "Пустынного песка, ср.",
+        "labels": {
+            "DMC": "3773",
+            "BELKA": "-",
+            "Kirova": "6302",
+            "Bestex": "766,A079",
+            "Gamma": "52",
+            "Anchor": "1008",
+            "Madeira": "2311"
+        }
+    },
+    {
+        "hex": "#f6e1d0",
+        "dmcNumber": "3774",
+        "colorName": "Desert Sand - vy lt",
+        "colorRUname": "Пустынного песка, оч.св.",
+        "labels": {
+            "DMC": "3774",
+            "BELKA": "1422",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3214",
+            "Anchor": "778",
+            "Madeira": "1909"
+        }
+    },
+    {
+        "hex": "#c27d45",
+        "dmcNumber": "3776",
+        "colorName": "Mahogany - lt",
+        "colorRUname": "Красного дерева, св.",
+        "labels": {
+            "DMC": "3776",
+            "BELKA": "3139",
+            "Kirova": "5406",
+            "Bestex": "-",
+            "Gamma": "48",
+            "Anchor": "1048",
+            "Madeira": "2011"
+        }
+    },
+    {
+        "hex": "#892b21",
+        "dmcNumber": "3777",
+        "colorName": "Terra Cotta - vy dk",
+        "colorRUname": "Терракотовый, оч.т.",
+        "labels": {
+            "DMC": "3777",
+            "BELKA": "2493",
+            "Kirova": "5610",
+            "Bestex": "-",
+            "Gamma": "3212",
+            "Anchor": "1015",
+            "Madeira": "2502"
+        }
+    },
+    {
+        "hex": "#c4856f",
+        "dmcNumber": "3778",
+        "colorName": "Terra Cotta - lt",
+        "colorRUname": "Терракотовый, св.",
+        "labels": {
+            "DMC": "3778",
+            "BELKA": "301",
+            "Kirova": "5604",
+            "Bestex": "767",
+            "Gamma": "767",
+            "Anchor": "1013",
+            "Madeira": "403"
+        }
+    },
+    {
+        "hex": "#f2c6b8",
+        "dmcNumber": "3779",
+        "colorName": "Terra Cotta - ultra vy lt",
+        "colorRUname": "Терракотовый, ультра св.",
+        "labels": {
+            "DMC": "3779",
+            "BELKA": "549",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3213",
+            "Anchor": "338",
+            "Madeira": "305"
+        }
+    },
+    {
+        "hex": "#5c4c2d",
+        "dmcNumber": "3781",
+        "colorName": "Mocha Brown - dk",
+        "colorRUname": "Мокка, т.",
+        "labels": {
+            "DMC": "3781",
+            "BELKA": "1118",
+            "Kirova": "5204",
+            "Bestex": "-",
+            "Gamma": "3223",
+            "Anchor": "1012",
+            "Madeira": "2106"
+        }
+    },
+    {
+        "hex": "#d2caba",
+        "dmcNumber": "3782",
+        "colorName": "Mocha Brown - lt",
+        "colorRUname": "Мокка, св.",
+        "labels": {
+            "DMC": "3782",
+            "BELKA": "1756",
+            "Kirova": "6002",
+            "Bestex": "915",
+            "Gamma": "915",
+            "Anchor": "1050",
+            "Madeira": "1902"
+        }
+    },
+    {
+        "hex": "#605b45",
+        "dmcNumber": "3787",
+        "colorName": "Brown Grey - dk",
+        "colorRUname": "Коричнево-серый, т.",
+        "labels": {
+            "DMC": "3787",
+            "BELKA": "1442",
+            "Kirova": "6808",
+            "Bestex": "-",
+            "Gamma": "3227",
+            "Anchor": "273",
+            "Madeira": "-"
+        }
+    },
+    {
+        "hex": "#978266",
+        "dmcNumber": "3790",
+        "colorName": "Beige Grey - ultra dk",
+        "colorRUname": "Бежево-серый, ультра т.",
+        "labels": {
+            "DMC": "3790",
+            "BELKA": "2752",
+            "Kirova": "-",
+            "Bestex": "919,A069",
+            "Gamma": "58",
+            "Anchor": "393",
+            "Madeira": "1903"
+        }
+    },
+    {
+        "hex": "#2f3b36",
+        "dmcNumber": "3799",
+        "colorName": "Pewter Grey - vy dk",
+        "colorRUname": "Оловянно серый, оч.т.",
+        "labels": {
+            "DMC": "3799",
+            "BELKA": "3274",
+            "Kirova": "7210",
+            "Bestex": "-",
+            "Gamma": "3070",
+            "Anchor": "236",
+            "Madeira": "1713"
+        }
+    },
+    {
+        "hex": "#e65952",
+        "dmcNumber": "3801",
+        "colorName": "Christmas Red - lt",
+        "colorRUname": "Рождественский красный, св.",
+        "labels": {
+            "DMC": "3801",
+            "BELKA": "3285",
+            "Kirova": "810",
+            "Bestex": "A081",
+            "Gamma": "63",
+            "Anchor": "1098",
+            "Madeira": "411"
+        }
+    },
+    {
+        "hex": "#6f2e35",
+        "dmcNumber": "3802",
+        "colorName": "Antique Mauve - vy dk",
+        "colorRUname": "Античный розовато-лиловый, оч.т.",
+        "labels": {
+            "DMC": "3802",
+            "BELKA": "310",
+            "Kirova": "1302",
+            "Bestex": "-",
+            "Gamma": "3100",
+            "Anchor": "1019",
+            "Madeira": "2606"
+        }
+    },
+    {
+        "hex": "#863248",
+        "dmcNumber": "3803",
+        "colorName": "Mauve - dk",
+        "colorRUname": "Розовато-лиловый, т.",
+        "labels": {
+            "DMC": "3803",
+            "BELKA": "2567",
+            "Kirova": "1808",
+            "Bestex": "907",
+            "Gamma": "3094",
+            "Anchor": "69",
+            "Madeira": "2609"
+        }
+    },
+    {
+        "hex": "#c33c62",
+        "dmcNumber": "3804",
+        "colorName": "Cyclamen Pink - dk",
+        "colorRUname": "Розового цикламена, т.",
+        "labels": {
+            "DMC": "3804",
+            "BELKA": "2725",
+            "Kirova": "1110",
+            "Bestex": "-",
+            "Gamma": "3103",
+            "Anchor": "55",
+            "Madeira": "604"
+        }
+    },
+    {
+        "hex": "#ce507f",
+        "dmcNumber": "3805",
+        "colorName": "Cyclamen Pink",
+        "colorRUname": "Розового цикламена",
+        "labels": {
+            "DMC": "3805",
+            "BELKA": "793",
+            "Kirova": "1408",
+            "Bestex": "-",
+            "Gamma": "69",
+            "Anchor": "63",
+            "Madeira": "702"
+        }
+    },
+    {
+        "hex": "#f19ac2",
+        "dmcNumber": "3806",
+        "colorName": "Cyclamen Pink - lt",
+        "colorRUname": "Розового цикламена, св.",
+        "labels": {
+            "DMC": "3806",
+            "BELKA": "231",
+            "Kirova": "1406",
+            "Bestex": "402",
+            "Gamma": "402",
+            "Anchor": "62",
+            "Madeira": "701"
+        }
+    },
+    {
+        "hex": "#073563",
+        "dmcNumber": "3807",
+        "colorName": "Cornflower Blue",
+        "colorRUname": "Васильковый, кобальтовый",
+        "labels": {
+            "DMC": "3807",
+            "BELKA": "551",
+            "Kirova": "2406",
+            "Bestex": "-",
+            "Gamma": "759",
+            "Anchor": "122",
+            "Madeira": "2702"
+        }
+    },
+    {
+        "hex": "#0c464b",
+        "dmcNumber": "3808",
+        "colorName": "Turquoise - ultra vy dk",
+        "colorRUname": "Бирюзовый, ультра т.",
+        "labels": {
+            "DMC": "3808",
+            "BELKA": "2793",
+            "Kirova": "3408",
+            "Bestex": "860",
+            "Gamma": "860",
+            "Anchor": "1068",
+            "Madeira": "2507"
+        }
+    },
+    {
+        "hex": "#1c869b",
+        "dmcNumber": "3809",
+        "colorName": "Turquoise - vy dk",
+        "colorRUname": "Бирюзовый, оч.т.",
+        "labels": {
+            "DMC": "3809",
+            "BELKA": "3039",
+            "Kirova": "3406",
+            "Bestex": "857",
+            "Gamma": "857",
+            "Anchor": "1066",
+            "Madeira": "2506"
+        }
+    },
+    {
+        "hex": "#4fa1a9",
+        "dmcNumber": "3810",
+        "colorName": "Turquoise - dk",
+        "colorRUname": "Бирюзовый, т.",
+        "labels": {
+            "DMC": "3810",
+            "BELKA": "708",
+            "Kirova": "3404",
+            "Bestex": "856",
+            "Gamma": "856",
+            "Anchor": "1066",
+            "Madeira": "1108"
+        }
+    },
+    {
+        "hex": "#c4e7e8",
+        "dmcNumber": "3811",
+        "colorName": "Turquoise - vy lt",
+        "colorRUname": "Бирюзовый, оч.св.",
+        "labels": {
+            "DMC": "3811",
+            "BELKA": "2854",
+            "Kirova": "3302",
+            "Bestex": "853",
+            "Gamma": "853",
+            "Anchor": "1060",
+            "Madeira": "1101"
+        }
+    },
+    {
+        "hex": "#008679",
+        "dmcNumber": "3812",
+        "colorName": "Seagreen - vy dk",
+        "colorRUname": "Морской воды, оч.т.",
+        "labels": {
+            "DMC": "3812",
+            "BELKA": "791",
+            "Kirova": "3512",
+            "Bestex": "-",
+            "Gamma": "3133",
+            "Anchor": "188",
+            "Madeira": "2706"
+        }
+    },
+    {
+        "hex": "#b8cebe",
+        "dmcNumber": "3813",
+        "colorName": "Blue Green - lt",
+        "colorRUname": "Сине-зеленый, св.",
+        "labels": {
+            "DMC": "3813",
+            "BELKA": "2456",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3144",
+            "Anchor": "875",
+            "Madeira": "1101"
+        }
+    },
+    {
+        "hex": "#3f8878",
+        "dmcNumber": "3814",
+        "colorName": "Aquamarine",
+        "colorRUname": "Аквамарин",
+        "labels": {
+            "DMC": "3814",
+            "BELKA": "3740",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3138",
+            "Anchor": "1074",
+            "Madeira": "1203"
+        }
+    },
+    {
+        "hex": "#538a6d",
+        "dmcNumber": "3815",
+        "colorName": "Celadon Green - dk",
+        "colorRUname": "Серовато-зеленый, т.",
+        "labels": {
+            "DMC": "3815",
+            "BELKA": "112",
+            "Kirova": "-",
+            "Bestex": "411",
+            "Gamma": "3143",
+            "Anchor": "877",
+            "Madeira": "1703"
+        }
+    },
+    {
+        "hex": "#699d85",
+        "dmcNumber": "3816",
+        "colorName": "Celadon Green",
+        "colorRUname": "Серовато-зеленый",
+        "labels": {
+            "DMC": "3816",
+            "BELKA": "3249",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3062",
+            "Anchor": "876",
+            "Madeira": "1702"
+        }
+    },
+    {
+        "hex": "#a6c5b4",
+        "dmcNumber": "3817",
+        "colorName": "Celadon Green - lt",
+        "colorRUname": "Серовато-зеленый, св.",
+        "labels": {
+            "DMC": "3817",
+            "BELKA": "2565",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3061",
+            "Anchor": "875",
+            "Madeira": "1111"
+        }
+    },
+    {
+        "hex": "#005d2e",
+        "dmcNumber": "3818",
+        "colorName": "Emerald Green - ultra vy dk",
+        "colorRUname": "Изумрудный, ультра т.",
+        "labels": {
+            "DMC": "3818",
+            "BELKA": "2482",
+            "Kirova": "4110",
+            "Bestex": "414",
+            "Gamma": "3149",
+            "Anchor": "923",
+            "Madeira": "2704"
+        }
+    },
+    {
+        "hex": "#d2d057",
+        "dmcNumber": "3819",
+        "colorName": "Moss Green - lt",
+        "colorRUname": "Мох, св.",
+        "labels": {
+            "DMC": "3819",
+            "BELKA": "2774",
+            "Kirova": "4802",
+            "Bestex": "817",
+            "Gamma": "817",
+            "Anchor": "278",
+            "Madeira": "2703"
+        }
+    },
+    {
+        "hex": "#ddb442",
+        "dmcNumber": "3820",
+        "colorName": "Straw - dk",
+        "colorRUname": "Соломенный, т.",
+        "labels": {
+            "DMC": "3820",
+            "BELKA": "2289",
+            "Kirova": "404",
+            "Bestex": "A012",
+            "Gamma": "3020",
+            "Anchor": "306",
+            "Madeira": "2509"
+        }
+    },
+    {
+        "hex": "#e2b73a",
+        "dmcNumber": "3821",
+        "colorName": "Straw",
+        "colorRUname": "Соломенный",
+        "labels": {
+            "DMC": "3821",
+            "BELKA": "1528",
+            "Kirova": "304",
+            "Bestex": "-",
+            "Gamma": "3190",
+            "Anchor": "305",
+            "Madeira": "2510"
+        }
+    },
+    {
+        "hex": "#f1d863",
+        "dmcNumber": "3822",
+        "colorName": "Straw - lt",
+        "colorRUname": "Соломенный, св.",
+        "labels": {
+            "DMC": "3822",
+            "BELKA": "2378",
+            "Kirova": "302",
+            "Bestex": "A011",
+            "Gamma": "99",
+            "Anchor": "295",
+            "Madeira": "112"
+        }
+    },
+    {
+        "hex": "#fffcdc",
+        "dmcNumber": "3823",
+        "colorName": "Yellow - ultra pale",
+        "colorRUname": "Желтый, ультра бледный",
+        "labels": {
+            "DMC": "3823",
+            "BELKA": "998",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "43",
+            "Anchor": "386",
+            "Madeira": "2512"
+        }
+    },
+    {
+        "hex": "#fbccb8",
+        "dmcNumber": "3824",
+        "colorName": "Apricot - lt",
+        "colorRUname": "Абрикосовый, св.",
+        "labels": {
+            "DMC": "3824",
+            "BELKA": "1866",
+            "Kirova": "702",
+            "Bestex": "311",
+            "Gamma": "45",
+            "Anchor": "8",
+            "Madeira": "2503"
+        }
+    },
+    {
+        "hex": "#fdc391",
+        "dmcNumber": "3825",
+        "colorName": "Pumpkin - pale",
+        "colorRUname": "Тыквенный, бледный",
+        "labels": {
+            "DMC": "3825",
+            "BELKA": "1018",
+            "Kirova": "604",
+            "Bestex": "-",
+            "Gamma": "3203",
+            "Anchor": "323",
+            "Madeira": "307"
+        }
+    },
+    {
+        "hex": "#c38c55",
+        "dmcNumber": "3826",
+        "colorName": "Golden Brown",
+        "colorRUname": "Золотовато-коричневый",
+        "labels": {
+            "DMC": "3826",
+            "BELKA": "1375",
+            "Kirova": "5806",
+            "Bestex": "926",
+            "Gamma": "926",
+            "Anchor": "1049, 365",
+            "Madeira": "2306"
+        }
+    },
+    {
+        "hex": "#e8aa5f",
+        "dmcNumber": "3827",
+        "colorName": "Golden Brown - pale",
+        "colorRUname": "Золотовато-коричневый, бледный",
+        "labels": {
+            "DMC": "3827",
+            "BELKA": "2224",
+            "Kirova": "5402",
+            "Bestex": "-",
+            "Gamma": "50",
+            "Anchor": "311",
+            "Madeira": "2013"
+        }
+    },
+    {
+        "hex": "#af8846",
+        "dmcNumber": "3828",
+        "colorName": "Hazelnut Brown",
+        "colorRUname": "Фундука",
+        "labels": {
+            "DMC": "3828",
+            "BELKA": "1171",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3182",
+            "Anchor": "373",
+            "Madeira": "2109"
+        }
+    },
+    {
+        "hex": "#a47829",
+        "dmcNumber": "3829",
+        "colorName": "Old Gold - vy dk",
+        "colorRUname": "Старого золота, оч.т.",
+        "labels": {
+            "DMC": "3829",
+            "BELKA": "557",
+            "Kirova": "5004",
+            "Bestex": "-",
+            "Gamma": "3189",
+            "Anchor": "901",
+            "Madeira": "2210"
+        }
+    },
+    {
+        "hex": "#b97161",
+        "dmcNumber": "3830",
+        "colorName": "Terra Cotta",
+        "colorRUname": "Терракотовый",
+        "labels": {
+            "DMC": "3830",
+            "BELKA": "2511",
+            "Kirova": "5608",
+            "Bestex": "-",
+            "Gamma": "3027",
+            "Anchor": "5975",
+            "Madeira": "401"
+        }
+    },
+    {
+        "hex": "#b33034",
+        "dmcNumber": "3831",
+        "colorName": "Raspberry - dk",
+        "colorRUname": "Малиновый, т.",
+        "labels": {
+            "DMC": "3831",
+            "BELKA": "567",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3086",
+            "Anchor": "29",
+            "Madeira": "610"
+        }
+    },
+    {
+        "hex": "#d55d63",
+        "dmcNumber": "3832",
+        "colorName": "Raspberry - med",
+        "colorRUname": "Малиновый, ср.",
+        "labels": {
+            "DMC": "3832",
+            "BELKA": "2710",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3085",
+            "Anchor": "28",
+            "Madeira": "506"
+        }
+    },
+    {
+        "hex": "#e8868c",
+        "dmcNumber": "3833",
+        "colorName": "Raspberry - lt",
+        "colorRUname": "Малиновый, св.",
+        "labels": {
+            "DMC": "3833",
+            "BELKA": "3465",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3084",
+            "Anchor": "26",
+            "Madeira": "414"
+        }
+    },
+    {
+        "hex": "#642441",
+        "dmcNumber": "3834",
+        "colorName": "Grape - dk",
+        "colorRUname": "Красного винограда, т.",
+        "labels": {
+            "DMC": "3834",
+            "BELKA": "2806",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3102",
+            "Anchor": "100",
+            "Madeira": "805"
+        }
+    },
+    {
+        "hex": "#784775",
+        "dmcNumber": "3835",
+        "colorName": "Grape - med",
+        "colorRUname": "Красного винограда, ср.",
+        "labels": {
+            "DMC": "3835",
+            "BELKA": "1512",
+            "Kirova": "-",
+            "Bestex": "730",
+            "Gamma": "730",
+            "Anchor": "98",
+            "Madeira": "805"
+        }
+    },
+    {
+        "hex": "#c1aec2",
+        "dmcNumber": "3836",
+        "colorName": "Grape - lt",
+        "colorRUname": "Красного винограда, св.",
+        "labels": {
+            "DMC": "3836",
+            "BELKA": "2637",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "68",
+            "Anchor": "90",
+            "Madeira": "711"
+        }
+    },
+    {
+        "hex": "#7c4087",
+        "dmcNumber": "3837",
+        "colorName": "Lavender - ultra dk",
+        "colorRUname": "Лаванда, ультра тёмный",
+        "labels": {
+            "DMC": "3837",
+            "BELKA": "1881",
+            "Kirova": "-",
+            "Bestex": "112",
+            "Gamma": "112",
+            "Anchor": "100",
+            "Madeira": "712"
+        }
+    },
+    {
+        "hex": "#62669a",
+        "dmcNumber": "3838",
+        "colorName": "Lavender Blue - dk",
+        "colorRUname": "Лавандово-синий, т.",
+        "labels": {
+            "DMC": "3838",
+            "BELKA": "2268",
+            "Kirova": "-",
+            "Bestex": "A062",
+            "Gamma": "3112",
+            "Anchor": "177",
+            "Madeira": "905"
+        }
+    },
+    {
+        "hex": "#94a8c9",
+        "dmcNumber": "3839",
+        "colorName": "Lavender Blue - med",
+        "colorRUname": "Лавандово-синий, ср.",
+        "labels": {
+            "DMC": "3839",
+            "BELKA": "21",
+            "Kirova": "-",
+            "Bestex": "A058",
+            "Gamma": "81",
+            "Anchor": "176",
+            "Madeira": "902"
+        }
+    },
+    {
+        "hex": "#c1d4ec",
+        "dmcNumber": "3840",
+        "colorName": "Lavender Blue - lt",
+        "colorRUname": "Лавандово-синий, св.",
+        "labels": {
+            "DMC": "3840",
+            "BELKA": "1194",
+            "Kirova": "-",
+            "Bestex": "302,A030",
+            "Gamma": "302",
+            "Anchor": "117",
+            "Madeira": "907"
+        }
+    },
+    {
+        "hex": "#cbdde7",
+        "dmcNumber": "3841",
+        "colorName": "Baby Blue - pale",
+        "colorRUname": "Нежно голубой, бледный",
+        "labels": {
+            "DMC": "3841",
+            "BELKA": "650",
+            "Kirova": "-",
+            "Bestex": "301",
+            "Gamma": "301",
+            "Anchor": "9159",
+            "Madeira": "1001"
+        }
+    },
+    {
+        "hex": "#12557e",
+        "dmcNumber": "3842",
+        "colorName": "Wedgwood - dk",
+        "colorRUname": "Пыльно-синий, т.",
+        "labels": {
+            "DMC": "3842",
+            "BELKA": "697",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3126",
+            "Anchor": "164",
+            "Madeira": "1010"
+        }
+    },
+    {
+        "hex": "#0095d3",
+        "dmcNumber": "3843",
+        "colorName": "Electric Blue",
+        "colorRUname": "Волнующе синий",
+        "labels": {
+            "DMC": "3843",
+            "BELKA": "937",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3122",
+            "Anchor": "433, 1089",
+            "Madeira": "1103"
+        }
+    },
+    {
+        "hex": "#04acce",
+        "dmcNumber": "3844",
+        "colorName": "Bright Turquoise - dk",
+        "colorRUname": "Ярко-бирюзовый, т.",
+        "labels": {
+            "DMC": "3844",
+            "BELKA": "2663",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "85",
+            "Anchor": "410",
+            "Madeira": "1103"
+        }
+    },
+    {
+        "hex": "#01cbec",
+        "dmcNumber": "3845",
+        "colorName": "Bright Turquoise - med",
+        "colorRUname": "Ярко-бирюзовый, ср.",
+        "labels": {
+            "DMC": "3845",
+            "BELKA": "3565",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "87",
+            "Anchor": "1089",
+            "Madeira": "-"
+        }
+    },
+    {
+        "hex": "#63d3e1",
+        "dmcNumber": "3846",
+        "colorName": "Bright Turquoise - lt",
+        "colorRUname": "Ярко-бирюзовый, св.",
+        "labels": {
+            "DMC": "3846",
+            "BELKA": "424",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3123",
+            "Anchor": "1090",
+            "Madeira": "-"
+        }
+    },
+    {
+        "hex": "#00604e",
+        "dmcNumber": "3847",
+        "colorName": "Teal Green - dk",
+        "colorRUname": "Цвет рабочего стола Windows, т.",
+        "labels": {
+            "DMC": "3847",
+            "BELKA": "3638",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3131",
+            "Anchor": "1076",
+            "Madeira": "2507"
+        }
+    },
+    {
+        "hex": "#42917f",
+        "dmcNumber": "3848",
+        "colorName": "Teal Green - med",
+        "colorRUname": "Цвет рабочего стола Windows, ср.",
+        "labels": {
+            "DMC": "3848",
+            "BELKA": "1125",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3059",
+            "Anchor": "1074",
+            "Madeira": "1109"
+        }
+    },
+    {
+        "hex": "#6eb2a7",
+        "dmcNumber": "3849",
+        "colorName": "Teal Green - lt",
+        "colorRUname": "Цвет рабочего стола Windows, св.",
+        "labels": {
+            "DMC": "3849",
+            "BELKA": "2227",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3058",
+            "Anchor": "1070",
+            "Madeira": "1111"
+        }
+    },
+    {
+        "hex": "#08926f",
+        "dmcNumber": "3850",
+        "colorName": "Bright Green - dk",
+        "colorRUname": "Ярко-зеленый, т.",
+        "labels": {
+            "DMC": "3850",
+            "BELKA": "3505",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3136",
+            "Anchor": "189",
+            "Madeira": "1203"
+        }
+    },
+    {
+        "hex": "#56b69c",
+        "dmcNumber": "3851",
+        "colorName": "Bright Green - lt",
+        "colorRUname": "Ярко-зеленый, св.",
+        "labels": {
+            "DMC": "3851",
+            "BELKA": "1637",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3134",
+            "Anchor": "187",
+            "Madeira": "1202"
+        }
+    },
+    {
+        "hex": "#cc972b",
+        "dmcNumber": "3852",
+        "colorName": "Straw - vy dk",
+        "colorRUname": "Соломенный, оч.т.",
+        "labels": {
+            "DMC": "3852",
+            "BELKA": "156",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3191",
+            "Anchor": "306",
+            "Madeira": "2203"
+        }
+    },
+    {
+        "hex": "#fc9749",
+        "dmcNumber": "3853",
+        "colorName": "Autumn Gold - dk",
+        "colorRUname": "Золотой осенний, т.",
+        "labels": {
+            "DMC": "3853",
+            "BELKA": "3356",
+            "Kirova": "-",
+            "Bestex": "107,A009",
+            "Gamma": "107",
+            "Anchor": "1003",
+            "Madeira": "311"
+        }
+    },
+    {
+        "hex": "#f7b25c",
+        "dmcNumber": "3854",
+        "colorName": "Autumn Gold - med",
+        "colorRUname": "Золотой осенний, ср.",
+        "labels": {
+            "DMC": "3854",
+            "BELKA": "419",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3209",
+            "Anchor": "313",
+            "Madeira": "2307"
+        }
+    },
+    {
+        "hex": "#f7ca84",
+        "dmcNumber": "3855",
+        "colorName": "Autumn Gold - lt",
+        "colorRUname": "Золотой осенний, св.",
+        "labels": {
+            "DMC": "3855",
+            "BELKA": "1896",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3208",
+            "Anchor": "311",
+            "Madeira": "2012"
+        }
+    },
+    {
+        "hex": "#ebbc9a",
+        "dmcNumber": "3856",
+        "colorName": "Mahogany - ultra vy lt",
+        "colorRUname": "Красного дерева, ультра св.",
+        "labels": {
+            "DMC": "3856",
+            "BELKA": "2262",
+            "Kirova": "-",
+            "Bestex": "A087",
+            "Gamma": "47",
+            "Anchor": "1010",
+            "Madeira": "2309"
+        }
+    },
+    {
+        "hex": "#804133",
+        "dmcNumber": "3857",
+        "colorName": "Rosewood - dk",
+        "colorRUname": "Розового дерева, т.",
+        "labels": {
+            "DMC": "3857",
+            "BELKA": "1815",
+            "Kirova": "-",
+            "Bestex": "772",
+            "Gamma": "772",
+            "Anchor": "936",
+            "Madeira": "2311"
+        }
+    },
+    {
+        "hex": "#8d5745",
+        "dmcNumber": "3858",
+        "colorName": "Rosewood - med",
+        "colorRUname": "Розового дерева, ср.",
+        "labels": {
+            "DMC": "3858",
+            "BELKA": "3349",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3029",
+            "Anchor": "1007",
+            "Madeira": "810"
+        }
+    },
+    {
+        "hex": "#b68472",
+        "dmcNumber": "3859",
+        "colorName": "Rosewood - lt",
+        "colorRUname": "Розового дерева, св.",
+        "labels": {
+            "DMC": "3859",
+            "BELKA": "2993",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3028",
+            "Anchor": "914",
+            "Madeira": "2312"
+        }
+    },
+    {
+        "hex": "#947974",
+        "dmcNumber": "3860",
+        "colorName": "Cocoa",
+        "colorRUname": "Какао",
+        "labels": {
+            "DMC": "3860",
+            "BELKA": "451",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3032",
+            "Anchor": "379",
+            "Madeira": "806"
+        }
+    },
+    {
+        "hex": "#9e887f",
+        "dmcNumber": "3861",
+        "colorName": "Cocoa - lt",
+        "colorRUname": "Какао, св.",
+        "labels": {
+            "DMC": "3861",
+            "BELKA": "334",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3217",
+            "Anchor": "378",
+            "Madeira": "1912"
+        }
+    },
+    {
+        "hex": "#845f2e",
+        "dmcNumber": "3862",
+        "colorName": "Mocha Beige - dk",
+        "colorRUname": "Темно-коричневый бежевый, т.",
+        "labels": {
+            "DMC": "3862",
+            "BELKA": "2042",
+            "Kirova": "-",
+            "Bestex": "808",
+            "Gamma": "808",
+            "Anchor": "358",
+            "Madeira": "1913"
+        }
+    },
+    {
+        "hex": "#a4866c",
+        "dmcNumber": "3863",
+        "colorName": "Mocha Beige - med",
+        "colorRUname": "Темно-коричневый бежевый, ср.",
+        "labels": {
+            "DMC": "3863",
+            "BELKA": "2459",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3035",
+            "Anchor": "379",
+            "Madeira": "1912"
+        }
+    },
+    {
+        "hex": "#c9af93",
+        "dmcNumber": "3864",
+        "colorName": "Mocha Beige - lt",
+        "colorRUname": "Темно-коричневый бежевый, св.",
+        "labels": {
+            "DMC": "3864",
+            "BELKA": "384",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3034",
+            "Anchor": "376",
+            "Madeira": "1910"
+        }
+    },
+    {
+        "hex": "#faf9f5",
+        "dmcNumber": "3865",
+        "colorName": "Winter White",
+        "colorRUname": "Снежно белый",
+        "labels": {
+            "DMC": "3865",
+            "BELKA": "2170",
+            "Kirova": "-",
+            "Bestex": "-",
+            "Gamma": "3250",
+            "Anchor": "2",
+            "Madeira": "2402"
+        }
+    },
+    {
+        "hex": "#e7e5dd",
+        "dmcNumber": "3866",
+        "colorName": "Mocha Brown - ultra vy lt",
+        "colorRUname": "Мокка, ультра св.",
+        "labels": {
+            "DMC": "3866",
+            "BELKA": "3211",
+            "Kirova": "-",
+            "Bestex": "A053",
+            "Gamma": "3042",
+            "Anchor": "926",
+            "Madeira": "1908"
+        }
+    }
+]

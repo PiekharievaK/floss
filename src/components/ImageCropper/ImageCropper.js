@@ -96,9 +96,9 @@ export const ImageCropper = ({ image, setCroppedImage, setSelectedFile }) => {
           </button>
         </div>
 
-          <button onClick={saveCrop} className={s.button}>
-            Crop Complete
-          </button>
+        <button onClick={saveCrop} className={s.button}>
+          Crop Complete
+        </button>
       </div>
     </div>
   );

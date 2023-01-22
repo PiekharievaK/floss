@@ -1,40 +1,63 @@
 @import "/src/styles/variables.scss";
-.cardList{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0px;
-    
+.cardList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px;
 }
 
-.card{
-    position: relative;
-margin: 20px;    
-padding: 20px;
-background-color: $table-collor;
-    border: 1px solid black;
+.card {
+  position: relative;
+  margin: 20px;
+  padding: 20px;
+  background-color: $table-collor;
+  border: 1px solid black;
+  @media screen and (max-width: 767px) {
+    max-width: 200px;
+    // overflow-x: hidden;
+  }
 }
 
-.flossesBox{
-    display: flex;
+.flossesBox {
+  display: flex;
+  @media screen and (max-width: 767px) {
+    max-width: 200px;
+    overflow-x: auto;
+  }
 }
 
-.flossesList{
-    margin: 10px;
-    padding: 0px;
-    list-style: none;
+.flossesList {
+  margin: 10px;
+  padding: 0px;
+  list-style: none;
 }
 
-.input{
-    width: 70px;
-    margin: 0px 5px;
+.input {
+  @media screen and (max-width: 767px) {
+    width: auto;
+    margin: 5px 0px;
+  }
+  width: 70px;
+  margin: 0px 5px;
 }
 
-.schemaDeleteBtn{
-    position: absolute;
-    right: 5px;
-    top: 5px;
+.schemaDeleteBtn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }
 
-.boxDark{
-    color: black;
+.boxDark {
+  color: black;
+}
+
+.form {
+  display: flex;
+  margin-bottom: 5px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.addBox {
+  margin-bottom: 5px;
 }

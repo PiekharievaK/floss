@@ -2,7 +2,7 @@ import axios from "axios";
 import notiflix, { Loading, Notify } from "notiflix";
 
 // axios.defaults.baseURL = "http://localhost:3001";
-axios.defaults.baseURL = 'https://floss-server.onrender.com';
+axios.defaults.baseURL = "https://floss-server.onrender.com";
 
 const token = {
   set(token) {
@@ -15,7 +15,7 @@ const token = {
 
 const signUpUser = async (userData) => {
   Loading.standard(`...Loading`);
-  try { 
+  try {
     const { data } = await axios.post("/users/signup", userData);
     Loading.remove();
 
@@ -29,7 +29,7 @@ const signUpUser = async (userData) => {
         try {
           Loading.standard(`...Loading`);
           await axios.get(`${data.user.linkToVerify}`);
-          Loading.remove()
+          Loading.remove();
           Notify.success("You have successfully registered on our website");
         } catch (error) {
           Loading.remove();
@@ -67,11 +67,11 @@ const logInUser = async (userData, setUser, setIsLoggedIn) => {
     setUser(data.user);
     localStorage.setItem("token", data.token);
     setIsLoggedIn(true);
-    Loading.remove()
+    Loading.remove();
     Notify.success("You have successfully logged in");
     return data;
   } catch (error) {
-    Loading.remove()
+    Loading.remove();
     return Notify.failure(`${error.response.data.message}.`);
   }
 };

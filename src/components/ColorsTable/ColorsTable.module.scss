@@ -1,31 +1,38 @@
 @import "../../styles/variables.scss";
 
 .box,
-.boxDark{
-    min-height: 300px;
-    max-height: 500px;
-    margin: auto;
-    padding: 30px;
-    width: fit-content;
-    overflow-y: auto;
-    box-shadow: 0px 4px 10px $shadow-color;
-    background-color: $table-collor;
-&::-webkit-scrollbar {
-    width: 0;
+.boxDark {
+  @media screen and (max-width: 767px) {
+    max-width: 200px;
+    overflow-x: auto;
   }
+  min-height: 300px;
+  max-height: 500px;
+  margin: auto;
+  padding: 30px;
+  width: fit-content;
+  overflow-y: auto;
+  box-shadow: 0px 4px 10px $shadow-color;
+  background-color: $table-collor;
+  // &::-webkit-scrollbar {
+  //     width: 0;
+  //   }
 }
-.boxDark{
+.boxDark {
   background-color: $table-collor-dark;
   // box-shadow: 0px 4px 10px $shadow-dark-color;
 }
 
-.hide{
-
-  @media screen and (max-width: 767px){
+.hide {
+  @media screen and (max-width: 767px) {
     display: none;
   }
-  
 }
-.hash{
+.hash {
   border: 1px solid black;
+}
+
+.tableTitle {
+  font-weight: 600;
+  font-size: 15px;
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Counter } from "../../../Counter/couter";
 import Button from "../../../Button";
 import Section from "../../../Section";
+import flosses from "../../../../Pages/ColorsPage/flosses.json";
 import s from "../JournalList/JournalList.module.scss";
 
 export const JournalList = ({
@@ -16,25 +17,33 @@ export const JournalList = ({
   const [filteredFloss, setFilteredFloss] = useState(data);
 
   const [editMode, setEditMode] = useState("");
-
+  // console.log(flosses);
+  const labels = Object.keys(flosses[0].labels).filter(
+    (label) => label !== "Bestex" && label !== "BELKA" && label !== "Kirova"
+  );
   useEffect(() => {
     setFilteredFloss(data);
     filterFloss(filter);
   }, [data]);
 
   const filterFloss = (value) => {
-    if (value === "DMC") {
-      setFilteredFloss(data.filter((item) => item.label === "DMC"));
-      return;
-    }
     if (value === "Other") {
-      setFilteredFloss(data.filter((item) => item.label !== "DMC"));
+      setFilteredFloss(
+        data.filter(
+          (item) =>
+            item.label !== "DMC" &&
+            item.label !== "Madeira" &&
+            item.label !== "Anchor" &&
+            item.label !== "Gamma"
+        )
+      );
       return;
     }
     if (value === "All") {
       setFilteredFloss(data);
       return;
     }
+    setFilteredFloss(data.filter((item) => item.label === value));
   };
 
   const onFilterChange = (e) => {
@@ -77,19 +86,26 @@ export const JournalList = ({
               All
             </label>
           </div>
-          <div className={s.radioBox}>
-            <input
-              type={"radio"}
-              name="flossLabel"
-              value="DMC"
-              id="DMC-List"
-              onChange={onFilterChange}
-              className={`${s.radioBotton} radio`}
-            />
-            <label htmlFor="DMC-List" className={s.inputLabel}>
-              DMC
-            </label>
-          </div>
+
+          {labels.map((label) => {
+            return (
+              <div className={s.radioBox} key={label}>
+                <input
+                  type={"radio"}
+                  name="flossLabel"
+                  value={label}
+                  id={`${label}-List`}
+                  checked={filter === label}
+                  onChange={onFilterChange}
+                  className={`${s.radioBotton} radio`}
+                />
+                <label htmlFor={`${label}-List`} className={s.inputLabel}>
+                  {label}
+                </label>
+              </div>
+            );
+          })}
+
           <div className={s.radioBox}>
             <input
               type={"radio"}
@@ -169,7 +185,7 @@ export const JournalList = ({
                             Delete
                           </Button>{" "}
                           <Button onClick={edit} className={s.closeButton}>
-                           Close<span className={s.mobileHide}> changes</span>
+                            Close<span className={s.mobileHide}> changes</span>
                           </Button>
                         </>
                       </div>
@@ -188,3 +204,60 @@ export const JournalList = ({
     </div>
   );
 };
+
+{
+  /*
+          <div className={s.radioBox}>
+            <input
+              type={"radio"}
+              name="flossLabel"
+              value="DMC"
+              id="DMC-List"
+              onChange={onFilterChange}
+              className={`${s.radioBotton} radio`}
+            />
+            <label htmlFor="DMC-List" className={s.inputLabel}>
+              DMC
+            </label>
+          </div>
+          <div className={s.radioBox}>
+            <input
+              type={"radio"}
+              name="flossLabel"
+              value="Anchor"
+              id="Anchor-List"
+              onChange={onFilterChange}
+              className={`${s.radioBotton} radio`}
+            />
+            <label htmlFor="Anchor-List" className={s.inputLabel}>
+            Anchor
+            </label>
+          </div>
+          <div className={s.radioBox}>
+            <input
+              type={"radio"}
+              name="flossLabel"
+              value="Madeira"
+              id="Madeira-List"
+              onChange={onFilterChange}
+              className={`${s.radioBotton} radio`}
+            />
+            <label htmlFor="Madeira-List" className={s.inputLabel}>
+            Madeira
+            </label>
+          </div>
+          <div className={s.radioBox}>
+            <input
+              type={"radio"}
+              name="flossLabel"
+              value="Gamma"
+              id="Gamma-List"
+              onChange={onFilterChange}
+              className={`${s.radioBotton} radio`}
+            />
+            <label htmlFor="Gamma-List" className={s.inputLabel}>
+            Gamma
+            </label>
+          </div>
+           */
+}

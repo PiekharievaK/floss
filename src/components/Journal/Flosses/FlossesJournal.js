@@ -40,10 +40,10 @@ export const FlossesJournal = ({user}) =>{
       setNewThread({});
     };
   
-    const AddThreads = async (e) => {
+    const AddThreads = async (e, label) => {
       e.preventDefault();
   try{
-    await addNewFloss(user, newThread);
+    await addNewFloss(user, {...newThread, label});
     await getAllFlosses(user, setUserCollection);
     }
     catch (e){console.log('object');}
