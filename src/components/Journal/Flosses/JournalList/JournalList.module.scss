@@ -3,11 +3,13 @@
   overflow-y: auto;
 }
 
-.filterForm{
-    display: flex;
-    align-items: center;
-    margin: auto;
-    width: fit-content;
+.filterForm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: fit-content;
 }
 .formBox {
 }
@@ -16,12 +18,12 @@
 }
 
 .filterBox {
-padding: 20px;
-padding-bottom: 0px;
+  padding: 20px;
+  padding-bottom: 0px;
 }
 
 .radioBotton {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 .list {
@@ -42,9 +44,9 @@ padding-bottom: 0px;
   border-bottom: 1px solid black;
   margin-bottom: 5px;
 }
-.radioBox{
+.radioBox {
   height: 28px;
-    margin-right: 10px;
+  margin-right: 10px;
 }
 .div {
   display: inline-block;
@@ -58,7 +60,7 @@ padding-bottom: 0px;
   width: 30px;
   @media screen and (min-width: 768px) {
     width: 65px;
-   }
+  }
 }
 .number {
   width: 70px;
@@ -66,18 +68,18 @@ padding-bottom: 0px;
   overflow: hidden;
   @media screen and (min-width: 768px) {
     width: 80px;
-   }
+  }
 }
 .colorName {
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     display: none;
   }
-   width: 65px;
+  width: 65px;
   text-overflow: ellipsis;
   overflow: hidden;
   @media screen and (min-width: 768px) {
     width: 120px;
-   }
+  }
 }
 .label {
 }
@@ -85,15 +87,14 @@ padding-bottom: 0px;
 .count {
   display: inline-block;
   width: 100px;
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     width: 50px;
   }
-
 }
 
-.mobileHide{
+.mobileHide {
   white-space: pre-wrap;
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     display: none;
   }
 }
@@ -101,7 +102,6 @@ padding-bottom: 0px;
   display: flex;
   width: 120px;
 }
-
 
 .counter {
   position: absolute;
@@ -115,7 +115,7 @@ padding-bottom: 0px;
   width: 100%;
   background: #3e4646;
   color: white;
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     left: 136px;
   }
 }
@@ -131,7 +131,8 @@ padding-bottom: 0px;
   margin-left: 5px;
 }
 
-.label{}
+.label {
+}
 .deleteButton {
   // width: fit-content;
 }

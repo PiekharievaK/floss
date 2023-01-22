@@ -9,10 +9,10 @@ export const searchFilter = (value, collection, setShownCollection) => {
     (item) =>
       item.number?.toLowerCase().includes(value.toLowerCase()) ||
       item.colorName?.toLowerCase().includes(value.toLowerCase()) ||
-      item.colorRUname?.toLowerCase().includes(value.toLowerCase())||
-      item.labels?.DMC?.includes(value.toLowerCase())||
-      item.labels?.Anchor?.includes(value.toLowerCase())||
-      item.labels?.Madeira?.includes(value.toLowerCase())||
+      item.colorRUname?.toLowerCase().includes(value.toLowerCase()) ||
+      item.labels?.DMC?.includes(value.toLowerCase()) ||
+      item.labels?.Anchor?.includes(value.toLowerCase()) ||
+      item.labels?.Madeira?.includes(value.toLowerCase()) ||
       item.labels?.Gamma?.includes(value.toLowerCase())
   );
   setShownCollection(searchFloss);

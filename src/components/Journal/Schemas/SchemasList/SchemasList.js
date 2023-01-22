@@ -222,9 +222,18 @@ export const SchemasList = ({
                           style={{ width: "50px", cursor: "pointer" }}
                         ></img>
                       )}
-                    <div className={s.addForm}>
-                      <form onSubmit={AddFloss} id={schema._id}>
-                        <select name="label" id="label" onChange={handleChange}>
+                    <div className={s.addBox}>
+                      <form
+                        onSubmit={AddFloss}
+                        id={schema._id}
+                        className={s.form}
+                      >
+                        <select
+                          name="label"
+                          id="label"
+                          onChange={handleChange}
+                          className={s.input}
+                        >
                           {labels.map((item) => (
                             <option name={item} value={item} key={item}>
                               {item}

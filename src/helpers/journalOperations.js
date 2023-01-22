@@ -20,7 +20,6 @@ const addNewFloss = async (user, userFloss) => {
       const { data } = await axios.post("/flosses", otherFloss);
       Notify.success("Floss is added to your collection");
       return data;
-    
     }
     const labelfloss = { floss: userFloss, collectionId };
     const { data } = await axios.post("/flosses", labelfloss);

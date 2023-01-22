@@ -18,10 +18,11 @@
     transition: top 300ms linear;
 
     &.active {
+      position: absolute;
       top: 74px;
       left: 0px;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       background-color: rgba(145, 145, 145, 0.932);
       flex-direction: column;
       align-items: center;
