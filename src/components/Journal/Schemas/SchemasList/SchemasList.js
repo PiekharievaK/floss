@@ -198,7 +198,7 @@ export const SchemasList = ({
                           onClick={(e) => {
                             e.target.style.width =
                               e.target.style.width === "50px"
-                                ? "300px"
+                                ? "200px"
                                 : "50px";
                           }}
                           style={{ width: "50px", cursor: "pointer" }}
@@ -216,7 +216,7 @@ export const SchemasList = ({
                             // console.log(e.target.style.width);
                             e.target.style.width =
                               e.target.style.width === "50px"
-                                ? "300px"
+                                ? "200px"
                                 : "50px";
                           }}
                           style={{ width: "50px", cursor: "pointer" }}
