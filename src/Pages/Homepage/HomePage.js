@@ -17,7 +17,7 @@ return <Container>
 Our database already has a collection of flosses by some manufacture, therefore, you only need to enter the number of the floss and the quantity (count) that you have.
 If your threads are of another manufacture (label), then you can enter them yourself by choosing the color that suits your thread, writing down its number, manufacture (label), color name and quantity.</p>
 
-      <h3><Link to="/JournalPage/flosses" >Your flosses collection:</Link></h3>
+      <h3><Link to="/JournalPage/Floss" >Your flosses collection:</Link></h3>
         <p>When you add a new floss, it appears in your list, where you can edit its quantity, or remove it when you use it or buy more.</p>
       
       <p>When your collection is filled with threads, you can filter them by manufacturer (label) for easy search.
