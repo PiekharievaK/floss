@@ -116,8 +116,8 @@ function App() {
               <Route />
             </Route>
           </Route>
-            <Route path="*" element={<NotFound />} />
-            {/* <Route path="*" element={<Homepage />} /> */}
+            {/* <Route path="*" element={<NotFound />} /> */}
+            <Route path="*" element={<Homepage />} />
         </Routes>
         <Footer />
       </div>
