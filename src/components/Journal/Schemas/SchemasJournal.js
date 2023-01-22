@@ -84,15 +84,14 @@ export const SchemasJournal = ({ user }) => {
 
   return (
     <>
-    <h2>Developing in process. Not available yet</h2>
-      {/* <AddSchemaForm schemasData={schemas} addSchema={addSchema} />
+      <AddSchemaForm schemasData={schemas} addSchema={addSchema} />
       <SchemasList
         schemasData={schemas}
         AddSchemaFloss={AddFloss}
         AddImage={AddImage}
         deleteSchemaFloss={deleteFloss}
         deleteOneSchema={deleteOneSchema}
-      /> */}
+      />
     </>
   );
 };
