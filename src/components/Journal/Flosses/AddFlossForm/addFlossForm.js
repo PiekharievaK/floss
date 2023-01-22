@@ -14,6 +14,7 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
   const onRadioChange = (e) => {
     clearThreed();
     setLabel(e.target.value);
+
   };
 
   const addValidation = (e) => {
@@ -30,9 +31,10 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
       );
       return;
     }
-    AddThreads(e);
+    AddThreads(e, label);
     console.log(e);
     e.target.reset();
+    clearThreed()
   };
 
   return (

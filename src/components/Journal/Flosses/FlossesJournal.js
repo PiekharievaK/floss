@@ -43,8 +43,13 @@ export const FlossesJournal = ({user}) =>{
     const AddThreads = async (e, label) => {
       e.preventDefault();
   try{
+    console.log(label);
+    if (label === "Other"){
+      await addNewFloss(user, {...newThread, customLabel: true});
+      await getAllFlosses(user, setUserCollection);
+    }else{
     await addNewFloss(user, {...newThread, label});
-    await getAllFlosses(user, setUserCollection);
+    await getAllFlosses(user, setUserCollection);}
     }
     catch (e){console.log('object');}
   };
