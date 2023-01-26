@@ -1,69 +1,69 @@
-// import { isDisabled } from "@testing-library/user-event/dist/utils";
 import { useState, useEffect } from "react";
 import Button from "../Button";
-import s from "./counter.module.scss"
+import s from "./counter.module.scss";
 
 export const Counter = ({
   card,
   setEditMode,
   changeThreats,
-  updateOneFloss
-
+  updateOneFloss,
 }) => {
   const [counterValue, setCounterValue] = useState(card.count);
-  // const [newArray, setNewArray] = useState(cardsArray);
 
-  const step = 0.25;
+  const step = 1;
 
-
- 
-useEffect(()=>{
-  
-  const newThreadsData = {...card, count: counterValue }
-  // const newArray = cardsArray.map(item=>{if ( item.dmcNumber=== card.dmcNumber){return newThreadsData} else return item })
-
-  changeThreats(newThreadsData)
-  
-}, [counterValue])
-
+  useEffect(() => {
+    const newThreadsData = { ...card, count: counterValue };
+    changeThreats(newThreadsData);
+  }, [counterValue]);
 
   const increment = () => {
-    setCounterValue(prevState => (Number(prevState) + step));
-
+    setCounterValue((prevState) => Number(prevState) + step);
   };
 
   const decrement = () => {
+    setCounterValue((prevState) => prevState - step);
+  };
 
-    setCounterValue(prevState => prevState - step);
-
+  const onSubmit = (e) => {
+    e.preventDefault();
+    updateOneFloss(card._id, counterValue);
+    setEditMode();
   };
 
   return (
     <>
-     
-      <div 
-      className={s.counterBox} 
-      id="counter">
-        <div 
-        // className={s.counter_title}
-        >count: </div>
+      <form onSubmit={onSubmit} className={s.counterBox} id="counter">
         <div
-           className={s.buttonBox}
-         >
+        // className={s.counter_title}
+        >
+          count:{" "}
+        </div>
+        <div className={s.buttonBox}>
           <Button
             className={s.changeButton}
             type="button"
             data-action="decrement"
-            disabled={counterValue===0? true: false}
+            disabled={counterValue === 0 ? true : false}
             onClick={decrement}
           >
             -
           </Button>
-          <span 
+          <input
+            type={"number"}
+            placeholder={"count"}
+            name={"count"}
+            step={0.25}
+            value={counterValue}
+            min={0.25}
+            onChange={(e) => setCounterValue(e.target.value)}
+            className={s.input}
+          ></input>
+          {/* <span 
           // className={s.counter_total} 
           id="value">
            { ` ${counterValue} ` }
-          </span>
+          </span> */}
           <Button
             className={s.changeButton}
             type="button"
@@ -73,9 +73,10 @@ useEffect(()=>{
             +
           </Button>
         </div>
-        <Button className={s.saveButton} onClick={()=>{updateOneFloss(card._id, counterValue); setEditMode()}}>Save <span className={s.mobileHide}>changes</span></Button>
-      </div>
-
+        <Button type={"submit"} className={s.saveButton}>
+          Save <span className={s.mobileHide}>changes</span>
+        </Button>
+      </form>
     </>
   );
 };
@@ -87,5 +88,3 @@ useEffect(()=>{
 //   summary: PropTypes.number,
 //   counter: PropTypes.number,
 // };
-
-
