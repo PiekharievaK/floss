@@ -316,8 +316,8 @@ export const SchemasList = ({
                             >
                               {item.flosses.map((floss) => {
                                 return (
-                                  <li
-                                    className={s.item}
+                                  <li 
+                                    className={s.item + " " + (floss.availabel=== true? s.availabel: s.unavailable)}
                                     key={floss._id}
                                     data-flossid={floss._id}
                                   >

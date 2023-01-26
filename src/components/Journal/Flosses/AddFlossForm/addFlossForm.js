@@ -120,7 +120,8 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
                   placeholder={"count"}
                   name={"count"}
                   onChange={onChange}
-                  min={1}
+                  step={0.25}
+                  min={0.25}
                   required
                   className={s.input}
                 ></input>
@@ -147,6 +148,8 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
                   type={"number"}
                   placeholder={"count"}
                   name={"count"}
+                  step={0.25}
+                  min={0.25}
                   onChange={onChange}
                   required
                   className={s.input}

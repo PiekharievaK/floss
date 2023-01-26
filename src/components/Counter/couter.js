@@ -13,7 +13,7 @@ export const Counter = ({
   const [counterValue, setCounterValue] = useState(card.count);
   // const [newArray, setNewArray] = useState(cardsArray);
 
-  const step = 1;
+  const step = 0.25;
 
 
  
