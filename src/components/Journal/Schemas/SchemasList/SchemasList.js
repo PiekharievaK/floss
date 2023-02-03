@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { ImageCropper } from "../../../ImageCropper/ImageCropper";
-import { Confirm } from "notiflix";
+import { AddFlossForm } from "../../../../helpers/addfloss";
+import operations from "../../../../helpers/wishListOperations";
 import sprite from "../../../../images/sprite.svg";
 import s from "./SchemasList.module.scss";
-import flosses from "../../../../Pages/ColorsPage/flosses.json";
 
 export const SchemasList = ({
   schemasData,
@@ -12,20 +12,15 @@ export const SchemasList = ({
   AddImage,
   deleteSchemaFloss,
   deleteOneSchema,
+  collectionId,
 }) => {
-  // const [label, setLabel] = useState("DMC");
-  const [number, setNumber] = useState("");
-  const [count, setCount] = useState("");
-  const [otherLabel, setOtherLabel] = useState("");
-  const [labels, setLabels] = useState(
-    Object.keys(flosses[0].labels).filter(
-      (label) => label !== "Bestex" && label !== "BELKA" && label !== "Kirova"
-    )
-  );
+  const { addLabeledFlosses } = operations;
   const [selectedFile, setSelectedFile] = useState(null);
   const [currentSchemaId, setCurrentSchemaId] = useState(null);
   const [uploaded, setUploaded] = useState(null);
   const [croppedImage, setCroppedImage] = useState(null);
+  const [avialabelSchema, setAvialabelSchema] = useState({});
+  const [editSchema, setEditSchema] = useState("");
 
   const isDark = useSelector((state) => state.theme.isDark);
   useEffect(() => {
@@ -51,66 +46,16 @@ export const SchemasList = ({
     document.body.style.overflow = "visible";
   }, [croppedImage]);
 
-  useEffect(() => {
-    if (otherLabel !== "Other") {
-      return;
-    }
-    Confirm.prompt(
-      "You label will be added to list",
-      "Please enter you label here",
-      "",
-      "Save",
-      "Cancel",
-      (e) => {
-        setLabels([...labels, e]);
-        setOtherLabel("");
-        return;
-      },
-      () => {
-        setOtherLabel("");
-        return;
-      },
-      {
-        titleColor: "#80bdff",
-        okButtonBackground: "#80bdff",
-      }
-    );
-
-    // console.log(labels);
-  }, [otherLabel]);
-
   const filePicker = useRef(null);
 
   const handleChange = ({ target }) => {
     switch (target.name) {
       case "selectedFile":
         return setSelectedFile(target.files[0]);
-      case "number":
-        return setNumber(target.value);
-      case "count":
-        return setCount(target.value);
-      case "label":
-        return setOtherLabel(target.value);
+
       default:
         return;
     }
-  };
-
-  const AddFloss = async (e) => {
-    e.preventDefault();
-    // console.log(
-    //   e.target[0].options.selectedIndex,
-    //   e.target[0].options[e.target[0].options.selectedIndex].innerHTML
-    // );
-
-    const label =
-      e.target[0].options[e.target[0].options.selectedIndex].innerHTML;
-    await AddSchemaFloss(e, { label, number, count });
-    setNumber("");
-    setCount("");
-    e.target[1].value = "";
-    e.target[2].value = "";
-    // e.target.reset()
   };
 
   const deleteFloss = async (e) => {
@@ -144,7 +89,7 @@ export const SchemasList = ({
 
   const deleteSchema = async (e) => {
     // console.log(e.target.parentNode.id);
-    deleteOneSchema(e.target.parentNode.id);
+    deleteOneSchema(e.target.parentNode.parentNode.id);
   };
 
   const AddSchemaImage = async (e) => {
@@ -172,175 +117,240 @@ export const SchemasList = ({
     }
   };
 
-  // console.log(currentSchemaId);
+  const toggleCheck = (e) => {
+    const schemaId = e.target.parentNode.parentNode.id;
+    // const keys = Object.keys(avialabelSchema);
+    if (avialabelSchema.id !== schemaId) {
+      setAvialabelSchema({ id: schemaId });
+      return;
+    }
+    if (avialabelSchema.id === schemaId) {
+      setAvialabelSchema({});
+    }
+  };
+
+  const toggleEdit = (e) => {
+    if (e.target.parentNode.parentNode.id === editSchema) {
+      setEditSchema("");
+      return;
+    }
+    console.log(e.target.parentNode.parentNode.id);
+    setEditSchema(e.target.parentNode.parentNode.id);
+  };
+
+  const addToWishList = (collection, schemaId, wishLabel) => {
+    const list = schemasData
+      .find((schema) => schema._id === schemaId)
+      .flossesList.find((list) => list.label === wishLabel).flosses;
+    const availabel = list.filter((item) => item.availabel === false);
+    const result = availabel.map((item) => {
+      return {
+        label: wishLabel,
+        number: item.number,
+        count: item.missingQuantity,
+      };
+    });
+    console.log(list);
+    addLabeledFlosses(collection, result);
+  };
+
   return (
     <div>
       {schemasData.length > 0 ? (
         <div className={isDark ? s.boxDark : s.box}>
           {schemasData && (
             <ul className={s.cardList}>
-              {schemasData.map((schema, idx) => {
-                return (
-                  <li className={s.card} key={schema._id} id={schema._id}>
-                    <h4>name: {schema.name}</h4>
-                    <button
-                      className={s.schemaDeleteBtn}
-                      onClick={deleteSchema}
-                    >
-                      Delete Schema
-                    </button>
-                    {currentSchemaId === schema._id && croppedImage && (
-                      <>
-                        <p>Image preview:</p>
-                        <img
-                          src={croppedImage}
-                          alt="img"
-                          onClick={(e) => {
-                            e.target.style.width =
-                              e.target.style.width === "50px"
-                                ? "200px"
-                                : "50px";
-                          }}
-                          style={{ width: "50px", cursor: "pointer" }}
-                        ></img>
-                      </>
-                    )}
-                    {(currentSchemaId !== schema._id ||
-                      (currentSchemaId === schema._id && !croppedImage)) &&
-                      schema.image &&
-                      schema.image.urlPreview.trim() !== "" && (
-                        <img
-                          src={schema.image.urlPreview}
-                          alt="img"
-                          onClick={(e) => {
-                            // console.log(e.target.style.width);
-                            e.target.style.width =
-                              e.target.style.width === "50px"
-                                ? "200px"
-                                : "50px";
-                          }}
-                          style={{ width: "50px", cursor: "pointer" }}
-                        ></img>
-                      )}
-                    <div className={s.addBox}>
-                      <form
-                        onSubmit={AddFloss}
-                        id={schema._id}
-                        className={s.form}
-                      >
-                        <select
-                          name="label"
-                          id="label"
-                          onChange={handleChange}
-                          className={s.input}
-                        >
-                          {labels.map((item) => (
-                            <option name={item} value={item} key={item}>
-                              {item}
-                            </option>
-                          ))}
-                          {/* <option name="label" value="DMC">
-                            DMC
-                          </option>
-                          <option name="Amhor" value="Amhor">
-                          Anchor
-                          </option>
-                          <option name="label" value="DMC">
-                          Madeira
-                          </option>
-                          <option name="label" value="DMC">
-                          Gamma
-                          </option> */}
-                          <option name="Other" value="Other">
-                            Other
-                          </option>
-                        </select>
-                        <input
-                          type="string"
-                          placeholder="number"
-                          name="number"
-                          onChange={handleChange}
-                          required
-                          className={s.input}
-                        ></input>
-                        <input
-                          type="number"
-                          placeholder="count"
-                          name="count"
-                          onChange={handleChange}
-                          required
-                          className={s.input}
-                        ></input>
-                        <button type="submit">add new floss</button>
-                      </form>
-                      <button onClick={pickFile} id="file" className="file">
-                        Pick schema image
-                      </button>
-                      {croppedImage && currentSchemaId === schema._id && (
+              {schemasData
+                .map((schema) => {
+                  return (
+                    <li className={s.card} key={schema._id} id={schema._id}>
+                      <h4>name: {schema.name}</h4>
+                      <div className={s.schemaDeleteBtn}>
+                        {editSchema === schema._id ? (
+                          <button onClick={deleteSchema}>Delete Schema</button>
+                        ) : (
+                          schema.flossesList.length > 0 && (
+                            <button onClick={toggleCheck}>
+                              {schema._id === avialabelSchema.id
+                                ? "close"
+                                : "check"}
+                            </button>
+                          )
+                        )}
+                        {avialabelSchema.id !== schema._id && (
+                          <button onClick={toggleEdit}>
+                            {editSchema === schema._id ? "close" : "edit"}
+                          </button>
+                        )}
+                      </div>
+                      {currentSchemaId === schema._id && croppedImage && (
                         <>
-                          <button
-                            id={schema._id}
-                            name={schema.name}
-                            onClick={AddSchemaImage}
-                          >
-                            {schema.image?.urlPreview.trim()
-                              ? "Save new image"
-                              : "Add image"}
-                          </button>
-                          <button onClick={closeImageChange}>
-                            Close changes
-                          </button>
+                          <p>Image preview:</p>
+                          <img
+                            src={croppedImage}
+                            alt="cropped preview"
+                            onClick={(e) => {
+                              e.target.style.width =
+                                e.target.style.width === "50px"
+                                  ? "200px"
+                                  : "50px";
+                            }}
+                            style={{ width: "50px", cursor: "pointer" }}
+                          ></img>
                         </>
                       )}
-                      <input
-                        type="file"
-                        name="selectedFile"
-                        accept=".png, .jpg"
-                        onChange={(e) => {
-                          handleChange(e);
-                          e.target.value = null;
-                        }}
-                        className="visually-hidden"
-                        ref={filePicker}
-                      ></input>
-                    </div>
-                    <div className={s.flossesBox}>
-                      {schema.flossesList?.map((item) => {
-                        return (
-                          <div key={item._id}>
-                            <span>{item.label}</span>
-                            <ul
-                              className={s.flossesList}
-                              data-label={item.label}
-                              data-schemaid={schema._id}
-                            >
-                              {item.flosses.map((floss) => {
-                                return (
-                                  <li 
-                                    className={s.item + " " + (floss.availabel=== true? s.availabel: s.unavailable)}
-                                    key={floss._id}
-                                    data-flossid={floss._id}
-                                  >
-                                    number:<span>{floss.number}</span> count:
-                                    <span>{floss.count}</span>{" "}
-                                    <button onClick={deleteFloss}>
-                                      <svg width="15px" height="15px">
-                                        <use
-                                          href={`${sprite}#icon-trash`}
-                                        ></use>
-                                      </svg>
+                      {(currentSchemaId !== schema._id ||
+                        (currentSchemaId === schema._id && !croppedImage)) &&
+                        schema.image &&
+                        schema.image.urlPreview &&
+                        schema.image.urlPreview.trim() !== "" && (
+                          <img
+                            src={schema.image.urlPreview}
+                            onError={(e) => {
+                              e.target.src =
+                                "https://cdn.izap24.ru/images/prodacts/250/0/0.jpg";
+                            }}
+                            alt="schema view"
+                            onClick={(e) => {
+                              e.target.style.width =
+                                e.target.style.width === "50px"
+                                  ? "200px"
+                                  : "50px";
+                            }}
+                            style={{ width: "50px", cursor: "pointer" }}
+                          ></img>
+                        )}
+                      {(schema.flossesList.length < 1 ||
+                        editSchema === schema._id) && (
+                        <div className={s.addBox}>
+                          <AddFlossForm
+                            AddFloss={AddSchemaFloss}
+                            schema={schema}
+                            s={s}
+                          />
+                          <button onClick={pickFile} id="file" className="file">
+                            Pick schema image
+                          </button>
+                          {croppedImage && currentSchemaId === schema._id && (
+                            <>
+                              <button
+                                id={schema._id}
+                                name={schema.name}
+                                onClick={AddSchemaImage}
+                              >
+                                {schema.image?.urlPreview?.trim()
+                                  ? "Save new image"
+                                  : "Add image"}
+                              </button>
+                              <button onClick={closeImageChange}>
+                                Close changes
+                              </button>
+                            </>
+                          )}
+                          <input
+                            type="file"
+                            name="selectedFile"
+                            accept=".png, .jpg"
+                            onChange={(e) => {
+                              handleChange(e);
+                              e.target.value = null;
+                            }}
+                            className="visually-hidden"
+                            ref={filePicker}
+                          ></input>
+                        </div>
+                      )}
+                      <div className={s.flossesBox}>
+                        {schema.flossesList?.map((item) => {
+                          return (
+                            <div key={item._id}>
+                              {item.flosses.filter(
+                                (item) => item.availabel === true
+                              ).length === item.flosses.length &&
+                              avialabelSchema.id === schema._id ? (
+                                <>
+                                  <span style={{ border: "1px solid green" }}>
+                                    {item.label}
+                                  </span>
+                                </>
+                              ) : (
+                                <>
+                                  <span>{item.label}</span>{" "}
+                                  {avialabelSchema.id === schema._id && (
+                                    <button
+                                      onClick={() =>
+                                        addToWishList(
+                                          collectionId,
+                                          schema._id,
+                                          item.label
+                                        )
+                                      }
+                                    >
+                                      {" "}
+                                      add to wishList
                                     </button>
-                                  </li>
-                                );
-                              })}
-                            </ul>
-                          </div>
-                        );
-                      })}{" "}
-                    </div>
-                  </li>
-                );
-              })}
+                                  )}
+                                </>
+                              )}
+                              <ul
+                                className={s.flossesList}
+                                data-label={item.label}
+                                data-schemaid={schema._id}
+                              >
+                                {item.flosses.map((floss) => {
+                                  return avialabelSchema.id === schema._id ? (
+                                    <li
+                                      className={
+                                        s.item +
+                                        " " +
+                                        (floss.availabel === true
+                                          ? s.availabel
+                                          : s.unavailable)
+                                      }
+                                      key={floss._id}
+                                      data-flossid={floss._id}
+                                    >
+                                      <p>
+                                        number:<span>{floss.number}</span>{" "}
+                                        count:
+                                        <span>{floss.count}</span>
+                                      </p>
+                                      {floss.availabel === false && (
+                                        <span>
+                                          need to:{" "}
+                                          <span>{floss.missingQuantity}</span>
+                                        </span>
+                                      )}
+                                    </li>
+                                  ) : (
+                                    <li
+                                      className={s.item}
+                                      key={floss._id}
+                                      data-flossid={floss._id}
+                                    >
+                                      number:<span>{floss.number}</span> count:
+                                      <span>{floss.count}</span>{" "}
+                                      {editSchema === schema._id && (
+                                        <button onClick={deleteFloss}>
+                                          <svg width="15px" height="15px">
+                                            <use
+                                              href={`${sprite}#icon-trash`}
+                                            ></use>
+                                          </svg>
+                                        </button>
+                                      )}
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            </div>
+                          );
+                        })}{" "}
+                      </div>
+                    </li>
+                  );
+                })
+                .reverse()}
             </ul>
           )}
         </div>

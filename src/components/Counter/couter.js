@@ -59,11 +59,6 @@ export const Counter = ({
             onChange={(e) => setCounterValue(e.target.value)}
             className={s.input}
           ></input>
-          {/* <span 
-          // className={s.counter_total} 
-          id="value">
-           { ` ${counterValue} ` }
-          </span> */}
           <Button
             className={s.changeButton}
             type="button"

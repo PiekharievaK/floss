@@ -15,6 +15,7 @@ import { ThemeContext } from "./components/ThemeProvider/ThemeProvider";
 
 import operations from "./helpers/authOperations";
 import "./App.css";
+import { WishList } from "./Pages/WishList/WishList";
 
 function App() {
   const { signUpUser, logInUser, logOut, fetchCurrentUser } = operations;
@@ -79,6 +80,17 @@ function App() {
               element={
                 <PrivateRoute isLoggedIn={isLoggedIn}>
                   <JournalPage user={user} />
+                </PrivateRoute>
+              }
+            >
+              {/* <Route path="Floss" element={<Registration signUpUser={signUpUser}/>}/>
+            <Route path="Schemas" element={<Registration signUpUser={signUpUser}/>}/> */}
+            </Route>
+            <Route
+              path={"WishList"}
+              element={
+                <PrivateRoute isLoggedIn={isLoggedIn}>
+                  <WishList user={user} />
                 </PrivateRoute>
               }
             >

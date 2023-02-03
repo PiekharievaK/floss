@@ -23,6 +23,12 @@
     height: 30px;
   }
 }
+.closeButton{
+  width: max-content;
+  @media screen and (max-width: 767px){
+    height: 30px;
+  }
+}
 
 .mobileHide{display: none;}
 .input{

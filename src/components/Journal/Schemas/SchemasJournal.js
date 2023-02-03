@@ -31,36 +31,8 @@ export const SchemasJournal = ({ user }) => {
   const AddFloss = async (e, floss) => {
     await addSchemaFloss(collectionId, e.target.id, floss);
     await getAllSchemas(collectionId, setSchemas);
-    // const schemaIdx = schemas.findIndex(
-    //   (schema) => schema.name === e.target.id
-    // );
-    // const currentLableIdx = schemas[schemaIdx].flossesList.findIndex(
-    //   (flosses) => flosses.label === label
-    // );
-
-    // const currentSchema = schemas[schemaIdx];
-    // const currentLableFlosses = currentSchema.flossesList[currentLableIdx];
-
-    // if (!currentLableFlosses) {
-    //   schemas[schemaIdx].flossesList =
-    //     currentSchema.flossesList.length > 0
-    //       ? [
-    //           ...currentSchema.flossesList,
-    //           { label, flosses: [{ number, count }] },
-    //         ]
-    //       : [{ label, flosses: [{ number, count }] }];
-    //   console.log(currentSchema);
-    //   setSchemas(schemas);
-    //   console.log(schemas);
-    //   return;
-    // }
-    // currentLableFlosses.flosses = [
-    //   ...currentLableFlosses.flosses,
-    //   { number, count },
-    // ];
-    // setSchemas(schemas);
-    // console.log(schemas);
   };
+  
 
   const AddImage = async (e, schemaId, image) => {
     // console.log(schemas[schemaIdx].image.urlPreview);
@@ -91,6 +63,7 @@ export const SchemasJournal = ({ user }) => {
         AddImage={AddImage}
         deleteSchemaFloss={deleteFloss}
         deleteOneSchema={deleteOneSchema}
+        collectionId={collectionId}
       />
     </>
   );

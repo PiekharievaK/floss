@@ -17,7 +17,7 @@ export  const UserPage =()=>{
         <li className={s.item}><Link to="/JournalPage/Schemas" className={linkClass}>My schemas </Link> <span>(developing)</span></li>
         <li className={s.item}><a  className={linkClass} href="https://doitms.com/csm/" target="blank">Create schema by image online </a></li>
         <li className={s.item}><a  className={linkClass} href="https://moresxem.com/category/sxemi-pdf/" target="blank">Find schemas </a></li> 
-        <li className={s.item}> <Link to="/UserPage/WishList" className={linkClass}>My wish list </Link><span>(developing)</span></li>
+        <li className={s.item}> <Link to="/WishList" className={linkClass}>My wish list </Link><span>(developing)</span></li>
         </ul>}>
         </Route>
 
