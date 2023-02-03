@@ -1,6 +1,7 @@
 import { useNavigate, Route, Routes, NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import { FlossesJournal, SchemasJournal } from "../../components/Journal/";
+import { WishList } from "../WishList/WishList";
 import Container from "../../components/Container";
 import Section from "../../components/Section";
 import s from "./JournalPage.module.scss";
@@ -39,10 +40,15 @@ export const JournalPage = ({user}) => {
           <NavLink to="Schemas" className={getLinkClassName}>
             Schemas
           </NavLink>
+          <NavLink to="WishList" className={getLinkClassName}>
+            Wish list
+          </NavLink>
         </div>
         <Routes>
           <Route path="Floss" element={<FlossesJournal user={user} />} />
           <Route path="Schemas" element={<SchemasJournal user={user} />} />
+          <Route path={"WishList"} element={ <WishList user={user} /> } />
+
         </Routes>
       </Section>
     </Container>

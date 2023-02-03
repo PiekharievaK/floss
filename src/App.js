@@ -86,17 +86,7 @@ function App() {
               {/* <Route path="Floss" element={<Registration signUpUser={signUpUser}/>}/>
             <Route path="Schemas" element={<Registration signUpUser={signUpUser}/>}/> */}
             </Route>
-            <Route
-              path={"WishList"}
-              element={
-                <PrivateRoute isLoggedIn={isLoggedIn}>
-                  <WishList user={user} />
-                </PrivateRoute>
-              }
-            >
-              {/* <Route path="Floss" element={<Registration signUpUser={signUpUser}/>}/>
-            <Route path="Schemas" element={<Registration signUpUser={signUpUser}/>}/> */}
-            </Route>
+           
 
             <Route
               path="Registerpage/"

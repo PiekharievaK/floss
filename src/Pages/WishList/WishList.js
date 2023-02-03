@@ -71,7 +71,7 @@ export const WishList = ({ user }) => {
                               <Counter
                                 card={floss}
                                 setEditMode
-                                changeThreats={() => console.log("object")}
+                                changeThreats={() => {}}
                                 updateOneFloss={ChangeCount}
                               />
                               <button onClick={() => deleteOne(floss._id)}>

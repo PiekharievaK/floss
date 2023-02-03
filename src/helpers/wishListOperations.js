@@ -25,8 +25,6 @@ const getAll = async (user, setWishList) => {
     const list = Object.keys(newList).map((label) => {
       return { label, flosses: newList[label] };
     });
-    console.log(list);
-
     setWishList(list);
 
     return list;
@@ -48,7 +46,7 @@ const addFloss = async (collectionId, floss) => {
 };
 
 const addLabeledFlosses = async (collectionId, flosses) => {
-  console.log(flosses);
+
   try {
     const { data } = await axios.post("/wishList/schema", flosses, {
       headers: { collectionId },
