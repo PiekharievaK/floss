@@ -43,7 +43,7 @@ export const WishList = ({ user }) => {
         <h3>WishList</h3>
         { wishList.length >0 && <div className={s.optionsBox}>
         <Button onClick={clearAll} >Clear all</Button>
-        <Button onClick={clearAll} >Add to my flosses all</Button>
+        {/* <Button onClick={clearAll} >Add to my flosses all</Button> */}
         </div>}
         <div>
           <AddFlossForm AddFloss={AddFloss} schema s={s} />
