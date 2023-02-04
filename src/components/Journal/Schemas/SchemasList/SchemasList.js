@@ -263,19 +263,20 @@ export const SchemasList = ({
                       <div className={s.flossesBox}>
                         {schema.flossesList?.map((item) => {
                           return (
-                            <div key={item._id}>
+                            <div key={item._id}  className={s.labeledFlosses}>
                               {item.flosses.filter(
                                 (item) => item.availabel === true
                               ).length === item.flosses.length &&
                               avialabelSchema.id === schema._id ? (
-                                <>
-                                  <span style={{ border: "1px solid green" }}>
+                                <div className={s.labelAvialabel}>
+                                  <span className={s.label} >
                                     {item.label}
                                   </span>
-                                </>
+                                  {/* <button>take to work</button> */}
+                                </div >
                               ) : (
-                                <>
-                                  <span>{item.label}</span>{" "}
+                                <div className={s.labelUnavialabel}>
+                                  <span className={s.label}>{item.label}</span>{" "}
                                   {avialabelSchema.id === schema._id && (
                                     <button
                                       onClick={() =>
@@ -290,7 +291,7 @@ export const SchemasList = ({
                                       add to wishList
                                     </button>
                                   )}
-                                </>
+                                </div>
                               )}
                               <ul
                                 className={s.flossesList}
@@ -310,13 +311,13 @@ export const SchemasList = ({
                                       key={floss._id}
                                       data-flossid={floss._id}
                                     >
-                                      <p>
+                                      <span className={s.floss}>
                                         number:<span>{floss.number}</span>{" "}
                                         count:
                                         <span>{floss.count}</span>
-                                      </p>
+                                      </span>
                                       {floss.availabel === false && (
-                                        <span>
+                                        <span className={s.needCount}>
                                           need to:{" "}
                                           <span>{floss.missingQuantity}</span>
                                         </span>

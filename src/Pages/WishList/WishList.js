@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import Container from "../../components/Container";
+import Button from "../../components/Button";
 import Section from "../../components/Section";
 import operations from "../../helpers/wishListOperations";
 import { AddFlossForm } from "../../helpers/addfloss";
 import { Counter } from "../../components/Counter/couter";
+import sprite from "../../images/sprite.svg";
 import s from "./WishList.module.scss";
 
 export const WishList = ({ user }) => {
@@ -38,19 +39,24 @@ export const WishList = ({ user }) => {
   };
 
   return (
-    <Container>
       <Section>
         <h3>WishList</h3>
-        <button onClick={clearAll}>Clear all</button>
+        { wishList.length >0 && <div className={s.optionsBox}>
+        <Button onClick={clearAll} >Clear all</Button>
+        <Button onClick={clearAll} >Add to my flosses all</Button>
+        </div>}
         <div>
-          <AddFlossForm AddFloss={AddFloss} schema s />
+          <AddFlossForm AddFloss={AddFloss} schema s={s} />
           {wishList.length > 0 ? (
-            <div className={s.wishlistBox}>
+            <ul className={s.wishlistBox}>
               {wishList.map((item) => {
                 return (
-                  <div key={item.label}>
+                  <li key={item.label} className={s.labeledList}>
                     <span className={s.label}>label: {item.label}</span>
-                    <button
+                    {/* <Button className={s.editButton}>
+                      Add all to my list
+                    </Button> */}
+                    <Button className={s.editButton}
                       onClick={() => {
                         if (editMode !== item.label) {
                           setEditMode(item.label);
@@ -59,38 +65,43 @@ export const WishList = ({ user }) => {
                         }
                       }}
                     >
-                      {editMode !== item.label ? "edit" : "close"}
-                    </button>
-                    <ul className={s.labeledList}>
+                      {editMode !== item.label ? "edit items" : "close"}
+                    </Button>
+                    
+                    <ul className={s.labelCard}>
                       {item.flosses.map((floss) => (
                         <li key={floss.number + floss.count}>
                           <span>number: {floss.number}</span>{" "}
                           <span>count: {floss.count}</span>
                           {editMode === item.label && (
-                            <div>
+                            <div className={s.optionsBox}>
                               <Counter
                                 card={floss}
                                 setEditMode
                                 changeThreats={() => {}}
                                 updateOneFloss={ChangeCount}
                               />
-                              <button onClick={() => deleteOne(floss._id)}>
-                                trash
-                              </button>
+                              <Button className={s.deleteOneFloss} onClick={() => deleteOne(floss._id)}>
+                              <svg width="15px" height="15px">
+                                            <use
+                                              href={`${sprite}#icon-trash`}
+                                            ></use>
+                                          </svg>
+                              </Button>
                             </div>
                           )}
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  </li>
                 );
               })}
-            </div>
+            </ul>
           ) : (
             <h3>No flosses on list yet</h3>
           )}
         </div>
       </Section>
-    </Container>
+
   );
 };

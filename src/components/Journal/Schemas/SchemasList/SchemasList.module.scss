@@ -14,18 +14,54 @@
   border: 1px solid black;
   @media screen and (max-width: 767px) {
     max-width: 200px;
+    flex-grow: 1;
     // overflow-x: hidden;
   }
 }
 
 .flossesBox {
   display: flex;
+  justify-content: center;
   @media screen and (max-width: 767px) {
     max-width: 200px;
     overflow-x: auto;
   }
 }
+.labeledFlosses{
+  display: flex;
+  flex-direction: column;
+}
+.labelAvialabel,
+.labelUnavialabel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.labelAvialabel{
+flex-grow: 0.5;
+justify-content: space-between;}
+
+// .labelAvialabel button{
+//   display: flex;
+//   align-items: center;
+// }
+//   .labelAvialabel button::before{
+//     content: "";
+//     display: inline-block;
+//     width: 20px;
+//     height: 20px;
+//     background-color: rgba(0, 255, 136, 0.39);
+// }
+// .labelUnavialabel{
+
+ 
+// }
+
+.item:not(:last-child){
+  margin-bottom: 10px;
+  border-bottom: 1px solid grey;
+}
 .flossesList {
   margin: 10px;
   padding: 0px;
@@ -43,8 +79,12 @@
 
 .schemaDeleteBtn {
   position: absolute;
-  right: 5px;
-  top: 5px;
+  right: 0px;
+  top: 0px;
+  width: calc(100% - 10px);
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
 }
 
 .boxDark {
@@ -53,6 +93,7 @@
 
 .form {
   display: flex;
+  justify-content: center;
   margin-bottom: 5px;
   @media screen and (max-width: 767px) {
     flex-direction: column;
@@ -63,5 +104,21 @@
   margin-bottom: 5px;
 }
 
-.availabel{border: 1px solid green;}
-.unavailable{ border: 1px solid red}
+.availabel{
+background-color: rgba(0, 255, 136, 0.199);
+}
+// .unavailable{ 
+//   background-color: rgba(255, 0, 0, 0.199);
+// }
+.needCount{ background-color: rgba(255, 0, 0, 0.199);}
+
+.floss{
+  display: block;
+  margin-bottom: 5px;
+}
+
+.label{
+  display: block;
+  flex-grow: 0.5;
+  font-weight: 600
+}
