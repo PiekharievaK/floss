@@ -81,7 +81,7 @@ export const WishList = ({ user }) => {
                                 changeThreats={() => {}}
                                 updateOneFloss={ChangeCount}
                               />
-                              <Button className={s.deleteOneFloss} onClick={() => deleteOne(floss._id)}>
+                              <Button className={s.deleteOneFloss} onClick={() => deleteOne(floss._id? floss._id: floss.id)}>
                               <svg width="15px" height="15px">
                                             <use
                                               href={`${sprite}#icon-trash`}
