@@ -1,5 +1,5 @@
 import flosses from "../Pages/ColorsPage/flosses.json"
-import { Confirm } from "notiflix";
+import { Confirm, Notify } from "notiflix";
 import { useState, useEffect } from "react";
 
 export const AddFlossForm = ({ AddFloss, schema, s }) => {
@@ -54,7 +54,7 @@ const addFloss = async(e)=>{
           (e) => {
             setLabels([...labels, e]);
             setOtherLabel("");
-            // setOther("")
+            Notify.success(`Label ${e} was added to list you can choose it now`)
             return;
           },
           () => {
