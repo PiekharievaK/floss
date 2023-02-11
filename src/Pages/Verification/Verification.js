@@ -30,11 +30,11 @@ export const Verification = () => {
       <Section>
         <h2>Verification</h2>
         {isVerify === true ? (
-          <p>{"Congrats,  you email is verify? you can log in to app now"}</p>
+          <p>{"Congrats,  you email is verify! You can log in to app now"}</p>
         ) : (
           <p>
             {
-              "Verification is not complete yet, this link is not work. Please try again or contact us"
+              "Verification is not complete yet. Please try again or contact us if it isn`t work"
             }
           </p>
         )}
