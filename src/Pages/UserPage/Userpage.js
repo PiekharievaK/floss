@@ -14,10 +14,10 @@ export  const UserPage =()=>{
 <Route path="" element={<ul className={s.list}>
         <li className={s.item}> <Link to="/UserPage/Profile" className={linkClass}>Profile </Link><span>(developing)</span></li>
         <li className={s.item}><Link to="/JournalPage" className={linkClass}>My floss </Link></li>
-        <li className={s.item}><Link to="/JournalPage/Schemas" className={linkClass}>My schemas </Link> <span>(developing)</span></li>
-        <li className={s.item}><a  className={linkClass} href="https://doitms.com/csm/" target="blank">Create schema by image online </a></li>
-        <li className={s.item}><a  className={linkClass} href="https://moresxem.com/category/sxemi-pdf/" target="blank">Find schemas </a></li> 
-        <li className={s.item}> <Link to="/JournalPage/WishList" className={linkClass}>My wish list </Link><span>(developing)</span></li>
+        <li className={s.item}><Link to="/JournalPage/Schemas" className={linkClass}>My schemas </Link> <span>(beta version)</span></li>
+        <li className={s.item}> <Link to="/JournalPage/WishList" className={linkClass}>My wish list </Link><span>(beta version)</span></li>
+        <li className={s.item}><a  className={linkClass} href="https://doitms.com/csm/" target="blank">Create schema by image online </a> (link to another website)</li>
+        <li className={s.item}><a  className={linkClass} href="https://moresxem.com/category/sxemi-pdf/" target="blank">Find schemas </a> (link to another website)</li> 
         </ul>}>
         </Route>
 

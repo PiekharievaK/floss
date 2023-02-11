@@ -20,41 +20,14 @@ const signUpUser = async (userData) => {
     Loading.remove();
 
     token.set(data.token);
-    notiflix.Confirm.show(
-      "Email Confirm",
-      "Do you agree with it?",
-      "Yes",
-      "It is Yes too",
-      async () => {
-        try {
-          Loading.standard(`...Loading`);
-          await axios.get(`${data.user.linkToVerify}`);
-          Loading.remove();
-          Notify.success("You have successfully registered on our website");
-        } catch (error) {
-          Loading.remove();
-          Notify.failure(
-            `Your email is not verify.  use this link to fix it ${data.user.linkToVerify}`
-          );
-        }
-      },
-      async () => {
-        try {
-          await axios.get(`${data.user.linkToVerify}`);
-          Notify.success("You have successfully registered on our website");
-        } catch (error) {
-          Loading.remove();
-          Notify.failure(
-            `Your email is not verify.  use this link to fix it ${data.user.linkToVerify}`
-          );
-        }
-      },
-      {}
-    );
 
+    verifyNotification(userData);
     return data;
   } catch (error) {
     Loading.remove();
+    if (error.response.data.message === "Email in use") {
+      verifyNotification(userData);
+    }
     return Notify.failure(`${error.response.data.message}.`);
   }
 };
@@ -68,10 +41,13 @@ const logInUser = async (userData, setUser, setIsLoggedIn) => {
     localStorage.setItem("token", data.token);
     setIsLoggedIn(true);
     Loading.remove();
-    Notify.success("You have successfully logged in");
+    // Notify.success("You have successfully logged in");
     return data;
   } catch (error) {
     Loading.remove();
+    if (error.response.data.message === `Email is not verify`) {
+      verifyNotification(userData);
+    }
     return Notify.failure(`${error.response.data.message}.`);
   }
 };
@@ -89,6 +65,35 @@ const logOut = async (setUser, setIsLoggedIn) => {
     window.location.reload();
     return;
   }
+};
+
+const verifyNotification = (userData) => {
+  notiflix.Confirm.show(
+    "Do you get verification email?",
+    `Please check all folders including "spam" `,
+    "Yes",
+    "No (send it again)",
+    () => {
+      try {
+        Notify.success("Please verify your email using instructions in letter");
+      } catch (error) {
+        Loading.remove();
+        Notify.failure(`Your email is not verify`);
+      }
+    },
+    async () => {
+      try {
+        await resendVerify(userData);
+        Notify.success(
+          "Verification letter is send again. if You still don`t get it, please contact us"
+        );
+      } catch (error) {
+        Loading.remove();
+        Notify.failure(`Your email is not verify`);
+      }
+    },
+    {}
+  );
 };
 
 const fetchCurrentUser = async (setUser, setIsLoggedIn) => {
@@ -115,10 +120,37 @@ const fetchCurrentUser = async (setUser, setIsLoggedIn) => {
   }
 };
 
+const resendVerify = async (user) => {
+  try {
+    const { data } = await axios.post("/users/verify", user);
+  } catch (error) {
+    // Loading.remove();
+    Notify.failure(error.message);
+    return;
+  }
+};
+
+const emailVerify = async (VerificationToken) => {
+  try {
+    Loading.standard(`...Loading`);
+    const { data } = await axios.get(`/users/verify/${VerificationToken}`);
+    Notify.success(
+      "Congratulations. You has succesfully complete registration"
+    );
+    Loading.remove();
+    return true;
+  } catch (error) {
+    Loading.remove();
+    Notify.failure(error.response.data.message);
+    return false;
+  }
+};
+
 const operations = {
   signUpUser,
   logOut,
   logInUser,
   fetchCurrentUser,
+  emailVerify,
 };
 export default operations;

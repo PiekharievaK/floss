@@ -10,6 +10,7 @@ import { Footer } from "./components/Footer/Footer";
 import { LoginForm } from "./components/Login/Login";
 import { Registration } from "./components/Registration/Registration";
 import { NotFound } from "./Pages/404Page/404";
+import { Verification } from "./Pages/Verification/Verification";
 import { PrivateRoute, PublicRoute } from "./components/Routers";
 import { ThemeContext } from "./components/ThemeProvider/ThemeProvider";
 
@@ -67,6 +68,7 @@ function App() {
                 // </PublicRoute>
               }
             />
+            
             <Route
               path={"UserPage/*"}
               element={
@@ -117,7 +119,11 @@ function App() {
               />
               <Route />
             </Route>
+            <Route path="Verification/*" element={<Verification />}/>
           </Route>
+
+
+          
             {/* <Route path="*" element={<NotFound />} /> */}
             <Route path="*" element={<Homepage />} />
         </Routes>

@@ -35,25 +35,12 @@ isActive ? (isDark?s.active__linkDark :s.active__link ) : (isDark?s.linkDark :s.
     <Container>
       <h1>RegisterPage</h1>
       <div className={s.linkBox}>
-        {/* <Button id={"login"} className={s.button}> */}
         <NavLink to="logIn" className={getLinkClassName}>Log In</NavLink>
-          {/* </Button> */}
-        {/* <Button id={"signup"} className={s.button}> */}
         <NavLink to="SignUp" className={getLinkClassName}>Sign Up</NavLink>
-          {/* </Button> */}
       </div>
       <Section>
 
      <Outlet/>
-
-      {/* {regisrtation === "signup" ? <Registration signUpUser={signUpUser} />:
-     
-        <LoginForm
-          logInUser={logInUser}
-          setUser={setUser}
-          setIsLoggedIn={setIsLoggedIn}
-        />
-      } */}
       </Section>
     </Container>
   );
