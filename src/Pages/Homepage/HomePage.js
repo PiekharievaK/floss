@@ -3,9 +3,11 @@ import { useSelector } from "react-redux"
 import s from "./HomePage.module.scss"
 import { Link } from "react-router-dom"
 
-export  const Homepage =({isLoggedIn})=>{
+export  const Homepage =({
+      // isLoggedIn
+})=>{
       const isDark = useSelector((state) => state.theme.isDark);
-
+const isLoggedIn = true
 return <Container>
 <div><h1>Welcome</h1>
 
@@ -25,7 +27,18 @@ You can also use the search box to find a specific thread from your collection b
 
 <h3><Link to="/JournalPage/schemas" >Your schemas collection: </Link></h3>
 
-<p>When you add a new schema, it appears in your list, where you can add its image, add flosses it need or remove it when you use it or dont wont to have it more.</p>
+<p>
+When you add a new scheme, it appears in your list, where you can add an image of it, add necessary threads, or remove it when you use it or don't want to have it anymore.
+You can also check if you have the threads needed for this scheme. If you are missing some threads, the application will count which threads and in what quantity, and with one button you can add all the missing threads to your wish list.</p>
+
+
+
+<h3><Link to="/JournalPage/WishList" >Your wish list: </Link></h3>
+
+<p>You can add those threads that you can buy for your schemes.
+Threads can be added as one important thread on this page, and all threads that are needed for an existing scheme can be added at once. The program includes a large number of threads based on how many are needed for this scheme and how many there are in the following list of threads. You can add threads from schemes on the scheme page.
+After you have bought all the threads you have eaten, you can clear the entire list with one button, as well as delete or change the quantity for each thread separately
+</p>
 
 <p>The site is under construction, so there will be new features in the future.</p>
     </div>
