@@ -102,15 +102,15 @@ const fetchCurrentUser = async (setUser, setIsLoggedIn) => {
   Loading.standard(`...Loading`);
   const usertoken = localStorage.getItem("token");
   token.set(usertoken);
-
-  if (usertoken === null) {
-    // return thunkAPI.rejectWithValue();
-  }
+  // if (usertoken === null) {
+  //   // return thunkAPI.rejectWithValue();
+  // }
 
   try {
     const { data } = await axios.get("/users/current");
     setUser(data.data.user);
     setIsLoggedIn(true);
+    localStorage.setItem("token", data.data.token);
     Loading.remove();
     return data;
   } catch (error) {
@@ -124,7 +124,6 @@ const resendVerify = async (user) => {
   try {
     const { data } = await axios.post("/users/verify", user);
   } catch (error) {
-    // Loading.remove();
     Notify.failure(error.message);
     return;
   }
