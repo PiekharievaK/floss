@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useSelector } from "react-redux";
+import { Block } from "notiflix";
 import { ImageCropper } from "../../../ImageCropper/ImageCropper";
 import { AddFlossForm } from "../../../../helpers/addfloss";
 import operations from "../../../../helpers/wishListOperations";
@@ -108,11 +109,14 @@ export const SchemasList = ({
     // const url = URL.createObjectURL(new Blob(binaryData, {type: "	application/octet-stream"}))
     // console.log(url);
     try {
+      Block.standard(`.${e.target.classList[0]}`);
       await AddImage(e, e.target.id, formData);
       setCroppedImage(null);
       setSelectedFile(null);
       setCurrentSchemaId(null);
+      Block.remove(`.${e.target.classList[0]}`);
     } catch {
+      Block.remove(`.${e.target.classList[0]}`);
       console.log("problem with add file");
     }
   };
@@ -138,7 +142,8 @@ export const SchemasList = ({
     setEditSchema(e.target.parentNode.parentNode.id);
   };
 
-  const addToWishList = (collection, schemaId, wishLabel) => {
+  const addToWishList = (collection, schemaId, wishLabel, e) => {
+    Block.standard(`.${e.target.parentNode.parentNode.classList[0]}`);
     const list = schemasData
       .find((schema) => schema._id === schemaId)
       .flossesList.find((list) => list.label === wishLabel).flosses;
@@ -152,6 +157,7 @@ export const SchemasList = ({
     });
     console.log(list);
     addLabeledFlosses(collection, result);
+    Block.remove(`.${s.cardList}`);
   };
 
   return (
@@ -237,6 +243,7 @@ export const SchemasList = ({
                                 id={schema._id}
                                 name={schema.name}
                                 onClick={AddSchemaImage}
+                                className={s.addImageButon}
                               >
                                 {schema.image?.urlPreview?.trim()
                                   ? "Save new image"
@@ -263,31 +270,30 @@ export const SchemasList = ({
                       <div className={s.flossesBox}>
                         {schema.flossesList?.map((item) => {
                           return (
-                            <div key={item._id}  className={s.labeledFlosses}>
+                            <div key={item._id} className={s.labeledFlosses}>
                               {item.flosses.filter(
                                 (item) => item.availabel === true
                               ).length === item.flosses.length &&
                               avialabelSchema.id === schema._id ? (
                                 <div className={s.labelAvialabel}>
-                                  <span className={s.label} >
-                                    {item.label}
-                                  </span>
+                                  <span className={s.label}>{item.label}</span>
                                   {/* <button>take to work</button> */}
-                                </div >
+                                </div>
                               ) : (
                                 <div className={s.labelUnavialabel}>
                                   <span className={s.label}>{item.label}</span>{" "}
                                   {avialabelSchema.id === schema._id && (
                                     <button
-                                      onClick={() =>
+                                      onClick={(e) =>
                                         addToWishList(
                                           collectionId,
                                           schema._id,
-                                          item.label
+                                          item.label,
+                                          e
                                         )
                                       }
+                                      className={s.wishListButton}
                                     >
-                                      {" "}
                                       add to wishList
                                     </button>
                                   )}

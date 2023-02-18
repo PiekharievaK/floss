@@ -1,5 +1,6 @@
 import { Report } from "notiflix";
 import { useState } from "react";
+import { Block } from "notiflix";
 import Button from "../../../Button";
 import flosses from "../../../../Pages/ColorsPage/flosses.json";
 import s from "./addFlossForm.module.scss";
@@ -14,9 +15,7 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
   const onRadioChange = (e) => {
     clearThreed();
     setLabel(e.target.value);
-
   };
-
   const addValidation = (e) => {
     e.preventDefault();
     if (
@@ -31,14 +30,15 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
       );
       return;
     }
+
     AddThreads(e, label);
     console.log(e);
     e.target.reset();
-    clearThreed()
+    clearThreed();
   };
 
   return (
-    <div>
+    <>
       <Button
         className={s.openFormButton}
         onClick={() => setAddActive(!addActive)}
@@ -81,7 +81,12 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
           </div>
           <div>
             {label === "Other" && (
-              <form onSubmit={addValidation} className={s.form}>
+              <form
+                onSubmit={(e) => {
+                  addValidation(e);
+                }}
+                className={s.form}
+              >
                 <input
                   type={"color"}
                   placeholder={"hex"}
@@ -160,7 +165,7 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
           </div>
         </>
       )}
-    </div>
+    </>
   );
 };
 

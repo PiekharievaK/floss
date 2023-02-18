@@ -32,7 +32,6 @@ export const SchemasJournal = ({ user }) => {
     await addSchemaFloss(collectionId, e.target.id, floss);
     await getAllSchemas(collectionId, setSchemas);
   };
-  
 
   const AddImage = async (e, schemaId, image) => {
     // console.log(schemas[schemaIdx].image.urlPreview);

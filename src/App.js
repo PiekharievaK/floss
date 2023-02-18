@@ -16,7 +16,6 @@ import { ThemeContext } from "./components/ThemeProvider/ThemeProvider";
 
 import operations from "./helpers/authOperations";
 import "./App.css";
-import { WishList } from "./Pages/WishList/WishList";
 
 function App() {
   const { signUpUser, logInUser, logOut, fetchCurrentUser } = operations;
@@ -28,8 +27,12 @@ function App() {
   const [{ theme }] = useContext(ThemeContext);
 
   useEffect(() => {
-    setPending(true);
+    // if (!localStorage.getItem("token")) {
+    //   setPending(false)
+    //   return;
+    // }
     try {
+      setPending(true);
       fetchCurrentUser(setUser, setIsLoggedIn);
       setTimeout(() => {
         setPending(false);
@@ -68,7 +71,7 @@ function App() {
                 // </PublicRoute>
               }
             />
-            
+
             <Route
               path={"UserPage/*"}
               element={
@@ -88,7 +91,6 @@ function App() {
               {/* <Route path="Floss" element={<Registration signUpUser={signUpUser}/>}/>
             <Route path="Schemas" element={<Registration signUpUser={signUpUser}/>}/> */}
             </Route>
-           
 
             <Route
               path="Registerpage/"
@@ -119,13 +121,11 @@ function App() {
               />
               <Route />
             </Route>
-            <Route path="Verification/*" element={<Verification />}/>
+            <Route path="Verification/*" element={<Verification />} />
           </Route>
 
-
-          
-            {/* <Route path="*" element={<NotFound />} /> */}
-            <Route path="*" element={<Homepage />} />
+          {/* <Route path="*" element={<NotFound />} /> */}
+          <Route path="*" element={<Homepage />} />
         </Routes>
         <Footer />
       </div>

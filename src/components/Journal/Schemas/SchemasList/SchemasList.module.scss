@@ -8,7 +8,7 @@
 
 .card {
   position: relative;
-  margin: 20px;
+  margin: 20px auto;
   padding: 20px;
   background-color: $table-collor;
   border: 1px solid black;
@@ -121,4 +121,11 @@ background-color: rgba(0, 255, 136, 0.199);
   display: block;
   flex-grow: 0.5;
   font-weight: 600
+}
+
+.addImageButon{
+  display: inline-block;
+}
+.wishListButton{
+  display: inline-block;
 }

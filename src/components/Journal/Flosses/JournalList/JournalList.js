@@ -122,79 +122,89 @@ export const JournalList = ({
 
       <Section>
         {filteredFloss.length > 0 ? (
-          <ul className={s.list}>
-            <li key={1} className={s.item}>
-              <div className={`${s.div} ${s.hexColor}`}>Color</div>
-              <div className={`${s.div} ${s.number}`}>Number</div>
-              <div className={`${s.div} ${s.colorName}`}>Color name</div>
-              <div className={`${s.div} ${s.label}`}>Label</div>
-              <div className={`${s.div} ${s.count}`}>Count</div>
-              <div className={s.closeButton}></div>
-            </li>
-            {filteredFloss.map((item) => {
-              return (
-                <li key={item._id} id={item._id} className={s.item}>
-                  <div
-                    className={`${s.div} ${s.hexColor}`}
-                    style={{
-                      backgroundColor: `${item.hex}`,
-                      border: "1px solid black",
-                    }}
-                  >
-                    {/* {item.hex ? item.hex : "unknown"}{" "} */}
-                  </div>
-                  <div className={`${s.div} ${s.number}`}>{item.number}</div>
-                  <div
-                    className={`${s.div} ${s.colorName}`}
-                    data-tooltip={item.colorName}
-                  >
-                    {item.colorName}
-                  </div>
-                  <div className={`${s.div} ${s.label}`}>{item.label}</div>
-                  {item._id !== editMode && (
-                    <div className={`${s.div} ${s.count}`}>
-                      <span className={s.mobileHide}>{"count: "}</span>
-                      {item.count}
-                    </div>
-                  )}
-                  {item._id !== editMode ? (
-                    <Button
-                      className={s.editButton}
-                      style={{ width: "fitContent", height: "20px" }}
-                      onClick={edit}
-                    >
-                      Edit
-                    </Button>
-                  ) : (
-                    <div className={s.counterBox}>
-                      <div className={s.counter}>
-                        <Counter
-                          card={item}
-                          cardsArray={filteredFloss}
-                          changeThreats={changeThreats}
-                          updateOneFloss={updateOneFloss}
-                          setEditMode={setEditMode}
-                        />
-                        <>
-                          <Button
-                            className={s.deleteButton}
-                            onClick={() => {
-                              deleteOneFloss(item._id, item.label, item.number);
-                            }}
-                          >
-                            Delete
-                          </Button>{" "}
-                          <Button onClick={edit} className={s.closeButton}>
-                            Close<span className={s.mobileHide}> changes</span>
-                          </Button>
-                        </>
+          <div className={s.listBox}>
+            <div className={s.item}>
+              <h4 className={`${s.listTitle} ${s.hexColor}`}>Color</h4>
+              <h4 className={`${s.listTitle} ${s.number}`}>Number</h4>
+              <h4 className={`${s.listTitle} ${s.colorName}`}>Color name</h4>
+              <h4 className={`${s.listTitle} ${s.label}`}>Label</h4>
+              <h4 className={`${s.listTitle} ${s.count}`}>Count</h4>
+            </div>
+            <ul className={s.list}>
+              {filteredFloss
+                .map((item) => {
+                  return (
+                    <li key={item._id} id={item._id} className={s.item}>
+                      <div
+                        className={`${s.div} ${s.hexColor}`}
+                        style={{
+                          backgroundColor: `${item.hex}`,
+                          border: "1px solid black",
+                        }}
+                      >
+                        {/* {item.hex ? item.hex : "unknown"}{" "} */}
                       </div>
-                    </div>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
+                      <div className={`${s.div} ${s.number}`}>
+                        {item.number}
+                      </div>
+                      <div
+                        className={`${s.div} ${s.colorName}`}
+                        data-tooltip={item.colorName}
+                      >
+                        {item.colorName}
+                      </div>
+                      <div className={`${s.div} ${s.label}`}>{item.label}</div>
+                      {item._id !== editMode && (
+                        <div className={`${s.div} ${s.count}`}>
+                          <span className={s.mobileHide}>{"count: "}</span>
+                          {item.count}
+                        </div>
+                      )}
+                      {item._id !== editMode ? (
+                        <Button
+                          className={s.editButton}
+                          style={{ width: "fitContent", height: "20px" }}
+                          onClick={edit}
+                        >
+                          Edit
+                        </Button>
+                      ) : (
+                        <div className={s.counterBox}>
+                          <div className={s.counter}>
+                            <Counter
+                              card={item}
+                              cardsArray={filteredFloss}
+                              changeThreats={changeThreats}
+                              updateOneFloss={updateOneFloss}
+                              setEditMode={setEditMode}
+                            />
+                            <>
+                              <Button
+                                className={s.deleteButton}
+                                onClick={() => {
+                                  deleteOneFloss(
+                                    item._id,
+                                    item.label,
+                                    item.number
+                                  );
+                                }}
+                              >
+                                Delete
+                              </Button>{" "}
+                              <Button onClick={edit} className={s.closeButton}>
+                                Close
+                                <span className={s.mobileHide}> changes</span>
+                              </Button>
+                            </>
+                          </div>
+                        </div>
+                      )}
+                    </li>
+                  );
+                })
+                .reverse()}
+            </ul>
+          </div>
         ) : (
           <>
             <h3>no flosses yet</h3>

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import operations from "../../..//helpers/journalOperations";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Block } from "notiflix";
 import { searchFilter } from "../../../helpers/searchFilter";
 import { Confirm } from "notiflix";
 
@@ -41,15 +42,19 @@ export const FlossesJournal = ({ user }) => {
     e.preventDefault();
     try {
       console.log(label);
+      Block.standard(`.${e.target.classList[0]}`, { svgSize: "20px" });
       if (label === "Other") {
         await addNewFloss(user, { ...newThread, customLabel: true });
         await getAllFlosses(user, setUserCollection);
+        // Block.remove(`.${e.target.classList[0]}`)
       } else {
         await addNewFloss(user, { ...newThread, label });
         await getAllFlosses(user, setUserCollection);
       }
-    } catch (e) {
-      console.log("object");
+      Block.remove(`.${e.target.classList[0]}`);
+    } catch (error) {
+      Block.remove(`.${e.target.classList[0]}`);
+      console.log(error);
     }
   };
 
