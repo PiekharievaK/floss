@@ -16,7 +16,7 @@ export  const UserPage =()=>{
         <li className={s.item}><Link to="/JournalPage" className={linkClass}>My floss </Link></li>
         <li className={s.item}><Link to="/JournalPage/Schemas" className={linkClass}>My schemas </Link> <span>(beta version)</span></li>
         <li className={s.item}> <Link to="/JournalPage/WishList" className={linkClass}>My wish list</Link></li>
-        <li className={s.item}><a  className={linkClass} href="https://doitms.com/csm/" target="blank">Create schema by image online </a> (website)</li>
+        <li className={s.item}><a  className={linkClass} href="https://flosscross.com/" target="blank">Create schema by image online </a> (website)</li>
         <li className={s.item}><a  className={linkClass} href="https://moresxem.com/category/sxemi-pdf/" target="blank">Find schemas </a> (website)</li> 
         </ul>}>
         </Route>
