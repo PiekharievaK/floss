@@ -4,10 +4,10 @@ import s from "./HomePage.module.scss"
 import { Link } from "react-router-dom"
 
 export  const Homepage =({
-      // isLoggedIn
+      isLoggedIn
 })=>{
       const isDark = useSelector((state) => state.theme.isDark);
-const isLoggedIn = true
+// const isLoggedIn = true
 return <Container>
 <div><h1>Welcome</h1>
 
