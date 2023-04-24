@@ -80,7 +80,7 @@ export const WishList = ({ user }) => {
                           <div className={s.optionsBox}>
                             <Counter
                               card={floss}
-                              setEditMode
+                              setEditMode={() => {}}
                               changeThreats={() => {}}
                               updateOneFloss={ChangeCount}
                             />
