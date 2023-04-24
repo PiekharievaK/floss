@@ -27,7 +27,7 @@ export const Counter = ({
 
   const onSubmit = (e) => {
     e.preventDefault();
-    updateOneFloss(card._id, counterValue);
+    updateOneFloss(card._id?card._id: card.id, counterValue);
     setEditMode();
   };
 
