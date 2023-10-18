@@ -62,6 +62,9 @@ const logOut = async (setUser, setIsLoggedIn) => {
     Notify.success("You have successfully logged out");
   } catch (error) {
     Notify.failure("Your token has expired, you logout authomaticly");
+    setUser({ status: "unauthorise" });
+    setIsLoggedIn(false);
+    localStorage.removeItem("token");
     window.location.reload();
     return;
   }
@@ -111,6 +114,7 @@ const fetchCurrentUser = async (setUser, setIsLoggedIn) => {
     setUser(data.data.user);
     setIsLoggedIn(true);
     localStorage.setItem("token", data.data.token);
+    token.set(data.data.token);
     Loading.remove();
     return data;
   } catch (error) {

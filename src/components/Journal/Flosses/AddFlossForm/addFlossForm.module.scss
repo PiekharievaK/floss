@@ -39,9 +39,19 @@
   }
 }
 .input {
+  display: inline;
+}
+
+.inputLabel {
+  margin-bottom: 5px;
+}
+.inputBox {
   @media screen and (max-width: 767px) {
     margin-right: 0px;
     margin-bottom: 15px;
   }
   margin-right: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
 }

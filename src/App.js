@@ -15,6 +15,7 @@ import { PrivateRoute, PublicRoute } from "./components/Routers";
 import { ThemeContext } from "./components/ThemeProvider/ThemeProvider";
 
 import operations from "./helpers/authOperations";
+// import startServer from "./helpers/startServerOperations";
 import "./App.css";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
 
   useEffect(() => {
     // if (!localStorage.getItem("token")) {
+    //   startServer()
     //   setPending(false)
     //   return;
     // }

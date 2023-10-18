@@ -87,49 +87,74 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
                 }}
                 className={s.form}
               >
-                <input
-                  type={"color"}
-                  placeholder={"hex"}
-                  name={"hex"}
-                  onChange={onChange}
-                  required
-                  className={s.input}
-                ></input>
-                <input
-                  type={"search"}
-                  placeholder={"number"}
-                  name={"number"}
-                  onChange={onChange}
-                  required
-                  className={s.input}
-                ></input>
-                <input
-                  type={"search"}
-                  placeholder={"label"}
-                  name={"label"}
-                  onChange={onChange}
-                  id={"firm"}
-                  required
-                  className={s.input}
-                ></input>
-                <input
-                  type={"search"}
-                  placeholder={"color"}
-                  name={"colorName"}
-                  onChange={onChange}
-                  required
-                  className={s.input}
-                ></input>
-                <input
-                  type={"number"}
-                  placeholder={"count"}
-                  name={"count"}
-                  onChange={onChange}
-                  step={0.25}
-                  min={0.25}
-                  required
-                  className={s.input}
-                ></input>
+                <div className={s.inputBox}>
+                  <input
+                    type={"color"}
+                    placeholder={"hex"}
+                    name={"hex"}
+                    onChange={onChange}
+                    required
+                    className={s.input}
+                  ></input>{" "}
+                  <label htmlFor={"hex"} className={s.inputLabel}>
+                    select floss color
+                  </label>
+                </div>
+                <div className={s.inputBox}>
+                  <input
+                    type={"search"}
+                    placeholder={"number (3811)"}
+                    name={"number"}
+                    onChange={onChange}
+                    required
+                    className={s.input}
+                  ></input>{" "}
+                  <label htmlFor={"number"} className={s.inputLabel}>
+                    floss number
+                  </label>
+                </div>
+                <div className={s.inputBox}>
+                  <input
+                    type={"search"}
+                    placeholder={"label (Dmc)"}
+                    name={"label"}
+                    onChange={onChange}
+                    id={"firm"}
+                    required
+                    className={s.input}
+                  ></input>{" "}
+                  <label htmlFor={"label"} className={s.inputLabel}>
+                    manufacture
+                  </label>
+                </div>
+                <div className={s.inputBox}>
+                  <input
+                    type={"search"}
+                    placeholder={"color (green)"}
+                    name={"colorName"}
+                    onChange={onChange}
+                    required
+                    className={s.input}
+                  ></input>{" "}
+                  <label htmlFor={"colorName"} className={s.inputLabel}>
+                    color name
+                  </label>
+                </div>
+                <div className={s.inputBox}>
+                  <input
+                    type={"number"}
+                    placeholder={"count (multiple of 0.25)"}
+                    name={"count"}
+                    onChange={onChange}
+                    step={0.25}
+                    min={0.25}
+                    required
+                    className={s.input}
+                  ></input>{" "}
+                  <label htmlFor={"count"} className={s.inputLabel}>
+                    quantity
+                  </label>
+                </div>
                 <Button className={s.addButton}>Add to my list</Button>
               </form>
             )}
@@ -141,24 +166,34 @@ const AddFlossForm = ({ AddThreads, onChange, clearThreed }) => {
                 }}
                 className={s.form}
               >
-                <input
-                  type={"search"}
-                  placeholder={"number"}
-                  name={"number"}
-                  onChange={onChange}
-                  required
-                  className={s.input}
-                ></input>
-                <input
-                  type={"number"}
-                  placeholder={"count"}
-                  name={"count"}
-                  step={0.25}
-                  min={0.25}
-                  onChange={onChange}
-                  required
-                  className={s.input}
-                ></input>
+                <div className={s.inputBox}>
+                  <input
+                    type={"search"}
+                    placeholder={"number (3811)"}
+                    name={"number"}
+                    onChange={onChange}
+                    required
+                    className={s.input}
+                  ></input>
+                  <label htmlFor={"number"} className={s.inputLabel}>
+                    floss number
+                  </label>
+                </div>
+                <div className={s.inputBox}>
+                  <input
+                    type={"number"}
+                    placeholder={"count (multiple of 0.25)"}
+                    name={"count"}
+                    step={0.25}
+                    min={0.25}
+                    onChange={onChange}
+                    required
+                    className={s.input}
+                  ></input>
+                  <label htmlFor={"count"} className={s.inputLabel}>
+                    quantity
+                  </label>
+                </div>
                 <Button className={s.addButton}>Add to my list</Button>
               </form>
             )}
