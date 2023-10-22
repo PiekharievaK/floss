@@ -79,7 +79,7 @@ export const Homepage = ({ isLoggedIn }) => {
               </p>
             </div>
 
-            <p>Enjoi using!</p>
+            <p>Enjoy using!</p>
           </div>
         ) : (
           <div className={isDark ? s.textDark : s.text}>
