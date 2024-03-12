@@ -1,5 +1,6 @@
 import axios from "axios";
 import { Notify } from "notiflix";
+import { errorCatcher } from "./errorCatcher";
 
 const getAllFlosses = async (user, setUserCollection) => {
   const collectionId = user.collectionId;
@@ -8,7 +9,7 @@ const getAllFlosses = async (user, setUserCollection) => {
     setUserCollection(data);
     return data;
   } catch (error) {
-    return Notify.failure(`${error.response.data.message}.`);
+    errorCatcher(error);
   }
 };
 
@@ -26,7 +27,7 @@ const addNewFloss = async (user, userFloss) => {
     Notify.success("Floss is added to your collection");
     return data;
   } catch (error) {
-    return Notify.failure(`${error.response.data.message}.`);
+    errorCatcher(error);
   }
 };
 const deleteFloss = async (collectionId, flossId) => {
@@ -39,7 +40,7 @@ const deleteFloss = async (collectionId, flossId) => {
 
     return data;
   } catch (error) {
-    return Notify.failure(`${error.response.data.message}.`);
+    errorCatcher(error);
   }
 };
 
@@ -53,7 +54,7 @@ const updateFloss = async (collectionId, flossId, count) => {
     Notify.success("Count is update");
     return data;
   } catch (error) {
-    return Notify.failure(`${error.response.data.message}.`);
+    errorCatcher(error);
   }
 };
 
@@ -63,7 +64,7 @@ const getAllSchemas = async (collectionId, setSchemas) => {
     setSchemas(data);
     return data;
   } catch (error) {
-    return Notify.failure(`${error.response.data.message}.`);
+    errorCatcher(error);
   }
 };
 
@@ -72,7 +73,7 @@ const addNewSchema = async (collectionId, schema) => {
     const { data } = await axios.post(`/schemas`, { collectionId, schema });
     return data;
   } catch (error) {
-    return Notify.failure(`${error.response.data.message}.`);
+    errorCatcher(error);
   }
 };
 const addSchemaImage = async (collectionId, schemaId, image) => {
@@ -83,7 +84,7 @@ const addSchemaImage = async (collectionId, schemaId, image) => {
     });
     return data;
   } catch (error) {
-    return Notify.failure(`${error.response.data.message}.`);
+    errorCatcher(error);
   }
 };
 const addSchemaFloss = async (collectionId, schemaId, floss) => {
@@ -94,7 +95,7 @@ const addSchemaFloss = async (collectionId, schemaId, floss) => {
     });
     return data;
   } catch (error) {
-    return Notify.failure(`${error.response.data.message}.`);
+    errorCatcher(error);
   }
 };
 
@@ -110,7 +111,7 @@ const deleteSchemaFloss = async (collectionId, schemaId, label, flossId) => {
     );
     return data;
   } catch (error) {
-    return Notify.failure(`${error.response.data.message}.`);
+    errorCatcher(error);
   }
 };
 const deleteSchema = async (collectionId, schemaId) => {
@@ -121,7 +122,7 @@ const deleteSchema = async (collectionId, schemaId) => {
     });
     return data;
   } catch (error) {
-    return Notify.failure(`${error.response.data.message}.`);
+    errorCatcher(error);
   }
 };
 

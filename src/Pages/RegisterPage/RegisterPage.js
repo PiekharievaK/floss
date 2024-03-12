@@ -33,7 +33,7 @@ isActive ? (isDark?s.active__linkDark :s.active__link ) : (isDark?s.linkDark :s.
 
   return (
     <Container>
-      <h1>RegisterPage</h1>
+      <h1>Registration Page</h1>
       <div className={s.linkBox}>
         <NavLink to="logIn" className={getLinkClassName}>Log In</NavLink>
         <NavLink to="SignUp" className={getLinkClassName}>Sign Up</NavLink>

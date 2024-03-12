@@ -68,9 +68,9 @@ isActive ? s.active__link : s.link;
          {isLoggedIn ?<>
          <nav className={s.nav} id="navigation">
           <ul className={s.list}>
-            <li className={s.item}><NavLink to="/" className={getLinkClassName} onClick={toggleModal}>Homepage</NavLink> </li>
-            <li className={s.item}><NavLink to="/ColorsPage" className={getLinkClassName} onClick={toggleModal}>ColorsPage</NavLink> </li>
-            <li className={s.item}><NavLink to="/UserPage" className={getLinkClassName} onClick={toggleModal}>UserPage</NavLink> </li>
+            <li className={s.item}><NavLink to="/" className={getLinkClassName} onClick={toggleModal}>Home page</NavLink> </li>
+            <li className={s.item}><NavLink to="/ColorsPage" className={getLinkClassName} onClick={toggleModal}>Colors Page</NavLink> </li>
+            <li className={s.item}><NavLink to="/UserPage" className={getLinkClassName} onClick={toggleModal}>User Page</NavLink> </li>
             <li className={s.item}><NavLink to="/JournalPage" className={getLinkClassName} onClick={toggleModal}>Journal</NavLink> </li>
             </ul><div className={s.buttonBox}>
             <ThemeButton/> 
@@ -81,9 +81,9 @@ isActive ? s.active__link : s.link;
             : 
            <> <nav className={s.unauthoriseNav} id="navigation">
            <ul className={s.list}>
-            <li className={s.item}><NavLink to="/"  className={getLinkClassName} onClick={toggleModal}>Homepage</NavLink> </li>
-            <li className={s.item}><NavLink to="/ColorsPage"  className={getLinkClassName} onClick={toggleModal}>ColorsPage</NavLink> </li>
-            <li className={s.item}><NavLink to="/RegisterPage"  className={getLinkClassName} onClick={toggleModal}>Register</NavLink> </li>
+            <li className={s.item}><NavLink to="/"  className={getLinkClassName} onClick={toggleModal}>Home page</NavLink> </li>
+            <li className={s.item}><NavLink to="/ColorsPage"  className={getLinkClassName} onClick={toggleModal}>Colors Page</NavLink> </li>
+            <li className={s.item}><NavLink to="/RegisterPage"  className={getLinkClassName} onClick={toggleModal}>Registration</NavLink> </li>
           </ul> 
         </nav >
         <ThemeButton/></>

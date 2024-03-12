@@ -1,5 +1,6 @@
 import axios from "axios";
 import notiflix, { Loading, Notify } from "notiflix";
+import { errorCatcher } from "./errorCatcher";
 
 // axios.defaults.baseURL = "http://localhost:3001";
 axios.defaults.baseURL = "https://floss-server.onrender.com";
@@ -18,10 +19,12 @@ const signUpUser = async (userData) => {
   try {
     const { data } = await axios.post("/users/signup", userData);
     Loading.remove();
-
-    token.set(data.token);
-
+    // token.set(data.token);
     verifyNotification(userData);
+
+    // if problem with sendgrid
+    // emailProblemNotification(userData.email, data.user.linkToVerify);
+
     return data;
   } catch (error) {
     Loading.remove();
@@ -61,12 +64,7 @@ const logOut = async (setUser, setIsLoggedIn) => {
     localStorage.removeItem("token");
     Notify.success("You have successfully logged out");
   } catch (error) {
-    Notify.failure("Your token has expired, you logout authomaticly");
-    setUser({ status: "unauthorise" });
-    setIsLoggedIn(false);
-    localStorage.removeItem("token");
-    window.location.reload();
-    return;
+    errorCatcher(error);
   }
 };
 
@@ -128,6 +126,9 @@ const resendVerify = async (user) => {
   try {
     const { data } = await axios.post("/users/verify", user);
   } catch (error) {
+    if (!error.response) {
+      return;
+    }
     Notify.failure(error.message);
     return;
   }
@@ -144,10 +145,41 @@ const emailVerify = async (VerificationToken) => {
     return true;
   } catch (error) {
     Loading.remove();
-    Notify.failure(error.response.data.message);
+    errorCatcher(error);
     return false;
   }
 };
+
+// if problem with sendgrid
+
+// const emailProblemNotification = (email, linkToVerify) => {
+//   console.log(email, linkToVerify);
+//   notiflix.Confirm.show(
+//     "We have a problem with email notice",
+//     `if you email write correct ${email}?`,
+//     "Yes verify it",
+//     "No i make a mistake and register again",
+//     async () => {
+//       try {
+//         let verify = await fetch(linkToVerify);
+//         window.open(linkToVerify, "_self");
+
+//         if (verify) {
+//           Notify.success(
+//             "Congratulations. You has succesfully complete registration"
+//           );
+//         }
+//       } catch (error) {
+//         Loading.remove();
+//         Notify.failure(`Your email is not verify`);
+//       }
+//     },
+//     async () => {
+//       Notify.info("Please try again and be careful now ");
+//     },
+//     {}
+//   );
+// };
 
 const operations = {
   signUpUser,

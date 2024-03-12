@@ -1,5 +1,6 @@
 import axios from "axios";
 import { Notify } from "notiflix";
+import { errorCatcher } from "./errorCatcher";
 
 const getAll = async (user, setWishList) => {
   try {
@@ -28,8 +29,8 @@ const getAll = async (user, setWishList) => {
     setWishList(list);
 
     return list;
-  } catch (e) {
-    return Notify.failure(`${e.response.data.message}.`);
+  } catch (error) {
+    errorCatcher(error);
   }
 };
 
@@ -40,21 +41,20 @@ const addFloss = async (collectionId, floss) => {
     });
 
     return data;
-  } catch (e) {
-    return Notify.failure(`${e.response.data.message}.`);
+  } catch (error) {
+    errorCatcher(error);
   }
 };
 
 const addLabeledFlosses = async (collectionId, flosses) => {
-
   try {
     const { data } = await axios.post("/wishList/schema", flosses, {
       headers: { collectionId },
     });
     Notify.success("All floss was added to you wish list");
     return data;
-  } catch (e) {
-    return Notify.failure(`${e.response.data.message}.`);
+  } catch (error) {
+    errorCatcher(error);
   }
 };
 
@@ -65,8 +65,8 @@ const deleteFloss = async (collectionId, flossId) => {
     });
 
     Notify.success("Deleted success");
-  } catch (e) {
-    return Notify.failure(`${e.response.data.message}.`);
+  } catch (error) {
+    errorCatcher(error);
   }
 };
 
@@ -77,8 +77,8 @@ const clearWishList = async (collectionId) => {
     });
 
     Notify.success("Your wish list is cleared");
-  } catch (e) {
-    return Notify.failure(`${e.response.data.message}.`);
+  } catch (error) {
+    errorCatcher(error);
   }
 };
 
@@ -89,8 +89,8 @@ const updateOneFloss = async (collectionId, floss) => {
     });
 
     Notify.success("Count is update");
-  } catch (e) {
-    return Notify.failure(`${e.response.data.message}.`);
+  } catch (error) {
+    errorCatcher(error);
   }
 };
 

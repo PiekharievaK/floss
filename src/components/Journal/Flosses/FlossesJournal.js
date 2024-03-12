@@ -44,11 +44,20 @@ export const FlossesJournal = ({ user }) => {
       console.log(label);
       Block.standard(`.${e.target.classList[0]}`, { svgSize: "20px" });
       if (label === "Other") {
-        await addNewFloss(user, { ...newThread, customLabel: true });
+        const data = await addNewFloss(user, {
+          ...newThread,
+          customLabel: true,
+        });
+        if (!data) {
+          throw new Error("jwt expired");
+        }
         await getAllFlosses(user, setUserCollection);
         // Block.remove(`.${e.target.classList[0]}`)
       } else {
-        await addNewFloss(user, { ...newThread, label });
+        const data = await addNewFloss(user, { ...newThread, label });
+        if (!data) {
+          throw new Error();
+        }
         await getAllFlosses(user, setUserCollection);
       }
       Block.remove(`.${e.target.classList[0]}`);
@@ -69,7 +78,11 @@ export const FlossesJournal = ({ user }) => {
       "Yes",
       "No",
       async () => {
-        await deleteFloss(user.collectionId, flossId);
+        const data = await deleteFloss(user.collectionId, flossId);
+        // Можно убрать лишний запрос записав ответ от удаления в стейт
+        if (!data) {
+          throw new Error("jwt expired");
+        }
         await getAllFlosses(user, setUserCollection);
         return;
       },
@@ -84,7 +97,10 @@ export const FlossesJournal = ({ user }) => {
   };
 
   const updateOneFloss = async (flossId, count) => {
-    await updateFloss(user.collectionId, flossId, count);
+    const data = await updateFloss(user.collectionId, flossId, count);
+    if (!data) {
+      throw new Error();
+    }
     await getAllFlosses(user, setUserCollection);
   };
 

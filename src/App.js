@@ -1,4 +1,5 @@
 import { Outlet, Route, Routes } from "react-router-dom";
+import axios from "axios";
 import { useEffect, useState, useContext } from "react";
 import { Homepage } from "./Pages/Homepage/HomePage";
 import { UserPage } from "./Pages/UserPage/Userpage";
@@ -13,6 +14,7 @@ import { NotFound } from "./Pages/404Page/404";
 import { Verification } from "./Pages/Verification/Verification";
 import { PrivateRoute, PublicRoute } from "./components/Routers";
 import { ThemeContext } from "./components/ThemeProvider/ThemeProvider";
+import { Notify } from "notiflix";
 
 import operations from "./helpers/authOperations";
 // import startServer from "./helpers/startServerOperations";
@@ -26,6 +28,25 @@ function App() {
   const [pending, setPending] = useState(true);
 
   const [{ theme }] = useContext(ThemeContext);
+
+  useEffect(() => {
+    axios.interceptors.response.use(
+      (response) => {
+        return response;
+      },
+      (error) => {
+        if (error.response.data.message === "jwt expired") {
+          setUser({ status: "unauthorise" });
+          localStorage.removeItem("token");
+          setIsLoggedIn(false);
+          Notify.failure("Your session has expired, you logout authomaticly");
+          return Promise.reject();
+        } else {
+          return Promise.reject(error);
+        }
+      }
+    );
+  }, []);
 
   useEffect(() => {
     // if (!localStorage.getItem("token")) {
