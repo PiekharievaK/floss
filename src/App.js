@@ -4,6 +4,7 @@ import { useEffect, useState, useContext } from "react";
 import { Homepage } from "./Pages/Homepage/HomePage";
 import { UserPage } from "./Pages/UserPage/Userpage";
 import { JournalPage } from "./Pages/JournalPage/JournalPage";
+import { ProfilePage } from "./Pages/ProfilePage/ProfilePage";
 import { RegisterPage } from "./Pages/RegisterPage/RegisterPage";
 import { ColorsPage } from "./Pages/ColorsPage/ColorsPage";
 import { Header } from "./components/Header/Header";
@@ -12,6 +13,7 @@ import { LoginForm } from "./components/Login/Login";
 import { Registration } from "./components/Registration/Registration";
 import { NotFound } from "./Pages/404Page/404";
 import { Verification } from "./Pages/Verification/Verification";
+import {PasswordPage} from "./Pages/PasswordPage/PasswordPage";
 import { PrivateRoute, PublicRoute } from "./components/Routers";
 import { ThemeContext } from "./components/ThemeProvider/ThemeProvider";
 import { Notify } from "notiflix";
@@ -21,7 +23,7 @@ import operations from "./helpers/authOperations";
 import "./App.css";
 
 function App() {
-  const { signUpUser, logInUser, logOut, fetchCurrentUser } = operations;
+  const { signUpUser, logInUser, logOut, fetchCurrentUser, resetPassword } = operations;
 
   const [user, setUser] = useState({ status: "unauthorise" });
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -35,7 +37,8 @@ function App() {
         return response;
       },
       (error) => {
-        if (error.response.data.message === "jwt expired") {
+        if (error.response.data.message === "jwt expired" || error.response.data.message === "Not authorized" )
+        {
           setUser({ status: "unauthorise" });
           localStorage.removeItem("token");
           setIsLoggedIn(false);
@@ -114,6 +117,14 @@ function App() {
               {/* <Route path="Floss" element={<Registration signUpUser={signUpUser}/>}/>
             <Route path="Schemas" element={<Registration signUpUser={signUpUser}/>}/> */}
             </Route>
+            <Route
+              path={"ProfilePage/*"}
+              element={
+                <PrivateRoute isLoggedIn={isLoggedIn}>
+                  <ProfilePage />
+                </PrivateRoute>
+              }
+            />
 
             <Route
               path="Registerpage/"
@@ -139,12 +150,14 @@ function App() {
                     logInUser={logInUser}
                     setUser={setUser}
                     setIsLoggedIn={setIsLoggedIn}
+                    resetPassword={resetPassword}
                   />
                 }
               />
               <Route />
             </Route>
             <Route path="Verification/*" element={<Verification />} />
+            <Route path="PasswordPage/*" element={<PasswordPage />} />
           </Route>
 
           {/* <Route path="*" element={<NotFound />} /> */}

@@ -1,0 +1,118 @@
+// @import "../../styles/variables.scss";
+
+
+.backdrope {
+margin-top: 81px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.281);
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    position: absolute;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.281);
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 320px;
+  max-width: 95vw;
+height: 100vh;
+  background:#ffffff;
+  z-index: 1000;
+  // 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 85vh;
+  // 
+  @media screen and (min-width: 768px) {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 672px;
+      height: 573px;
+      box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.modal__close_button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  // width: 25px;
+  // height: 25px;
+
+  @media screen and (max-width: 767px) {
+    top: 20px;
+    right: 20px;;
+    height: 25px;
+    width: 25px;
+
+    border-radius: 50%;
+  
+  }
+
+  @media screen and (min-width: 768px) {
+    left: 632px;
+    top: 20px;
+    background-color: transparent;
+
+
+    &:hover ,
+    &:focus{
+      background-color:rgb(100, 231, 198);
+      border-radius: 50%;
+    }
+  }
+}
+
+// .modal__close_mobile {
+//   text-align: left;
+//   padding-left: 20px;
+//   height: 40px;
+//   width: 100vw;
+//   border: none;
+//   background:rgb(0, 0, 0);
+//   cursor: pointer;
+
+//   @media screen and (min-width: 768px) {
+//     display: none;
+//   }
+// }
+
+.modal__cross_icon {
+  // @media screen and (min-width: 768px) {
+    fill:rgb(0, 0, 0);
+    width: 20px;
+    height: 20px;
+    // transform: translate(-13%, 11%);
+  // }
+}
+
+.modal__arrow_icon {
+  height: 8px;
+  width: 20px;
+}
+
+.display_none_mobile{
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}

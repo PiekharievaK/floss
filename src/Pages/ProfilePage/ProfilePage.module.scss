@@ -1,0 +1,58 @@
+.user {
+  border: 1px solid black;
+  width: 300px;
+  padding: 20px;
+}
+.userProfile {
+  border: 1px solid black;
+  background-color: rgba(127, 255, 212, 0.37);
+}
+.profilePic {
+  display: block;
+}
+.profilePicImg {
+  width: 100px;
+   min-width: 100px;
+   min-height: 100px;
+   background-color: rgba(75, 75, 75, 0.466);
+  border: 0;
+}
+.profilePicButtonBox {
+  border: 1px solid black;
+}
+.profilePicButton {
+  cursor: pointer;
+  display: inline;
+}
+
+.userName {
+  margin: auto;
+}
+.userInfo{
+text-align: start;}
+
+.userTime {
+  margin: auto;
+}
+.journal {
+  border: 1px solid black;
+  flex: 1
+}
+.journalBox {
+  padding: 20px;
+}
+
+.journalList {
+  text-align: start;
+  padding: 0px;
+}
+.changeButtonBox {
+  border: 1px solid black;
+}
+.changeButton{
+  cursor: pointer;
+}
+
+.dataBox {
+  display: flex;
+}
