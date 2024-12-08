@@ -2,8 +2,8 @@ import axios from "axios";
 import notiflix, { Loading, Notify } from "notiflix";
 import { errorCatcher } from "./errorCatcher";
 
-axios.defaults.baseURL = "http://localhost:3001";
-// axios.defaults.baseURL = "https://floss-server.onrender.com";
+// axios.defaults.baseURL = "http://localhost:3001";
+axios.defaults.baseURL = "https://floss-server.onrender.com";
 
 const token = {
   set(token) {
