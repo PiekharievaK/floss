@@ -5,6 +5,8 @@ import { Notify } from "notiflix";
 export const ChangePasswordModal = () => {
   const { checkPassword } = operations;
   const [oldPassword, setOldPassword] = useState("");
+  const [newPassword, setNewPassword] = useState('')
+  const [checkingPassword, setCheckingPassword] = useState('')
   const [passwordOk, setPasswordOk] = useState(false);
 
   const verifyPassword = async (e) => {
@@ -20,6 +22,13 @@ export const ChangePasswordModal = () => {
       e.target.reset()
     }
   };
+
+const changePasword = (e) =>{
+  e.preventDefault()
+}
+
+const handleChange = ()=>{}
+
 
   return (
     <div className="Box">

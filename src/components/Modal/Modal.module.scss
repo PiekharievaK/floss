@@ -36,6 +36,7 @@ height: 100vh;
   align-items: center;
   justify-content: center;
   max-height: 85vh;
+  border-radius: 5px;
   // 
   @media screen and (min-width: 768px) {
       position: absolute;
@@ -56,6 +57,7 @@ height: 100vh;
   justify-content: center;
   cursor: pointer;
   border: none;
+  padding: 5px;
   // width: 25px;
   // height: 25px;
 

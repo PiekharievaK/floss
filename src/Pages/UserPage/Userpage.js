@@ -12,7 +12,7 @@ export  const UserPage =()=>{
 
     <Routes>
 <Route path="" element={<ul className={s.list}>
-        <li className={s.item}> <Link to="/ProfilePage" className={linkClass}>Profile </Link><span>(developing)</span></li>
+        <li className={s.item}> <Link to="/ProfilePage" className={linkClass}>Profile </Link></li>
         <li className={s.item}><Link to="/JournalPage" className={linkClass}>My floss </Link></li>
         <li className={s.item}><Link to="/JournalPage/Schemas" className={linkClass}>My schemas </Link> <span>(beta version)</span></li>
         <li className={s.item}> <Link to="/JournalPage/WishList" className={linkClass}>My wish list</Link></li>

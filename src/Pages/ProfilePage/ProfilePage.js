@@ -1,6 +1,6 @@
 import Section from "../../components/Section/Section";
 import Container from "../../components/Container/Container";
-import {Modal} from "../../components/Modal/Modal";
+import { Modal } from "../../components/Modal/Modal";
 import { Confirm } from "notiflix";
 import operations from "../../helpers/userProfileOperations";
 import s from "./ProfilePage.module.scss";
@@ -10,57 +10,48 @@ import { ChangePasswordModal } from "../../components/PasswordOptions/ChangePass
 export const ProfilePage = () => {
   const { getUserData, checkPassword, changePassword } = operations;
   const [userData, setUserData] = useState({});
-  const [isModal, setIsModal] = useState(false)
-
+  const [isModal, setIsModal] = useState(false);
 
   useEffect(() => {
     getUserData(setUserData);
   }, []);
   useEffect(() => {
-  //  console.log(isModal);;
+    //  console.log(isModal);;
   }, [isModal]);
 
   // console.log(userData);
 
-
-const GetTempPassword = (e) =>{
-  try{
-    
-    // Создать свою модалку для смені пароля
-    Confirm.prompt(
-      'Hello',
-      'Enter you current password or temprarry password from email',
-      '',
-      'Confirm',
-      'Cancel',
-      async(clientAnswer) => {
-       try{
-        await checkPassword(clientAnswer)
-        changePassword()
-      } 
-       catch(e){
-        console.log(e.message);
-        throw new Error()
-       }
-  
-      },
-      (clientAnswer) => {
-      return
-      },
-      {
-      },
+  const GetTempPassword = (e) => {
+    try {
+      // Создать свою модалку для смены пароля
+      Confirm.prompt(
+        "Hello",
+        "Enter you current password or temprarry password from email",
+        "",
+        "Confirm",
+        "Cancel",
+        async (clientAnswer) => {
+          try {
+            await checkPassword(clientAnswer);
+            changePassword();
+          } catch (e) {
+            console.log(e.message);
+            throw new Error();
+          }
+        },
+        (clientAnswer) => {
+          return;
+        },
+        {}
       );
+    } catch (e) {}
+  };
 
-      
-  }
-  catch(e){
-
-  }
-
-
-}
-
-
+  const timeSinceRegistration = (date) => {
+    let currentDate = Date.parse(new Date());
+    let days = (currentDate - Date.parse(date)) / 86400000; //86400000 - ms в дне
+    return Math.round(days);
+  };
 
   return (
     <Container>
@@ -76,9 +67,9 @@ const GetTempPassword = (e) =>{
                   className={s.profilePicImg}
                 />
                 <div className={s.profilePicButtonBox}>
-                  <button className={s.profilePicButton}>
+                  {/* <button className={s.profilePicButton}>
                     Change profile image
-                  </button>
+                  </button> */}
                   {/* <button>pick profile image</button>
       <button>add profile image</button> */}
                 </div>
@@ -88,30 +79,38 @@ const GetTempPassword = (e) =>{
             <div className={s.userInfo}>
               <p className={s.userMail}>User email: {userData.email}</p>
               <p className={s.userTime}>
-                Time since registration: {userData.createdAt}
+                Registration date :{" "}
+                {new Date(userData.createdAt).toLocaleDateString()}
+              </p>
+              <p className={s.userTime}>
+                Time since registration:{" "}
+                {timeSinceRegistration(userData.createdAt)} days
               </p>
             </div>
           </div>
           <div className={s.journal}>
             <div className={s.journalBox}>
-              <h4>My total</h4> 
+              <h4>My total</h4>
               <ul className={s.journalList}>
-                <li>flosses i have: {userData.flosses}</li>
-                <li>schemas i have: {userData.schemas}</li>
-                <li>flosses i want to buy: {userData.wishList}</li>
+                <li>my flosses: {userData.flosses}</li>
+                <li>my schemas: {userData.schemas}</li>
+                <li>wishlist: {userData.wishList}</li>
               </ul>
             </div>
 
-            <div className={s.changeButtonBox}>
+            {/* <div className={s.changeButtonBox}>
               <button className={s.changeButton} onClick={ ()=> setIsModal(true)}>change password</button>
               <button className={s.changeButton}>change user name</button>
               <button className={s.changeButton} onClick={GetTempPassword}>get temporary password</button>
-            </div>
+            </div> */}
           </div>
-          
         </div>
-        {isModal === true  && (<Modal onClose={()=> setIsModal(false)} children={<ChangePasswordModal/>}>
-                </Modal>)}
+        {isModal === true && (
+          <Modal
+            onClose={() => setIsModal(false)}
+            children={<ChangePasswordModal />}
+          ></Modal>
+        )}
       </Section>
     </Container>
   );

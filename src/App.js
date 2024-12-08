@@ -31,6 +31,11 @@ function App() {
 
   const [{ theme }] = useContext(ThemeContext);
 
+  Notify.init({
+    // clickToClose: true,
+    closeButton: true,
+    });
+
   useEffect(() => {
     axios.interceptors.response.use(
       (response) => {

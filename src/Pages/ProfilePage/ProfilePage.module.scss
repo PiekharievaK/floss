@@ -1,7 +1,9 @@
 .user {
   border: 1px solid black;
-  width: 300px;
   padding: 20px;
+  @media screen and (min-width: 768px) {
+    width: 300px;
+  }
 }
 .userProfile {
   border: 1px solid black;
@@ -12,9 +14,9 @@
 }
 .profilePicImg {
   width: 100px;
-   min-width: 100px;
-   min-height: 100px;
-   background-color: rgba(75, 75, 75, 0.466);
+  min-width: 100px;
+  min-height: 100px;
+  background-color: rgba(75, 75, 75, 0.466);
   border: 0;
 }
 .profilePicButtonBox {
@@ -28,15 +30,16 @@
 .userName {
   margin: auto;
 }
-.userInfo{
-text-align: start;}
+.userInfo {
+  text-align: start;
+}
 
 .userTime {
   margin: auto;
 }
 .journal {
   border: 1px solid black;
-  flex: 1
+  flex: 1;
 }
 .journalBox {
   padding: 20px;
@@ -49,10 +52,14 @@ text-align: start;}
 .changeButtonBox {
   border: 1px solid black;
 }
-.changeButton{
+.changeButton {
   cursor: pointer;
 }
 
 .dataBox {
   display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 }
