@@ -72,9 +72,9 @@ export const LoginForm = ({ logInUser, setUser, setIsLoggedIn, resetPassword }) 
         </Button>
       </form>
 
- {/* <Button type="button" className={s.repassword} onClick={passwordAction}>
+ <Button type="button" className={s.repassword} onClick={passwordAction}>
           Forgot  the password
-        </Button>  */}
+        </Button> 
        {/* Добавить кнопку "забыли пароль" и её функционал    /auth/resetPassword */}
 
     </>
