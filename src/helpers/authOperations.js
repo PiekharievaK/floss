@@ -2,8 +2,8 @@ import axios from "axios";
 import notiflix, { Loading, Notify } from "notiflix";
 import { errorCatcher } from "./errorCatcher";
 
-// axios.defaults.baseURL = "http://localhost:3001";
-axios.defaults.baseURL = "https://floss-server.onrender.com";
+axios.defaults.baseURL = "http://localhost:3001";
+// axios.defaults.baseURL = "https://floss-server.onrender.com";
 
 const token = {
   set(token) {
@@ -150,6 +150,24 @@ const emailVerify = async (VerificationToken) => {
   }
 };
 
+const resetPassword = async (email) =>{
+  try {
+    Loading.standard(`...Loading`);
+    const { data } = await axios.post(`/users/resetPassword`, {email: email});
+    Notify.success(
+      "A new password has been sent to your email. Please check it"
+    );
+    Loading.remove();
+    return true;
+  } catch (error) {
+    Loading.remove();
+    errorCatcher(error);
+    return false;
+  }
+}
+
+
+
 // if problem with sendgrid
 
 // const emailProblemNotification = (email, linkToVerify) => {
@@ -187,5 +205,6 @@ const operations = {
   logInUser,
   fetchCurrentUser,
   emailVerify,
+  resetPassword,
 };
 export default operations;

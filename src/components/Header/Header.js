@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 import Button from "../Button"
 import Container from "../Container"
 import logo from "../../images/icon1.png"
@@ -75,8 +75,8 @@ isActive ? s.active__link : s.link;
             </ul><div className={s.buttonBox}>
             <ThemeButton/> 
             </div>
-         </nav >
-         <div className={s.userBox}> <span className={s.userName}>{userName? userName: user.status}</span> <Button className={s.button} onClick={onLogOut}>logOut</Button></div>
+         </nav >    
+         <div className={s.userBox}> <NavLink to="/ProfilePage" className={ (e)=> e.isActive? s.active__userName: s.userName }> {userName? userName: user.status}</NavLink> <Button className={s.button} onClick={onLogOut}>logOut</Button></div>
          </>
             : 
            <> <nav className={s.unauthoriseNav} id="navigation">

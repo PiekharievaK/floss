@@ -152,14 +152,34 @@
   margin-right: 10px;
 }
 
-.userName {
+.userName, 
+.active__userName {
+  position: relative;
   max-width: 75px;
   margin-right: 10px;
   font-weight: 600;
   font-size: 18px;
   text-overflow: ellipsis;
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+ 
 }
+
+.active__userName{
+
+  &:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    left: 0px;
+    height: 3px;
+    background-color: rgb(77, 15, 134);
+  }
+}
+
 
 .button {
   height: 30px;

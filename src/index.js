@@ -10,7 +10,7 @@ import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
       <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
     <ThemeProvider>
@@ -20,6 +20,6 @@ root.render(
           </ThemeProvider>
           </PersistGate>
     </Provider>
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
