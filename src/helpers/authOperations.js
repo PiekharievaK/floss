@@ -19,17 +19,19 @@ const signUpUser = async (userData) => {
   try {
     const { data } = await axios.post("/users/signup", userData);
     Loading.remove();
+     // if all good with sendgrid
+    // verifyNotification(userData);
+    
+    
     // token.set(data.token);
-    verifyNotification(userData);
-
     // if problem with sendgrid
-    // emailProblemNotification(userData.email, data.user.linkToVerify);
+    emailProblemNotification(userData.email, data.user.linkToVerify);
 
     return data;
   } catch (error) {
     Loading.remove();
     if (error.response.data.message === "Email in use") {
-      verifyNotification(userData);
+      // verifyNotification(userData);
     }
     return Notify.failure(`${error.response.data.message}.`);
   }
@@ -150,10 +152,10 @@ const emailVerify = async (VerificationToken) => {
   }
 };
 
-const resetPassword = async (email) =>{
+const resetPassword = async (email) => {
   try {
     Loading.standard(`...Loading`);
-    const { data } = await axios.post(`/users/resetPassword`, {email: email});
+    const { data } = await axios.post(`/users/resetPassword`, { email: email });
     Notify.success(
       "A new password has been sent to your email. Please check it"
     );
@@ -164,40 +166,38 @@ const resetPassword = async (email) =>{
     errorCatcher(error);
     return false;
   }
-}
-
-
+};
 
 // if problem with sendgrid
 
-// const emailProblemNotification = (email, linkToVerify) => {
-//   console.log(email, linkToVerify);
-//   notiflix.Confirm.show(
-//     "We have a problem with email notice",
-//     `if you email write correct ${email}?`,
-//     "Yes verify it",
-//     "No i make a mistake and register again",
-//     async () => {
-//       try {
-//         let verify = await fetch(linkToVerify);
-//         window.open(linkToVerify, "_self");
+const emailProblemNotification = (email, linkToVerify) => {
+  console.log(email, linkToVerify);
+  notiflix.Confirm.show(
+    "We have a problem with email notice",
+    `if you email write correct ${email}?`,
+    "Yes verify it",
+    "No. Try again",
+    async () => {
+      try {
+        let verify = await fetch(linkToVerify);
+        window.open(linkToVerify, "_self");
 
-//         if (verify) {
-//           Notify.success(
-//             "Congratulations. You has succesfully complete registration"
-//           );
-//         }
-//       } catch (error) {
-//         Loading.remove();
-//         Notify.failure(`Your email is not verify`);
-//       }
-//     },
-//     async () => {
-//       Notify.info("Please try again and be careful now ");
-//     },
-//     {}
-//   );
-// };
+        if (verify) {
+          Notify.success(
+            "Congratulations. You has succesfully complete registration"
+          );
+        }
+      } catch (error) {
+        Loading.remove();
+        Notify.failure(`Your email is not verify`);
+      }
+    },
+    async () => {
+      Notify.info("Please try again and be careful now ");
+    },
+    {}
+  );
+};
 
 const operations = {
   signUpUser,
