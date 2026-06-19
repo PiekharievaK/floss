@@ -119,6 +119,8 @@ const fetchCurrentUser = async (setUser, setIsLoggedIn) => {
     return data;
   } catch (error) {
     Loading.remove();
+     token.unset();                                                                                                         
+     localStorage.removeItem("token");
     // Notify.failure("Please log in or sign up");
     return;
   }
