@@ -16,7 +16,7 @@ export const ColorsTable = ({ data, selectedLabels }) => {
             {selectedLabels.includes("Madeira")&&<td className={s.tableTitle}> Madeira</td>}
             {selectedLabels.includes("Gamma")&&<td className={s.tableTitle}> Gamma</td>}
           <td className={s.tableTitle}> Color name</td>
-          <td className={s.hide + " " + s.tableTitle}> Название цвета</td>
+          <td className={s.hide + " " + s.tableTitle}> Назва кольору</td>
         </tr>
         { data.map( color =>{ return <tr height="20" aria-label="height:15.0pt" key={color.dmcNumber}>
         <td style={{backgroundColor: color.hex}} className={s.hash}></td>
@@ -25,7 +25,7 @@ export const ColorsTable = ({ data, selectedLabels }) => {
         {selectedLabels.includes("Madeira")&&  <td> {color.labels.Madeira}</td>}
         {selectedLabels.includes("Gamma")&&   <td> {color.labels.Gamma}</td>}
           <td>{color.colorName}</td>
-                  <td className={s.hide} >{color.colorRUname}</td>
+                  <td className={s.hide} >{color.colorUAname}</td>
         </tr>})}
         </tbody>
       </table>
@@ -62,7 +62,7 @@ export const ColorsTable = ({ data, selectedLabels }) => {
           <td bgcolor={el.hex} className={s.hash}>{/* {el.hex} </td>*/}
 //           <td>{el.number}</td>
 //           <td>{el.colorName}</td>
-//           <td className={s.hide}>{el.colorRUname}</td>
+//           <td className={s.hide}>{el.colorUAname}</td>
 //         </tr>
 //       );
 //     })}
